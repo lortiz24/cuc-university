@@ -15,6 +15,7 @@ import Button from '@mui/material/Button';
 import { useTheme } from '@mui/material';
 import { ActiveLink } from '../active-link/ActiveLink';
 import { useRouter } from 'next/router';
+import styles from './Navbar.module.css'
 
 interface Props {
     window?: () => Window;
@@ -22,7 +23,7 @@ interface Props {
 
 const drawerWidth = 240;
 
-interface MenuItem {
+export interface MenuItem {
     path: string;
     name: string;
 }
@@ -90,8 +91,8 @@ export const NavbarUi = (props: Props) => {
         <>
             <AppBar
                 sx={{
-                    marginTop: {xs:4, md:4},
-                    paddingX: {xs:4, md:10},
+                    marginTop: { xs: 4, md: 4 },
+                    paddingX: { xs: 4, md: 10 },
                 }}
                 component={'nav'}
                 elevation={0}
@@ -119,11 +120,13 @@ export const NavbarUi = (props: Props) => {
                     </div>
 
                     <Box sx={{ display: { xs: 'none', lg: 'block' } }}>
-                        {navItems.map((menuItem) => (
-                            <>
-                                <ActiveLink href={menuItem.path} text={menuItem.name} key={menuItem.name} />
-                            </>
-                        ))}
+                        <nav className={styles['menu-container']} >
+                            {navItems.map((menuItem) => (
+                                <>
+                                    <ActiveLink href={menuItem.path} text={menuItem.name} key={menuItem.name} />
+                                </>
+                            ))}
+                        </nav>
                     </Box>
                 </Toolbar>
             </AppBar>
