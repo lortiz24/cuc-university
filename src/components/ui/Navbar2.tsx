@@ -12,13 +12,46 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { useTheme } from '@mui/material';
+import { ActiveLink } from '../active-link/ActiveLink';
+import { useRouter } from 'next/router';
 
 interface Props {
     window?: () => Window;
 }
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About Us', 'Academic Programs', 'Students', 'Scholarships', 'Contact Us'];
+
+interface MenuItem {
+    path: string;
+    name: string;
+}
+const navItems: MenuItem[] = [
+    {
+        path: '/',
+        name: 'Home'
+    },
+    {
+        name: 'About Us',
+        path: '/about-us'
+    },
+    {
+        name: 'Academic Programs',
+        path: '/academic-programs'
+    },
+    {
+        name: 'Students',
+        path: '/students'
+    },
+    {
+        name: 'Scholarships',
+        path: '/scholarships'
+    },
+    {
+        name: 'Contact Us',
+        path: '/contact-us'
+    }
+];
 
 
 const origin = (typeof window === 'undefined') ? '' : window.location.origin;
@@ -28,11 +61,11 @@ const origin = (typeof window === 'undefined') ? '' : window.location.origin;
 export const NavbarUi = (props: Props) => {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
-
+    const theme = useTheme()
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
     };
-
+    const router = useRouter()
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
             <Typography variant="h6" sx={{ my: 2 }}>
@@ -40,10 +73,10 @@ export const NavbarUi = (props: Props) => {
             </Typography>
             <Divider />
             <List>
-                {navItems.map((item) => (
-                    <ListItem key={item} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center' }}>
-                            <ListItemText primary={item} />
+                {navItems.map((menuitem) => (
+                    <ListItem key={menuitem.name} disablePadding>
+                        <ListItemButton sx={{ textAlign: 'center' }} onClick={() => router.push(menuitem.path)}>
+                            <ListItemText primary={menuitem.name} />
                         </ListItemButton>
                     </ListItem>
                 ))}
@@ -86,10 +119,10 @@ export const NavbarUi = (props: Props) => {
                     </div>
 
                     <Box sx={{ display: { xs: 'none', md: 'block' } }}>
-                        {navItems.map((item) => (
-                            <Button key={item} style={{ color: '#405262' }}>
-                                {item}
-                            </Button>
+                        {navItems.map((menuItem) => (
+                            <>
+                                <ActiveLink href={menuItem.path} text={menuItem.name} key={menuItem.name} />
+                            </>
                         ))}
                     </Box>
                 </Toolbar>
