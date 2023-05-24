@@ -1,18 +1,22 @@
+import React from 'react'
 import { Button, useTheme } from '@mui/material';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React, { CSSProperties } from 'react'
 interface IActiveLinkProps {
     text: string;
     href: string
 }
 
-const buttonCircleStyle: React.CSSProperties = {
-    borderRadius: 10
-}
 export const ActiveLink = ({ text, href }: IActiveLinkProps) => {
     const router = useRouter()
     const theme = useTheme()
+
+
+    const buttonCircleStyle: React.CSSProperties = {
+        borderRadius: '40rem',
+        backgroundColor: theme.palette.secondary.main,
+        color:'#ffffff'
+    }
     return (
         <>
             {href === '/contact-us'

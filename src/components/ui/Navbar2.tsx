@@ -61,11 +61,11 @@ const origin = (typeof window === 'undefined') ? '' : window.location.origin;
 export const NavbarUi = (props: Props) => {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
-    const theme = useTheme()
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
     };
     const router = useRouter()
+
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
             <Typography variant="h6" sx={{ my: 2 }}>
@@ -76,7 +76,7 @@ export const NavbarUi = (props: Props) => {
                 {navItems.map((menuitem) => (
                     <ListItem key={menuitem.name} disablePadding>
                         <ListItemButton sx={{ textAlign: 'center' }} onClick={() => router.push(menuitem.path)}>
-                            <ListItemText primary={menuitem.name} />
+                            <ActiveLink text={menuitem.name} href={menuitem.path} />
                         </ListItemButton>
                     </ListItem>
                 ))}
@@ -90,8 +90,8 @@ export const NavbarUi = (props: Props) => {
         <>
             <AppBar
                 sx={{
-                    marginTop: 2,
-                    paddingX: '40px'
+                    marginTop: {xs:4, md:4},
+                    paddingX: {xs:4, md:10},
                 }}
                 component={'nav'}
                 elevation={0}
@@ -102,7 +102,7 @@ export const NavbarUi = (props: Props) => {
                         aria-label="open drawer"
                         edge="start"
                         onClick={handleDrawerToggle}
-                        sx={{ mr: 2, display: { md: 'none' } }}
+                        sx={{ mr: 2, display: { lg: 'none' } }}
                     >
                         <MenuIcon />
                     </IconButton>
@@ -112,13 +112,13 @@ export const NavbarUi = (props: Props) => {
                             sx={{
                                 maxHeight: { xs: 200, md: 167 },
                                 maxWidth: { xs: 300, md: 250 },
-                                display: { xs: 'none', md: 'block' }
+                                display: { xs: 'none', lg: 'block' }
                             }}
                             alt="The house from the offer."
                             src={`${origin}/assets/9744a3a642b478781df6cd9b3dde8724.png`} />
                     </div>
 
-                    <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+                    <Box sx={{ display: { xs: 'none', lg: 'block' } }}>
                         {navItems.map((menuItem) => (
                             <>
                                 <ActiveLink href={menuItem.path} text={menuItem.name} key={menuItem.name} />
@@ -137,7 +137,7 @@ export const NavbarUi = (props: Props) => {
                         keepMounted: true, // Better open performance on mobile.
                     }}
                     sx={{
-                        display: { xs: 'block', md: 'none' },
+                        display: { xs: 'block', lg: 'none' },
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
                     }}
                 >
