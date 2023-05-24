@@ -28,7 +28,7 @@ export const MainLayout = ({ children, title = 'Cuc University' }: Props) => {
             </Head>
 
             <NavbarUi />
-            
+
             <Box sx={{
                 padding: '10px 40px'
             }}>

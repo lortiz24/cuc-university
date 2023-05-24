@@ -90,7 +90,9 @@ export const NavbarUi = (props: Props) => {
     return (
         <>
             <AppBar
+                position='static'
                 sx={{
+
                     marginTop: { xs: 4, md: 4 },
                     paddingX: { xs: 4, md: 10 },
                 }}
