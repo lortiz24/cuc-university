@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
-import { Navbar } from '../ui';
-
+import { Navbar, NavbarUi } from '../ui';
+import { Box } from '@mui/material'
 
 
 interface Props {
@@ -10,11 +10,13 @@ interface Props {
 }
 
 
-export const MainLayout = ({ children, title }: Props) => {
+export const MainLayout = ({ children, title = 'Cuc University' }: Props) => {
     return (
-        <>
+        <Box sx={{
+            flexFlow: 1
+        }}>
             <Head>
-                <title>{title || 'Cuc University'}</title>
+                <title>{title}</title>
                 <meta name="author" content="Luis Ortiz" />
                 <meta name="description" content={`Información sobre el pokémon ${title}`} />
                 <meta name="keywords" content={`${title}, pokemon, pokedex`} />
@@ -25,14 +27,14 @@ export const MainLayout = ({ children, title }: Props) => {
 
             </Head>
 
-            <Navbar />
-
-            <main style={{
-                padding: '0px 20px'
+            <NavbarUi />
+            
+            <Box sx={{
+                padding: '10px 40px'
             }}>
                 {children}
-            </main>
+            </Box>
 
-        </>
+        </Box>
     )
 }

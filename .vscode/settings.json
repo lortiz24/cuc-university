@@ -1,0 +1,16 @@
+{
+    "liveSassCompile.settings.includeItems": [
+        
+    ],
+    "liveSassCompile.settings.forceBaseDirectory": "",
+    "liveSassCompile.settings.formats": [
+
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/src/styles",
+            "savePathReplacementPairs": null
+        }
+    ],
+    "liveSassCompile.settings.showAnnouncements": null
+}
