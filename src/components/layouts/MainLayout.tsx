@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import { Navbar, NavbarUi } from '../ui';
+import { NavbarUi } from '../ui';
 import { Box } from '@mui/material'
 
 

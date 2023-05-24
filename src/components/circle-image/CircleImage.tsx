@@ -1,32 +1,30 @@
-import { useGetOrigin } from '@/hooks/useGetOrigin';
-import { Button, useTheme, Menu } from '@mui/material';
+import { useTheme } from '@mui/material';
 import Image from 'next/image';
 
 
 
+interface Props {
+    src: string,
+}
 
-
-export const CircleImage = () => {
+export const CircleImage = ({ src }: Props) => {
     const theme = useTheme()
-    const { origin } = useGetOrigin()
-    const circleSyyle: React.CSSProperties = {
-        borderRadius: '40rem',
-        backgroundColor: theme.palette.secondary.main,
-        color: '#ffffff',
-        padding: '4px 15px'
-    }
-
 
     return (
         <div style={{ position: 'relative', width: '100%' }}>
-            <div
+            <Image
+                src={src}
+                alt="Imagen"
+                width={0}
+                height={0}
+                sizes="100vw"
                 style={{
-                    borderRadius: '40rem',
                     width: '100%',
-                    backgroundImage: `url(${origin}/assets/team-working.jpg)`,
-                    height: 400,
-                }}
-            />
+                    height: '400px',
+                    borderRadius: '40rem',
+                    objectFit: 'cover',
+                    objectPosition: 'right top'
+                }} />
             <div
                 style={{
                     borderRadius: '40rem',
@@ -35,8 +33,8 @@ export const CircleImage = () => {
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    backgroundColor: 'rgba(128, 128, 128, 0.5)',
-                    opacity: 0.5,
+                    backgroundColor: theme.palette.secondary.main,
+                    opacity: 0.8,
                 }}
             ></div>
         </div>
