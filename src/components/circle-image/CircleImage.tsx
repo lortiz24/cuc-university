@@ -1,17 +1,17 @@
-import { useTheme, Typography, Grid } from '@mui/material';
+import { useTheme, Typography, Grid, Box } from '@mui/material';
 import Image from 'next/image';
 import MyGradiantBackground from './ColorBackground';
 
 
 interface Props {
     src: string,
+    height: string,
 }
-export const CircleImage = ({ src }: Props) => {
+export const CircleImage = ({ src, height = '500px' }: Props) => {
     const theme = useTheme()
-
     return (
         <div
-            style={{ position: 'relative', width: '100%', height: 400 }}
+            style={{ position: 'relative', width: '100%', height }}
         >
             <Image
                 src={src}
@@ -22,7 +22,7 @@ export const CircleImage = ({ src }: Props) => {
                 style={{
                     position: "absolute",
                     width: '100%',
-                    height: '400px',
+                    height,
                     borderRadius: '40rem',
                     objectFit: 'cover',
                     objectPosition: 'right top',
@@ -30,10 +30,15 @@ export const CircleImage = ({ src }: Props) => {
                 }} />
             <MyGradiantBackground color={theme.palette.secondary.main} borderRadius='40rem' />
 
-            <div style={{
-                zIndex: 4000,
-                padding: 50,
-            }}>
+            <Box
+                sx={{
+                    height: '500px',
+                    paddingX: { xs: 2, sm: 10 },
+                }}
+                display={'flex'}
+                flexDirection={'column'}
+                justifyContent={'center'}
+            >
                 <Grid container spacing={2}>
                     <Grid item xs={6} md={6}>
                     </Grid>
@@ -53,10 +58,10 @@ export const CircleImage = ({ src }: Props) => {
                     </Grid>
 
                 </Grid>
-            </div>
+            </Box>
 
 
-        </div>
+        </div >
 
 
     )

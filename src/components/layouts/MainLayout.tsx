@@ -29,19 +29,21 @@ export const MainLayout = ({ children, title = 'Cuc University' }: Props) => {
 
             <NavbarUi />
 
-            {/* <Box sx={{
-                padding: '10px 40px'
+            <Box sx={{
+                paddingX: { xs:2,sm:15 },
+                paddingBottom: 20,
             }}>
                 {children}
-            </Box> */}
+            </Box>
 
-            <Container sx={
+            {/* <Container sx={
                 {
-                    marginTop: 3
+                    marginTop: 3,
+                    paddingBottom: 20,
                 }
             }>
                 {children}
-            </Container>
+            </Container> */}
 
         </Box>
     )
