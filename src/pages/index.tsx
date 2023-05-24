@@ -8,6 +8,7 @@ export default function Home() {
   return (
     <MainLayout title='Cuc University'>
       <CircleImage src={`/assets/team-working.jpg`}/>
+      
     </MainLayout>
   )
 }
