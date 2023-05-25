@@ -16,6 +16,9 @@ import { useTheme } from '@mui/material';
 import { ActiveLink } from '../active-link/ActiveLink';
 import { useRouter } from 'next/router';
 import styles from './Navbar.module.css'
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+
 
 interface Props {
     window?: () => Window;
@@ -26,6 +29,7 @@ const drawerWidth = 240;
 export interface MenuItem {
     path: string;
     name: string;
+    dropdown?: MenuItem[];
 }
 const navItems: MenuItem[] = [
     {
@@ -38,7 +42,17 @@ const navItems: MenuItem[] = [
     },
     {
         name: 'Academic Programs',
-        path: '/academic-programs'
+        path: '/academic-programs',
+        dropdown: [
+            {
+              name: 'Undergraduate Programs',
+              path: '/program-1',
+            },
+            {
+              name: 'Graduate Programs',
+              path: '/program-2',
+            },
+          ],
     },
     {
         name: 'Students',
@@ -62,10 +76,17 @@ const origin = (typeof window === 'undefined') ? '' : window.location.origin;
 export const NavbarUi = (props: Props) => {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
+    const [showDropdown, setShowDropdown] = React.useState(false);
+    const [selectedItem, setSelectedItem] = React.useState("");
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
     };
     const router = useRouter()
+
+    const toggleDropdown = (item:string) => {
+        setShowDropdown(!showDropdown);
+        setSelectedItem(item);
+      };
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
@@ -90,7 +111,7 @@ export const NavbarUi = (props: Props) => {
     return (
         <>
             <AppBar
-            position='static'
+                position='static'
                 sx={{
 
                     marginTop: { xs: 4, md: 4 },
@@ -124,32 +145,39 @@ export const NavbarUi = (props: Props) => {
 
                     <Box sx={{ display: { xs: 'none', lg: 'block' } }}>
                         <nav className={styles['menu-container']} >
-                            {navItems.map((menuItem) => (
-                                <>
-                                    <ActiveLink href={menuItem.path} text={menuItem.name} key={menuItem.name} />
-                                </>
-                            ))}
+                            {
+                                navItems.map((menuItem) => (
+                                    <React.Fragment key={menuItem.name}>
+                                        {menuItem.dropdown ? (
+                                            <div className="dropdown-container">
+                                                <button
+                                                    className={`dropdown-button ${selectedItem === menuItem.path ? 'active' : ''}`}
+                                                    onClick={() => toggleDropdown(menuItem.path)}
+                                                >
+                                                    {menuItem.name}
+                                                </button>
+                                                {showDropdown && selectedItem === menuItem.path && (
+                                                    <div className="dropdown-menu">
+                                                        {menuItem.dropdown.map((item) => (
+                                                            <a href={item.path} key={item.name}>{item.name}</a>
+                                                        ))}
+                                                    </div>
+                                                )}
+                                            </div>
+                                        ) : (
+                                            <ActiveLink
+                                                text={menuItem.name}
+                                                href={menuItem.path}
+                                            />
+                                        )}
+                                    </React.Fragment>
+                                ))
+                            }
                         </nav>
                     </Box>
                 </Toolbar>
             </AppBar>
-            <Box component="nav">
-                <Drawer
-                    container={container}
-                    variant="temporary"
-                    open={mobileOpen}
-                    onClose={handleDrawerToggle}
-                    ModalProps={{
-                        keepMounted: true, // Better open performance on mobile.
-                    }}
-                    sx={{
-                        display: { xs: 'block', lg: 'none' },
-                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-                    }}
-                >
-                    {drawer}
-                </Drawer>
-            </Box>
+
         </>
 
     );
