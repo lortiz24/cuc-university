@@ -9,6 +9,7 @@ interface Props {
 }
 export const CircleImage = ({ src, height = '500px' }: Props) => {
     const theme = useTheme()
+    const borderRadius = '20rem'
     return (
         <div
             style={{ position: 'relative', width: '100%', height }}
@@ -23,12 +24,12 @@ export const CircleImage = ({ src, height = '500px' }: Props) => {
                     position: "absolute",
                     width: '100%',
                     height,
-                    borderRadius: '20rem',
+                    borderRadius,
                     objectFit: 'cover',
                     objectPosition: 'right -8rem',
                     zIndex: -3
                 }} />
-            <MyGradiantBackground color={theme.palette.secondary.main} borderRadius='20rem' />
+            <MyGradiantBackground color={theme.palette.secondary.main} borderRadius={borderRadius} />
 
             <Box
                 sx={{
@@ -41,6 +42,18 @@ export const CircleImage = ({ src, height = '500px' }: Props) => {
             >
                 <Grid container spacing={2}>
                     <Grid item xs={6} md={6}>
+                        <div style={{ height: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-end' }}>
+                            <Image
+                                src={'/assets/mano.png'}
+                                alt="Imagen"
+                                width={300}
+                                height={300}
+                                style={{
+                                    objectFit: 'cover',
+                                    zIndex: 4
+                                }} />
+                        </div>
+
                     </Grid>
                     <Grid item xs={6} md={6} >
                         <Typography
@@ -53,7 +66,7 @@ export const CircleImage = ({ src, height = '500px' }: Props) => {
                         <Typography
                             variant='body2'
                             color={'#FFFFFF'}
-                            fontSize={{ xs: 10, sm: 15 }}
+                            fontSize={{ xs: 20, sm: 17 }}
                         >CUC Unisersity is dedicated to providing students with the essential knowledge and skils to thrive in the competitive global marketplace.</Typography>
                     </Grid>
 

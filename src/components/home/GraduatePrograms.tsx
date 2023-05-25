@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { Typography, Grid, Button, useTheme } from '@mui/material';
+import { Grid, Button, useTheme } from '@mui/material';
 import { ProgramCard } from './ProgramCard';
 import { graduatePrograms } from '@/data/programs';
 
