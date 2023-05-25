@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import { NavbarUi } from '../ui';
-import { Box, Container } from '@mui/material'
+import { Box } from '@mui/material'
 
 
 interface Props {
@@ -29,12 +29,21 @@ export const MainLayout = ({ children, title = 'Cuc University' }: Props) => {
 
             <NavbarUi />
 
-            <div style={{
+            {/* <div style={{
                 padding: '0rem 10rem',
                 paddingBottom: 20,
             }}>
                 {children}
-            </div>
+            </div> */}
+
+
+            <Box sx={{
+                paddingX: { xs: 1, md: 15 },
+                paddingBottom: 20,
+            }}>
+                {children}
+            </Box>
+
 
             {/* <Container sx={
                 {

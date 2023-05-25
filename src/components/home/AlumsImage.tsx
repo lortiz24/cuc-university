@@ -3,7 +3,7 @@ import React from 'react'
 
 export const AlumsImage = () => {
     return (
-        <div style={{ height: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'left', alignItems: 'flex-end' }}>
+        <div style={{ height: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-end' }}>
             <Image
                 src={'/assets/Alumna-1-1.png'}
                 alt='aluma1'
@@ -12,7 +12,7 @@ export const AlumsImage = () => {
                 sizes="100vw"
                 style={{
                     position: 'absolute',
-                    width: '500px',
+                    width: '460px',
                     zIndex: 1
                 }}
             />
@@ -25,8 +25,8 @@ export const AlumsImage = () => {
                 sizes="100vw"
                 style={{
                     position: 'absolute',
-                    width: '500px',
-                    marginLeft: '15rem',
+                    width: '450px',
+                    marginLeft: '20rem',
                     zIndex: 2
                 }}
             />
