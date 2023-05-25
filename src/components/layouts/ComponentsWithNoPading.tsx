@@ -10,7 +10,6 @@ interface Props {
 export const ComponentsWithNoPading = ({ children }: Props) => {
     return (
         <Box sx={{
-            paddingBottom: 20,
         }}>
             {children}
         </Box>

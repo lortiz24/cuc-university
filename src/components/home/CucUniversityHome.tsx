@@ -1,4 +1,4 @@
-import { Grid, Typography, useTheme, Box } from '@mui/material'
+import { Grid, Typography } from '@mui/material'
 import { AlumsImage } from './AlumsImage'
 
 export const CucUniversityHome = () => {

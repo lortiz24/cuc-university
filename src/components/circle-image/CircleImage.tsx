@@ -15,6 +15,7 @@ export const CircleImage = ({ src, height = '500px' }: Props) => {
             style={{ position: 'relative', width: '100%', height }}
         >
             <Image
+            className='img-background-circle'
                 src={src}
                 alt="Imagen"
                 width={0}
@@ -26,7 +27,6 @@ export const CircleImage = ({ src, height = '500px' }: Props) => {
                     height,
                     borderRadius,
                     objectFit: 'cover',
-                    objectPosition: 'right -8rem',
                     zIndex: -3
                 }} />
             <MyGradiantBackground color={theme.palette.secondary.main} borderRadius={borderRadius} />
@@ -34,15 +34,14 @@ export const CircleImage = ({ src, height = '500px' }: Props) => {
             <Box
                 sx={{
                     height: '500px',
-                    paddingX: { xs: 2, sm: 10 },
                 }}
                 display={'flex'}
                 flexDirection={'column'}
                 justifyContent={'center'}
             >
-                <Grid container spacing={2}>
-                    <Grid item xs={6} md={6}>
-                        <div style={{ height: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-end' }}>
+                <Grid container spacing={2} >
+                    <Grid item xs={12} md={6}>
+                        <div style={{ height: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-end', }}>
                             <Image
                                 src={'/assets/mano.png'}
                                 alt="Imagen"
@@ -52,10 +51,26 @@ export const CircleImage = ({ src, height = '500px' }: Props) => {
                                     objectFit: 'cover',
                                     zIndex: 4
                                 }} />
+                            {/* <Image
+                                src={'/assets/start.png'}
+                                alt='aluma2'
+                                width={300}
+                                height={300}
+                                sizes="100vw"
+                                style={{
+                                    zIndex: 2,
+                                    objectFit: 'cover',
+                                    objectPosition:'0px top',
+                                    top:'-2.5rem',
+                                    right:'55rem'
+                                }}
+                            /> */}
                         </div>
 
                     </Grid>
-                    <Grid item xs={6} md={6} >
+                    <Grid item xs={12} md={6}  sx={{
+                        padding:'10rem 10rem',
+                    }}>
                         <Typography
                             variant='h2'
                             color={theme.palette.primary.main}
