@@ -15,7 +15,7 @@ export const CircleImage = ({ src, height = '500px' }: Props) => {
             style={{ position: 'relative', width: '100%', height }}
         >
             <Image
-            className='img-background-circle'
+                className='img-background-circle'
                 src={src}
                 alt="Imagen"
                 width={0}
@@ -68,8 +68,8 @@ export const CircleImage = ({ src, height = '500px' }: Props) => {
                         </div>
 
                     </Grid>
-                    <Grid item xs={12} md={6}  sx={{
-                        padding:'10rem 10rem',
+                    <Grid item xs={12} md={6} sx={{
+                        padding: '10rem 10rem',
                     }}>
                         <Typography
                             variant='h2'

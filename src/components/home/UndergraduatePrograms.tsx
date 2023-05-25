@@ -3,6 +3,7 @@ import { Typography, Grid, Button } from '@mui/material';
 import { ProgramCard } from './ProgramCard';
 import { underGraduatePrograms } from '@/data/programs';
 import { graduatePrograms } from '@/data/programs';
+import Image from 'next/image';
 
 
 export const UndergraduatePrograms = () => {
@@ -10,6 +11,20 @@ export const UndergraduatePrograms = () => {
         <div style={{
             marginTop: '4rem'
         }}>
+            <Image
+                src={'/assets/figura2.png'}
+                alt='Alumno-with-notebook'
+                width={0}
+                height={0}
+                sizes="100vw"
+                style={{
+                    position: 'absolute',
+                    width: '60rem',
+                    marginLeft: '-20rem',
+                    marginBottom:'4rem',
+                    zIndex: -2
+                }}
+            />
             <Grid container
                 display={'flex'}
                 justifyContent={'center'}>
@@ -52,7 +67,7 @@ export const UndergraduatePrograms = () => {
                     ))}
                 </div>
 
-               
+
 
 
             </Grid>

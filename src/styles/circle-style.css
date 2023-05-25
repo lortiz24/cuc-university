@@ -2,7 +2,7 @@
   object-position: right -8rem;
 }
 
-@media (max-width: 1355px) {
+@media (max-width: 1400px) {
   .img-background-circle {
     object-position: right 0rem;
   }
