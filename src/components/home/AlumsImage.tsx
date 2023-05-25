@@ -3,16 +3,34 @@ import React from 'react'
 
 export const AlumsImage = () => {
     return (
-        <div>
+        <div style={{ height: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'left', alignItems: 'flex-end' }}>
             <Image
                 src={'/assets/Alumna-1-1.png'}
-                alt="Imagen"
-                width={200}
-                height={200}
+                alt='aluma1'
+                width={0}
+                height={0}
+                sizes="100vw"
                 style={{
-                    objectFit: 'cover',
-                    objectPosition: 'bottom',
-                }} />
+                    position: 'absolute',
+                    width: '500px',
+                    zIndex: 1
+                }}
+            />
+
+            <Image
+                src={'/assets/Alumno1-1.png'}
+                alt='aluma2'
+                width={0}
+                height={0}
+                sizes="100vw"
+                style={{
+                    position: 'absolute',
+                    width: '500px',
+                    marginLeft: '15rem',
+                    zIndex: 2
+                }}
+            />
         </div>
+
     )
 }

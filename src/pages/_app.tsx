@@ -1,7 +1,8 @@
 import '@/styles/globals.css'
 import { darkTheme, lightTheme } from '@/themes'
 import { ThemeProvider, CssBaseline } from '@mui/material'
-import '../styles/circle-style.css'
+import '@/styles/AlumsImage-style.css'
+import '@/styles/circle-style.css'
 
 
 

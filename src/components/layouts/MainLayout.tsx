@@ -29,12 +29,12 @@ export const MainLayout = ({ children, title = 'Cuc University' }: Props) => {
 
             <NavbarUi />
 
-            <Box sx={{
-                paddingX: { xs:2,sm:15 },
+            <div style={{
+                padding: '0rem 10rem',
                 paddingBottom: 20,
             }}>
                 {children}
-            </Box>
+            </div>
 
             {/* <Container sx={
                 {

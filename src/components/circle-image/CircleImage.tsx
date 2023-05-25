@@ -23,12 +23,12 @@ export const CircleImage = ({ src, height = '500px' }: Props) => {
                     position: "absolute",
                     width: '100%',
                     height,
-                    borderRadius: '40rem',
+                    borderRadius: '20rem',
                     objectFit: 'cover',
-                    objectPosition: 'right top',
-                    zIndex: -999
+                    objectPosition: 'right -8rem',
+                    zIndex: -3
                 }} />
-            <MyGradiantBackground color={theme.palette.secondary.main} borderRadius='40rem' />
+            <MyGradiantBackground color={theme.palette.secondary.main} borderRadius='20rem' />
 
             <Box
                 sx={{
