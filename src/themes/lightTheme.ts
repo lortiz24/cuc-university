@@ -11,6 +11,9 @@ export const lightTheme = createTheme({
         },
         text: {
             primary: '#405262'
+        },
+        background: {
+            paper: '#F1F1F1'
         }
     },
     breakpoints: {

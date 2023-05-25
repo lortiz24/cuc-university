@@ -1,8 +1,7 @@
 import { Inter } from 'next/font/google'
 import { MainLayout } from '@/components/layouts/MainLayout'
 import { CircleImage } from '@/components/circle-image/CircleImage'
-import { Grid, Typography, useTheme, Box } from '@mui/material'
-import { AlumsImage } from '@/components/home/AlumsImage'
+import { useTheme } from '@mui/material'
 import { ProgramsHome } from '@/components/home/ProgramsHome'
 import { CucUniversityHome } from '@/components/home/CucUniversityHome'
 

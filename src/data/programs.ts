@@ -16,16 +16,16 @@ export const graduatePrograms: ProgramItem[] = [
     {
         title: 'Master of Science in International Business Administration',
         path: '/master-of-science-in-international-business-administration',
-        publicImg: '/assets/team-work-2.jpg',
+        publicImg: '/assets/master-businnes.jpg',
     },
     {
         title: 'Mastter of Science in Marketing',
         path: '/mastter-of-science-in-marketing',
-        publicImg: '/assets/team-work-3.jpg',
+        publicImg: '/assets/master-marketing.jpg',
     },
     {
         title: 'Master of Science in Mass Media Communication and Media Technology',
         path: '/master-of-science-in-mass-media-communication-and-media-technology',
-        publicImg: '/assets/team-work-3.jpg',
+        publicImg: '/assets/master-comunication.jpg',
     },
 ]

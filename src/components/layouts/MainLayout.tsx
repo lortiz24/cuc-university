@@ -38,7 +38,7 @@ export const MainLayout = ({ children, title = 'Cuc University' }: Props) => {
 
 
             <Box sx={{
-                paddingX: { xs: 1, md: 15 },
+                paddingX: { xs: 1, sm: 5, md: 15 },
                 paddingBottom: 20,
             }}>
                 {children}
