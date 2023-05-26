@@ -1,4 +1,4 @@
-import { useTheme, Typography, Grid, Box } from '@mui/material';
+import { Box } from '@mui/material';
 
 interface IMyGradiantBackgroundProps {
     color: string,

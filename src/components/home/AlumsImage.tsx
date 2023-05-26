@@ -5,11 +5,11 @@ import React from 'react'
 export const AlumsImage = () => {
 
     const { origin } = useGetOrigin()
-    
+
     return (
         <div style={{
             height: '100%',
-            width:'100%',
+            width: '100%',
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'center',
@@ -18,7 +18,6 @@ export const AlumsImage = () => {
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
             backgroundSize: '100%',
-            // backgroundColor:"red"
         }}>
             <Image
                 src={'/assets/Alumna-1-1.png'}
