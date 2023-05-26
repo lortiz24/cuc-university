@@ -43,7 +43,7 @@ export const CircleImage = ({ src, height = '500px' }: Props) => {
                     <Grid item xs={12} md={6}>
                         <div style={{ height: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-end', }}>
                             <Image
-                                src={'/assets/mano.png'}
+                                src={'/assets/mano-start.png'}
                                 alt="Imagen"
                                 width={300}
                                 height={300}
@@ -68,15 +68,23 @@ export const CircleImage = ({ src, height = '500px' }: Props) => {
                         </div>
 
                     </Grid>
-                    <Grid item xs={12} md={6} sx={{
-                        padding: '10rem 10rem',
-                    }}>
+                    <Grid
+                        item
+                        xs={12} md={6}
+                        display={'flex'}
+                        justifyContent={'center'}
+                        flexDirection={'column'}
+                        sx={{
+                            padding: '10rem 10rem',
+
+                        }}>
                         <Typography
                             variant='h2'
                             color={theme.palette.primary.main}
                             fontWeight="bold"
-                            fontSize={{ xs: 20, sm: 35 }}
+                            fontSize={{ xs: 20, sm: 40 }}
                             marginBottom={{ xs: 2, md: 4 }}
+                            textAlign={'end'}
                         >With a primary emphasis on business education,</Typography>
                         <Typography
                             variant='body2'

@@ -7,12 +7,9 @@ import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import { useTheme } from '@mui/material';
 import { ActiveLink } from '../active-link/ActiveLink';
 import { useRouter } from 'next/router';
 import styles from './Navbar.module.css'

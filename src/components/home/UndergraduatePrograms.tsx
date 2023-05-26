@@ -58,9 +58,11 @@ export const UndergraduatePrograms = () => {
                     >Undergradute Programs</Button>
                 </Grid>
                 <div style={{
+                    marginTop:'2rem',
                     display: 'flex',
                     justifyContent: 'center',
-                    flexWrap: 'wrap'
+                    flexWrap: 'wrap',
+                    gap:'2rem'
                 }}>
                     {underGraduatePrograms.map((programItem, index) => (
                         <ProgramCard key={index} programItem={programItem} />

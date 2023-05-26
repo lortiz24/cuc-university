@@ -1,9 +1,20 @@
+import { useGetOrigin } from '@/hooks/useGetOrigin'
 import Image from 'next/image'
 import React from 'react'
 
 export const AlumsImage = () => {
+
+    const { origin } = useGetOrigin()
+    
     return (
-        <div style={{ height: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-end' }}>
+        <div style={{
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'center',
+            alignItems: 'flex-end',
+            backgroundImage: `url(${origin}/assets/figura1.png)`
+        }}>
             <Image
                 src={'/assets/Alumna-1-1.png'}
                 alt='alumna-with-cellphone'
@@ -30,7 +41,7 @@ export const AlumsImage = () => {
                     zIndex: 2
                 }}
             />
-            <Image
+           {/*  <Image
                 src={'/assets/figura1.png'}
                 alt='figuras'
                 width={0}
@@ -40,10 +51,10 @@ export const AlumsImage = () => {
                     position: 'absolute',
                     width: '60rem',
                     marginLeft: '10rem',
-                    marginBottom:'4rem',
+                    marginBottom: '4rem',
                     zIndex: -2
                 }}
-            />
+            /> */}
         </div>
 
     )

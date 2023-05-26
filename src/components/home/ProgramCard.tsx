@@ -23,7 +23,6 @@ export const ProgramCard = ({ programItem }: Props) => {
                 md={6}
             >  */}
             <div style={{
-                margin: '0px 2rem',
                 marginTop: '2rem'
             }}>
                 <Card sx={{ width: 200, borderRadius }}>
