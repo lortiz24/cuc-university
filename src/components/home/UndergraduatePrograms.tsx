@@ -1,11 +1,15 @@
 import React from 'react'
 import { Typography, Grid, Button, Box } from '@mui/material';
 import { ProgramCard } from './ProgramCard';
-import { underGraduatePrograms } from '@/data/programs';
 import { useGetOrigin } from '@/hooks/useGetOrigin';
+import { ProgramItem } from '@/interfaces/Programs.interface';
 
 
-export const UndergraduatePrograms = () => {
+interface Props {
+    underGraduatePrograms: ProgramItem[];
+}
+
+export const UndergraduatePrograms = ({ underGraduatePrograms }: Props) => {
     const { origin } = useGetOrigin()
     return (
         <Box sx={{
@@ -45,7 +49,6 @@ export const UndergraduatePrograms = () => {
                 </Grid>
                 <Grid
                     item
-                    spacing={12}
                     display={'flex'}
                     justifyContent={'center'}
                     width={'100%'}

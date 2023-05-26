@@ -2,12 +2,15 @@
 import React from 'react'
 import { Grid, Button, useTheme } from '@mui/material';
 import { ProgramCard } from './ProgramCard';
-import { graduatePrograms } from '@/data/programs';
+import { ProgramItem } from '@/interfaces/Programs.interface';
 
 
+interface Props {
+    graduatePrograms: ProgramItem[];
+}
 
 
-export const GraduatePrograms = () => {
+export const GraduatePrograms = ({ graduatePrograms }: Props) => {
 
     const theme = useTheme()
     return (
@@ -22,7 +25,6 @@ export const GraduatePrograms = () => {
                 justifyContent={'center'}>
                 <Grid
                     item
-                    spacing={12}
                     display={'flex'}
                     justifyContent={'center'}
                     width={'100%'}
@@ -39,11 +41,11 @@ export const GraduatePrograms = () => {
 
 
                 <div style={{
-                    marginTop:'2rem',
+                    marginTop: '2rem',
                     display: 'flex',
                     justifyContent: 'center',
                     flexWrap: 'wrap',
-                    gap:'2rem'
+                    gap: '2rem'
                 }}>
                     {graduatePrograms.map((programItem, index) => (
                         <ProgramCard key={index} programItem={programItem} />
