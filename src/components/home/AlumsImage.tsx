@@ -27,11 +27,10 @@ export const AlumsImage = () => {
             backgroundPosition: 'bottom',
             backgroundSize: 'contain',
         }}>
-            
+
             <Box sx={{
                 height: '100%',
                 width: '100%',
-                backgroundColor:'red',
                 display: 'flex',
                 flexDirection: 'row',
                 justifyContent: 'center',
@@ -44,10 +43,8 @@ export const AlumsImage = () => {
             }} />
             <Box sx={{
                 position: 'absolute',
-                left: '25%',
                 height: '100%',
                 width: '100%',
-                // width: 'calc(100% - 20px)',
                 display: 'flex',
                 flexDirection: 'row',
                 justifyContent: 'center',
@@ -57,33 +54,7 @@ export const AlumsImage = () => {
                 backgroundPosition: 'bottom ',
                 backgroundSize: 'contain',
             }} />
-            {/* <Image
-                src={'/assets/Alumna-1-1.png'}
-                alt='alumna-with-cellphone'
-                width={0}
-                height={0}
-                sizes="100vw"
-                style={{
-                    maxHeight:'100%',
-                    position: 'absolute',
-                    width: '460px',
-                    zIndex: 1,
-                }}
-            />
 
-            <Image
-                src={'/assets/Alumno1-1.png'}
-                alt='Alumno-with-notebook'
-                width={0}
-                height={0}
-                sizes="100vw"
-                style={{
-                    position: 'absolute',
-                    width: '450px',
-                    marginLeft,
-                    zIndex: 2
-                }}
-            /> */}
         </Box>
 
     )

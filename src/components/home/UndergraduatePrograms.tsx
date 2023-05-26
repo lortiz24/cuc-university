@@ -31,7 +31,6 @@ export const UndergraduatePrograms = () => {
                 justifyContent={'center'}>
                 <Grid
                     item
-                    spacing={12}
                     display={'flex'}
                     justifyContent={'center'}
                     width={'100%'}

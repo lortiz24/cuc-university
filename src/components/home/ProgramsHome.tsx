@@ -14,7 +14,7 @@ export const ProgramsHome = () => {
             <Grid container width={'100%'} >
                 <Grid
                     item
-                    minHeight={{ xs: '20rem', sm: '30rem', md: '40rem' }}
+                    minHeight={'40rem'}
                     width={'100%'}>
                     <UndergraduatePrograms />
                 </Grid>
