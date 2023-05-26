@@ -13,15 +13,12 @@ interface Props {
 
 export const MainLayout = ({ children, title = 'Cuc University', description = 'Informacion sobre Cuc university' }: Props) => {
     return (
-        <Box sx={{
-            flexFlow: 1
-        }}>
+        <>
             <Head>
                 <title>{title}</title>
                 <meta name="author" content="Cuc University" />
                 <meta name="description" content={description} />
                 <meta name="keywords" content={`${title}`} />
-
                 <meta property="og:title" content={`Información sobre ${title}`} />
                 <meta property="og:description" content={`Esta es la página sobre ${title}`} />
                 {/* <meta property="og:image" content={`${origin}/img/banner.png`} /> */}
@@ -29,6 +26,7 @@ export const MainLayout = ({ children, title = 'Cuc University', description = '
             </Head>
 
             <NavbarUi />
+
 
             {/* <div style={{
                 padding: '0rem 10rem',
@@ -49,7 +47,6 @@ export const MainLayout = ({ children, title = 'Cuc University', description = '
             }>
                 {children}
             </Container> */}
-
-        </Box>
+        </>
     )
 }

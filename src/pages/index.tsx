@@ -1,6 +1,4 @@
-import { Inter } from 'next/font/google'
 import { MainLayout } from '@/components/layouts/MainLayout'
-import { CircleImage } from '@/components/circle-image/CircleImage'
 import { ProgramsHome } from '@/components/home/ProgramsHome'
 import { CucUniversityHome } from '@/components/home/CucUniversityHome'
 import { ComponentWithPadding } from '@/components/layouts/ComponentWithPadding'
@@ -15,7 +13,6 @@ interface Props {
   graduatePrograms: ProgramItem[];
   underGraduatePrograms: ProgramItem[];
 }
-
 
 const HomePage: NextPage<Props> = ({ graduatePrograms, underGraduatePrograms }) => {
   return (
@@ -44,6 +41,5 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
     }
   }
 }
-
 
 export default HomePage
