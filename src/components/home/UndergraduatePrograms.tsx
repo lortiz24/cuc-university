@@ -9,6 +9,7 @@ export const UndergraduatePrograms = () => {
     const { origin } = useGetOrigin()
     return (
         <Box sx={{
+            marginTop: 4,
             height: '100%',
             width: '100%',
             display: 'flex',
@@ -20,7 +21,6 @@ export const UndergraduatePrograms = () => {
                 lg: 'start',
                 xl: 'center',
             },
-            alignItems: 'flex-end',
             backgroundImage: `url(${origin}/assets/figura2.png)`,
             backgroundRepeat: 'no-repeat',
             backgroundPosition: { xs: 'top 15rem right 5rem', sm: 'left' },

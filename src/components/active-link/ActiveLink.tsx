@@ -52,8 +52,6 @@ export const ActiveLink = ({ text, href }: IActiveLinkProps) => {
     const open = Boolean(anchorEl);
     const buttonCircleStyle: React.CSSProperties = {
         borderRadius: '40rem',
-        backgroundColor: theme.palette.secondary.main,
-        color: '#ffffff',
         padding: '4px 15px'
     }
 
@@ -76,7 +74,7 @@ export const ActiveLink = ({ text, href }: IActiveLinkProps) => {
                 ?
                 <Link
                     style={
-                        router.asPath === href ? { color: theme.palette.primary.main, ...buttonCircleStyle } : { color: theme.palette.secondary.main, ...buttonCircleStyle }}
+                        router.asPath === href ? { backgroundColor: theme.palette.primary.main, ...buttonCircleStyle } : { backgroundColor: theme.palette.secondary.main, color: '#ffffff', ...buttonCircleStyle }}
                     href={href} >{text}</Link>
 
                 :
