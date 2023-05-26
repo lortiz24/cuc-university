@@ -1,35 +1,33 @@
 import { useTheme, Typography, Grid, Box } from '@mui/material';
 import Image from 'next/image';
 import MyGradiantBackground from './ColorBackground';
+import { useGetOrigin } from '@/hooks/useGetOrigin';
 
 
 interface Props {
     src: string,
-    height: string,
+    height?: string,
 }
-export const CircleImage = ({ src, height = '500px' }: Props) => {
+export const CircleImage = ({ src, height = '600px' }: Props) => {
+    const { origin } = useGetOrigin()
     const theme = useTheme()
-    const borderRadius = '20rem'
+    const borderRadiusMd = '20rem'
+    const borderRadiusSm = '15rem'
+    const borderRadiusXs = '5rem'
     return (
-        <div
-            style={{ position: 'relative', width: '100%', height }}
+        <Box
+            sx={{
+                borderRadius: { xs: borderRadiusXs, sm: borderRadiusSm, md: borderRadiusMd },
+                position: 'relative',
+                width: '100%',
+                minHeight: height,
+                backgroundImage: `url(${origin}/assets/team-work-1-black_and_white.jpg)`,
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+                zIndex: -10
+            }}
         >
-            <Image
-                className='img-background-circle'
-                src={src}
-                alt="Imagen"
-                width={0}
-                height={0}
-                sizes="100vw"
-                style={{
-                    position: "absolute",
-                    width: '100%',
-                    height,
-                    borderRadius,
-                    objectFit: 'cover',
-                    zIndex: -3
-                }} />
-            <MyGradiantBackground color={theme.palette.secondary.main} borderRadius={borderRadius} />
+            <MyGradiantBackground color={theme.palette.secondary.main} borderRadiusMd={borderRadiusMd} borderRadiusSm={borderRadiusSm} borderRadiusXs={borderRadiusXs} />
 
             <Box
                 sx={{
@@ -41,7 +39,13 @@ export const CircleImage = ({ src, height = '500px' }: Props) => {
             >
                 <Grid container spacing={2} >
                     <Grid item xs={12} md={6}>
-                        <div style={{ height: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-end', }}>
+                        <div style={{
+                            height: '100%',
+                            display: 'flex',
+                            flexDirection: 'row',
+                            justifyContent: 'center',
+                            alignItems: 'flex-end',
+                        }}>
                             <Image
                                 src={'/assets/mano-start.png'}
                                 alt="Imagen"
@@ -51,7 +55,6 @@ export const CircleImage = ({ src, height = '500px' }: Props) => {
                                     objectFit: 'cover',
                                     zIndex: 4
                                 }} />
-                            
                         </div>
                     </Grid>
                     <Grid
@@ -83,7 +86,7 @@ export const CircleImage = ({ src, height = '500px' }: Props) => {
             </Box>
 
 
-        </div >
+        </Box >
 
 
     )

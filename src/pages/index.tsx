@@ -16,7 +16,7 @@ export default function Home() {
 
         <ComponentWithPadding>
           <CucUniversityHome />
-          <CircleImage src={`/assets/team-work-1-black_and_white.jpg`} height='600px' />
+          <CircleImage src={`/assets/team-work-1-black_and_white.jpg`}  />
         </ComponentWithPadding>
 
         <ComponentsWithNoPading>

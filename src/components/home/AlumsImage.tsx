@@ -18,6 +18,7 @@ export const AlumsImage = () => {
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
             backgroundSize: '100%',
+            // backgroundColor:"red"
         }}>
             <Image
                 src={'/assets/Alumna-1-1.png'}
