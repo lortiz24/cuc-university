@@ -23,7 +23,7 @@ export const CircleImage = ({ src, height = '600px' }: Props) => {
                 backgroundImage: `url(${origin}/assets/team-work-1-black_and_white.jpg)`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
-                zIndex: -10
+                zIndex: -10,
             }}
         >
             <MyGradiantBackground color={theme.palette.secondary.main} borderRadiusMd={borderRadiusMd} borderRadiusSm={borderRadiusSm} borderRadiusXs={borderRadiusXs} />

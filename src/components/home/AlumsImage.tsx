@@ -15,30 +15,52 @@ export const AlumsImage = () => {
 
     return (
         <Box sx={{
+            position: 'relative', // Establece el posicionamiento relativo en el contenedor principal
             height: '100%',
             width: '100%',
             display: 'flex',
             flexDirection: 'row',
-            justifyContent: {
-                xs: 'start',
-                sm: 'start',
-                md: 'start',
-                lg: 'start',
-                xl: 'center',
-            },
+            justifyContent: 'center',
             alignItems: 'flex-end',
-            backgroundImage: `url(${origin}/assets/figura1.png)`,
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            backgroundSize: '100%',
+
         }}>
-            <Image
+            <Box sx={{
+                height: '100%',
+                width: '100%',
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'flex-end',
+                backgroundImage: `url(${origin}/assets/Alumna-1-1.png)`,
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'bottom',
+                backgroundSize: 'contain',
+
+            }} />
+            <Box sx={{
+                position: 'absolute', // Establece el posicionamiento absoluto en el primer Box interno
+                top: 0, // Coloca el primer Box en la parte superior
+                left: 0, // Coloca el primer Box a la izquierda
+                height: '100%',
+                width: '100%',
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'flex-end',
+                backgroundImage: `url(${origin}/assets/Alumno1-1.png)`,
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'bottom',
+                backgroundSize: 'contain',
+
+            }} />
+            {/* <Image
                 src={'/assets/Alumna-1-1.png'}
                 alt='alumna-with-cellphone'
                 width={0}
                 height={0}
                 sizes="100vw"
                 style={{
+                    maxHeight:'100%',
                     position: 'absolute',
                     width: '460px',
                     zIndex: 1,
@@ -57,7 +79,7 @@ export const AlumsImage = () => {
                     marginLeft,
                     zIndex: 2
                 }}
-            />
+            /> */}
         </Box>
 
     )

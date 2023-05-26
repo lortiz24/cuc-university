@@ -1,9 +1,10 @@
 import { Grid, Typography } from '@mui/material'
 import { AlumsImage } from './AlumsImage'
+import { CircleImage } from '../circle-image/CircleImage'
 
 export const CucUniversityHome = () => {
     return (
-        <Grid container paddingX={{ xs: 2, sm: 5, md: 10, lg: 15 }}>
+        <Grid container >
             <Grid item xs={12} sm={12} lg={3} >
                 <div style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'start', }}>
                     <Typography
@@ -24,8 +25,11 @@ export const CucUniversityHome = () => {
                     </Typography>
                 </div>
             </Grid>
-            <Grid item xs={12} sm={12} lg={8} marginTop={{xs:2,sm:0}} minHeight={{ xs: '20rem', sm: '30rem', md: '40rem' }}>
+            <Grid item xs={12} sm={12} lg={8} marginTop={{ xs: 2, sm: 0 }} minHeight={{ xs: '20rem', sm: '30rem', md: '40rem' }}>
                 <AlumsImage />
+            </Grid>
+            <Grid item xs={12}  minHeight={{ xs: '20rem', sm: '30rem', md: '40rem' }} width={'100%'}>
+                <CircleImage src={`/assets/team-work-1-black_and_white.jpg`} />
             </Grid>
         </Grid>
     )

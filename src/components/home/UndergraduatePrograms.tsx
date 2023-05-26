@@ -2,11 +2,11 @@ import React from 'react'
 import { Typography, Grid, Button, Box } from '@mui/material';
 import { ProgramCard } from './ProgramCard';
 import { underGraduatePrograms } from '@/data/programs';
-import { graduatePrograms } from '@/data/programs';
-import Image from 'next/image';
+import { useGetOrigin } from '@/hooks/useGetOrigin';
 
 
 export const UndergraduatePrograms = () => {
+    const { origin } = useGetOrigin()
     return (
         <Box sx={{
             height: '100%',
