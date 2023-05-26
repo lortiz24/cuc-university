@@ -9,11 +9,15 @@ export const AlumsImage = () => {
     return (
         <div style={{
             height: '100%',
+            width:'100%',
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'center',
             alignItems: 'flex-end',
-            backgroundImage: `url(${origin}/assets/figura1.png)`
+            backgroundImage: `url(${origin}/assets/figura1.png)`,
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            backgroundSize: '100%',
         }}>
             <Image
                 src={'/assets/Alumna-1-1.png'}
@@ -41,20 +45,6 @@ export const AlumsImage = () => {
                     zIndex: 2
                 }}
             />
-           {/*  <Image
-                src={'/assets/figura1.png'}
-                alt='figuras'
-                width={0}
-                height={0}
-                sizes="100vw"
-                style={{
-                    position: 'absolute',
-                    width: '60rem',
-                    marginLeft: '10rem',
-                    marginBottom: '4rem',
-                    zIndex: -2
-                }}
-            /> */}
         </div>
 
     )

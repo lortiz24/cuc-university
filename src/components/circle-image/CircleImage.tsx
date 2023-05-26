@@ -51,22 +51,8 @@ export const CircleImage = ({ src, height = '500px' }: Props) => {
                                     objectFit: 'cover',
                                     zIndex: 4
                                 }} />
-                            {/* <Image
-                                src={'/assets/start.png'}
-                                alt='aluma2'
-                                width={300}
-                                height={300}
-                                sizes="100vw"
-                                style={{
-                                    zIndex: 2,
-                                    objectFit: 'cover',
-                                    objectPosition:'0px top',
-                                    top:'-2.5rem',
-                                    right:'55rem'
-                                }}
-                            /> */}
+                            
                         </div>
-
                     </Grid>
                     <Grid
                         item

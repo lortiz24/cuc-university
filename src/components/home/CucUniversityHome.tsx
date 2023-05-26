@@ -24,7 +24,7 @@ export const CucUniversityHome = () => {
                     </Typography>
                 </div>
             </Grid>
-            <Grid item xs={12} sm={12} lg={8} height={'40rem'}>
+            <Grid item xs={12} sm={12} lg={8} marginTop={{xs:2,sm:0}} minHeight={{ xs: '20rem', sm: '30rem', md: '40rem' }}>
                 <AlumsImage />
             </Grid>
         </Grid>
