@@ -39,4 +39,22 @@
   .dropdown-menu a:last-child {
     border-bottom: none;
   }
+
+  .menu-container {
+
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-container > * {
+    margin-right: 30px;
+  }
+
+  .collapse-container {
+    position: relative;
+    left: -13.5rem ;
+    top: 3rem;
+  }
+  
+  
   
