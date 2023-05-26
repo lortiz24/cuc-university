@@ -42,28 +42,13 @@ export const CircleImage = ({ src, height = '600px' }: Props) => {
                     sx={{
                         backgroundImage: `url(${origin}/assets/mano-start.png)`,
                         backgroundRepeat: 'no-repeat',
-                        backgroundPosition: 'center',
-                        backgroundSize: '50%',
+                        backgroundPosition: 'center', // Modificado para alinear la imagen en la parte superior
+                        backgroundSize: '80%',
+                        height: '100%',
+                        width: '100%',
                     }}
                 >
 
-                    {/*  <div style={{
-                        height: '100%',
-                        display: 'flex',
-                        flexDirection: 'row',
-                        justifyContent: 'center',
-                        alignItems: 'flex-end',
-                    }}>
-                        <Image
-                            src={'/assets/mano-start.png'}
-                            alt="Imagen"
-                            width={300}
-                            height={300}
-                            style={{
-                                objectFit: 'cover',
-                                zIndex: 4
-                            }} />
-                    </div> */}
                 </Grid>
                 <Grid
                     item
@@ -75,7 +60,7 @@ export const CircleImage = ({ src, height = '600px' }: Props) => {
                         alignItems: 'center',
                         padding: {
                             xs: '1rem 1rem',
-                            lg:'5rem 5rem',
+                            lg: '5rem 5rem',
                             xl: '10rem 10rem',
                         },
                     }}
