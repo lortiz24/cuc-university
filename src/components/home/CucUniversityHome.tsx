@@ -5,10 +5,11 @@ import { CircleImage } from '../circle-image/CircleImage'
 export const CucUniversityHome = () => {
     return (
         <Grid container >
-
             <Grid
                 item
-                xs={12} sm={12} lg={3} paddingX={{ xs: 8, sm: 0 }}
+                xs={12} sm={12} lg={4}
+                paddingLeft={{ xs: 0, xl: 20 }}
+                paddingX={{ xs: 4, }}
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
