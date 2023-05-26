@@ -13,6 +13,7 @@ import Typography from '@mui/material/Typography';
 import { ActiveLink } from '../active-link/ActiveLink';
 import { useRouter } from 'next/router';
 import styles from './Navbar.module.css'
+import { navItems } from '@/data';
 
 interface Props {
     window?: () => Window;
@@ -20,36 +21,7 @@ interface Props {
 
 const drawerWidth = 240;
 
-export interface MenuItem {
-    path: string;
-    name: string;
-}
-const navItems: MenuItem[] = [
-    {
-        path: '/',
-        name: 'Home'
-    },
-    {
-        name: 'About Us',
-        path: '/about-us'
-    },
-    {
-        name: 'Academic Programs',
-        path: '/academic-programs'
-    },
-    {
-        name: 'Students',
-        path: '/students'
-    },
-    {
-        name: 'Scholarships',
-        path: '/scholarships'
-    },
-    {
-        name: 'Contact Us',
-        path: '/contact-us'
-    }
-];
+
 
 
 const origin = (typeof window === 'undefined') ? '' : window.location.origin;
@@ -87,7 +59,7 @@ export const NavbarUi = (props: Props) => {
     return (
         <>
             <AppBar
-            position='static'
+                position='static'
                 sx={{
 
                     marginTop: { xs: 4, md: 4 },

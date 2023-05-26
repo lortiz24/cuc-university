@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import { NavbarUi } from '../ui';
 import { Box } from '@mui/material'
+import { Footer } from '../ui/footer/Footer';
 
 
 interface Props {
@@ -35,18 +36,14 @@ export const MainLayout = ({ children, title = 'Cuc University', description = '
                 {children}
             </div> */}
 
-            <div>
+            <Box
+                sx={{
+                    minHeight: '100vh'
+                }}>
                 {children}
-            </div>
+            </Box>
 
-            {/* <Container sx={
-                {
-                    marginTop: 3,
-                    paddingBottom: 20,
-                }
-            }>
-                {children}
-            </Container> */}
+            <Footer />
         </>
     )
 }
