@@ -1,5 +1,4 @@
 import { useTheme, Typography, Grid, Box } from '@mui/material';
-import Image from 'next/image';
 import MyGradiantBackground from './ColorBackground';
 import { useGetOrigin } from '@/hooks/useGetOrigin';
 
@@ -11,7 +10,7 @@ interface Props {
 export const CircleImage = ({ src, height = '600px' }: Props) => {
     const { origin } = useGetOrigin()
     const theme = useTheme()
-    const borderRadiusMd = '20rem'
+    const borderRadiusMd = '17rem'
     const borderRadiusSm = '15rem'
     const borderRadiusXs = '5rem'
     return (
@@ -20,7 +19,7 @@ export const CircleImage = ({ src, height = '600px' }: Props) => {
                 borderRadius: { xs: borderRadiusXs, sm: borderRadiusSm, md: borderRadiusMd },
                 position: 'relative',
                 width: '100%',
-                height: { xs: '400px', sm: '550px', md: '600px' },
+                height: { xs: '400px', sm: '450px', md: '500px' },
                 backgroundImage: `url(${origin}/assets/team-work-1-black_and_white.jpg)`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
@@ -48,7 +47,6 @@ export const CircleImage = ({ src, height = '600px' }: Props) => {
                         width: '100%',
                     }}
                 >
-
                 </Grid>
                 <Grid
                     item

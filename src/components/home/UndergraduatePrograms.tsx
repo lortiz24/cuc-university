@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography, Grid, Button } from '@mui/material';
+import { Typography, Grid, Button, Box } from '@mui/material';
 import { ProgramCard } from './ProgramCard';
 import { underGraduatePrograms } from '@/data/programs';
 import { graduatePrograms } from '@/data/programs';
@@ -8,23 +8,24 @@ import Image from 'next/image';
 
 export const UndergraduatePrograms = () => {
     return (
-        <div style={{
-            marginTop: '4rem'
+        <Box sx={{
+            height: '100%',
+            width: '100%',
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: {
+                xs: 'start',
+                sm: 'start',
+                md: 'start',
+                lg: 'start',
+                xl: 'center',
+            },
+            alignItems: 'flex-end',
+            backgroundImage: `url(${origin}/assets/figura2.png)`,
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: { xs: 'top 15rem right 5rem', sm: 'left' },
+            backgroundSize: { xs: '100%', sm: '40%' },
         }}>
-            <Image
-                src={'/assets/figura2.png'}
-                alt='Alumno-with-notebook'
-                width={0}
-                height={0}
-                sizes="100vw"
-                style={{
-                    position: 'absolute',
-                    width: '60rem',
-                    marginLeft: '-20rem',
-                    marginBottom:'4rem',
-                    zIndex: -2
-                }}
-            />
             <Grid container
                 display={'flex'}
                 justifyContent={'center'}>
@@ -38,7 +39,9 @@ export const UndergraduatePrograms = () => {
                     <Typography
                         fontWeight="bold"
                         variant='h2'
-                        color={(theme) => theme.palette.primary.main}>Academic Programs
+                        color={(theme) => theme.palette.primary.main}
+                        textAlign={'center'}
+                    >Academic Programs
                     </Typography>
                 </Grid>
                 <Grid
@@ -58,11 +61,11 @@ export const UndergraduatePrograms = () => {
                     >Undergradute Programs</Button>
                 </Grid>
                 <div style={{
-                    marginTop:'2rem',
+                    marginTop: '2rem',
                     display: 'flex',
                     justifyContent: 'center',
                     flexWrap: 'wrap',
-                    gap:'2rem'
+                    gap: '2rem'
                 }}>
                     {underGraduatePrograms.map((programItem, index) => (
                         <ProgramCard key={index} programItem={programItem} />
@@ -73,6 +76,6 @@ export const UndergraduatePrograms = () => {
 
 
             </Grid>
-        </div>
+        </Box>
     )
 }

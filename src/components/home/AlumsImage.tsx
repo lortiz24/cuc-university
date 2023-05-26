@@ -1,18 +1,31 @@
+import React, { useEffect, useState } from 'react'
 import { useGetOrigin } from '@/hooks/useGetOrigin'
+import { useGetBreakpoints } from '@/styles/useGetBreakpoints'
+import { Box } from '@mui/material'
 import Image from 'next/image'
-import React from 'react'
 
 export const AlumsImage = () => {
 
     const { origin } = useGetOrigin()
+    const { xs, sm, md, lg, xl } = useGetBreakpoints()
+    const [marginLeft, setMarginLeft] = useState('20rem')
+    useEffect(() => {
+        if (xs) setMarginLeft('0rem')
+    }, [xs, sm, md, lg, xl])
 
     return (
-        <div style={{
+        <Box sx={{
             height: '100%',
             width: '100%',
             display: 'flex',
             flexDirection: 'row',
-            justifyContent: 'center',
+            justifyContent: {
+                xs: 'start',
+                sm: 'start',
+                md: 'start',
+                lg: 'start',
+                xl: 'center',
+            },
             alignItems: 'flex-end',
             backgroundImage: `url(${origin}/assets/figura1.png)`,
             backgroundRepeat: 'no-repeat',
@@ -28,7 +41,7 @@ export const AlumsImage = () => {
                 style={{
                     position: 'absolute',
                     width: '460px',
-                    zIndex: 1
+                    zIndex: 1,
                 }}
             />
 
@@ -41,11 +54,11 @@ export const AlumsImage = () => {
                 style={{
                     position: 'absolute',
                     width: '450px',
-                    marginLeft: '20rem',
+                    marginLeft,
                     zIndex: 2
                 }}
             />
-        </div>
+        </Box>
 
     )
 }
