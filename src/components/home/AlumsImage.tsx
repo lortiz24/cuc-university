@@ -22,36 +22,40 @@ export const AlumsImage = () => {
             flexDirection: 'row',
             justifyContent: 'center',
             alignItems: 'flex-end',
-
+            backgroundImage: `url(${origin}/assets/figura1.png)`,
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'bottom',
+            backgroundSize: 'contain',
         }}>
+            
             <Box sx={{
                 height: '100%',
                 width: '100%',
+                backgroundColor:'red',
                 display: 'flex',
                 flexDirection: 'row',
                 justifyContent: 'center',
                 alignItems: 'flex-end',
                 backgroundImage: `url(${origin}/assets/Alumna-1-1.png)`,
                 backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'bottom',
+                backgroundPosition: 'bottom ',
                 backgroundSize: 'contain',
 
             }} />
             <Box sx={{
-                position: 'absolute', // Establece el posicionamiento absoluto en el primer Box interno
-                top: 0, // Coloca el primer Box en la parte superior
-                left: 0, // Coloca el primer Box a la izquierda
+                position: 'absolute',
+                left: '25%',
                 height: '100%',
                 width: '100%',
+                // width: 'calc(100% - 20px)',
                 display: 'flex',
                 flexDirection: 'row',
                 justifyContent: 'center',
                 alignItems: 'flex-end',
                 backgroundImage: `url(${origin}/assets/Alumno1-1.png)`,
                 backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'bottom',
+                backgroundPosition: 'bottom ',
                 backgroundSize: 'contain',
-
             }} />
             {/* <Image
                 src={'/assets/Alumna-1-1.png'}

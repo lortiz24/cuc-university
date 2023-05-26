@@ -10,7 +10,7 @@ interface Props {
 export const ComponentWithPadding = ({ children }: Props) => {
     return (
         <Box sx={{
-            paddingX: { xs: 1, sm: 5, md: 15 },
+            paddingX: { xs: 0, sm: 5, md: 15 },
         }}>
             {children}
         </Box>

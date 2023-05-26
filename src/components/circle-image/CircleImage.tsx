@@ -10,13 +10,15 @@ interface Props {
 export const CircleImage = ({ src, height = '600px' }: Props) => {
     const { origin } = useGetOrigin()
     const theme = useTheme()
-    const borderRadiusMd = '17rem'
-    const borderRadiusSm = '15rem'
-    const borderRadiusXs = '5rem'
+    const borderRadiusLg = '17rem'
+    const borderRadiusMd = '10rem'
+    const borderRadiusSm = '50px'
+    const borderRadiusXs = '0rem'
     return (
         <Box
             sx={{
-                borderRadius: { xs: borderRadiusXs, sm: borderRadiusSm, md: borderRadiusMd },
+                borderRadius: { xs: borderRadiusXs, sm: borderRadiusSm, md: borderRadiusMd, lg: borderRadiusLg },
+                // borderRadius: 'calc(0 * (1vw / 400) + 17rem * (100vw / 400))',
                 position: 'relative',
                 width: '100%',
                 height: { xs: '400px', sm: '450px', md: '500px' },
@@ -26,7 +28,7 @@ export const CircleImage = ({ src, height = '600px' }: Props) => {
                 zIndex: -10,
             }}
         >
-            <MyGradiantBackground color={theme.palette.secondary.main} borderRadiusMd={borderRadiusMd} borderRadiusSm={borderRadiusSm} borderRadiusXs={borderRadiusXs} />
+            <MyGradiantBackground color={theme.palette.secondary.main} borderRadiusMd={borderRadiusMd} borderRadiusSm={borderRadiusSm} borderRadiusXs={borderRadiusXs} borderRadiusLg={borderRadiusLg} />
 
             <Grid
                 container

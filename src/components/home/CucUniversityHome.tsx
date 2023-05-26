@@ -25,10 +25,10 @@ export const CucUniversityHome = () => {
                     </Typography>
                 </div>
             </Grid>
-            <Grid item xs={12} sm={12} lg={8} marginTop={{ xs: 2, sm: 0 }} minHeight={{ xs: '20rem', sm: '30rem', md: '40rem' }}>
+            <Grid item xs={12} sm={12} lg={8} marginTop={{ xs: 2, sm: 0 }} minHeight={'400px'}>
                 <AlumsImage />
             </Grid>
-            <Grid item xs={12}  minHeight={{ xs: '20rem', sm: '30rem', md: '40rem' }} width={'100%'}>
+            <Grid item xs={12} minHeight={'auto'} width={'100%'}>
                 <CircleImage src={`/assets/team-work-1-black_and_white.jpg`} />
             </Grid>
         </Grid>
