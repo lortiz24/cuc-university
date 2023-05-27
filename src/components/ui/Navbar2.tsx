@@ -11,6 +11,8 @@ import MenuItem from "@mui/material/MenuItem";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { ActiveLink } from "../active-link/ActiveLink";
 import { Divider, Drawer, List, ListItem, ListItemText, Typography, useTheme } from "@mui/material";
+import { navItems } from "@/data";
+import { MenuDrawer } from "./menu-drawer/MenuDrawer";
 
 interface Props {
   window?: () => Window;
@@ -18,54 +20,11 @@ interface Props {
 
 const origin = typeof window === "undefined" ? "" : window.location.origin;
 
-export interface MenuItem {
-  path: string;
-  name: string;
-  dropdown?: MenuItem[];
-}
-
-const navItems: MenuItem[] = [
-  {
-    path: "/",
-    name: "Home",
-  },
-  {
-    name: "About Us",
-    path: "/about-us",
-  },
-  {
-    name: "Academic Programs",
-    path: "/academic-programs",
-    dropdown: [
-      {
-        name: "Undergraduate Programs",
-        path: "/program-1",
-      },
-      {
-        name: "Graduate Programs",
-        path: "/program-2",
-      },
-    ],
-  },
-  {
-    name: "Students",
-    path: "/students",
-  },
-  {
-    name: "Scholarships",
-    path: "/scholarships",
-  },
-  {
-    name: "Contact Us",
-    path: "/contact-us",
-  },
-];
 
 export const NavbarUi = (props: Props) => {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const [anchorEl2, setAnchorEl2] = React.useState<null | HTMLElement>(null);
 
   const router = useRouter();
   const theme = useTheme()
@@ -75,13 +34,11 @@ export const NavbarUi = (props: Props) => {
     setMobileOpen((prevState) => !prevState);
   };
 
-  const handleMenuOpen = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleMenuOpen = (event: React.MouseEvent<HTMLButtonElement | HTMLLIElement>) => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleMenuOpen2 = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl2(event.currentTarget);
-  };
+
   const handleMenuClose = () => {
     setAnchorEl(null);
   };
@@ -207,39 +164,7 @@ export const NavbarUi = (props: Props) => {
         </Typography>
         <Divider />
 
-        <List>
-          {navItems.map((menuItem) => (
-            <React.Fragment key={menuItem.name}>
-              {menuItem.dropdown ? (
-                <>
-                  <ListItem  onClick={handleMenuOpen}>
-                    <ListItemText primary={menuItem.name} />
-                    <ExpandMoreIcon />
-                  </ListItem>
-                  <Popover
-                    open={Boolean(anchorEl) && anchorEl === menuItem.name}
-                    anchorEl={anchorEl}
-                    onClose={handleMenuClose}
-                    anchorOrigin={{
-                      vertical: 'bottom',
-                      horizontal: 'left',
-                    }}
-                    transformOrigin={{
-                      vertical: 'top',
-                      horizontal: 'left',
-                    }}
-                  >
-                    {/* ... */}
-                  </Popover>
-                </>
-              ) : (
-                <ListItem button>
-                  <ActiveLink text={menuItem.name} href={menuItem.path} />
-                </ListItem>
-              )}
-            </React.Fragment>
-          ))}
-        </List>
+        <MenuDrawer mobileOpen={mobileOpen} />
       </Drawer>
 
     </>
