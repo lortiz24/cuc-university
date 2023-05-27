@@ -1,7 +1,9 @@
 import React from 'react'
 import { Grid, useTheme, Typography } from '@mui/material'
-export const Footer = () => {
+import { useGetOrigin } from '@/hooks/useGetOrigin'
 
+export const Footer = () => {
+  const { origin } = useGetOrigin()
   const theme = useTheme()
   return (
     <Grid
