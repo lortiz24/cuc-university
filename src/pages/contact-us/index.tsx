@@ -1,5 +1,5 @@
 import { MainLayout } from '@/components/layouts/MainLayout'
-import FormComponent from '../../components/FormContactUs';
+import FormComponent from '../../components/form-contact/FormContactUs';
 import React from 'react'
 import { Grid } from '@mui/material';
 import Image from 'next/image';

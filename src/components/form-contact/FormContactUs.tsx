@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, FormControlLabel, Grid, TextField, Typography, Link, useTheme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import { BpCheckbox } from './ui/Checkbox';
+import { BpCheckbox } from '../ui/Checkbox';
 import { FormContact } from '@/interfaces';
 
 
