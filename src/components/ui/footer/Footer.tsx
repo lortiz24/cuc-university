@@ -53,7 +53,7 @@ export const Footer = () => {
             variant='h2'
             color={theme.palette.primary.main}
             fontWeight="bold"
-            fontSize={{ xs: 35, xl: 40 }}
+            fontSize={{ xs: 22, }}
             marginBottom={{ xs: 2, xl: 4 }}
             textAlign={'start'}
           >Join our Newsletter</Typography>
