@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useGetOrigin } from '@/hooks/useGetOrigin'
-import { useGetBreakpoints } from '@/styles/useGetBreakpoints'
+import { useGetBreakpoints } from '@/hooks/useGetBreakpoints'
 import { Box } from '@mui/material'
 import Image from 'next/image'
 

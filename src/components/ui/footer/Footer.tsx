@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid, useTheme, Typography, Box } from '@mui/material'
 import { useGetOrigin } from '@/hooks/useGetOrigin'
+import { SocialNetworks } from './SocialNetworks'
 
 export const Footer = () => {
   const { origin } = useGetOrigin()
@@ -64,6 +65,7 @@ export const Footer = () => {
           >
             Stay up to date our news, blog post, and announcements by subscribing to our Newsletter.
           </Typography>
+          <SocialNetworks />
         </Grid>
       </Grid >
     </Box>
