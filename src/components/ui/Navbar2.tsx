@@ -10,7 +10,7 @@ import Popover from "@mui/material/Popover";
 import MenuItem from "@mui/material/MenuItem";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { ActiveLink } from "../active-link/ActiveLink";
-import { Divider, Drawer, List, ListItem, ListItemText, Typography, useTheme } from "@mui/material";
+import { Divider, Drawer, Typography, useTheme } from "@mui/material";
 import { navItems } from "@/data";
 import { MenuDrawer } from "./menu-drawer/MenuDrawer";
 
@@ -25,7 +25,10 @@ export const NavbarUi = (props: Props) => {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const [openSubMenuIndex, setOpenSubMenuIndex] = React.useState<null | number[]>(null); // Nuevo estado para los índices de submenús abiertos
+  const [anchorEl2, setAnchorEl2] = React.useState<null | HTMLElement>(null);
 
+  
   const router = useRouter();
   const theme = useTheme()
 
@@ -34,14 +37,21 @@ export const NavbarUi = (props: Props) => {
     setMobileOpen((prevState) => !prevState);
   };
 
-  const handleMenuOpen = (event: React.MouseEvent<HTMLButtonElement | HTMLLIElement>) => {
-    setAnchorEl(event.currentTarget);
+  const handleMenuOpen = (event: React.MouseEvent<HTMLLIElement, MouseEvent> | React.MouseEvent<HTMLButtonElement, MouseEvent>, menuIndex: number, subMenuIndex: number) => {
+    if (subMenuIndex === 0) {
+      setAnchorEl(event.currentTarget);
+      setOpenSubMenuIndex([menuIndex, subMenuIndex]);
+    } else {
+      setAnchorEl2(event.currentTarget);
+      setOpenSubMenuIndex([menuIndex, subMenuIndex]);
+    }
   };
-
 
   const handleMenuClose = () => {
     setAnchorEl(null);
+    setOpenSubMenuIndex(null); // Restablecer los índices de los submenús abiertos
   };
+
 
   const container =
     window !== undefined ? () => window().document.body : undefined;
@@ -83,7 +93,7 @@ export const NavbarUi = (props: Props) => {
           </div>
           <Box sx={{ display: { xs: "none", lg: "block" } }}>
             <nav className={"menu-container"}>
-              {navItems.map((menuItem) => (
+              {navItems.map((menuItem, menuIndex) => (
                 <React.Fragment key={menuItem.name}>
                   {menuItem.dropdown ? (
                     <div
@@ -91,14 +101,16 @@ export const NavbarUi = (props: Props) => {
                       style={{ position: "relative" }}
                     >
                       <button
-                        onMouseEnter={handleMenuOpen}
+                        onMouseEnter={(event) =>
+                          handleMenuOpen(event, menuIndex, 0)
+                        }
                         className={"nav-item-button"}
                       >
                         {menuItem.name}
                         <ExpandMoreIcon className={styles["expand-icon"]} />
                       </button>
                       <Popover
-                        open={Boolean(anchorEl)}
+                        open={Boolean(anchorEl) && openSubMenuIndex?.[0] === menuIndex}
                         anchorEl={anchorEl}
                         onClose={handleMenuClose}
                         anchorOrigin={{
@@ -111,17 +123,49 @@ export const NavbarUi = (props: Props) => {
                         }}
                       >
                         <Box sx={{ minWidth: "200px" }}>
-                          {menuItem.dropdown.map((subItem) => (
-                            <MenuItem
-                              key={subItem.name}
-                              onClick={() => {
-                                handleMenuClose();
-                                router.push(subItem.path);
-                              }}
-                              sx={{ width: "100%" }}
-                            >
-                              {subItem.name}
-                            </MenuItem>
+                          {menuItem.dropdown?.map((subMenu, subMenuIndex) => (
+                            <div key={subMenu.name}>
+                              <MenuItem
+                                onClick={(event) =>
+                                  handleMenuOpen(event, menuIndex, subMenuIndex + 1)
+                                }
+                                sx={{ width: "100%" }}
+                              >
+                                {subMenu.name}
+                                <ExpandMoreIcon className={styles["expand-icon"]} />
+                              </MenuItem>
+                              {openSubMenuIndex?.[0] === menuIndex &&
+                                openSubMenuIndex?.[1] === subMenuIndex + 1 && (
+                                  <Popover
+                                    open={Boolean(anchorEl2)}
+                                    anchorEl={anchorEl2}
+                                    onClose={handleMenuClose}
+                                    anchorOrigin={{
+                                      vertical: "bottom",
+                                      horizontal: "left",
+                                    }}
+                                    transformOrigin={{
+                                      vertical: "top",
+                                      horizontal: "left",
+                                    }}
+                                  >
+                                    <Box sx={{ minWidth: "200px" }}>
+                                      {subMenu.dropdown?.map((subItem) => (
+                                        <MenuItem
+                                          key={subItem.name}
+                                          onClick={() => {
+                                            handleMenuClose();
+                                            router.push(menuItem.path + subItem.path);
+                                          }}
+                                          sx={{ width: "100%" }}
+                                        >
+                                          {subItem.name}
+                                        </MenuItem>
+                                      ))}
+                                    </Box>
+                                  </Popover>
+                                )}
+                            </div>
                           ))}
                         </Box>
                       </Popover>

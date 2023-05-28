@@ -1,9 +1,19 @@
-import { SvgIconTypeMap } from "@mui/material";
-import { OverridableComponent } from "@mui/material/OverridableComponent";
 
-export interface MenuItem {
+
+interface Menu {
     path: string;
     name: string;
-    dropdown?: Omit<MenuItem,'icon'>[]
+}
+
+interface Menu {
+    path: string;
+    name: string;
+
+}
+export interface MenuItem extends Menu {
+    path: string;
+    name: string;
+    dropdown?: Omit<MenuItem, 'icon'>[]
     icon: React.ReactNode;
 }
+
