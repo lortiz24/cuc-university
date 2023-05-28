@@ -7,15 +7,17 @@ export const lightTheme = createTheme({
             main: '#C29508',
         },
         secondary: {
-            main: '#415262'
+            main: '#415262',
         },
         text: {
             primary: '#405262'
         },
         background: {
             paper: '#F1F1F1'
-        }
+        },
+
     },
+
     breakpoints: {
         values: {
             xs: 0,
@@ -30,6 +32,8 @@ export const lightTheme = createTheme({
             color: '#405262',
         },
     },
+
+
 
 })
 

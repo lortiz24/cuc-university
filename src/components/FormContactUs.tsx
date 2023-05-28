@@ -1,37 +1,18 @@
 import React, { useState } from 'react';
-import { Button, Checkbox, FormControlLabel, Grid, TextField, Typography,Link } from '@mui/material';
-import { makeStyles, createStyles } from '@mui/styles';
+import { Button, FormControlLabel, Grid, TextField, Typography, Link, useTheme } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { BpCheckbox } from './ui/Checkbox';
-import { CustomButton } from './ui/ButtonEdit';
+import { FormContact } from '@/interfaces';
 
 
 interface FormComponentProps {
     title?: string;
-    onSubmit: (formData: FormData) => void;
+    onSubmit: (FormContact: FormContact) => void;
 }
 
-export interface FormData {
-    name: string;
-    lastName: string;
-    phone: string;
-    email: string;
-    message: string;
-}
-const useStyles = makeStyles({
-    button: {
-        backgroundColor: '#405262',
-        color: 'white',
-        borderRadius: 30,
-        padding: '2px',
-        fontSize: '1rem',
-        textTransform: 'none',
-        '&:hover': {
-            backgroundColor: '#667481',
-        }
-    }
-});
+
+
 const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your details and we will contact you", onSubmit }) => {
-    const classes = useStyles()
 
     const [name, setName] = useState('');
     const [lastName, setLastName] = useState('');
@@ -39,14 +20,12 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [acceptData, setAcceptData] = useState(false);
-
+    const theme = useTheme()
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
-        // Validar el formulario antes de enviarlo
         if (name && lastName && phone && email && acceptData) {
-            // Crear un objeto con los datos del formulario
-            const formData: FormData = {
+            const FormContact: FormContact = {
                 name,
                 lastName,
                 phone,
@@ -54,10 +33,8 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                 message,
             };
 
-            // Llamar a la función de submit pasada por props y pasarle los datos del formulario
-            onSubmit(formData);
+            onSubmit(FormContact);
         } else {
-            // Mostrar un mensaje de error o realizar otra acción en caso de que el formulario no sea válido
             console.log('Formulario no válido');
         }
     };
@@ -84,7 +61,7 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                                 }
                                 required
                                 fullWidth
-                                InputLabelProps={{shrink:false}}
+                                InputLabelProps={{ shrink: false }}
                                 InputProps={{
                                     sx: {
                                         borderRadius: 6,
@@ -93,8 +70,8 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                                         boxShadow: 'inset 0px 11px 11px -10px rgba(128,128,128,0.65)',
                                         borderTop: 'none',
                                         borderBottom: 'none',
-                                        
-                                        
+
+
                                     }
                                 }}
                             />
@@ -201,11 +178,11 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                                 }
                                 label={
                                     <span>
-                                    *I have read and accept the{' '}
-                                    <Link href="#" color="primary">
-                                      the terms and conditions
-                                    </Link>
-                                  </span>
+                                        *I have read and accept the{' '}
+                                        <Link href="#" color="primary">
+                                            the terms and conditions
+                                        </Link>
+                                    </span>
                                 }
                             />
                         </Grid>
@@ -214,8 +191,9 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                                 type="submit"
                                 variant="contained"
                                 fullWidth
-                                color='secondary'
-                                className={classes.button}
+                                sx={{
+                                    borderRadius: 30
+                                }}
                             >
                                 Send
                             </Button>
