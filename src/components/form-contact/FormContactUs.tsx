@@ -8,11 +8,12 @@ import { FormContact } from '@/interfaces';
 interface FormComponentProps {
     title?: string;
     onSubmit: (FormContact: FormContact) => void;
+    TextFieldMessage?: boolean;
 }
 
 
 
-const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your details and we will contact you", onSubmit }) => {
+const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your details and we will contact you", onSubmit, TextFieldMessage = true }) => {
 
     const [name, setName] = useState('');
     const [lastName, setLastName] = useState('');
@@ -121,7 +122,7 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                                 }}
                             />
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid item marginBottom={!TextFieldMessage ? 1:0 } xs={12}>
                             <TextField
                                 size='small'
                                 placeholder="Email"
@@ -144,28 +145,33 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                                 }}
                             />
                         </Grid>
-                        <Grid item marginBottom={1} xs={12}>
-                            <TextField
-                                placeholder="Message"
-                                multiline
-                                rows={4}
-                                value={message}
-                                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                                    setMessage(e.target.value)
-                                }
-                                fullWidth
-                                InputProps={{
-                                    sx: {
-                                        borderRadius: 6,
-                                        WebkitBoxShadow: 'inset 0px 11px 11px -10px rgba(128,128,128,0.65)',
-                                        MozBoxShadow: 'inset 0px 11px 11px -10px rgba(128,128,128,0.65)',
-                                        boxShadow: 'inset 0px 11px 11px -10px rgba(128,128,128,0.65)',
-                                        borderTop: 'none',
-                                        borderBottom: 'none',
-                                    }
-                                }}
-                            />
-                        </Grid>
+                        {
+                            TextFieldMessage && (
+                                <Grid item marginBottom={1} xs={12}>
+                                    <TextField
+                                        placeholder="Message"
+                                        multiline
+                                        rows={4}
+                                        value={message}
+                                        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                                            setMessage(e.target.value)
+                                        }
+                                        fullWidth
+                                        InputProps={{
+                                            sx: {
+                                                borderRadius: 6,
+                                                WebkitBoxShadow: 'inset 0px 11px 11px -10px rgba(128,128,128,0.65)',
+                                                MozBoxShadow: 'inset 0px 11px 11px -10px rgba(128,128,128,0.65)',
+                                                boxShadow: 'inset 0px 11px 11px -10px rgba(128,128,128,0.65)',
+                                                borderTop: 'none',
+                                                borderBottom: 'none',
+                                            }
+                                        }}
+                                    />
+                                </Grid>
+                            )
+                        }
+
                         <Grid item xs={8}>
                             <FormControlLabel
                                 control={

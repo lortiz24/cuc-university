@@ -20,12 +20,12 @@ const index = () => {
           <Grid item xs={12} sm={12} md={12} lg={6} marginY={4} justifyContent="center" alignItems="center" display={'flex'}>
             <Image
               src={'/assets/Maps_ubication.png'}
-              alt='aluma1'
+              alt='maps1'
               width={0}
               height={0}
               sizes="100vw"
               style={{
-                width: '100%',
+                width: '490px',
                 borderRadius: '3rem',
               }}
             />

@@ -5,6 +5,7 @@ import '@/styles/AlumsImage-style.css'
 import '@/styles/circle-style.css'
 import '@/styles/footer.style.css'
 import '@/styles/Navbar-style.css'
+import '@/styles/ComponentImage-style.css'
 
 
 
