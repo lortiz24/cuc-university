@@ -7,10 +7,13 @@ export const lightTheme = createTheme({
             main: '#C29508',
         },
         secondary: {
-            main: '#405262'
+            main: '#415262'
         },
         text: {
             primary: '#405262'
+        },
+        background: {
+            paper: '#F1F1F1'
         }
     },
     breakpoints: {

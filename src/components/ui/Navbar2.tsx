@@ -10,7 +10,9 @@ import Popover from "@mui/material/Popover";
 import MenuItem from "@mui/material/MenuItem";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { ActiveLink } from "../active-link/ActiveLink";
-import { Divider, Drawer, List, ListItem, ListItemText, Typography, useTheme } from "@mui/material";
+import { Divider, Drawer, Typography, useTheme } from "@mui/material";
+import { navItems } from "@/data";
+import { MenuDrawer } from "./menu-drawer/MenuDrawer";
 
 interface Props {
   window?: () => Window;
@@ -18,81 +20,13 @@ interface Props {
 
 const origin = typeof window === "undefined" ? "" : window.location.origin;
 
-export interface SubMenuItem {
-  path: string;
-  name: string;
-}
-
-export interface MenuItem {
-  path?: string;
-  name: string;
-  sub_dropdown?: SubMenuItem[];
-  dropdown?: MenuItem[];
-}
-
-const navItems: MenuItem[] = [
-  {
-    path: "/",
-    name: "Home",
-  },
-  {
-    name: "About Us",
-    path: "/about-us",
-  },
-  {
-    name: "Academic Programs",
-    path: "/academic-programs",
-    dropdown: [
-      {
-        name: "Undergraduate Programs",
-        sub_dropdown: [{
-          name: "Associates of Science in International Business Administration",
-          path: "/Associates_of_Science_in_International_Business_Administration"
-        },
-        {
-          name: "Bachelors of Science in International Business Administration",
-          path: "/Bachelors_of_Science_in_International_Business_Administration"
-        },
-        ]
-      },
-      {
-        name: "Graduate Programs",
-        sub_dropdown: [{
-          name: "Master of Science in International Business Administration",
-          path: "/Master_of_Science_in_International_Business_Administration"
-        },
-        {
-          name: "Master of Science in Marketing",
-          path: "/Master_of_Science_in_Marketing"
-        },
-        {
-          name: "Master of Science in Mass Media Communication and Media Technology",
-          path: "/Master_of_Science_in_Mass_Media_Communication_and_Media_Technology"
-        },
-        ]
-      },
-    ],
-  },
-  {
-    name: "Students",
-    path: "/students",
-  },
-  {
-    name: "Scholarships",
-    path: "/scholarships",
-  },
-  {
-    name: "Contact Us",
-    path: "/contact-us",
-  },
-];
 
 export const NavbarUi = (props: Props) => {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [anchorEl2, setAnchorEl2] = React.useState<null | HTMLElement>(null);
-  const [openSubMenuIndex, setOpenSubMenuIndex] = React.useState<null | number[]>(null); // Nuevo estado para los índices de submenús abiertos
+  const [openSubMenuIndex, setOpenSubMenuIndex] = React.useState<null | number[]>(null); // Nuevo estado para los índices de submenús abiertos
 
   const router = useRouter();
   const theme = useTheme()
@@ -102,7 +36,7 @@ export const NavbarUi = (props: Props) => {
     setMobileOpen((prevState) => !prevState);
   };
 
-  const handleMenuOpen = (event: React.MouseEvent<HTMLButtonElement>, menuIndex: number, subMenuIndex: number) => {
+  const handleMenuOpen = (event: React.MouseEvent<HTMLLIElement, MouseEvent> | React.MouseEvent<HTMLButtonElement, MouseEvent>, menuIndex: number, subMenuIndex: number) => {
     if (subMenuIndex === 0) {
       setAnchorEl(event.currentTarget);
       setOpenSubMenuIndex([menuIndex, subMenuIndex]);
@@ -188,7 +122,7 @@ export const NavbarUi = (props: Props) => {
                         }}
                       >
                         <Box sx={{ minWidth: "200px" }}>
-                          {menuItem.dropdown.map((subMenu, subMenuIndex) => (
+                          {menuItem.dropdown?.map((subMenu, subMenuIndex) => (
                             <div key={subMenu.name}>
                               <MenuItem
                                 onClick={(event) =>
@@ -215,12 +149,12 @@ export const NavbarUi = (props: Props) => {
                                     }}
                                   >
                                     <Box sx={{ minWidth: "200px" }}>
-                                      {subMenu.sub_dropdown?.map((subItem) => (
+                                      {subMenu.dropdown?.map((subItem) => (
                                         <MenuItem
                                           key={subItem.name}
                                           onClick={() => {
                                             handleMenuClose();
-                                            router.push(subItem.path);
+                                            router.push(menuItem.path + subItem.path);
                                           }}
                                           sx={{ width: "100%" }}
                                         >
@@ -273,39 +207,7 @@ export const NavbarUi = (props: Props) => {
         </Typography>
         <Divider />
 
-        <List>
-          {navItems.map((menuItem) => (
-            <React.Fragment key={menuItem.name}>
-              {menuItem.dropdown ? (
-                <>
-                  <ListItem button onClick={handleMenuOpen}>
-                    <ListItemText primary={menuItem.name} />
-                    <ExpandMoreIcon />
-                  </ListItem>
-                  <Popover
-                    open={Boolean(anchorEl) && anchorEl === menuItem.name}
-                    anchorEl={anchorEl}
-                    onClose={handleMenuClose}
-                    anchorOrigin={{
-                      vertical: 'bottom',
-                      horizontal: 'left',
-                    }}
-                    transformOrigin={{
-                      vertical: 'top',
-                      horizontal: 'left',
-                    }}
-                  >
-                    {/* ... */}
-                  </Popover>
-                </>
-              ) : (
-                <ListItem button>
-                  <ActiveLink text={menuItem.name} href={menuItem.path} />
-                </ListItem>
-              )}
-            </React.Fragment>
-          ))}
-        </List>
+        <MenuDrawer mobileOpen={mobileOpen} />
       </Drawer>
 
     </>

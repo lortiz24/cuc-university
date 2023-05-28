@@ -1,20 +1,26 @@
+import { Box } from '@mui/material';
+
 interface IMyGradiantBackgroundProps {
     color: string,
-    borderRadius: string
+    borderRadiusMd: string
+    borderRadiusSm: string
+    borderRadiusXs: string
+    borderRadiusLg: string
 }
 
-const MyGradiantBackground = ({ color, borderRadius }: IMyGradiantBackgroundProps) => {
+const MyGradiantBackground = ({ color, borderRadiusMd, borderRadiusSm, borderRadiusXs, borderRadiusLg }: IMyGradiantBackgroundProps) => {
     return (
-        <div
-            style={{
-                borderRadius,
+        <Box
+            sx={{
+                borderRadius: { xs: borderRadiusXs, sm: borderRadiusSm, md: borderRadiusMd, lg: borderRadiusLg },
+                // borderRadius: 'calc(0 * (1vw / 400) + 17rem * (100vw / 400))',
                 position: 'absolute',
                 top: 0,
                 left: 0,
                 width: '100%',
                 height: '100%',
                 backgroundColor: color,
-                zIndex:-2,
+                zIndex: -2,
                 opacity: 0.8,
             }}
         />
