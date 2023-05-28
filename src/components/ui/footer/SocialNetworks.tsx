@@ -12,7 +12,7 @@ export const SocialNetworks = () => {
             backgroundColor: theme.palette.secondary.main
         }}>
             <a className={styles.link} style={{ color: theme.palette.primary.main }}>
-                <FacebookOutlinedIcon className={`${styles['link-icon']}`}/>
+                <FacebookOutlinedIcon className={`${styles['link-icon']}`} />
                 <span className={styles['link-title']}>Facebook</span>
             </a>
             <a className={styles.link} style={{ color: theme.palette.primary.main }}>
@@ -31,10 +31,7 @@ export const SocialNetworks = () => {
                 <i className={`${styles['link-icon']} fa fa-whatsapp`}> </i>
                 <span className={styles['link-title']}>Whatsapp</span>
             </a>
-            {/* <a className={styles.link} style={{ color: theme.palette.primary.main }}>
-                <i className={`${styles['link-icon']} fab fa-tiktok`}> </i>
-                <span className={styles['link-title']}>TikTok</span>
-            </a> */}
+           
             <a className={styles.link} style={{ color: theme.palette.primary.main }}>
                 <i className={`${styles['link-icon']} fa fa-youtube`}> </i>
                 <span className={styles['link-title']}>Youtube</span>
