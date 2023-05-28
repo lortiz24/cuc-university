@@ -5,6 +5,7 @@ import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import PeopleOutlineOutlinedIcon from '@mui/icons-material/PeopleOutlineOutlined';
 import AttachMoneyOutlinedIcon from '@mui/icons-material/AttachMoneyOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
+import Groups2OutlinedIcon from '@mui/icons-material/Groups2Outlined';
 
 
 export const navItems: MenuItem[] = [
@@ -16,7 +17,7 @@ export const navItems: MenuItem[] = [
     {
         name: "About Us",
         path: "/about-us",
-        icon: <HomeOutlinedIcon />
+        icon: <Groups2OutlinedIcon />
     },
     {
         name: "Academic Programs",

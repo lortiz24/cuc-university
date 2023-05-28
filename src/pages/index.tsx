@@ -23,10 +23,8 @@ const HomePage: NextPage<Props> = ({ graduatePrograms, underGraduatePrograms }) 
           <CucUniversityHome />
         </ComponentWithPadding>
 
-        <ComponentsWithNoPading>
           <ProgramsHome graduatePrograms={graduatePrograms} underGraduatePrograms={underGraduatePrograms} />
-        </ComponentsWithNoPading>
-
+        
       </MainLayout >
     </>
   )

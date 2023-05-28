@@ -9,8 +9,7 @@ interface Props {
 
 export const ComponentsWithNoPading = ({ children }: Props) => {
     return (
-        <Box sx={{
-        }}>
+        <Box>
             {children}
         </Box>
     )

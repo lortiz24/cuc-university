@@ -7,7 +7,7 @@ export const CucUniversityHome = () => {
         <Grid container >
             <Grid
                 item
-                xs={12} sm={12} lg={4}
+                xs={12}  lg={4}
                 paddingLeft={{ xs: 0, xl: 20 }}
                 paddingX={{ xs: 4, }}
                 sx={{
@@ -35,7 +35,7 @@ export const CucUniversityHome = () => {
                     A distinguished American institution located in Miami, Florida, delivers a versatile hybrid educational approach that combines online and on-campus learning opportunities in English and Spanish.
                 </Typography>
             </Grid>
-            <Grid item xs={12} sm={12} lg={8} marginTop={{ xs: 2, md: 0 }} minHeight={'400px'}>
+            <Grid item xs={12}  lg={8} marginTop={{ xs: 2, md: 0 }} minHeight={'400px'}>
                 <AlumsImage />
             </Grid>
             <Grid item xs={12} minHeight={'auto'} width={'100%'}>

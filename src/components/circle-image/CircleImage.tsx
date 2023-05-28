@@ -84,7 +84,6 @@ export const CircleImage = ({ src, height = '600px' }: Props) => {
 
             </Grid>
 
-
         </Box >
 
 
