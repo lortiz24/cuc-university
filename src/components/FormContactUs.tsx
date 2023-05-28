@@ -76,6 +76,7 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                     <Grid container spacing={2}>
                         <Grid item xs={12} marginTop={3} >
                             <TextField
+                                size='small'
                                 placeholder='Name'
                                 value={name}
                                 onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
@@ -92,7 +93,7 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                                         boxShadow: 'inset 0px 11px 11px -10px rgba(128,128,128,0.65)',
                                         borderTop: 'none',
                                         borderBottom: 'none',
-                                        height: '3rem',
+                                        
                                         
                                     }
                                 }}
@@ -100,6 +101,7 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                         </Grid>
                         <Grid item xs={12}>
                             <TextField
+                                size='small'
                                 placeholder="Last Name"
                                 value={lastName}
                                 onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
@@ -115,13 +117,13 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                                         boxShadow: 'inset 0px 11px 11px -10px rgba(128,128,128,0.65)',
                                         borderTop: 'none',
                                         borderBottom: 'none',
-                                        height: '3rem'
                                     }
                                 }}
                             />
                         </Grid>
                         <Grid item xs={12}>
                             <TextField
+                                size='small'
                                 placeholder="Phone"
                                 type="number"
                                 value={phone}
@@ -138,13 +140,13 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                                         boxShadow: 'inset 0px 11px 11px -10px rgba(128,128,128,0.65)',
                                         borderTop: 'none',
                                         borderBottom: 'none',
-                                        height: '3rem'
                                     }
                                 }}
                             />
                         </Grid>
                         <Grid item xs={12}>
                             <TextField
+                                size='small'
                                 placeholder="Email"
                                 type="email"
                                 value={email}
@@ -161,7 +163,6 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                                         boxShadow: 'inset 0px 11px 11px -10px rgba(128,128,128,0.65)',
                                         borderTop: 'none',
                                         borderBottom: 'none',
-                                        height: '3rem'
                                     }
                                 }}
                             />
@@ -184,7 +185,6 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                                         boxShadow: 'inset 0px 11px 11px -10px rgba(128,128,128,0.65)',
                                         borderTop: 'none',
                                         borderBottom: 'none',
-                                        height: '8rem'
                                     }
                                 }}
                             />
