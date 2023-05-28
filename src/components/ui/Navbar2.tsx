@@ -25,9 +25,10 @@ export const NavbarUi = (props: Props) => {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const [anchorEl2, setAnchorEl2] = React.useState<null | HTMLElement>(null);
   const [openSubMenuIndex, setOpenSubMenuIndex] = React.useState<null | number[]>(null); // Nuevo estado para los índices de submenús abiertos
+  const [anchorEl2, setAnchorEl2] = React.useState<null | HTMLElement>(null);
 
+  
   const router = useRouter();
   const theme = useTheme()
 
