@@ -11,6 +11,8 @@ interface IActiveLinkProps {
     href: string;
     redirect?: boolean;
     icon?: React.ReactNode
+    onClick?: any
+    cursorPointer?: boolean
 
 }
 
@@ -22,7 +24,7 @@ export interface MenuItem {
 
 
 
-export const ActiveLink = ({ text, href, redirect = true, icon }: IActiveLinkProps) => {
+export const ActiveLink = ({ text, href, redirect = true, icon, onClick, cursorPointer = true }: IActiveLinkProps) => {
     const router = useRouter()
     const theme = useTheme()
 
@@ -34,23 +36,23 @@ export const ActiveLink = ({ text, href, redirect = true, icon }: IActiveLinkPro
     }
 
     return (
-        <>
+        <div onClick={onClick} >
             {href === '/contact-us'
                 ?
                 <Link
                     style={
                         router.asPath === href ? { backgroundColor: theme.palette.primary.main, color: '#FFFFFF', ...buttonCircleStyle } : { backgroundColor: theme.palette.secondary.main, color: '#ffffff', ...buttonCircleStyle }}
                     href={href} >{text}{icon}</Link>
-
                 :
                 <CustomLink
                     href={href}
                     redirect={redirect}
                     text={text}
                     icon={icon}
+                    cursorPointer={cursorPointer}
                 />
             }
 
-        </>
+        </div>
     )
 }

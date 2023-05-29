@@ -1,7 +1,7 @@
 import { MainLayout } from '@/components/layouts/MainLayout'
 import FormComponent from '../../components/form-contact/FormContactUs';
 import React from 'react'
-import { Grid } from '@mui/material';
+import { Grid, Card, CardMedia } from '@mui/material';
 import Image from 'next/image';
 import { FormContact } from '@/interfaces';
 import { ComponentWithPadding } from '@/components/layouts/ComponentWithPadding';
@@ -10,6 +10,7 @@ const index = () => {
   const handleSubmit = (formData: FormContact) => {
     console.log(formData);
   };
+  const borderRadius = '3rem'
   return (
     <MainLayout title='Contact Us'>
       <ComponentWithPadding>
@@ -17,8 +18,28 @@ const index = () => {
           <Grid xs={12} sm={12} md={12} lg={6} item >
             <FormComponent onSubmit={handleSubmit} />
           </Grid>
-          <Grid item xs={12} sm={12} md={12} lg={6} marginY={4} justifyContent="center" alignItems="center" display={'flex'}>
-            <Image
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={12}
+            lg={6}
+            marginY={{ xs: 4, md: 0 }}
+            justifyContent="center"
+            alignItems="center"
+            display={'flex'}
+            paddingX={{xs:1}}
+            >
+            <CardMedia
+              sx={{
+                borderRadius,
+                width: '100%',
+              }}
+              component="img"
+              image={'/assets/Maps_ubication.png'}
+              alt="Map"
+            />
+            {/*  <Image
               src={'/assets/Maps_ubication.png'}
               alt='maps1'
               width={0}
@@ -28,7 +49,7 @@ const index = () => {
                 width: '490px',
                 borderRadius: '3rem',
               }}
-            />
+            /> */}
           </Grid>
         </Grid>
       </ComponentWithPadding>

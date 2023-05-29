@@ -8,11 +8,12 @@ interface Props {
     href: string;
     text: string;
     redirect: boolean;
-    icon?: React.ReactNode
+    icon?: React.ReactNode,
+    cursorPointer?: boolean
 }
 
 
-export const CustomLink = ({ href, text, redirect, icon }: Props) => {
+export const CustomLink = ({ href, text, redirect, icon, cursorPointer }: Props) => {
     const router = useRouter()
     const theme = useTheme()
 
@@ -20,6 +21,7 @@ export const CustomLink = ({ href, text, redirect, icon }: Props) => {
         if (!redirect) {
             event.preventDefault();
         }
+
     };
 
 
@@ -40,7 +42,7 @@ export const CustomLink = ({ href, text, redirect, icon }: Props) => {
             style={{
                 color: theme.palette.secondary.main,
                 textDecoration: 'none',
-                cursor: redirect ? 'pointer' : 'default',
+                cursor: cursorPointer ? 'pointer' : 'default',
             }}
         >
             <Grid container alignItems="center">

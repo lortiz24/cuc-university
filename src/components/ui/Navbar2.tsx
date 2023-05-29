@@ -28,6 +28,12 @@ export const NavbarUi = (props: Props) => {
   const [openSubMenuIndex, setOpenSubMenuIndex] = React.useState<null | number[]>(null); // Nuevo estado para los índices de submenús abiertos
   const [anchorEl2, setAnchorEl2] = React.useState<null | HTMLElement>(null);
 
+
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+
   const router = useRouter();
   const theme = useTheme()
 
@@ -94,18 +100,18 @@ export const NavbarUi = (props: Props) => {
               {navItems.map((menuItem, menuIndex) => (
                 <React.Fragment key={menuItem.name}>
                   {menuItem.dropdown ? (
-                    <div>
-                      {/* <button
-                        onMouseEnter={(event) =>
-                          handleMenuOpen(event, menuIndex, 0)
-                        }
-                      >
-                        {menuItem.name}
-                      </button> */}
-                      <ActiveLink href="/" text={menuItem.name} redirect={false} icon={<ExpandMoreIcon className={styles["expand-icon"]} />} />
+                    <div >
+
+                      <ActiveLink
+                        href="/"
+                        text={menuItem.name}
+                        redirect={false}
+                        icon={<ExpandMoreIcon className={styles["expand-icon"]} />}
+                        onClick={handleClick}
+                      />
 
                       <Popover
-                        open={Boolean(anchorEl) && openSubMenuIndex?.[0] === menuIndex}
+                        open={Boolean(anchorEl)}
                         anchorEl={anchorEl}
                         onClose={handleMenuClose}
                         anchorOrigin={{
