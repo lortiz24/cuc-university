@@ -6,6 +6,7 @@ import { ComponentsWithNoPading } from '@/components/layouts/ComponentsWithNoPad
 import { GetStaticProps, NextPage } from 'next'
 import { ProgramItem } from '@/interfaces/Programs.interface'
 import { graduatePrograms, underGraduatePrograms } from '@/data/programs'
+import { Button } from '@mui/material'
 
 
 
@@ -18,13 +19,12 @@ const HomePage: NextPage<Props> = ({ graduatePrograms, underGraduatePrograms }) 
   return (
     <>
       <MainLayout title='Cuc University'>
-
         <ComponentWithPadding>
           <CucUniversityHome />
         </ComponentWithPadding>
 
-          <ProgramsHome graduatePrograms={graduatePrograms} underGraduatePrograms={underGraduatePrograms} />
-        
+        <ProgramsHome graduatePrograms={graduatePrograms} underGraduatePrograms={underGraduatePrograms} />
+
       </MainLayout >
     </>
   )

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Button, FormControlLabel, Grid, TextField, Typography, Link, useTheme } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 import { BpCheckbox } from '../ui/Checkbox';
 import { FormContact } from '@/interfaces';
 
@@ -21,7 +20,6 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [acceptData, setAcceptData] = useState(false);
-    const theme = useTheme()
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
@@ -196,6 +194,7 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                             <Button
                                 type="submit"
                                 variant="contained"
+                                color='secondary'
                                 fullWidth
                                 sx={{
                                     borderRadius: 30

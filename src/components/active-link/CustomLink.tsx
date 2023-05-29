@@ -1,16 +1,18 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { Button, useTheme, Menu } from '@mui/material';
+import { Button, useTheme, Menu, Grid, Typography } from '@mui/material';
 
 
 interface Props {
     href: string;
     text: string;
     redirect: boolean;
+    icon?: React.ReactNode
 }
 
-export const CustomLink = ({ href, text, redirect }: Props) => {
+
+export const CustomLink = ({ href, text, redirect, icon }: Props) => {
     const router = useRouter()
     const theme = useTheme()
 
@@ -26,9 +28,8 @@ export const CustomLink = ({ href, text, redirect }: Props) => {
         return (
             <Link
                 href={href}
-                style={router.asPath === href ? { color: theme.palette.primary.main } : { color: theme.palette.secondary.main }}
-            >{text}
-            </Link>
+                style={router.asPath === href ? { color: theme.palette.primary.main, textDecoration: 'none' } : { color: theme.palette.secondary.main, textDecoration: 'none' }}
+            >{text}{icon}</Link>
         )
     }
 
@@ -37,13 +38,21 @@ export const CustomLink = ({ href, text, redirect }: Props) => {
             href={href}
             onClick={handleClick}
             style={{
-                color: theme.palette.secondary.main, 
+                color: theme.palette.secondary.main,
                 textDecoration: 'none',
                 cursor: redirect ? 'pointer' : 'default',
-
             }}
         >
-            {text}
+            <Grid container alignItems="center">
+                <Grid item>
+                    <Typography variant="body1" style={{ color: theme.palette.secondary.main }}>
+                        {text}
+                    </Typography>
+                </Grid>
+                <Grid item>
+                    {icon}
+                </Grid>
+            </Grid>
         </a>
     );
 };

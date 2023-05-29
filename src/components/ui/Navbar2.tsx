@@ -28,7 +28,6 @@ export const NavbarUi = (props: Props) => {
   const [openSubMenuIndex, setOpenSubMenuIndex] = React.useState<null | number[]>(null); // Nuevo estado para los índices de submenús abiertos
   const [anchorEl2, setAnchorEl2] = React.useState<null | HTMLElement>(null);
 
-  
   const router = useRouter();
   const theme = useTheme()
 
@@ -84,8 +83,7 @@ export const NavbarUi = (props: Props) => {
               component="img"
               sx={{
                 maxHeight: { xs: 200, md: 167 },
-                maxWidth: { xs: 300, md: 250 },
-                display: { xs: "none", lg: "block" },
+                maxWidth: { xs: '100%', sm: 250, md: 250 },
               }}
               alt="The house from the offer."
               src={`${origin}/assets/9744a3a642b478781df6cd9b3dde8724.png`}
@@ -96,19 +94,16 @@ export const NavbarUi = (props: Props) => {
               {navItems.map((menuItem, menuIndex) => (
                 <React.Fragment key={menuItem.name}>
                   {menuItem.dropdown ? (
-                    <div
-                      onMouseLeave={handleMenuClose}
-                      style={{ position: "relative" }}
-                    >
-                      <button
+                    <div>
+                      {/* <button
                         onMouseEnter={(event) =>
                           handleMenuOpen(event, menuIndex, 0)
                         }
-                        className={"nav-item-button"}
                       >
                         {menuItem.name}
-                        <ExpandMoreIcon className={styles["expand-icon"]} />
-                      </button>
+                      </button> */}
+                      <ActiveLink href="/" text={menuItem.name} redirect={false} icon={<ExpandMoreIcon className={styles["expand-icon"]} />} />
+
                       <Popover
                         open={Boolean(anchorEl) && openSubMenuIndex?.[0] === menuIndex}
                         anchorEl={anchorEl}
@@ -179,6 +174,7 @@ export const NavbarUi = (props: Props) => {
           </Box>
         </Toolbar>
       </AppBar>
+
       <Drawer
         container={container}
         variant='temporary'
@@ -200,7 +196,7 @@ export const NavbarUi = (props: Props) => {
           variant='h2'
           color={theme.palette.primary.main}
           fontWeight="bold"
-          fontSize={{ xs: 20, sm: 35 }}
+          fontSize={{ xs: 20, md: 35 }}
           marginBottom={{ xs: 1, md: 2 }}
           style={{ textAlign: 'center' }}
         >
