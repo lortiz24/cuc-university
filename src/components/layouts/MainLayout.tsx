@@ -37,9 +37,7 @@ export const MainLayout = ({ children, title = 'Cuc University', description = '
             </div> */}
 
             <Box
-                sx={{
-                    minHeight: '100vh'
-                }}>
+                >
                 {children}
             </Box>
 
