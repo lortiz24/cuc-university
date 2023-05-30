@@ -19,7 +19,17 @@ const ComponentWithImage: React.FC<ComponentWithImageProps> = ({
       </Grid>
       <Grid item xs={12}  md={6} position="relative">
         <div className="image-container">
-          <Image
+        <img
+          src={image}
+          alt={"students"}
+          style={{
+            width: '100%',
+            height: 'auto',
+            position: 'absolute',
+            top: '1rem',
+          }}
+        />
+          {/* <Image
             src={image}
             alt="aluma1"
             width={700}
@@ -29,7 +39,7 @@ const ComponentWithImage: React.FC<ComponentWithImageProps> = ({
               position: 'absolute',
               top: '1rem', // Ajusta el valor según la distancia vertical deseada
             }}
-          />
+          /> */}
         </div>
       </Grid>
 
