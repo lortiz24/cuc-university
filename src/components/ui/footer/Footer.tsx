@@ -3,6 +3,7 @@ import { Grid, useTheme, Typography, Box, TextField, Button } from '@mui/materia
 import { useGetOrigin } from '@/hooks/useGetOrigin'
 import { SocialNetworks } from './SocialNetworks'
 import { MenuFooter } from '../menu/MenuFooter'
+import { EmailForm } from './EmailForm'
 
 export const Footer = () => {
   const { origin } = useGetOrigin()
@@ -83,34 +84,10 @@ export const Footer = () => {
               >
                 Stay up to date our news, blog post, and announcements by subscribing to our Newsletter.
               </Typography>
-
             </Grid>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                size='small'
-                placeholder="Message"
-                fullWidth
-                InputProps={{
-                  sx: {
-                    borderRadius: 6,
-                  }
-                }}
-              />
 
-            </Grid>
-            <Grid item xs={7} sm={4}>
-              <Button
-                type="submit"
-                variant="contained"
-                color='primary'
-                fullWidth
-                sx={{
-                  borderRadius: 6,
-                  paddingX: 2
-                }}
-              >
-                Subscribe
-              </Button>
+            <Grid item xs={12}>
+              <EmailForm />
             </Grid>
             <Grid item xs={12}>
               <SocialNetworks />
