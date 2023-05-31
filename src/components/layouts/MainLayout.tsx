@@ -28,16 +28,8 @@ export const MainLayout = ({ children, title = 'Cuc University', description = '
 
             <NavbarUi />
 
-
-            {/* <div style={{
-                padding: '0rem 10rem',
-                paddingBottom: 20,
-            }}>
-                {children}
-            </div> */}
-
             <Box
-                >
+            >
                 {children}
             </Box>
 

@@ -33,7 +33,7 @@ export const CustomLink = ({ href, text, redirect, icon, cursorPointer, colorLin
                 href={href}
                 style={router.asPath === href
                     ?
-                    { color: colorLink ? colorLink : theme.palette.primary.main, textDecoration: 'none' }
+                    { color: theme.palette.primary.main, textDecoration: 'none' }
                     :
                     { color: colorLink ? colorLink : theme.palette.secondary.main, textDecoration: 'none' }}
             >{text}{icon}</Link>

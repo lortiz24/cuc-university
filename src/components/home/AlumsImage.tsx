@@ -35,13 +35,13 @@ export const AlumsImage = () => {
                 flexDirection: 'row',
                 justifyContent: 'center',
                 alignItems: 'flex-end',
-                backgroundImage: `url(${origin}/assets/Alumna-1-1.png)`,
+                backgroundImage: `url(${origin}/assets/Grupo-alumnos.png)`,
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'bottom ',
                 backgroundSize: 'contain',
 
             }} />
-            <Box sx={{
+           {/*  <Box sx={{
                 position: 'absolute',
                 height: '100%',
                 width: '100%',
@@ -53,7 +53,7 @@ export const AlumsImage = () => {
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'bottom ',
                 backgroundSize: 'contain',
-            }} />
+            }} /> */}
 
         </Box>
 

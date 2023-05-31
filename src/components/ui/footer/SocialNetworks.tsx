@@ -6,35 +6,34 @@ import { useTheme, } from '@mui/material';
 
 
 export const SocialNetworks = () => {
-    const theme = useTheme()
+    //todo:agregar icono de tiktok
     return (
         <div className={styles.menu} style={{
-            backgroundColor: theme.palette.secondary.main
         }}>
-            <a className={styles.link} style={{ color: theme.palette.primary.main }}>
+            <a className={styles.link} style={{ color: '#FFFFFF' }}>
                 <FacebookOutlinedIcon className={`${styles['link-icon']}`} />
-                <span className={styles['link-title']}>Facebook</span>
+                {/* <span className={styles['link-title']}>Facebook</span> */}
             </a>
-            <a className={styles.link} style={{ color: theme.palette.primary.main }}>
+            <a className={styles.link} style={{ color: '#FFFFFF' }}>
                 <i className={`${styles['link-icon']} fa fa-twitter`}> </i>
                 <span className={styles['link-title']}>Twitter</span>
             </a>
-            <a className={styles.link} style={{ color: theme.palette.primary.main }}>
+            <a className={styles.link} style={{ color: '#FFFFFF' }}>
                 <i className={`${styles['link-icon']} fa fa-instagram`}> </i>
-                <span className={styles['link-title']}>Instagram</span>
+                {/* <span className={styles['link-title']}>Instagram</span> */}
             </a>
-            <a className={styles.link} style={{ color: theme.palette.primary.main }}>
+            <a className={styles.link} style={{ color: '#FFFFFF' }}>
                 <i className={`${styles['link-icon']} fa fa-linkedin`}> </i>
-                <span className={styles['link-title']}>Linkedln</span>
+                {/* <span className={styles['link-title']}>Linkedln</span> */}
             </a>
-            <a className={styles.link} style={{ color: theme.palette.primary.main }}>
+            <a className={styles.link} style={{ color: '#FFFFFF' }}>
                 <i className={`${styles['link-icon']} fa fa-whatsapp`}> </i>
-                <span className={styles['link-title']}>Whatsapp</span>
+                {/* <span className={styles['link-title']}>Whatsapp</span> */}
             </a>
-           
-            <a className={styles.link} style={{ color: theme.palette.primary.main }}>
+
+            <a className={styles.link} style={{ color: '#FFFFFF' }}>
                 <i className={`${styles['link-icon']} fa fa-youtube`}> </i>
-                <span className={styles['link-title']}>Youtube</span>
+                {/* <span className={styles['link-title']}>Youtube</span> */}
             </a>
 
         </div>

@@ -1,9 +1,7 @@
 import React from 'react'
-import { Grid, useTheme, Typography, Box } from '@mui/material'
+import { Grid, useTheme, Typography, Box, TextField, Button } from '@mui/material'
 import { useGetOrigin } from '@/hooks/useGetOrigin'
 import { SocialNetworks } from './SocialNetworks'
-import { NavbarUi } from '../Navbar2'
-import { Menu } from '../menu/Menu'
 import { MenuFooter } from '../menu/MenuFooter'
 
 export const Footer = () => {
@@ -20,22 +18,22 @@ export const Footer = () => {
       backgroundSize: 'contain',
       minHeight,
       backgroundColor: theme.palette.secondary.main,
-      zIndex: -10
+      zIndex: -10,
+
     }}>
       <Grid
         container
         sx={{ minHeight }}
+        paddingX={{ xs: 1, sm: 3, md: 2 }}
         rowGap={4}
+        paddingBottom={{ xs: 5, sm: 5 }}
       >
         <Grid
           item
           xs={12}
-          md={4}
+          lg={4}
           padding={{ xs: 0 }}
           minHeight={200}
-        /* sx={{
-          backgroundColor: 'red',
-        }} */
         >
           <Box sx={{
             height: '100%',
@@ -50,7 +48,7 @@ export const Footer = () => {
         <Grid
           item
           xs={12}
-          md={4}
+          lg={4}
           padding={{ xs: 1 }}
           display={'flex'}
           justifyContent={'center'}
@@ -62,31 +60,65 @@ export const Footer = () => {
         <Grid
           item
           xs={12}
-          md={4}
+          lg={4}
           display={'flex'}
           justifyContent={'center'}
           flexDirection={'column'}
           paddingX={{ xs: 2, sm: 3, md: 4, lg: 5 }}
         >
-          <Typography
-            variant='h2'
-            color={theme.palette.primary.main}
-            fontWeight="bold"
-            fontSize={{ xs: 22, md: 22 }}
-            marginBottom={{ xs: 2, xl: 4 }}
-            textAlign={'start'}
-          >Join our Newsletter</Typography>
-          <Typography
-            variant='body2'
-            color={'#FFFFFF'}
-            fontSize={{ xs: 20, sm: 20, md: 22 }}
-            textAlign={'start'}
-          >
-            Stay up to date our news, blog post, and announcements by subscribing to our Newsletter.
-          </Typography>
-          <SocialNetworks />
+          <Grid container columnGap={2} rowGap={2} marginTop={2}>
+            <Grid item xs={12}>
+              <Typography
+                variant='h2'
+                color={theme.palette.primary.main}
+                fontWeight="bold"
+                fontSize={{ xs: 22, md: 22 }}
+                textAlign={'start'}
+              >Join our Newsletter</Typography>
+              <Typography
+                variant='body2'
+                color={'#FFFFFF'}
+                fontSize={{ xs: 20, sm: 20, md: 20 }}
+                textAlign={'start'}
+              >
+                Stay up to date our news, blog post, and announcements by subscribing to our Newsletter.
+              </Typography>
+
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                size='small'
+                placeholder="Message"
+                fullWidth
+                InputProps={{
+                  sx: {
+                    borderRadius: 6,
+                  }
+                }}
+              />
+
+            </Grid>
+            <Grid item xs={7} sm={4}>
+              <Button
+                type="submit"
+                variant="contained"
+                color='primary'
+                fullWidth
+                sx={{
+                  borderRadius: 6,
+                  paddingX: 2
+                }}
+              >
+                Subscribe
+              </Button>
+            </Grid>
+            <Grid item xs={12}>
+              <SocialNetworks />
+            </Grid>
+          </Grid>
+
         </Grid>
       </Grid >
-    </Box>
+    </Box >
   )
 }
