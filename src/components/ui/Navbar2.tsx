@@ -13,6 +13,7 @@ import { ActiveLink } from "../active-link/ActiveLink";
 import { Divider, Drawer, Typography, useTheme } from "@mui/material";
 import { navItems } from "@/data";
 import { MenuDrawer } from "./menu-drawer/MenuDrawer";
+import { Menu } from "./menu/Menu";
 
 interface Props {
   window?: () => Window;
@@ -96,87 +97,7 @@ export const NavbarUi = (props: Props) => {
             />
           </div>
           <Box sx={{ display: { xs: "none", lg: "block" } }}>
-            <nav className={"menu-container"}>
-              {navItems.map((menuItem, menuIndex) => (
-                <React.Fragment key={menuItem.name}>
-                  {menuItem.dropdown ? (
-                    <div >
-
-                      <ActiveLink
-                        href="/"
-                        text={menuItem.name}
-                        redirect={false}
-                        icon={<ExpandMoreIcon className={styles["expand-icon"]} />}
-                        onClick={handleClick}
-                      />
-
-                      <Popover
-                        open={Boolean(anchorEl)}
-                        anchorEl={anchorEl}
-                        onClose={handleMenuClose}
-                        anchorOrigin={{
-                          vertical: "bottom",
-                          horizontal: "left",
-                        }}
-                        transformOrigin={{
-                          vertical: "top",
-                          horizontal: "left",
-                        }}
-                      >
-                        <Box sx={{ minWidth: "200px" }}>
-                          {menuItem.dropdown?.map((subMenu, subMenuIndex) => (
-                            <div key={subMenu.name}>
-                              <MenuItem
-                                onClick={(event) =>
-                                  handleMenuOpen(event, menuIndex, subMenuIndex + 1)
-                                }
-                                sx={{ width: "100%" }}
-                              >
-                                {subMenu.name}
-                                <ExpandMoreIcon className={styles["expand-icon"]} />
-                              </MenuItem>
-                              {openSubMenuIndex?.[0] === menuIndex &&
-                                openSubMenuIndex?.[1] === subMenuIndex + 1 && (
-                                  <Popover
-                                    open={Boolean(anchorEl2)}
-                                    anchorEl={anchorEl2}
-                                    onClose={handleMenuClose}
-                                    anchorOrigin={{
-                                      vertical: "bottom",
-                                      horizontal: "left",
-                                    }}
-                                    transformOrigin={{
-                                      vertical: "top",
-                                      horizontal: "left",
-                                    }}
-                                  >
-                                    <Box sx={{ minWidth: "200px" }}>
-                                      {subMenu.dropdown?.map((subItem) => (
-                                        <MenuItem
-                                          key={subItem.name}
-                                          onClick={() => {
-                                            handleMenuClose();
-                                            router.push(menuItem.path + subItem.path);
-                                          }}
-                                          sx={{ width: "100%" }}
-                                        >
-                                          {subItem.name}
-                                        </MenuItem>
-                                      ))}
-                                    </Box>
-                                  </Popover>
-                                )}
-                            </div>
-                          ))}
-                        </Box>
-                      </Popover>
-                    </div>
-                  ) : (
-                    <ActiveLink text={menuItem.name} href={menuItem.path} />
-                  )}
-                </React.Fragment>
-              ))}
-            </nav>
+            <Menu />
           </Box>
         </Toolbar>
       </AppBar>

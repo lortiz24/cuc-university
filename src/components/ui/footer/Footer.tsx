@@ -2,6 +2,8 @@ import React from 'react'
 import { Grid, useTheme, Typography, Box } from '@mui/material'
 import { useGetOrigin } from '@/hooks/useGetOrigin'
 import { SocialNetworks } from './SocialNetworks'
+import { NavbarUi } from '../Navbar2'
+import { Menu } from '../menu/Menu'
 
 export const Footer = () => {
   const { origin } = useGetOrigin()
@@ -26,7 +28,7 @@ export const Footer = () => {
         <Grid
           item
           xs={12}
-          lg={6}
+          lg={4}
           padding={{ xs: 3 }}
         // sx={{ backgroundColor: 'red' }}
         >
@@ -43,7 +45,17 @@ export const Footer = () => {
         <Grid
           item
           xs={12}
-          lg={6}
+          lg={4}
+          padding={{ xs: 3 }}
+        // sx={{ backgroundColor: 'red' }}
+        >
+          <Menu />
+
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          lg={4}
           display={'flex'}
           justifyContent={'center'}
           flexDirection={'column'}
