@@ -10,10 +10,11 @@ interface Props {
     redirect: boolean;
     icon?: React.ReactNode,
     cursorPointer?: boolean
+    colorLink?: string;
 }
 
 
-export const CustomLink = ({ href, text, redirect, icon, cursorPointer }: Props) => {
+export const CustomLink = ({ href, text, redirect, icon, cursorPointer, colorLink }: Props) => {
     const router = useRouter()
     const theme = useTheme()
 
@@ -30,7 +31,11 @@ export const CustomLink = ({ href, text, redirect, icon, cursorPointer }: Props)
         return (
             <Link
                 href={href}
-                style={router.asPath === href ? { color: theme.palette.primary.main, textDecoration: 'none' } : { color: theme.palette.secondary.main, textDecoration: 'none' }}
+                style={router.asPath === href
+                    ?
+                    { color: colorLink ? colorLink : theme.palette.primary.main, textDecoration: 'none' }
+                    :
+                    { color: colorLink ? colorLink : theme.palette.secondary.main, textDecoration: 'none' }}
             >{text}{icon}</Link>
         )
     }
@@ -40,14 +45,14 @@ export const CustomLink = ({ href, text, redirect, icon, cursorPointer }: Props)
             href={href}
             onClick={handleClick}
             style={{
-                color: theme.palette.secondary.main,
+                color: colorLink ? colorLink : theme.palette.secondary.main,
                 textDecoration: 'none',
                 cursor: cursorPointer ? 'pointer' : 'default',
             }}
         >
             <Grid container alignItems="center">
                 <Grid item>
-                    <Typography variant="body1" style={{ color: theme.palette.secondary.main }}>
+                    <Typography variant="body1" style={{ color: colorLink ? colorLink : theme.palette.secondary.main }}>
                         {text}
                     </Typography>
                 </Grid>
@@ -55,6 +60,6 @@ export const CustomLink = ({ href, text, redirect, icon, cursorPointer }: Props)
                     {icon}
                 </Grid>
             </Grid>
-        </a>
+        </a >
     );
 };

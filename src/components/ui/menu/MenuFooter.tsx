@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
-import { ActiveLink } from '@/components/active-link/ActiveLink';
+import { ActiveLinkFooter } from '@/components/active-link/ActiveLinkFooter';
 import { navItems } from '@/data';
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import styles from "../Navbar.module.css";
-import { Box, MenuItem, Popover } from '@mui/material';
+import { Box, MenuItem, Popover, Grid } from '@mui/material';
 import { useRouter } from 'next/router';
-
 
 
 interface Props {
     colorLink?: string;
 }
-export const Menu = ({ colorLink }: Props) => {
+
+
+export const MenuFooter = ({ colorLink }: Props) => {
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const [openSubMenuIndex, setOpenSubMenuIndex] = useState<null | number[]>(null); // Nuevo estado para los índices de submenús abiertos
     const [anchorEl2, setAnchorEl2] = useState<null | HTMLElement>(null);
@@ -40,12 +41,21 @@ export const Menu = ({ colorLink }: Props) => {
 
 
     return (
-        <Box component={'nav'} className={"menu-container"}>
+        <Grid
+            container
+            component={'nav'}
+            display='flex'
+            justifyContent='center'
+            alignItems='center'
+        >
             {navItems.map((menuItem, menuIndex) => (
-                <React.Fragment key={menuItem.name}>
+                <Grid item
+                    xs={12}
+                    sm={6}
+                    key={menuItem.name}>
                     {menuItem.dropdown ? (
                         <div >
-                            <ActiveLink
+                            <ActiveLinkFooter
                                 colorLink={colorLink}
                                 href="/"
                                 text={menuItem.name}
@@ -115,10 +125,10 @@ export const Menu = ({ colorLink }: Props) => {
                             </Popover>
                         </div>
                     ) : (
-                        <ActiveLink text={menuItem.name} href={menuItem.path} colorLink={colorLink} />
+                        <ActiveLinkFooter text={menuItem.name} href={menuItem.path} colorLink={colorLink} />
                     )}
-                </React.Fragment>
+                </Grid>
             ))}
-        </Box>
+        </Grid>
     )
 }

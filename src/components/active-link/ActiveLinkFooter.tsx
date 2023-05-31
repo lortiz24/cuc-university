@@ -25,7 +25,7 @@ export interface MenuItem {
 
 
 
-export const ActiveLink = ({ text, href, redirect = true, icon, onClick, cursorPointer = true, colorLink }: IActiveLinkProps) => {
+export const ActiveLinkFooter = ({ text, href, redirect = true, icon, onClick, cursorPointer = true, colorLink }: IActiveLinkProps) => {
     const router = useRouter()
     const theme = useTheme()
 
@@ -43,12 +43,13 @@ export const ActiveLink = ({ text, href, redirect = true, icon, onClick, cursorP
                 <Link
                     style={
                         router.asPath === href ?
-                            { backgroundColor: theme.palette.primary.main, color: '#FFFFFF', ...buttonCircleStyle }
+                            { color: '#FFFFFF', ...buttonCircleStyle, border: `1px solid ${theme.palette.primary.main}` }
                             :
-                            { backgroundColor: theme.palette.secondary.main, color: '#ffffff', ...buttonCircleStyle }}
+                            { color: '#ffffff', ...buttonCircleStyle, border: '1px solid #FFFFFF' }}
                     href={href} >{text}{icon}</Link>
                 :
                 <CustomLink
+                    colorLink={colorLink}
                     href={href}
                     redirect={redirect}
                     text={text}
