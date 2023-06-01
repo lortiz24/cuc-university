@@ -3,7 +3,6 @@ import { Grid, Typography, useTheme } from '@mui/material'
 import { CircleImage } from '../circle-image/CircleImage'
 import { MisionAndVision } from './MisionAndVision';
 import { ContentWithBackgrounImage } from '../ui/ContentWithBackgrounImage';
-import { useGetOrigin } from '@/hooks/useGetOrigin';
 
 export const AboutUsSectionUp = () => {
     const theme = useTheme()
@@ -62,25 +61,39 @@ export const AboutUsSectionUp = () => {
                     environment and apply their academic expertise to real-world challenges.
                 </Typography>
             </Grid>
-            <Grid item xs={12} lg={8} marginTop={{ xs: 2, md: 0 }} minHeight={'400px'}>
+            <Grid
+                item xs={12}
+                lg={8}
+                marginTop={{ xs: 2, md: 0 }}
+                minHeight={{ xs: '300px', sm: '500px' }}
+                display='flex'
+                flexDirection='column'
+                alignItems='start'
+                sx={{ zIndex: -20 }}
+            >
                 <ContentWithBackgrounImage
                     item1={`/assets/Alumna-3.png`}
                     backgroundImage={`/assets/City-1.jpg`}
-                    backgroundImagProps={{borderRadius:'10rem'}}
+                    withBackgroundImage={false}
                 />
             </Grid>
-            <Grid item xs={12} minHeight={'auto'} width={'100%'}>
+            <Grid
+                item
+                xs={12}
+                minHeight={'auto'}
+                width={'100%'}
+                sx={{ position: 'relative' }}>
                 <CircleImage
                     src={`/assets/figura2.png`}
                     backgroundColor={theme.palette.background.paper}
                     backgroundPosition='center'
-                    backgroundSize='containe'
-                    minHeight={{ xs: 600 }}
+                    backgroundSize='contain'
+                    minHeight={{ xs: 800, sm:700, md:650 }}
                 >
                     <MisionAndVision />
                 </CircleImage>
             </Grid>
-        </Grid>
+        </Grid >
 
     )
 }

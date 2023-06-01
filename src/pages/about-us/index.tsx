@@ -7,7 +7,7 @@ import { AboutUsSectionUp } from '@/components/about-us/AboutUsSectionUp';
 const index = () => {
     return (
         <MainLayout title='About Us'>
-            <Grid container>
+            <Grid container rowGap={3}>
                 <Grid item xs={12}>
                     <AboutUsSectionUp />
                 </Grid>

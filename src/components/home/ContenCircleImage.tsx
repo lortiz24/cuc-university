@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Typography, useTheme } from '@mui/material'
+import { Grid, Typography, useTheme, Box } from '@mui/material'
 import { useGetOrigin } from '@/hooks/useGetOrigin'
 
 export const ContenCircleImage = () => {
@@ -25,10 +25,22 @@ export const ContenCircleImage = () => {
                     width: '100%',
                 }}
             >
+                {/* <Box
+                    sx={{
+                        position: 'relative',
+                        width: '100%',
+                        height: '100%',
+                        backgroundImage: `url(${origin}/assets/mano-start.png)`,
+                        backgroundRepeat: 'no-repeat',
+                        backgroundPosition: 'center', // Modificado para alinear la imagen en la parte superior
+                        backgroundSize: '80%',
+                        zIndex: 10,
+                    }}
+                ></Box> */}
             </Grid>
             <Grid
                 item
-                xs={12} 
+                xs={12}
                 lg={6}
                 sx={{
                     display: 'flex',

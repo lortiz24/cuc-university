@@ -28,7 +28,7 @@ export const MenuDrawer = ({ mobileOpen }: Props) => {
 
     }, [mobileOpen])
 
-//todo: menu no responde enseguida
+    //todo: menu no responde enseguida
     return (
         <List
             sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
@@ -39,8 +39,8 @@ export const MenuDrawer = ({ mobileOpen }: Props) => {
 
                 if (menu.dropdown) {
                     return (
-                        <>
-                            <ListItemButton onClick={handleClick}>
+                        <div key={menu.path + index}>
+                            <ListItemButton onClick={handleClick} >
                                 <ListItemIcon>
                                     {menu.icon}
                                 </ListItemIcon>
@@ -58,16 +58,17 @@ export const MenuDrawer = ({ mobileOpen }: Props) => {
                                             return (
                                                 <>
                                                     <List component="nav"
-                                                        aria-labelledby="nested-list-subheader">
+                                                        aria-labelledby="nested-list-subheader"
+                                                        key={subMenu.name}>
                                                         <CollapseMenuHeader primary={subMenu.name}>
                                                             {
                                                                 subMenu.dropdown.map((program, inedx) => {
                                                                     return (
-                                                                        <>
-                                                                            <ListItemButton key={index}>
+                                                                        <div key={menu.path + index}>
+                                                                            <ListItemButton >
                                                                                 <ActiveLink href={menu.path + program.path} text={program.name} />
                                                                             </ListItemButton>
-                                                                        </>
+                                                                        </div>
                                                                     )
                                                                 })
                                                             }
@@ -81,10 +82,10 @@ export const MenuDrawer = ({ mobileOpen }: Props) => {
 
                                 </List>
                             </Collapse>
-                        </>)
+                        </div>)
                 }
                 return (
-                    <ListItemButton key={index}>
+                    <ListItemButton key={menu.path + index}>
                         <ListItemIcon>
                             {menu.icon}
                         </ListItemIcon>

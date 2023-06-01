@@ -36,7 +36,7 @@ export const CucUniversityHome = () => {
                     A distinguished American institution located in Miami, Florida, delivers a versatile hybrid educational approach that combines online and on-campus learning opportunities in English and Spanish.
                 </Typography>
             </Grid>
-            <Grid item xs={12} lg={8} marginTop={{ xs: 2, md: 0 }} minHeight={'400px'}>
+            <Grid item xs={12} lg={8} marginTop={{ xs: 2, md: 0 }} minHeight={{ xs: '300px', sm: '500px' }}>
                 <ContentWithBackgrounImage />
             </Grid>
             <Grid item xs={12} minHeight={'auto'} width={'100%'}>

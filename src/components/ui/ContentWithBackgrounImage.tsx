@@ -4,9 +4,7 @@ import { Box } from '@mui/material'
 interface Props {
     backgroundImage?: string;
     item1?: string;
-    backgroundImagProps?: {
-        borderRadius?: number | string;
-    }
+    withBackgroundImage?: boolean;
 }
 
 
@@ -15,6 +13,7 @@ const origin = (typeof window === 'undefined') ? '' : window.location.origin
 export const ContentWithBackgrounImage = ({
     backgroundImage = `/assets/figura1.png`,
     item1 = `/assets/Grupo-alumnos.png`,
+    withBackgroundImage = true
 }: Props) => {
 
     return (
@@ -26,7 +25,7 @@ export const ContentWithBackgrounImage = ({
             flexDirection: 'row',
             justifyContent: 'center',
             alignItems: 'flex-end',
-            backgroundImage: `url(${origin}${backgroundImage})`,
+            backgroundImage: withBackgroundImage ? `url(${origin}${backgroundImage})` : '',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'bottom',
             backgroundSize: 'contain',
