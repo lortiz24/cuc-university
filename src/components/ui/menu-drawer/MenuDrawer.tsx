@@ -28,7 +28,7 @@ export const MenuDrawer = ({ mobileOpen }: Props) => {
 
     }, [mobileOpen])
 
-
+//todo: menu no responde enseguida
     return (
         <List
             sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}

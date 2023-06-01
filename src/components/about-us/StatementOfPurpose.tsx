@@ -4,11 +4,11 @@ import {
   Typography,
   List,
   ListItem,
-  ListItemText,
   ListItemIcon,
   Grid,
 } from '@mui/material';
-import Image from 'next/image';
+import { TextWithIcon } from './TextWithIcon';
+import { useGetOrigin } from '@/hooks/useGetOrigin';
 
 interface SplitPageProps {
   listItems?: string[];
@@ -16,12 +16,22 @@ interface SplitPageProps {
   image?: string;
 }
 
-const SplitPage: React.FC<SplitPageProps> = ({ listItems = ["Provide undergraduate and master's programs with an environment that focuses on all dimensions of learning - knowledge, understanding, skills, behaviors, values, and attitudes.",
-  "Create and disseminate knowledge on important business issues through research, innovation, and rewarding learning experiences.", "Serve society through the exchange of ideas and practices.",
-  "Practice ethical leadership by managing our resources effectively and efficiently.",
-  "Foster a culture of excellence, inclusion, collaboration, and respect for diverse ideas"],
-  paragraph = "CUC University is a private institution organized as a for profit corporation under the laws of the State of Florida. It is licensed under the Commission for Independent Education Florida Department of Education, to provide post-secondary education and has authority to grant degrees under the laws of the State of Florida.",
-  image = "/assets/9744a3a642b478781df6cd9b3dde8724.png" }) => {
+const SplitPage: React.FC<SplitPageProps> = () => {
+  const { origin } = useGetOrigin()
+
+  const IconoStart = <Box
+    component={'image'}
+    style={{
+      width: '50px',
+      height: '50px',
+      backgroundImage: `url(${origin}/assets/start.png)`,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+    }}
+  ></Box>
+
+
+
   return (
 
     <Grid container spacing={0} display={'flex'} justifyContent={'center'}>
@@ -38,25 +48,21 @@ const SplitPage: React.FC<SplitPageProps> = ({ listItems = ["Provide undergradua
             Statement of Purpose
           </Typography>
           <Grid xs={9} sx={{ marginBottom: { xs: 3, md: 10 } }}>
-            <List>
-              {listItems.map((item, index) => (
-                <ListItem key={index} >
-                  <ListItemIcon sx={{ minWidth: 4 }}>
-                    <img
-                      src="/assets/start.png"
-                      alt="Start"
-                      style={{
-                        width: '50px',
-                        height: '50px',
-                      }}
-                    />
-                  </ListItemIcon>
-                  <Typography variant="body2" lineHeight={2} gutterBottom color={(theme) => theme.palette.secondary.main}>
-                {item}
-              </Typography>
-                </ListItem>
-              ))}
-            </List>
+            <TextWithIcon startIcon={IconoStart} >
+              Provide undergraduate and master&apos;s programs with an environment that focuses on all dimensions of learning - knowledge, understanding, skills, behaviors, values, and attitudes.
+            </TextWithIcon>
+            <TextWithIcon startIcon={IconoStart} >
+              Create and disseminate knowledge on important business issues through research, innovation, and rewarding learning experiences.
+            </TextWithIcon>
+            <TextWithIcon startIcon={IconoStart} >
+              Serve society through the exchange of ideas and practices.
+            </TextWithIcon>
+            <TextWithIcon startIcon={IconoStart} >
+              Practice ethical leadership by managing our resources effectively and efficiently.
+            </TextWithIcon>
+            <TextWithIcon startIcon={IconoStart} >
+              Foster a culture of excellence, inclusion, collaboration, and respect for diverse ideas
+            </TextWithIcon>
           </Grid>
         </Box>
       </Grid>
@@ -73,23 +79,23 @@ const SplitPage: React.FC<SplitPageProps> = ({ listItems = ["Provide undergradua
           >
             Accreditation
           </Typography>
-            <Grid xs={8}>
-              <Typography variant="body2" lineHeight={2} gutterBottom color={(theme) => theme.palette.secondary.main}>
-                {paragraph}
-              </Typography>
-            </Grid>
-            <img
-              src={image}
-              alt="Logo_Florida"
-              style={{
-                marginTop: '5rem',
-                marginBottom: '2rem',
-                width: '100%',
-                maxWidth: '383px', // Establece un ancho máximo para evitar que la imagen se haga demasiado pequeña
-                height: 'auto', // Ajusta l
+          <Grid xs={8}>
+            <Typography variant="body2" lineHeight={2} gutterBottom color={(theme) => theme.palette.secondary.main}>
+              CUC University is a private institution organized as a for profit corporation under the laws of the State of Florida. It is licensed under the Commission for Independent Education Florida Department of Education, to provide post-secondary education and has authority to grant degrees under the laws of the State of Florida.
+            </Typography>
+          </Grid>
+          <img
+            src={'/assets/9744a3a642b478781df6cd9b3dde8724.png'}
+            alt="Logo_Florida"
+            style={{
+              marginTop: '5rem',
+              marginBottom: '2rem',
+              width: '100%',
+              maxWidth: '383px',
+              height: 'auto',
 
-              }}
-            />
+            }}
+          />
         </Box>
 
       </Grid>

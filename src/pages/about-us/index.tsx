@@ -9,7 +9,7 @@ import {
     Paper,
     Grid,
     Avatar,
-  } from '@mui/material';
+} from '@mui/material';
 import { MainLayout } from '@/components/layouts/MainLayout'
 import React from 'react'
 
@@ -17,10 +17,9 @@ const index = () => {
     return (
         <MainLayout title='About Us'>
             <Grid xs={12}>
-
-            <StatementOfPurpose />
+                <StatementOfPurpose />
             </Grid>
-           
+
         </MainLayout>
     )
 }
