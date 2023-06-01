@@ -2,13 +2,13 @@ import { Box } from '@mui/material';
 
 interface IMyGradiantBackgroundProps {
     color: string,
-    borderRadiusMd: string
-    borderRadiusSm: string
-    borderRadiusXs: string
-    borderRadiusLg: string
+    borderRadiusMd?: string
+    borderRadiusSm?: string
+    borderRadiusXs?: string
+    borderRadiusLg?: string
 }
 
-const MyGradiantBackground = ({ color, borderRadiusMd, borderRadiusSm, borderRadiusXs, borderRadiusLg }: IMyGradiantBackgroundProps) => {
+const MyGradiantBackground = ({ color, borderRadiusMd = '0px', borderRadiusSm = '0px', borderRadiusXs = '0px', borderRadiusLg = '0px' }: IMyGradiantBackgroundProps) => {
     return (
         <Box
             sx={{

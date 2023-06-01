@@ -2,35 +2,13 @@ import React from 'react';
 import {
   Box,
   Typography,
-  List,
-  ListItem,
-  ListItemIcon,
   Grid,
+  List,
 } from '@mui/material';
 import { TextWithIcon } from './TextWithIcon';
 import { useGetOrigin } from '@/hooks/useGetOrigin';
 
-interface SplitPageProps {
-  listItems?: string[];
-  paragraph?: string;
-  image?: string;
-}
-
-const SplitPage: React.FC<SplitPageProps> = () => {
-  const { origin } = useGetOrigin()
-
-  const IconoStart = <Box
-    component={'image'}
-    style={{
-      width: '50px',
-      height: '50px',
-      backgroundImage: `url(${origin}/assets/start.png)`,
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-    }}
-  ></Box>
-
-
+const SplitPage = () => {
 
   return (
 
@@ -48,21 +26,25 @@ const SplitPage: React.FC<SplitPageProps> = () => {
             Statement of Purpose
           </Typography>
           <Grid xs={9} sx={{ marginBottom: { xs: 3, md: 10 } }}>
-            <TextWithIcon startIcon={IconoStart} >
-              Provide undergraduate and master&apos;s programs with an environment that focuses on all dimensions of learning - knowledge, understanding, skills, behaviors, values, and attitudes.
-            </TextWithIcon>
-            <TextWithIcon startIcon={IconoStart} >
-              Create and disseminate knowledge on important business issues through research, innovation, and rewarding learning experiences.
-            </TextWithIcon>
-            <TextWithIcon startIcon={IconoStart} >
-              Serve society through the exchange of ideas and practices.
-            </TextWithIcon>
-            <TextWithIcon startIcon={IconoStart} >
-              Practice ethical leadership by managing our resources effectively and efficiently.
-            </TextWithIcon>
-            <TextWithIcon startIcon={IconoStart} >
-              Foster a culture of excellence, inclusion, collaboration, and respect for diverse ideas
-            </TextWithIcon>
+            <List>
+
+              <TextWithIcon  >
+                Provide undergraduate and master&apos;s programs with an environment that focuses on all dimensions of learning - knowledge, understanding, skills, behaviors, values, and attitudes.
+              </TextWithIcon>
+              <TextWithIcon  >
+                Create and disseminate knowledge on important business issues through research, innovation, and rewarding learning experiences.
+              </TextWithIcon>
+              <TextWithIcon  >
+                Serve society through the exchange of ideas and practices.
+              </TextWithIcon>
+              <TextWithIcon  >
+                Practice ethical leadership by managing our resources effectively and efficiently.
+              </TextWithIcon>
+              <TextWithIcon  >
+                Foster a culture of excellence, inclusion, collaboration, and respect for diverse ideas
+              </TextWithIcon>
+            </List>
+
           </Grid>
         </Box>
       </Grid>
