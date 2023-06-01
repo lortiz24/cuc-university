@@ -1,5 +1,5 @@
 import { Grid, Typography } from '@mui/material'
-import { AlumsImage } from './AlumsImage'
+import { ContentWithBackgrounImage } from '../ui/ContentWithBackgrounImage'
 import { CircleImage } from '../circle-image/CircleImage'
 import { ContenCircleImage } from './ContenCircleImage'
 
@@ -37,7 +37,7 @@ export const CucUniversityHome = () => {
                 </Typography>
             </Grid>
             <Grid item xs={12} lg={8} marginTop={{ xs: 2, md: 0 }} minHeight={'400px'}>
-                <AlumsImage />
+                <ContentWithBackgrounImage />
             </Grid>
             <Grid item xs={12} minHeight={'auto'} width={'100%'}>
                 <CircleImage src={`/assets/team-work-1-black_and_white.jpg`}>

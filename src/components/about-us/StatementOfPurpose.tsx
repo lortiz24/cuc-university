@@ -6,7 +6,6 @@ import {
   List,
 } from '@mui/material';
 import { TextWithIcon } from './TextWithIcon';
-import { useGetOrigin } from '@/hooks/useGetOrigin';
 
 const SplitPage = () => {
 

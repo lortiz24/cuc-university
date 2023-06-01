@@ -89,7 +89,7 @@ export const NavbarUi = (props: Props) => {
                 maxWidth: { xs: '100%', sm: 250, md: 250 },
               }}
               alt="The house from the offer."
-              src={`${origin}/assets/MainLogo.png`}
+              src={`${origin}/assets/MainLogo2.png`}
             />
           </div>
           <Box sx={{ display: { xs: "none", lg: "block" } }}>

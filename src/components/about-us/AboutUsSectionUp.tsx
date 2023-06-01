@@ -2,9 +2,12 @@ import React from 'react'
 import { Grid, Typography, useTheme } from '@mui/material'
 import { CircleImage } from '../circle-image/CircleImage'
 import { MisionAndVision } from './MisionAndVision';
-import { AlumsImage } from '../home/AlumsImage';
+import { ContentWithBackgrounImage } from '../ui/ContentWithBackgrounImage';
+import { useGetOrigin } from '@/hooks/useGetOrigin';
+
 export const AboutUsSectionUp = () => {
     const theme = useTheme()
+
     return (
         <Grid container >
             <Grid
@@ -28,8 +31,8 @@ export const AboutUsSectionUp = () => {
                     marginBottom={{ xs: 1, md: 4 }}
                     textAlign={'start'}
                 >
-                    CUC University,<Typography
-                        variant='h2'
+                    CUC University, <Typography
+                        variant='caption'
                         color={(theme) => theme.palette.secondary.main}
                         fontWeight="bold"
                         fontSize={{ xs: 25, sm: 40 }}
@@ -60,7 +63,11 @@ export const AboutUsSectionUp = () => {
                 </Typography>
             </Grid>
             <Grid item xs={12} lg={8} marginTop={{ xs: 2, md: 0 }} minHeight={'400px'}>
-                <AlumsImage />
+                <ContentWithBackgrounImage
+                    item1={`/assets/Alumna-3.png`}
+                    backgroundImage={`/assets/City-1.jpg`}
+                    backgroundImagProps={{borderRadius:'10rem'}}
+                />
             </Grid>
             <Grid item xs={12} minHeight={'auto'} width={'100%'}>
                 <CircleImage
