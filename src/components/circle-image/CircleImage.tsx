@@ -5,6 +5,7 @@ import { useGetOrigin } from '@/hooks/useGetOrigin';
 
 interface Props {
     src: string,
+    whithouBoxBackground?: boolean,
     minHeight?: (string & any),
     height?: any;
     children: React.ReactNode;
@@ -29,7 +30,8 @@ export const CircleImage = ({
     backgroundSize = 'cover',
     backgroundPosition = '',
     minHeight = { xs: '400px', sm: '450px', md: '500px' },
-    height = { xs: '400px', sm: '450px', md: '500px' }
+    height = { xs: '400px', sm: '450px', md: '500px' },
+    whithouBoxBackground = false
 }: Props) => {
     const { origin } = useGetOrigin()
     const theme = useTheme()
@@ -46,16 +48,19 @@ export const CircleImage = ({
                 backgroundRepeat,
                 backgroundSize,
                 backgroundPosition,
-                zIndex: -10,
+                mixBlendMode: 'overlay',
+                zIndex: -1,
+                backgroundColor: backgroundColor ? backgroundColor : theme.palette.secondary.main,
             }}
         >
-            <MyGradiantBackground
-                color={backgroundColor ? backgroundColor : theme.palette.secondary.main}
-                borderRadiusMd={borderRadiusMd}
-                borderRadiusSm={borderRadiusSm}
-                borderRadiusXs={borderRadiusXs}
-                borderRadiusLg={borderRadiusLg}
-            />
+            {!whithouBoxBackground &&
+                <MyGradiantBackground
+                    color={backgroundColor ? backgroundColor : theme.palette.secondary.main}
+                    borderRadiusMd={borderRadiusMd}
+                    borderRadiusSm={borderRadiusSm}
+                    borderRadiusXs={borderRadiusXs}
+                    borderRadiusLg={borderRadiusLg}
+                />}
 
             {children}
 

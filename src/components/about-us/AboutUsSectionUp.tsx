@@ -82,13 +82,14 @@ export const AboutUsSectionUp = () => {
                 xs={12}
                 minHeight={'auto'}
                 width={'100%'}
-                sx={{ position: 'relative' }}>
+                sx={{ position: 'relative', top: -20, zIndex: 1 }}>
                 <CircleImage
                     src={`/assets/figura2.png`}
                     backgroundColor={theme.palette.background.paper}
                     backgroundPosition='center'
                     backgroundSize='contain'
-                    minHeight={{ xs: 800, sm:700, md:650 }}
+                    minHeight={{ xs: 800, sm: 700, md: 650 }}
+                    whithouBoxBackground
                 >
                     <MisionAndVision />
                 </CircleImage>

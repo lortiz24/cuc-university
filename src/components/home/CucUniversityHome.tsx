@@ -39,7 +39,7 @@ export const CucUniversityHome = () => {
             <Grid item xs={12} lg={8} marginTop={{ xs: 2, md: 0 }} minHeight={{ xs: '300px', sm: '500px' }}>
                 <ContentWithBackgrounImage />
             </Grid>
-            <Grid item xs={12} minHeight={'auto'} width={'100%'}>
+            <Grid item xs={12} minHeight={'auto'} width={'100%'} sx={{ zIndex: 1, position: 'relative', top: -35, }}>
                 <CircleImage src={`/assets/team-work-1-black_and_white.jpg`}>
                     <ContenCircleImage />
                 </CircleImage>
