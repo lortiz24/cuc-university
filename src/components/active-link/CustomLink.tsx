@@ -18,41 +18,39 @@ export const CustomLink = ({ href, text, redirect, icon, cursorPointer, colorLin
     const router = useRouter()
     const theme = useTheme()
 
-    const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    const handleClickWithouRedirect = (event: React.MouseEvent<HTMLAnchorElement>) => {
         if (!redirect) {
             event.preventDefault();
         }
-
+    };
+    const handleClickWithRedirect = (event: React.MouseEvent<HTMLAnchorElement>) => {
+        router.push(href)
     };
 
 
-
-    if (redirect) {
-        return (
-            <Link
-                href={href}
-                style={router.asPath === href
-                    ?
-                    { color: theme.palette.primary.main, textDecoration: 'none' }
-                    :
-                    { color: colorLink ? colorLink : theme.palette.secondary.main, textDecoration: 'none' }}
-            >{text}{icon}</Link>
-        )
-    }
+    /* 
+        if (redirect) {
+            return (
+               
+            )
+        } */
 
     return (
-        <a
+        <Link
+            onClick={redirect ? handleClickWithRedirect : handleClickWithouRedirect}
             href={href}
-            onClick={handleClick}
-            style={{
-                color: colorLink ? colorLink : theme.palette.secondary.main,
-                textDecoration: 'none',
-                cursor: cursorPointer ? 'pointer' : 'default',
-            }}
-        >
-            <Grid container alignItems="center">
+            style={router.asPath === href
+                ?
+                { color: theme.palette.primary.main, textDecoration: 'none' }
+                :
+                { color: colorLink ? colorLink : theme.palette.secondary.main, textDecoration: 'none' }}
+        ><Grid container alignItems="center">
                 <Grid item>
-                    <Typography variant="body1" style={{ color: colorLink ? colorLink : theme.palette.secondary.main }}>
+                    <Typography variant="body1" style={router.asPath === href
+                        ?
+                        { color: theme.palette.primary.main, textDecoration: 'none' }
+                        :
+                        { color: colorLink ? colorLink : theme.palette.secondary.main, textDecoration: 'none' }}>
                         {text}
                     </Typography>
                 </Grid>
@@ -60,6 +58,7 @@ export const CustomLink = ({ href, text, redirect, icon, cursorPointer, colorLin
                     {icon}
                 </Grid>
             </Grid>
-        </a >
+        </Link>
+
     );
 };

@@ -33,7 +33,8 @@ export const ActiveLinkFooter = ({ text, href, redirect = true, icon, onClick, c
     const buttonCircleStyle: React.CSSProperties = {
         borderRadius: '40rem',
         padding: '4px 15px',
-        textDecoration: 'none'
+        textDecoration: 'none',
+        
     }
 
     return (

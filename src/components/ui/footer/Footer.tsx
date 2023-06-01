@@ -56,10 +56,10 @@ export const Footer = () => {
           item
           xs={12}
           md={4}
-          padding={{ xs: 1 }}
           display={'flex'}
           justifyContent={'center'}
           flexDirection={'column'}
+          padding={{ xs: 1 }}
           paddingX={{ xs: 4, sm: 3, md: 4, lg: 5 }}
         >
           <MenuFooter colorLink='#FFFFFF' />

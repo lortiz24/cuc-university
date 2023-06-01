@@ -47,7 +47,7 @@ export const Menu = ({ colorLink }: Props) => {
                         <div >
                             <ActiveLink
                                 colorLink={colorLink}
-                                href="/"
+                                href={menuItem.path}
                                 text={menuItem.name}
                                 redirect={false}
                                 icon={<ExpandMoreIcon className={styles["expand-icon"]} />}

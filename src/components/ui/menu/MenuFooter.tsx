@@ -44,20 +44,21 @@ export const MenuFooter = ({ colorLink }: Props) => {
         <Grid
             container
             component={'nav'}
-            display='flex'
-            justifyContent='center'
-            alignItems='center'
+            rowGap={3}
         >
             {navItems.map((menuItem, menuIndex) => (
-                <Grid item
+                <Grid
+                    item
                     xs={12}
                     sm={6}
+                    display={'flex'}
+                    justifyContent={'flex-start'}
                     key={menuItem.name}>
                     {menuItem.dropdown ? (
                         <div >
                             <ActiveLinkFooter
                                 colorLink={colorLink}
-                                href="/"
+                                href={menuItem.path}
                                 text={menuItem.name}
                                 redirect={false}
                                 icon={<ExpandMoreIcon className={styles["expand-icon"]} />}
