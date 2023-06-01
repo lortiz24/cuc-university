@@ -1,35 +1,58 @@
-import { useTheme, Typography, Grid, Box } from '@mui/material';
+import { useTheme, Grid, Box } from '@mui/material';
 import MyGradiantBackground from './ColorBackground';
 import { useGetOrigin } from '@/hooks/useGetOrigin';
 
 
 interface Props {
     src: string,
-    height?: string,
-    children: React.ReactNode
+    height?: (string & any),
+    children: React.ReactNode;
+    backgroundColor?: string
+    borderRadiusLg?: string
+    borderRadiusMd?: string
+    borderRadiusSm?: string
+    borderRadiusXs?: string
+    backgroundRepeat?: "no-repeat" | "repeat" | "repeat-x" | "repeat-y" | "round" | "space";
+    backgroundSize?: "auto" | "contain" | "cover" | string,
+    backgroundPosition?: "bottom" | "center" | "left" | "right" | "top" | string
 }
-export const CircleImage = ({ src, height = '600px', children }: Props) => {
+export const CircleImage = ({
+    src = '/assets/team-work-1-black_and_white.jpg',
+    children,
+    backgroundColor,
+    borderRadiusLg = '17rem',
+    borderRadiusMd = '10rem',
+    borderRadiusSm = '50px',
+    borderRadiusXs = '0rem',
+    backgroundRepeat = 'no-repeat',
+    backgroundSize = 'cover',
+    backgroundPosition = '',
+    height = { xs: '400px', sm: '450px', md: '500px' }
+}: Props) => {
     const { origin } = useGetOrigin()
     const theme = useTheme()
-    const borderRadiusLg = '17rem'
-    const borderRadiusMd = '10rem'
-    const borderRadiusSm = '50px'
-    const borderRadiusXs = '0rem'
+
     return (
         <Box
             sx={{
                 borderRadius: { xs: borderRadiusXs, sm: borderRadiusSm, md: borderRadiusMd, lg: borderRadiusLg },
-                // borderRadius: 'calc(0 * (1vw / 400) + 17rem * (100vw / 400))',
                 position: 'relative',
                 width: '100%',
-                height: { xs: '400px', sm: '450px', md: '500px' },
-                backgroundImage: `url(${origin}/assets/team-work-1-black_and_white.jpg)`,
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover',
+                height,
+                backgroundImage: `url(${origin}${src})`,
+                backgroundRepeat,
+                backgroundSize,
+                backgroundPosition,
                 zIndex: -10,
             }}
         >
-            <MyGradiantBackground color={theme.palette.secondary.main} borderRadiusMd={borderRadiusMd} borderRadiusSm={borderRadiusSm} borderRadiusXs={borderRadiusXs} borderRadiusLg={borderRadiusLg} />
+            <MyGradiantBackground
+                color={backgroundColor ? backgroundColor : theme.palette.secondary.main}
+                borderRadiusMd={borderRadiusMd}
+                borderRadiusSm={borderRadiusSm}
+                borderRadiusXs={borderRadiusXs}
+                borderRadiusLg={borderRadiusLg}
+            />
 
             {children}
 
