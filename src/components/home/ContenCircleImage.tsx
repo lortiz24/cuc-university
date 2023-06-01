@@ -14,7 +14,7 @@ export const ContenCircleImage = () => {
             <Grid
                 item
                 xs={12}
-                md={6}
+                lg={6}
                 display={{ xs: 'none', lg: 'block' }}
                 sx={{
                     backgroundImage: `url(${origin}/assets/mano-start.png)`,
@@ -28,7 +28,8 @@ export const ContenCircleImage = () => {
             </Grid>
             <Grid
                 item
-                xs={12} lg={6}
+                xs={12} 
+                lg={6}
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',

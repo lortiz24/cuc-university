@@ -5,7 +5,7 @@ import { useGetOrigin } from '@/hooks/useGetOrigin';
 
 interface Props {
     src: string,
-    height?: (string & any),
+    minHeight?: (string & any),
     children: React.ReactNode;
     backgroundColor?: string
     borderRadiusLg?: string
@@ -27,7 +27,7 @@ export const CircleImage = ({
     backgroundRepeat = 'no-repeat',
     backgroundSize = 'cover',
     backgroundPosition = '',
-    height = { xs: '400px', sm: '450px', md: '500px' }
+    minHeight = { xs: '400px', sm: '450px', md: '500px' }
 }: Props) => {
     const { origin } = useGetOrigin()
     const theme = useTheme()
@@ -38,7 +38,7 @@ export const CircleImage = ({
                 borderRadius: { xs: borderRadiusXs, sm: borderRadiusSm, md: borderRadiusMd, lg: borderRadiusLg },
                 position: 'relative',
                 width: '100%',
-                height,
+                minHeight,
                 backgroundImage: `url(${origin}${src})`,
                 backgroundRepeat,
                 backgroundSize,
