@@ -1,7 +1,6 @@
 import React from 'react'
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import styles from './social-networks.module.css';
-import { useTheme, } from '@mui/material';
 
 
 
@@ -16,7 +15,7 @@ export const SocialNetworks = () => {
             </a>
             <a className={styles.link} style={{ color: '#FFFFFF' }}>
                 <i className={`${styles['link-icon']} fa fa-twitter`}> </i>
-                <span className={styles['link-title']}>Twitter</span>
+                {/* <span className={styles['link-title']}>Twitter</span> */}
             </a>
             <a className={styles.link} style={{ color: '#FFFFFF' }}>
                 <i className={`${styles['link-icon']} fa fa-instagram`}> </i>
