@@ -12,6 +12,7 @@ interface Props {
 
 
 export const ProgramsHome = ({ graduatePrograms, underGraduatePrograms }: Props) => {
+    //todo: colocar el hoverable y onClick a las programsCArds
     return (
         <>
             <Grid container width={'100%'} >

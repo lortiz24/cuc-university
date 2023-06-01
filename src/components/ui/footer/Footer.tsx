@@ -32,24 +32,30 @@ export const Footer = () => {
         <Grid
           item
           xs={12}
-          lg={4}
-          padding={{ xs: 0 }}
+          md={4}
+          padding={{ xs: 5, }}
           minHeight={200}
         >
           <Box sx={{
             height: '100%',
-            width: '100%',
-            backgroundImage: `url(${origin}/assets/9744a3a642b478781df6cd9b3dde8724.png)`,
+            width: { xs: '100%', lg: 320 },
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'center',
+            alignItems: 'flex-end',
+            backgroundImage: `url(${origin}/assets/WhiteLogo.png)`,
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center ',
-            backgroundSize: '60%',
+            backgroundSize: 'contain',
+
           }} />
+
 
         </Grid>
         <Grid
           item
           xs={12}
-          lg={4}
+          md={4}
           padding={{ xs: 1 }}
           display={'flex'}
           justifyContent={'center'}
@@ -61,7 +67,7 @@ export const Footer = () => {
         <Grid
           item
           xs={12}
-          lg={4}
+          md={4}
           display={'flex'}
           justifyContent={'center'}
           flexDirection={'column'}
@@ -79,7 +85,7 @@ export const Footer = () => {
               <Typography
                 variant='body2'
                 color={'#FFFFFF'}
-                fontSize={{ xs: 20, sm: 20, md: 20 }}
+                fontSize={18}
                 textAlign={'start'}
               >
                 Stay up to date our news, blog post, and announcements by subscribing to our Newsletter.
