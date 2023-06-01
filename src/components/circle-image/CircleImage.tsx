@@ -30,7 +30,7 @@ export const CircleImage = ({
     backgroundSize = 'cover',
     backgroundPosition = '',
     minHeight = { xs: '400px', sm: '450px', md: '500px' },
-    height = { xs: '400px', sm: '450px', md: '500px' },
+    height,
     whithouBoxBackground = false
 }: Props) => {
     const { origin } = useGetOrigin()

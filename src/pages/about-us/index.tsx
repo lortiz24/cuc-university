@@ -3,18 +3,21 @@ import StatementOfPurpose from '@/components/about-us/StatementOfPurpose'
 import { Grid } from '@mui/material';
 import { MainLayout } from '@/components/layouts/MainLayout'
 import { AboutUsSectionUp } from '@/components/about-us/AboutUsSectionUp';
+import { ComponentWithPadding } from '@/components/layouts/ComponentWithPadding';
 
 const index = () => {
     return (
         <MainLayout title='About Us'>
-            <Grid container rowGap={3}>
-                <Grid item xs={12}>
-                    <AboutUsSectionUp />
+            <ComponentWithPadding>
+                <Grid container rowGap={3}>
+                    <Grid item xs={12}>
+                        <AboutUsSectionUp />
+                    </Grid>
+                    <Grid item xs={12}>
+                        <StatementOfPurpose />
+                    </Grid>
                 </Grid>
-                <Grid item xs={12}>
-                    <StatementOfPurpose />
-                </Grid>
-            </Grid>
+            </ComponentWithPadding>
         </MainLayout>
     )
 }

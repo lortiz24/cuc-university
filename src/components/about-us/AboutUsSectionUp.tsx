@@ -80,7 +80,6 @@ export const AboutUsSectionUp = () => {
             <Grid
                 item
                 xs={12}
-                minHeight={'auto'}
                 width={'100%'}
                 sx={{ position: 'relative', top: -20, zIndex: 1 }}>
                 <CircleImage
@@ -88,7 +87,6 @@ export const AboutUsSectionUp = () => {
                     backgroundColor={theme.palette.background.paper}
                     backgroundPosition='center'
                     backgroundSize='contain'
-                    minHeight={{ xs: 800, sm: 700, md: 650 }}
                     whithouBoxBackground
                 >
                     <MisionAndVision />

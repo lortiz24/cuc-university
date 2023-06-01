@@ -40,7 +40,7 @@ export const CucUniversityHome = () => {
                 <ContentWithBackgrounImage />
             </Grid>
             <Grid item xs={12} minHeight={'auto'} width={'100%'} sx={{ zIndex: 1, position: 'relative', top: -35, }}>
-                <CircleImage src={`/assets/team-work-1-black_and_white.jpg`}>
+                <CircleImage src={`/assets/team-work-1-black_and_white.jpg`} height={{ xs: '400px', sm: '450px', md: '500px' }}>
                     <ContenCircleImage />
                 </CircleImage>
             </Grid>
