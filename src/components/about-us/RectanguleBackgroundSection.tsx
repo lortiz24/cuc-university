@@ -14,17 +14,16 @@ export const RectanguleBackgroundSection = ({ children }: Props) => {
     return (
         <Box
             sx={{
-
                 position: 'relative',
                 width: '100%',
-                height: { xs: '400px', sm: '450px', md: '500px' },
-                backgroundImage: `url(${origin}/assets/team-work-1-black_and_white.jpg)`,
+                height: '1000px',
+                backgroundImage: `url(${origin}/assets/Paper.jpg)`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
                 zIndex: -10,
             }}
         >
-            <MyGradiantBackground color={theme.palette.secondary.main} />
+            <MyGradiantBackground color={theme.palette.background.paper} />
             {children}
         </Box>
 

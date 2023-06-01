@@ -9,7 +9,8 @@ const index = () => {
     return (
         <MainLayout title='About Us'>
             <Grid container>
-                <Grid xs={12}>
+
+                <Grid item xs={12}>
                     <StatementOfPurpose />
                 </Grid>
             </Grid>
