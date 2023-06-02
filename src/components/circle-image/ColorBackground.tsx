@@ -10,7 +10,6 @@ interface IMyGradiantBackgroundProps {
 }
 
 const MyGradiantBackground = ({ color, borderRadiusMd = '0px', borderRadiusSm = '0px', borderRadiusXs = '0px', borderRadiusLg = '0px', opacity = 0.8 }: IMyGradiantBackgroundProps) => {
-    console.log('opacity',opacity)
     return (
         <Box
             sx={{

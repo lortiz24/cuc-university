@@ -1,9 +1,8 @@
 import React from 'react'
-import { Grid, useTheme, Typography } from '@mui/material'
+import { Grid} from '@mui/material'
 import { CircleBanner } from '../circle-banner/CircleBanner'
 
 export const AdmisionsUp = () => {
-    const theme = useTheme()
     return (
         <Grid container >
             <Grid
