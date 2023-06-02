@@ -18,7 +18,7 @@ const CustomComponent: React.FC<CustomComponentProps> = ({ title, items }) => {
         >
         {title}
       </Typography>
-      <Box sx={{ border: 1, borderColor: 'primary.main', borderRadius: '40px', py: 2 , px: 1 , minHeight:'447px' }}>
+      <Box sx={{ border: 1, borderColor: '#E0CA83', borderRadius: '40px', py: 2 , px: 1 , minHeight:'447px' }}>
         <List disablePadding>
           {items.map((item, index) => (
             <ListItem key={index} sx={{ py: 0.3 }}>

@@ -11,7 +11,7 @@ export const ScolarhipsUp = () => {
                 minHeight={'auto'}
                 width={'100%'}
                 marginBottom={10}
-                height={{ xs: 400, lg: 650, xl: 720 }}
+                height={{ xs: 400, lg: 500, xl: 700 }}
                 sx={{
                     zIndex: 1,
                     position: 'relative',
@@ -22,7 +22,7 @@ export const ScolarhipsUp = () => {
                 }}
             >
                 <CircleBanner
-                    src={`/assets/graduadas.jpg`}
+                    src={`/assets/graduadas.png`}
                     tittle='SCHOLARSHIPS'
                     borderRadiusLg='400px'
                     borderRadiusMd='200px'

@@ -21,7 +21,7 @@ export const AdmisionsUp = () => {
                 }}
             >
                 <CircleBanner
-                    src={`/assets/NegroSinEdit.jpg`}
+                    src={`/assets/Negro_con_Escudo.png`}
                     tittle='ADMISSIONS'
                     borderRadiusLg='400px'
                     borderRadiusMd='200px'
