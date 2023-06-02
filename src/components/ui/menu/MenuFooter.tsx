@@ -52,7 +52,7 @@ export const MenuFooter = ({ colorLink }: Props) => {
                     xs={12}
                     sm={6}
                     display={'flex'}
-                    justifyContent={'flex-start'}
+                    justifyContent={{ xs: 'center', sm: 'flex-start' }}
                     key={menuItem.name}>
                     {menuItem.dropdown ? (
                         <div >

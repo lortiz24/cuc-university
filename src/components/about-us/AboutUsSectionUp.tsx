@@ -2,7 +2,6 @@ import React from 'react'
 import { Grid, Typography, useTheme } from '@mui/material'
 import { CircleImage } from '../circle-image/CircleImage'
 import { MisionAndVision } from './MisionAndVision';
-import { ContentWithBackgrounImage } from '../ui/ContentWithBackgrounImage';
 import { Alumna } from './Alumna';
 
 export const AboutUsSectionUp = () => {
@@ -12,7 +11,7 @@ export const AboutUsSectionUp = () => {
         <Grid container >
             <Grid
                 item
-                xs={12} lg={6}
+                xs={12} lg={5}
                 paddingLeft={{ xs: 0, xl: 20 }}
                 paddingX={{ xs: 4, }}
                 paddingBottom={{ xs: 4 }}
@@ -64,7 +63,7 @@ export const AboutUsSectionUp = () => {
             </Grid>
             <Grid
                 item xs={12}
-                lg={6}
+                lg={7}
                 marginTop={{ xs: 2, md: 0 }}
                 minHeight={{ xs: '300px', sm: '600px' }}
                 display='flex'
