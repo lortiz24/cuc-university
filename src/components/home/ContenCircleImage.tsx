@@ -9,7 +9,8 @@ export const ContenCircleImage = () => {
         <Grid
             container
             height={'100%'}
-
+            display='flex'
+            padding={{ xs: 5, lg: 10 }}
         >
             <Grid
                 item
@@ -19,8 +20,8 @@ export const ContenCircleImage = () => {
                 sx={{
                     backgroundImage: `url(${origin}/assets/mano-start.png)`,
                     backgroundRepeat: 'no-repeat',
-                    backgroundPosition: 'center', // Modificado para alinear la imagen en la parte superior
-                    backgroundSize: '80%',
+                    backgroundPosition: 'center', 
+                    backgroundSize: 'contain',
                     height: '100%',
                     width: '100%',
                 }}
@@ -46,19 +47,14 @@ export const ContenCircleImage = () => {
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'center',
-                    alignItems: 'center',
-                    padding: {
-                        xs: '1rem 1rem',
-                        lg: '5rem 5rem',
-                        xl: '10rem 10rem',
-                    },
+                    alignItems: 'center'
                 }}
             >
                 <Typography
                     variant='h2'
                     color={theme.palette.primary.main}
                     fontWeight="bold"
-                    fontSize={{ xs: 35, xl: 40 }}
+                    fontSize={{ xs: 30, xl: 35 }}
                     marginBottom={{ xs: 2, xl: 4 }}
                     textAlign={'end'}
                 >With a primary emphasis on business education,</Typography>
