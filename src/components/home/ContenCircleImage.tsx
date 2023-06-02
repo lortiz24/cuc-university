@@ -10,39 +10,29 @@ export const ContenCircleImage = () => {
             container
             height={'100%'}
             display='flex'
-            padding={{ xs: 5, lg: 10 }}
+
         >
             <Grid
                 item
                 xs={12}
                 lg={6}
+                padding={{ xs: 5, lg: 5 }}
                 display={{ xs: 'none', lg: 'block' }}
                 sx={{
                     backgroundImage: `url(${origin}/assets/mano-start.png)`,
                     backgroundRepeat: 'no-repeat',
-                    backgroundPosition: 'center', 
+                    backgroundPosition: 'center',
                     backgroundSize: 'contain',
                     height: '100%',
                     width: '100%',
                 }}
             >
-                {/* <Box
-                    sx={{
-                        position: 'relative',
-                        width: '100%',
-                        height: '100%',
-                        backgroundImage: `url(${origin}/assets/mano-start.png)`,
-                        backgroundRepeat: 'no-repeat',
-                        backgroundPosition: 'center', // Modificado para alinear la imagen en la parte superior
-                        backgroundSize: '80%',
-                        zIndex: 10,
-                    }}
-                ></Box> */}
             </Grid>
             <Grid
                 item
                 xs={12}
                 lg={6}
+                padding={{ xs: 5, lg: 10 }}
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
