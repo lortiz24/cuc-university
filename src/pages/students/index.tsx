@@ -7,7 +7,7 @@ import CustomComponent from '@/components/students/CustomComponent';
 
 
 const index = () => {
-    const items = [
+    const itemsFall = [
         { date: 'August 29, 2022', description: 'Fall semesters begin' },
         { date: 'August 29- September 6, 2022', description: 'ADD/DROP Period for Fall 2022 semester' },
         { date: 'November 10-December 1, 2022 ', description: 'Early Registration and Payment for Spring 2023' },
@@ -19,11 +19,25 @@ const index = () => {
         { date: 'November 25, 2022', description: 'Black Friday' },
         { date: 'December 26, 2022', description: 'Christmas Day' },
       ];
+
+    const itemsSpring = [
+        { date: 'January 1, 2023', description: 'New Years Day' },
+        { date: 'January 16, 2023', description: 'Martin Luther King' },
+        { date: 'January 23, 2023', description: 'Spring Semester begins' },
+        { date: 'January 23-27, 2023', description: 'ADD/DROP Period for Spring 2023 semester' },
+        { date: 'April 10-16, 2023', description: 'Spring Break (no classes)' },
+        { date: 'April 20 -May 9, 2023', description: 'Regular registration for Summer and Fall 2023 semesters' },
+        { date: 'May 12-16, 2023', description: 'Late Registration for Summer and Fall 2023 semesters' },
+        { date: 'May 12, 2023', description: 'Spring Semester ends' },
+      ];
+
     return (
         <MainLayout title='Students'>
             <ComponentWithPadding>
                 <Grid container spacing={2}>
-                    <CustomComponent title="Eventos" items={items} />
+                    <CustomComponent title="FALL 2022" items={itemsFall} />
+                    <CustomComponent title="SPRING 2023" items={itemsSpring} />
+
                     {/* Agrega más componentes personalizados o contenido adicional aquí */}
                 </Grid>
                 {/* <ContactImage /> */}
