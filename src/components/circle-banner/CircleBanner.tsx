@@ -11,7 +11,8 @@ interface Props {
     borderRadiusSm?: string
     borderRadiusXs?: string
     backgroundSize?: string,
-    tittle?: string
+    tittle?: string,
+    fontSize?: any
 }
 export const CircleBanner = ({
     src = '/assets/team-work-1-black_and_white.jpg',
@@ -20,7 +21,8 @@ export const CircleBanner = ({
     borderRadiusSm = '50px',
     borderRadiusXs = '0rem',
     backgroundSize = 'cover',
-    tittle
+    tittle,
+    fontSize = { xs: '14vw', md: '8vw' }
 }: Props) => {
     const { origin } = useGetOrigin()
     const theme = useTheme()
@@ -49,7 +51,7 @@ export const CircleBanner = ({
                     transform: 'translateX(-50%)',
                     color: 'transparent',
                     WebkitTextStroke: `2px ${theme.palette.primary.main}`,
-                    fontSize: { xs: '14vw', md: '8vw' },
+                    fontSize,
 
                 }}
             >

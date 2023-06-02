@@ -7,7 +7,7 @@ import React from 'react'
 
 const index = () => {
     return (
-        <MainLayout>
+        <MainLayout title='Admissions'>
             <ComponentWithPadding>
                 <AdmisionsUp />
             </ComponentWithPadding>

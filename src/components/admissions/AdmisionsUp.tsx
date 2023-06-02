@@ -29,9 +29,7 @@ export const AdmisionsUp = () => {
                 >
                 </CircleBanner>
             </Grid>
-            <Grid item xs={12} minHeight={'auto'} width={'100%'} sx={{ zIndex: 1, position: 'relative', top: -35, }}>
-
-            </Grid>
+            
         </Grid >
     )
 }

@@ -23,15 +23,13 @@ export const ScolarhipsUp = () => {
             >
                 <CircleBanner
                     src={`/assets/graduadas.jpg`}
-                    tittle='ADMISSIONS'
+                    tittle='SCHOLARSHIPS'
                     borderRadiusLg='400px'
                     borderRadiusMd='200px'
                     borderRadiusSm='200px'
+                    fontSize={{ xs: '12vw', md: '8vw' }}
                 >
                 </CircleBanner>
-            </Grid>
-            <Grid item xs={12} minHeight={'auto'} width={'100%'} sx={{ zIndex: 1, position: 'relative', top: -35, }}>
-
             </Grid>
         </Grid >
     )
