@@ -197,7 +197,10 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                                 color='secondary'
                                 fullWidth
                                 sx={{
-                                    borderRadius: 30
+                                    borderRadius: 30,
+                                    textDecoration:'none',
+                                    textTransform: 'none',
+                                    fontSize:18
                                 }}
                             >
                                 Send
