@@ -22,7 +22,7 @@ export const AdmisionsUp = () => {
             >
                 <CircleBanner
                     src={`/assets/City-1.jpg`}
-                    height={450}
+                    tittle='ADMISSIONS'
                 >
                 </CircleBanner>
             </Grid>
