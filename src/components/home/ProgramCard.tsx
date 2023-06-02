@@ -38,7 +38,9 @@ export const ProgramCard = ({ programItem }: Props) => {
                         alt="Paella dish"
                     />
                 </Card>
-                <Typography variant='body2' color={theme.palette.primary.main} sx={{ width: 200, textAlign: 'center', marginTop: '10px' }}>
+                <Typography variant='body2' color={theme.palette.secondary.main} sx={{ width: 200, textAlign: 'center', marginTop: '10px',
+                '&:hover': {color: theme.palette.primary.main,
+            }, }}>
                     {programItem.title}
                 </Typography>
             </div>

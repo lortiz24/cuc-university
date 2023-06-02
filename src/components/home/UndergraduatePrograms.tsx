@@ -3,6 +3,7 @@ import { Typography, Grid, Button, Box } from '@mui/material';
 import { ProgramCard } from './ProgramCard';
 import { useGetOrigin } from '@/hooks/useGetOrigin';
 import { ProgramItem } from '@/interfaces/Programs.interface';
+import Link from 'next/link';
 
 
 interface Props {
@@ -61,7 +62,9 @@ export const UndergraduatePrograms = ({ underGraduatePrograms }: Props) => {
                     gap: '2rem'
                 }}>
                     {underGraduatePrograms.map((programItem, index) => (
-                        <ProgramCard key={index} programItem={programItem} />
+                        <Link key={index} style={{textDecoration: 'none'}} href={programItem.path} passHref>
+                                <ProgramCard programItem={programItem} />
+                        </Link>
                     ))}
                 </div>
 
