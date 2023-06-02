@@ -3,6 +3,7 @@ import { Grid, Typography, useTheme } from '@mui/material'
 import { CircleImage } from '../circle-image/CircleImage'
 import { MisionAndVision } from './MisionAndVision';
 import { ContentWithBackgrounImage } from '../ui/ContentWithBackgrounImage';
+import { Alumna } from './Alumna';
 
 export const AboutUsSectionUp = () => {
     const theme = useTheme()
@@ -11,7 +12,7 @@ export const AboutUsSectionUp = () => {
         <Grid container >
             <Grid
                 item
-                xs={12} lg={4}
+                xs={12} lg={6}
                 paddingLeft={{ xs: 0, xl: 20 }}
                 paddingX={{ xs: 4, }}
                 paddingBottom={{ xs: 4 }}
@@ -26,7 +27,7 @@ export const AboutUsSectionUp = () => {
                     variant='h2'
                     color={(theme) => theme.palette.primary.main}
                     fontWeight="bold"
-                    fontSize={{ xs: 25, sm: 40 }}
+                    fontSize={{ xs: 25, sm: 30, xl: 40 }}
                     marginBottom={{ xs: 1, md: 4 }}
                     textAlign={'start'}
                 >
@@ -34,7 +35,7 @@ export const AboutUsSectionUp = () => {
                         variant='caption'
                         color={(theme) => theme.palette.secondary.main}
                         fontWeight="bold"
-                        fontSize={{ xs: 25, sm: 40 }}
+                        fontSize={{ xs: 25, sm: 30, xl: 40 }}
                         marginBottom={{ xs: 1, md: 4 }}
                         textAlign={'start'}
                     >
@@ -63,15 +64,15 @@ export const AboutUsSectionUp = () => {
             </Grid>
             <Grid
                 item xs={12}
-                lg={8}
+                lg={6}
                 marginTop={{ xs: 2, md: 0 }}
-                minHeight={{ xs: '300px', sm: '500px' }}
+                minHeight={{ xs: '300px', sm: '600px' }}
                 display='flex'
                 flexDirection='column'
                 alignItems='start'
-                sx={{ zIndex: -20 }}
+                sx={{ zIndex: -20, /* backgroundColor:'red' */ }}
             >
-                <ContentWithBackgrounImage
+                <Alumna
                     item1={`/assets/Alumna-3.png`}
                     backgroundImage={`/assets/City-1.jpg`}
                     withBackgroundImage={false}

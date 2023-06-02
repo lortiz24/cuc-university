@@ -29,7 +29,7 @@ export const MisionAndVision = () => {
           }}>
           <Image
             src="/assets/location.png"
-            alt="Corazón" width="20" height="20" />
+            alt="Corazón" width="50" height="50" />
         </Grid>
         <Grid
           item
@@ -38,13 +38,16 @@ export const MisionAndVision = () => {
             flexDirection: 'column',
             justifyContent: 'start',
             alignItems: 'center',
-          }}>
+          }}
+          marginBottom={{ xs: 5, md: 0 }}
+        >
           <Typography
             variant="h2"
             color={theme.palette.primary.main}
             fontWeight="bold"
             fontSize={{ xs: 35, xl: 40 }}
             textAlign="end"
+            paddingBottom={2}
           >
             Mission
           </Typography>
@@ -79,7 +82,7 @@ export const MisionAndVision = () => {
             justifyContent: 'start',
             alignItems: 'center',
           }}>
-          <Image src="/assets/ojo.png" alt="Corazón" width="30" height="20" />
+          <Image src="/assets/ojo.png" alt="Corazón" width="60" height="40" />
 
         </Grid>
         <Grid
@@ -89,17 +92,20 @@ export const MisionAndVision = () => {
             flexDirection: 'column',
             justifyContent: 'start',
             alignItems: 'center',
-          }}>
+          }}
+          marginBottom={{ xs: 5, md: 0 }}
+        >
           <Typography
             variant='h2'
             color={theme.palette.primary.main}
             fontWeight="bold"
             fontSize={{ xs: 35, xl: 40 }}
-            marginBottom={{ xs: 2, xl: 4 }}
             textAlign={'end'}
+            paddingBottom={2}
           >Vision</Typography>
           <Typography
             variant='body2'
+            marginBottom={{ xs: 2, xl: 4 }}
             color={theme.palette.secondary.main}
             fontSize={{ xs: 15, sm: 17, md: 19 }}
             textAlign={'center'}
@@ -137,7 +143,7 @@ export const MisionAndVision = () => {
             justifyContent: 'start',
             alignItems: 'center',
           }}>
-          <Image src="/assets/corazon.png" alt="Corazón" width="20" height="20" />
+          <Image src="/assets/corazon.png" alt="Corazón" width="50" height="48" />
 
         </Grid>
         <Grid
@@ -147,17 +153,20 @@ export const MisionAndVision = () => {
             flexDirection: 'column',
             justifyContent: 'start',
             alignItems: 'center',
-          }}>
+          }}
+          marginBottom={{ xs: 5, md: 0 }}
+        >
           <Typography
             variant='h2'
             color={theme.palette.primary.main}
             fontWeight="bold"
             fontSize={{ xs: 35, xl: 40 }}
-            marginBottom={{ xs: 2, xl: 4 }}
             textAlign={'end'}
+            paddingBottom={2}
           >Values</Typography>
           <Typography
             variant='body2'
+            marginBottom={{ xs: 2, xl: 4 }}
             color={theme.palette.secondary.main}
             fontSize={{ xs: 15, sm: 17, md: 19 }}
             textAlign={'center'}

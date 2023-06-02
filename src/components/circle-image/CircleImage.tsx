@@ -4,7 +4,8 @@ import { useGetOrigin } from '@/hooks/useGetOrigin';
 
 
 interface Props {
-    src: string,
+    src: string;
+    opacity?: string | number;
     whithouBoxBackground?: boolean,
     minHeight?: (string & any),
     height?: any;
@@ -21,6 +22,7 @@ interface Props {
 export const CircleImage = ({
     src = '/assets/team-work-1-black_and_white.jpg',
     children,
+    opacity = 0.8,
     backgroundColor,
     borderRadiusLg = '17rem',
     borderRadiusMd = '10rem',
@@ -55,6 +57,7 @@ export const CircleImage = ({
         >
             {!whithouBoxBackground &&
                 <MyGradiantBackground
+                    opacity={opacity}
                     color={backgroundColor ? backgroundColor : theme.palette.secondary.main}
                     borderRadiusMd={borderRadiusMd}
                     borderRadiusSm={borderRadiusSm}

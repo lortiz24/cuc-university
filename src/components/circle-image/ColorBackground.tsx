@@ -6,14 +6,15 @@ interface IMyGradiantBackgroundProps {
     borderRadiusSm?: string
     borderRadiusXs?: string
     borderRadiusLg?: string
+    opacity?: string | number
 }
 
-const MyGradiantBackground = ({ color, borderRadiusMd = '0px', borderRadiusSm = '0px', borderRadiusXs = '0px', borderRadiusLg = '0px' }: IMyGradiantBackgroundProps) => {
+const MyGradiantBackground = ({ color, borderRadiusMd = '0px', borderRadiusSm = '0px', borderRadiusXs = '0px', borderRadiusLg = '0px', opacity = 0.8 }: IMyGradiantBackgroundProps) => {
+    console.log('opacity',opacity)
     return (
         <Box
             sx={{
                 borderRadius: { xs: borderRadiusXs, sm: borderRadiusSm, md: borderRadiusMd, lg: borderRadiusLg },
-                // borderRadius: 'calc(0 * (1vw / 400) + 17rem * (100vw / 400))',
                 position: 'absolute',
                 top: 0,
                 left: 0,
@@ -21,7 +22,7 @@ const MyGradiantBackground = ({ color, borderRadiusMd = '0px', borderRadiusSm = 
                 height: '100%',
                 backgroundColor: color,
                 zIndex: -2,
-                opacity: 0.8,
+                opacity,
             }}
         />
     )
