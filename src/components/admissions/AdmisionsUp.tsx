@@ -1,6 +1,6 @@
 import React from 'react'
 import { Grid, useTheme, Typography } from '@mui/material'
-import { CircleBanner } from './CircleBanner'
+import { CircleBanner } from '../circle-banner/CircleBanner'
 
 export const AdmisionsUp = () => {
     const theme = useTheme()
@@ -11,6 +11,7 @@ export const AdmisionsUp = () => {
                 minHeight={'auto'}
                 width={'100%'}
                 marginBottom={10}
+                height={{ xs: 400, lg: 650, xl: 720 }}
                 sx={{
                     zIndex: 1,
                     position: 'relative',
@@ -21,8 +22,11 @@ export const AdmisionsUp = () => {
                 }}
             >
                 <CircleBanner
-                    src={`/assets/City-1.jpg`}
+                    src={`/assets/NegroSinEdit.jpg`}
                     tittle='ADMISSIONS'
+                    borderRadiusLg='400px'
+                    borderRadiusMd='200px'
+                    borderRadiusSm='200px'
                 >
                 </CircleBanner>
             </Grid>
