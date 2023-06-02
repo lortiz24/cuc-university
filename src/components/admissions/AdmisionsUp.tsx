@@ -10,7 +10,7 @@ export const AdmisionsUp = () => {
                 minHeight={'auto'}
                 width={'100%'}
                 marginBottom={10}
-                height={{ xs: 400, lg: 500, xl: 700 }}
+                height={{ xs: 400, lg: 500, xl: 630 }}
                 sx={{
                     zIndex: 1,
                     position: 'relative',
