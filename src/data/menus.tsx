@@ -52,6 +52,11 @@ export const navItems: MenuItem[] = [
         icon: <PeopleOutlineOutlinedIcon />
     },
     {
+        name: "Admissions",
+        path: "/admissions",
+        icon: <PeopleOutlineOutlinedIcon />
+    },
+    {
         name: "Scholarships",
         path: "/scholarships",
         icon: <AttachMoneyOutlinedIcon />
