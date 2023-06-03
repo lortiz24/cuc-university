@@ -5,6 +5,8 @@ interface Props {
     backgroundImage?: string;
     item1?: string;
     withBackgroundImage?: boolean;
+    withBackImage?: boolean;
+
 }
 
 
@@ -13,7 +15,8 @@ const origin = (typeof window === 'undefined') ? '' : window.location.origin
 export const ContentWithBackgrounImage = ({
     backgroundImage = `/assets/figura1.png`,
     item1 = `/assets/Grupo-alumnos.png`,
-    withBackgroundImage = true
+    withBackgroundImage = true,
+    withBackImage = true
 }: Props) => {
 
     return (
@@ -33,7 +36,7 @@ export const ContentWithBackgrounImage = ({
              <Box sx={{
                 minHeight: '100%',
                 minWidth: '100%',
-                backgroundImage: `url(${origin}${item1})`,
+                backgroundImage: withBackImage ? `url(${origin}${item1})`:'',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'bottom ',
                 backgroundSize: 'contain',

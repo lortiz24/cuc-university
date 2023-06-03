@@ -4,6 +4,8 @@ import ContactImage from '../../components/form-contact/ComponentWithImage';
 import { ComponentWithPadding } from '@/components/layouts/ComponentWithPadding';
 import { Grid } from '@mui/material';
 import CustomComponent from '@/components/students/CustomComponent';
+import TextwithImage from '@/components/students/TextwithImage';
+
 
 
 const index = () => {
@@ -35,6 +37,7 @@ const index = () => {
         <MainLayout title='Students'>
             <ComponentWithPadding>
                 <Grid container spacing={2}>
+                    <TextwithImage />
                     <CustomComponent title="FALL 2022" items={itemsFall} />
                     <CustomComponent title="SPRING 2023" items={itemsSpring} />
 
