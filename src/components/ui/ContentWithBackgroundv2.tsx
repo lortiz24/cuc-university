@@ -10,7 +10,7 @@ interface Props {
 
 const origin = (typeof window === 'undefined') ? '' : window.location.origin
 
-export const ContentWithBackgrounImage = ({
+export const ContentWithBackgroundv2 = ({
     backgroundImage = `/assets/figura1.png`,
     item1 = `/assets/Grupo-alumnos.png`,
     withBackgroundImage = true
@@ -37,9 +37,9 @@ export const ContentWithBackgrounImage = ({
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'bottom ',
                 backgroundSize: 'contain',
-                position: 'absolute',
-                bottom: '0',
-                marginBottom: '-100px',
+                // position: 'absolute',
+                // bottom: '0',
+                // marginBottom: '100px',
 
             }} />
            {/*  <Image

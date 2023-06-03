@@ -10,7 +10,7 @@ export const ScolarhipsUp = () => {
                 item xs={12}
                 minHeight={'auto'}
                 width={'100%'}
-                marginBottom={10}
+                marginBottom={4}
                 height={{ xs: 400, lg: 500, xl: 630 }}
                 sx={{
                     zIndex: 1,

@@ -25,16 +25,17 @@ export const AboutUsSectionUp = () => {
                 <Typography
                     variant='h2'
                     color={(theme) => theme.palette.primary.main}
+                    lineHeight={0.3}
                     fontWeight="bold"
-                    fontSize={{ xs: 25, sm: 30, xl: 40 }}
+                    fontSize={{ xs: 25, sm: 42, xl: 40 }}
                     marginBottom={{ xs: 1, md: 4 }}
                     textAlign={'start'}
                 >
                     CUC University, <Typography
                         variant='caption'
+                        lineHeight={1.2}
                         color={(theme) => theme.palette.secondary.main}
-                        fontWeight="bold"
-                        fontSize={{ xs: 25, sm: 30, xl: 40 }}
+                        fontSize={{ xs: 25, sm: 38, xl: 40 }}
                         marginBottom={{ xs: 1, md: 4 }}
                         textAlign={'start'}
                     >
@@ -44,8 +45,9 @@ export const AboutUsSectionUp = () => {
 
                 <Typography
                     variant='body2'
-                    color={(theme) => theme.palette.secondary.main}
+                    color={'#626970'}
                     fontSize={{ xs: 15, sm: 16 }}
+                    lineHeight={1.8}
                     style={{ marginBottom: '16px' }}
                 >
                     delivers a versatile hybrid educational approach that combines online and on-campus learning opportunities. Our comprehensive academic programs are offered in both Spanish and English, accommodating a diverse range of students.
@@ -53,7 +55,8 @@ export const AboutUsSectionUp = () => {
 
                 <Typography
                     variant='body2'
-                    color={(theme) => theme.palette.secondary.main}
+                    color={'#626970'}
+                    lineHeight={1.8}
                     fontSize={{ xs: 15, sm: 16 }}
                 >
                     With a primary emphasis on business education, CUC University is dedicated to providing students with the essential knowledge and skills to thrive in the competitive global marketplace. Our unwavering commitment to excellence and quality ensures that our curriculum

@@ -26,7 +26,8 @@ export const TextWithIcon = ({ children }: Props) => {
                     }}
                 />
             </ListItemIcon>
-            <Typography variant="body2" lineHeight={2} gutterBottom color={(theme) => theme.palette.secondary.main}>
+                    
+            <Typography variant="body2" lineHeight={2} gutterBottom color={'#626970'}>
                 {children}
             </Typography>
         </ListItem>

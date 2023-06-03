@@ -53,7 +53,7 @@ export const MisionAndVision = () => {
           </Typography>
           <Typography
             variant="body2"
-            color={theme.palette.secondary.main}
+            color={'#626970'}
             fontSize={{ xs: 15, sm: 17, md: 19 }}
             textAlign="center"
           >
@@ -106,7 +106,7 @@ export const MisionAndVision = () => {
           <Typography
             variant='body2'
             marginBottom={{ xs: 2, xl: 4 }}
-            color={theme.palette.secondary.main}
+            color={'#626970'}
             fontSize={{ xs: 15, sm: 17, md: 19 }}
             textAlign={'center'}
           >CUC University was created with the desire to
@@ -166,8 +166,8 @@ export const MisionAndVision = () => {
           >Values</Typography>
           <Typography
             variant='body2'
+            color={'#626970'}
             marginBottom={{ xs: 2, xl: 4 }}
-            color={theme.palette.secondary.main}
             fontSize={{ xs: 15, sm: 17, md: 19 }}
             textAlign={'center'}
           >Our core values are excellence, responsibility integrity, and commitment to society, These values are reflected in everything we do, from teaching and research to interaction with our students, faculty, and administrative staff.

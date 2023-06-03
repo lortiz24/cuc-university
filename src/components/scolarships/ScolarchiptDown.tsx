@@ -7,27 +7,31 @@ export const ScolarchiptDown = () => {
         <Grid
             container
             marginTop={{ xs: 3, md: 10, lg: 15 }}
+            marginBottom={12.5}
         >
             <Grid
                 item
                 xs={12}
-                lg={5}
+                lg={4}
+                marginLeft={{xs:5,lg:25}}
+                marginRight={{xs:5,md:0}}
             >
                 <Typography
                     variant='body1'
-                    color={(theme) => theme.palette.secondary.main}
-                    fontSize={{ xs: 15, sm: 18 }}
+                    fontSize={{ xs: 14, sm: 16 }}
                     style={{ marginBottom: '16px', lineHeight: '2' }}
+                    color={'#626970'}
+
                 >
                     CUC University is committed to supporting eligible students through a
                     variety of scholarships, which are awarded on a semester basis and
                     renewable based on satisfactory academic progress. Upon completing the scholarship application, eligible candidates will be scheduled for an interview and asked to compose a 300-word essay on campus. The
-                    essay topic will be randomly selected
+                    essay topic will be randomly selected.
                 </Typography>
                 <Typography
                     variant='body1'
-                    color={(theme) => theme.palette.secondary.main}
-                    fontSize={{ xs: 15, sm: 18 }}
+                    color={'#626970'}
+                    fontSize={{ xs: 14, sm: 16 }}
                     style={{ marginBottom: '16px', lineHeight: '2' }}
                 >
                     All students who receive CUC University scholarships must maintain a
@@ -35,19 +39,19 @@ export const ScolarchiptDown = () => {
                     signing the &apos;Terms for Institutional Scholarships&apos; form.
                 </Typography>
                 <Typography
-                    variant='body1'
+                    variant='subtitle2'
                     color={(theme) => theme.palette.primary.main}
-                    fontSize={{ xs: 15, sm: 18 }}
+                    fontSize={{ xs: 14, sm: 16 }}
                     sx={{ marginBottom: '16px', lineHeight: '2' }}
                 >
-                    Application deadlines for each semester will be posted on the university website. It is essential to note that upon withdrawal or failure of courses, recipients of institutional aid will forfeit the cUc University scholarship and become financially liable for the full tuition of the ongoing semester.
+                    Application deadlines for each semester will be posted on the university website. It is essential to note that upon withdrawal or failure of courses, recipients of institutional aid will forfeit the CUC University scholarship and become financially liable for the full tuition of the ongoing semester.
 
                 </Typography>
             </Grid>
             <Grid
                 item
                 xs={12}
-                lg={7}
+                lg={6}
                 marginTop={{ xs: 2, md: 0 }}
                 minHeight={{ xs: '300px', sm: '500px' }}>
                 <ContentWithBackgrounImage

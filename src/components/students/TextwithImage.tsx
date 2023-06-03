@@ -24,7 +24,7 @@ const TextWithImage = () => {
         <Typography
           lineHeight={2}
           variant='body2'
-          color={'#8C97A0'}
+          color={'#626970'}
           fontSize={{ xs: 13, sm: 14 ,lg:18 }}
         >
           This will be the page where students find relevant information and tools including log in to Campus Café, Canva, Online Payments Library Resources, University Catalog and Academic Calendar.

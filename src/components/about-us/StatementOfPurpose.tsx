@@ -61,7 +61,7 @@ const SplitPage = () => {
             Accreditation
           </Typography>
           <Grid xs={8}>
-            <Typography variant="body2" lineHeight={2} gutterBottom color={(theme) => theme.palette.secondary.main}>
+            <Typography variant="body2" lineHeight={2} gutterBottom  color={'#626970'}>
               CUC University is a private institution organized as a for profit corporation under the laws of the State of Florida. It is licensed under the Commission for Independent Education Florida Department of Education, to provide post-secondary education and has authority to grant degrees under the laws of the State of Florida.
             </Typography>
           </Grid>
