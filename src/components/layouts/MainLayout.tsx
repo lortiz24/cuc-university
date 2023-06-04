@@ -29,6 +29,9 @@ export const MainLayout = ({ children, title = 'Cuc University', description = '
             <NavbarUi />
 
             <Box
+            /* sx={{
+                overflowX:'scroll'
+            }} */
             >
                 {children}
             </Box>

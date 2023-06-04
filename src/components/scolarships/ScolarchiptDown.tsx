@@ -6,15 +6,19 @@ export const ScolarchiptDown = () => {
     return (
         <Grid
             container
-            marginTop={{ xs: 3, md: 10, lg: 15 }}
+            marginTop={{ xs: 10, lg: 15 }}
             marginBottom={12.5}
+
         >
             <Grid
                 item
                 xs={12}
-                lg={4}
-                marginLeft={{xs:5,lg:25}}
-                marginRight={{xs:5,md:0}}
+                lg={5}
+                display={'flex'}
+                justifyContent={'center'}
+                flexDirection={'column'}
+                paddingLeft={{ xs: 5, sm: 7, md: 10, lg: 7, xl: 15 }}
+                paddingRight={{ xs: 5, sm: 7, md: 10, lg: 0 }}
             >
                 <Typography
                     variant='body1'
@@ -51,9 +55,12 @@ export const ScolarchiptDown = () => {
             <Grid
                 item
                 xs={12}
-                lg={6}
+                lg={7}
                 marginTop={{ xs: 2, md: 0 }}
-                minHeight={{ xs: '300px', sm: '500px' }}>
+                minHeight={{ xs: '300px', sm: '500px' }}
+                display={'flex'}
+                justifyContent={'center'}
+            >
                 <ContentWithBackgrounImage
                     item1={`/assets/Alumna-4.png`}
                 />

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, useTheme, Typography, Box, TextField, Button } from '@mui/material'
+import { Grid, useTheme, Typography, Box } from '@mui/material'
 import { useGetOrigin } from '@/hooks/useGetOrigin'
 import { SocialNetworks } from './SocialNetworks'
 import { MenuFooter } from '../menu/MenuFooter'
@@ -13,15 +13,33 @@ export const Footer = () => {
 
   return (
     <Box sx={{
+      width: '100%',
+      position: 'relative',
       backgroundImage: `url(${origin}/assets/Grupo-175.png)`,
       backgroundRepeat: 'no-repeat',
       backgroundPosition: { xs: 'top 15rem right 5rem', sm: 'right' },
       backgroundSize: 'contain',
       minHeight,
       backgroundColor: theme.palette.secondary.main,
-      zIndex: -10,
-
+      // zIndex: -10,
     }}>
+      {/* <Box
+        sx={{
+          position: 'absolute',
+          left: '50%',
+          bottom: `calc(100%)`,
+          transform: 'translateX(-50%)',
+          color: 'transparent',
+          WebkitTextStroke: `2px ${theme.palette.primary.main}`,
+          fontSize: { xs: '14vw', md: '8vw' },
+          minHeight: '100%',
+          minWidth: '800px',
+          backgroundImage: `url(${origin}/assets/Alumna-4-recorte.png)`,
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'bottom',
+          backgroundSize: 'contain',
+        }}
+      /> */}
       <Grid
         container
         sx={{ minHeight }}
