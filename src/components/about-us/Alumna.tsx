@@ -41,7 +41,7 @@ export const Alumna = ({
             }} />
             <Box sx={{
                 borderRadius: 100,
-                backgroundColor: 'yellow',
+                // backgroundColor: 'yellow',
                 minHeight: '70%',
                 width: '100%',
                 maxWidth:'700px',

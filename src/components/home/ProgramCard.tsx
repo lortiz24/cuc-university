@@ -1,6 +1,6 @@
-import { ProgramItem } from '@/interfaces/Programs.interface'
-import { Card, CardMedia, Grid, Typography, useTheme } from '@mui/material'
 import React from 'react'
+import { ProgramItem } from '@/interfaces/Programs.interface'
+import { Box, Card, CardMedia, Grid, Typography, useTheme } from '@mui/material'
 
 interface Props {
     programItem: ProgramItem
@@ -12,19 +12,14 @@ export const ProgramCard = ({ programItem }: Props) => {
 
     return (
         <>
-            {/* <Grid
-                item
-                direction="column"
-                alignItems="center"
-                justifyContent={'center'}
-                display={'flex'}
-                xs={12}
-                sm={12}
-                md={6}
-            >  */}
-            <div style={{
-                marginTop: '2rem'
-            }}>
+            <Box
+                sx={{
+                    marginTop: '2rem',
+                    '&:hover .hoverTypography': {
+                        color: theme.palette.primary.main,
+                    },
+                }}
+            >
                 <Card sx={{ width: 200, borderRadius }}>
                     <CardMedia
                         sx={{
@@ -38,13 +33,20 @@ export const ProgramCard = ({ programItem }: Props) => {
                         alt="Paella dish"
                     />
                 </Card>
-                <Typography variant='body2' color={theme.palette.secondary.main} sx={{ width: 200, textAlign: 'center', marginTop: '10px',
-                '&:hover': {color: theme.palette.primary.main,
-            }, }}>
+                <Typography
+                    variant="body2"
+                    color={theme.palette.secondary.main}
+                    sx={{
+                        width: 200,
+                        textAlign: 'center',
+                        marginTop: '10px',
+                    }}
+                    className="hoverTypography" // Agrega una clase para seleccionar el Typography
+                >
                     {programItem.title}
                 </Typography>
-            </div>
-            {/*  </Grid> */}
+            </Box>
+
         </>
     )
 }

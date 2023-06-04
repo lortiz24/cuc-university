@@ -49,7 +49,7 @@ export const GraduatePrograms = ({ graduatePrograms }: Props) => {
                     gap: '2rem'
                 }}>
                  {graduatePrograms.map((programItem, index) => (
-                        <Link key={index} style={{textDecoration: 'none'}} href={programItem.path} passHref>
+                        <Link key={index} style={{textDecoration: 'none'}} href={`academic-programs${programItem.path}`} passHref>
                                 <ProgramCard programItem={programItem} />
                         </Link>
                     ))}

@@ -72,15 +72,7 @@ export const NavbarUi = (props: Props) => {
         color="transparent"
       >
         <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { lg: "none" } }}
-          >
-            <MenuIcon />
-          </IconButton>
+
           <div style={{ flexGrow: 1 }}>
             <Box
               component="img"
@@ -95,12 +87,21 @@ export const NavbarUi = (props: Props) => {
           <Box sx={{ display: { xs: "none", lg: "block" } }}>
             <Menu />
           </Box>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { lg: "none" } }}
+          >
+            <MenuIcon />
+          </IconButton>
         </Toolbar>
       </AppBar>
 
       <Drawer
         container={container}
-        variant='temporary'
+        variant="temporary"
         open={mobileOpen}
         onClose={handleDrawerToggle}
         ModalProps={{
@@ -114,6 +115,7 @@ export const NavbarUi = (props: Props) => {
             backgroundColor: '#f1f1f1',
           },
         }}
+        anchor="right" // Establece el anchor en "right"
       >
         <Typography
           variant='h2'

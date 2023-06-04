@@ -38,7 +38,7 @@ export const ContactSectionProgram = ({ contactImage, downloadnItem }: Props) =>
 
             // sx={{ backgroundColor: 'blue', }}
             >
-                <FormComponent onSubmit={(values) => console.log(values)} />
+                <FormComponent onSubmit={(values) => console.log(values)} TextFieldMessage={false} />
             </Grid>
             <Grid
                 item

@@ -20,7 +20,7 @@ export const NegroImage = () => {
                     minHeight: '300px',
                     width: '100%',
                     position: 'relative',
-                    backgroundColor: 'yellow',
+                    // backgroundColor: 'yellow',
                 }}
             >
                 <Box
