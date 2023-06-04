@@ -16,9 +16,8 @@ export const ContentOverview = ({ program }: Props) => {
         <Grid
             container
             width={'70%'}
-             paddingLeft={2}
+            paddingLeft={2}
             paddingY={{ xs: 5, sm: 5 }}
-            // paddingX={1}
             display={'flex'}
             justifyContent={'center'}
             flexDirection={'column'}

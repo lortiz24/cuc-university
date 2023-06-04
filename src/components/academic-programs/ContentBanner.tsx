@@ -64,7 +64,7 @@ export const ContentBanner = ({ publicImg, title }: Props) => {
                     borderRadius: '100rem',
                     minHeight: '70%',
                     width: '100%',
-                    maxWidth:'700px',
+                    maxWidth:'1000px',
                     backgroundImage: `url(${origin}${publicImg})`,
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: 'cover',

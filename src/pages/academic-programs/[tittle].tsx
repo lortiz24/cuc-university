@@ -40,7 +40,6 @@ export const getStaticPaths: GetStaticPaths = async (ctx) => {
             params: { tittle: path }
         })),
         fallback: false
-        //  fallback: 'blocking'
     }
 }
 
