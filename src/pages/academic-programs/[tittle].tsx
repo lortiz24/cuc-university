@@ -19,7 +19,7 @@ interface Props {
 
 const ProgramPage: NextPage<Props> = ({ program }) => {
     return (
-        <MainLayout title={program.title}>
+        <MainLayout title={program.title} description={program.description} image={program.publicImg}>
             <BannerProgram program={program} >
                 <ContentBanner publicImg={program.publicImg} title={program.titleComplete} />
             </BannerProgram>
