@@ -32,11 +32,11 @@ const TextWithImage = () => {
           This will be the page where students find relevant information and tools including log in to Campus Café, Canva, Online Payments Library Resources, University Catalog and Academic Calendar.
         </Typography>
       </Grid>
-      <Grid item xs={12} lg={8} sx={{paddingTop:'0px', position: 'relative' }}>
+      <Grid item xs={12} lg={8} marginLeft={{xs:4,md:0}} marginRight={{xs:1.5,md:0}} sx={{paddingTop:'0px', position: 'relative' }}>
         <img
           src="/assets/grupoStudiantes2.png"
           alt="Students"
-          style={{ width: '100%', height: 'auto', objectFit: 'cover'}}
+          style={{ width: '100%', height: 'auto',}}
         />
       </Grid>
     </Grid>
