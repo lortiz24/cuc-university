@@ -5,6 +5,8 @@ import { MainLayout } from '@/components/layouts/MainLayout';
 import { graduatePrograms, underGraduatePrograms } from '@/data';
 import { ProgramItem } from '@/interfaces';
 import { getProgramByTitlePath } from '@/services/program.service';
+import { BannerProgram } from '@/components/academic-programs/BannerProgram';
+import { ContentBanner } from '@/components/academic-programs/ContentBanner';
 
 
 interface Props {
@@ -18,7 +20,9 @@ const ProgramPage: NextPage<Props> = ({ program }) => {
 
     return (
         <MainLayout title={program.title}>
-            {program.title}
+            <BannerProgram bannerSrc={program.imgBanner} >
+                <ContentBanner publicImg={program.publicImg} title={program.titleComplete} />
+            </BannerProgram>
         </MainLayout>
     )
 };
