@@ -16,84 +16,89 @@ export const FooterImageDownload = ({
 }: Props) => {
 
     return (
-
-        <Grid
-            container
-            sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                flexDirection: 'column',
-            }}
+        <Box
+            display="flex"
+            flexDirection="column"
+            alignItems="end"
+            justifyContent="center"
+            width={'100%'}
+            paddingX={{ xs: 4, md: 20 }}
+            marginY={10}
         >
-            <Grid
-                item
-                xs={12}
-                marginTop={4}
+            <Typography
+                variant='caption'
+                lineHeight={1.2}
+                color={(theme) => theme.palette.secondary.main}
+                fontSize={{ xs: 20, sm: 20, xl: 20 }}
+                marginBottom={{ xs: 1, md: 4 }}
+                textAlign={'center'}
             >
-                <Typography
-                    variant='caption'
-                    lineHeight={1.2}
-                    color={(theme) => theme.palette.secondary.main}
-                    fontSize={{ xs: 20, sm: 20, xl: 20 }}
-                    marginBottom={{ xs: 1, md: 4 }}
-                    textAlign={'center'}
-                >
-                    Study Plan and Course Catalogue
-                </Typography>
-            </Grid>
-            <Grid
-                item
-                xs={8}
-                marginTop={4}
+                Study Plan and Course Catalogue
+            </Typography>
+
+            <Button
+                variant="contained"
+                color='secondary'
+                sx={{
+                    borderRadius: 30,
+                    textDecoration: 'none',
+                    textTransform: 'none',
+                    fontSize: 18,
+                    color: '#FFFFF',
+                    paddingX: 5,
+                    marginTop: 4
+                }}
             >
-                <Button
-                    variant="contained"
-                    color='secondary'
-
-                    sx={{
-                        borderRadius: 30,
-                        textDecoration: 'none',
-                        textTransform: 'none',
-                        fontSize: 18,
-                        color: '#FFFFF',
-                        paddingX:5
-                    }}
-                >
-                    Download
-                </Button>
-            </Grid>
-            {/*  <Grid
-                item
-                xs={12}
-            >
-                <Box sx={{
-                    position: 'relative',
-                    bottom: 0,
-                    height: '100%',
-                    width: '100%',
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'center',
-                    alignItems: 'flex-end',
-                    backgroundImage: withBackgroundImage ? `url(${origin}${backgroundImage})` : '',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundPosition: 'bottom',
-                    backgroundSize: 'contain',
-                }}>
-
-                    <Box sx={{
-                        minHeight: '100%',
-                        minWidth: '100%',
-                        backgroundImage: `url(${origin}${item1})`,
-                        backgroundRepeat: 'no-repeat',
-                        backgroundPosition: 'bottom center',
-                        backgroundSize: 'contain',
-
-                    }} />
-                </Box>
-            </Grid> */}
-        </Grid>
+                Download
+            </Button>
+        </Box>
 
     )
 }
+{/* <Grid
+    container
+sx={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+}}
+>
+    <Grid
+        item
+        xs={12}
+        marginTop={4}
+    >
+        <Typography
+            variant='caption'
+            lineHeight={1.2}
+            color={(theme) => theme.palette.secondary.main}
+            fontSize={{ xs: 20, sm: 20, xl: 20 }}
+            marginBottom={{ xs: 1, md: 4 }}
+            textAlign={'center'}
+        >
+            Study Plan and Course Catalogue
+        </Typography>
+    </Grid>
+    <Grid
+        item
+        xs={12}
+        marginTop={4}
+    >
+        <Button
+            variant="contained"
+            color='secondary'
+
+            sx={{
+                borderRadius: 30,
+                textDecoration: 'none',
+                textTransform: 'none',
+                fontSize: 18,
+                color: '#FFFFF',
+                paddingX: 5
+            }}
+        >
+            Download
+        </Button>
+    </Grid>
+</Grid >  */}

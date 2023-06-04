@@ -13,19 +13,16 @@ export const ContactSectionProgram = ({ contactImage }: Props) => {
     return (
         <Grid
             container
-        // sx={{ backgroundColor: 'red', }}
         >
-            <Grid
-                item
-                xs={12}
-                md={6}
-            >
 
-            </Grid>
             <Grid
+                
                 item
                 xs={12}
-                md={6}
+                display={'flex'}
+                justifyContent={'end'}
+                flexDirection={'column'}
+                alignItems={'center'}
             >
                 <FooterImageDownload withBackgroundImage={false} item1={contactImage} />
             </Grid>
