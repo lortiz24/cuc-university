@@ -24,9 +24,6 @@ export const ContentBanner = ({ publicImg, title }: Props) => {
                 flexDirection='column'
                 alignItems={'center'}
                 paddingX={{ xs: 10 }}
-            /* sx={{
-                backgroundColor: 'red'
-            }} */
             >
                 <Typography
                     variant='h2'

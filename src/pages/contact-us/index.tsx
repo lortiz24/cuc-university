@@ -14,10 +14,12 @@ const index = () => {
   return (
     <MainLayout title='Contact Us'>
       <ComponentWithPadding>
-        <Grid container marginBottom={10}>
+        <Grid container marginBottom={10} >
           <Grid xs={12} sm={12} md={12} lg={6} item >
             <FormComponent onSubmit={handleSubmit} />
           </Grid>
+
+
           <Grid
             item
             xs={12}
@@ -28,12 +30,13 @@ const index = () => {
             justifyContent="center"
             alignItems="center"
             display={'flex'}
-            paddingX={{xs:1}}
-            >
+            paddingX={{ xs: 2 }}
+          >
             <CardMedia
               sx={{
                 borderRadius,
-                width: {xs:'100%',xl:'700px'},
+                width: '100%',
+                maxWidth: '700px'
               }}
               component="img"
               image={'/assets/Maps_ubication.png'}

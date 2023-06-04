@@ -29,7 +29,7 @@ export const BannerProgram = ({ children, program }: Props) => {
                         position: 'relative',
                         width: '100%',
                         height: '100%',
-                        backgroundImage: `url(${origin}${program.imgBanner})`,
+                        backgroundImage: `url(${origin}${program.publicImg})`,
                         backgroundRepeat: 'no-repeat',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',

@@ -25,8 +25,8 @@ const ProgramPage: NextPage<Props> = ({ program }) => {
             </BannerProgram>
             <DescriptionAndObjectives description={program.description} objective={program.objective} />
             <ComponentWithPadding>
-                <ContactSectionProgram contactImage={program.contactImage} />
             </ComponentWithPadding>
+            <ContactSectionProgram contactImage={program.contactImage} downloadnItem={program.pdf} />
         </MainLayout>
     )
 };

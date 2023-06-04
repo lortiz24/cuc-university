@@ -3,9 +3,12 @@ import { ProgramItem } from "@/interfaces/Programs.interface"
 export const underGraduatePrograms: ProgramItem[] = [
     {
         id: 'e15f1e9f1e651f59ef196564ef45e',
+        pdf: {
+            name: 'Associates of Science in International Plan.pdf',
+            ruta: '/files/pdf/Associates-of-Science-in-International-Plan.pdf'
+        },
         publicImg: '/assets/team-work-2.jpg',
         contactImage: '/assets/Alumno1-2.png',
-        imgBanner: '/assets/team-work-2.jpg',
         path: '/associates-science-international-business-administration',
         title: 'Associates of Science International Business Administration',
         titleComplete: {
@@ -30,8 +33,11 @@ export const underGraduatePrograms: ProgramItem[] = [
     },
     {
         id: 'f451e58f1ef1e1f5ef1e5f',
+        pdf: {
+            name: 'Bachelors of Science in International Business Administration Plan.pdf',
+            ruta: '/files/pdf/Bachelors-of-Science-in-International-Business-Administration-Plan.pdf'
+        },
         publicImg: '/assets/bachelors.jpg',
-        imgBanner: '/assets/team-work-2.jpg',
         contactImage: '/assets/alumna-contact.png',
         title: 'Bachelors of Science in International Business Administration',
         titleComplete: {
@@ -59,9 +65,12 @@ export const underGraduatePrograms: ProgramItem[] = [
 export const graduatePrograms: ProgramItem[] = [
     {
         title: 'Master of Science in International Business Administration',
+        pdf: {
+            name: 'Master of Science in International Business Administration PLAN.pdf',
+            ruta: '/files/pdf/Master-of-Science-in-International-Business-Administration-PLAN.pdf'
+        },
         path: '/master-of-science-in-international-business-administration',
         publicImg: '/assets/master-of-science.jpg',
-        imgBanner: '/assets/team-work-2.jpg',
         contactImage: '/assets/Alumna-contact-2.png',
         id: 'f9e8f51e85f1e891f8e1f5',
         overView: {
@@ -86,13 +95,16 @@ export const graduatePrograms: ProgramItem[] = [
     },
     {
         title: 'Mastter of Science in Marketing',
+        pdf: {
+            name: 'Master of Science in Marketing.pdf',
+            ruta: '/files/pdf/Master-of-Science-in-Marketing.pdf'
+        },
         titleComplete: {
             type: 'Master of Science',
             specialty: 'in Marketing'
         },
         path: '/mastter-of-science-in-marketing',
         publicImg: '/assets/master-marketing.jpg',
-        imgBanner: '/assets/team-work-2.jpg',
         contactImage: '/assets/Alumna-contact-2.png',
         id: 'e89f1e1fe1f9e1f98e1f',
         overView: {
@@ -113,13 +125,16 @@ export const graduatePrograms: ProgramItem[] = [
     },
     {
         title: 'Master of Science in Mass Media Communication and Media Technology',
+        pdf: {
+            name: 'Master of Science in Mass Media Communication and Media Technology.pdf',
+            ruta: '/files/pdf/Master-of-Science-in-Mass-Media-Communication-and-Media-Technology.pdf'
+        },
         titleComplete: {
             type: 'Master of Science',
             specialty: 'in Mass Media Communication and Media Technology'
         },
         path: '/master-of-science-in-mass-media-communication-and-media-technology',
         publicImg: '/assets/master-comunication.jpg',
-        imgBanner: '/assets/team-work-2.jpg',
         contactImage: '/assets/Alumno1-2.png',
         id: '56e1f561e98f419e162e15',
         overView: {

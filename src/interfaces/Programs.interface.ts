@@ -8,8 +8,13 @@ export interface TitleProgram {
     specialty: string;
 }
 
+
+export interface DownloadItem {
+    ruta: string;
+    name: string;
+}
 export interface ProgramItem {
-    imgBanner: string;
+    pdf: DownloadItem;
     contactImage: string;
     publicImg: string;
     path: string;

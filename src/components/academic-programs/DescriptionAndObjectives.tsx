@@ -20,7 +20,7 @@ export const DescriptionAndObjectives = ({ description, objective }: Props) => {
                 item
                 xs={12}
                 md={6}
-                marginTop={{ xs: 65, sm: 40, md: 47 }}
+                marginTop={{ xs: 55, sm: 37, md: 40, lg: 40, xl: 30 }}
                 paddingX={{ xs: 4, sm: 15, md: 4, xl: 20 }}
             >
                 <Typography

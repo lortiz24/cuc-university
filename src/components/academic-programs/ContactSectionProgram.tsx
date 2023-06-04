@@ -3,20 +3,22 @@ import React from 'react'
 import FormComponent from '../form-contact/FormContactUs'
 import { FooterImageDownload } from './FooterImageDownload';
 import { useGetOrigin } from '@/hooks/useGetOrigin';
+import { DownloadItem } from '@/interfaces';
 
 
 interface Props {
     contactImage: string;
+    downloadnItem: DownloadItem;
 }
-export const ContactSectionProgram = ({ contactImage }: Props) => {
+export const ContactSectionProgram = ({ contactImage, downloadnItem }: Props) => {
     const { origin } = useGetOrigin()
     return (
         <Grid
             container
+        // sx={{ backgroundColor: 'red' }}
         >
 
             <Grid
-                
                 item
                 xs={12}
                 display={'flex'}
@@ -24,13 +26,17 @@ export const ContactSectionProgram = ({ contactImage }: Props) => {
                 flexDirection={'column'}
                 alignItems={'center'}
             >
-                <FooterImageDownload withBackgroundImage={false} item1={contactImage} />
+                <FooterImageDownload withBackgroundImage={false} item1={contactImage} downloadnItem={downloadnItem} />
             </Grid>
             <Grid
                 item
                 xs={12}
                 md={6}
+                lg={6}
                 marginBottom={4}
+                paddingX={{ xs: 4, lg: 10 }}
+
+            // sx={{ backgroundColor: 'blue', }}
             >
                 <FormComponent onSubmit={(values) => console.log(values)} />
             </Grid>
@@ -38,6 +44,7 @@ export const ContactSectionProgram = ({ contactImage }: Props) => {
                 item
                 xs={0}
                 md={6}
+                lg={6}
             // sx={{ backgroundColor: 'yellow' }}
             >
 
@@ -51,8 +58,9 @@ export const ContactSectionProgram = ({ contactImage }: Props) => {
                     justifyContent: 'center',
                     alignItems: 'flex-end',
                     backgroundRepeat: 'no-repeat',
-                    backgroundPosition: 'bottom',
-                    backgroundSize: 'contain',
+                    backgroundPosition: 'bottom center',
+                    backgroundSize: 'cover',
+
                 }}>
 
                     <Box sx={{

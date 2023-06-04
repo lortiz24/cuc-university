@@ -39,8 +39,8 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
     };
 
     return (
-        <Grid container marginTop={5} justifyContent="center">
-            <Grid item xs={12} md={8} lg={8}>
+        <Grid container marginTop={5} justifyContent="center" >
+            <Grid item xs={12}>
                 <form onSubmit={handleSubmit}>
                     <Typography
                         variant="h4"
@@ -120,7 +120,7 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                                 }}
                             />
                         </Grid>
-                        <Grid item marginBottom={!TextFieldMessage ? 1:0 } xs={12}>
+                        <Grid item marginBottom={!TextFieldMessage ? 1 : 0} xs={12}>
                             <TextField
                                 size='small'
                                 placeholder="Email"
@@ -198,9 +198,9 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                                 fullWidth
                                 sx={{
                                     borderRadius: 30,
-                                    textDecoration:'none',
+                                    textDecoration: 'none',
                                     textTransform: 'none',
-                                    fontSize:18
+                                    fontSize: 18
                                 }}
                             >
                                 Send

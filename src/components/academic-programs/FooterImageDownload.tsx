@@ -1,9 +1,13 @@
 import { Box, Button, Grid, Typography } from '@mui/material'
+import DownloadButton from '../download-files-button/DownloadButton';
+import { DownloadItem } from '@/interfaces';
 
 interface Props {
     backgroundImage?: string;
     item1?: string;
     withBackgroundImage?: boolean;
+    downloadnItem: DownloadItem;
+
 }
 
 
@@ -12,7 +16,8 @@ const origin = (typeof window === 'undefined') ? '' : window.location.origin
 export const FooterImageDownload = ({
     backgroundImage = `/assets/figura1.png`,
     item1 = `/assets/Grupo-alumnos.png`,
-    withBackgroundImage = true
+    withBackgroundImage = true,
+    downloadnItem
 }: Props) => {
 
     return (
@@ -36,21 +41,7 @@ export const FooterImageDownload = ({
                 Study Plan and Course Catalogue
             </Typography>
 
-            <Button
-                variant="contained"
-                color='secondary'
-                sx={{
-                    borderRadius: 30,
-                    textDecoration: 'none',
-                    textTransform: 'none',
-                    fontSize: 18,
-                    color: '#FFFFF',
-                    paddingX: 5,
-                    marginTop: 4
-                }}
-            >
-                Download
-            </Button>
+            <DownloadButton downloadnItem={downloadnItem} />
         </Box>
 
     )
