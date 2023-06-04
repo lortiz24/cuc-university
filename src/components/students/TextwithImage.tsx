@@ -16,6 +16,7 @@ const TextWithImage = () => {
           variant='h2'
           color={(theme) => theme.palette.primary.main}
           fontWeight="bold"
+          marginX={{xs:4,md:0}}
           fontSize={{ xs: 25, sm: 40 }}
           textAlign='start'
         >
@@ -24,6 +25,7 @@ const TextWithImage = () => {
         <Typography
           lineHeight={2}
           variant='body2'
+          marginX={{xs:4,md:0}}
           color={'#626970'}
           fontSize={{ xs: 13, sm: 14 ,lg:18 }}
         >
