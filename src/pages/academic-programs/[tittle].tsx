@@ -7,6 +7,10 @@ import { ProgramItem } from '@/interfaces';
 import { getProgramByTitlePath } from '@/services/program.service';
 import { BannerProgram } from '@/components/academic-programs/BannerProgram';
 import { ContentBanner } from '@/components/academic-programs/ContentBanner';
+import { DescriptionAndObjectives } from '@/components/academic-programs/DescriptionAndObjectives';
+import FormComponent from '@/components/form-contact/FormContactUs';
+import { ContactSectionProgram } from '@/components/academic-programs/ContactSectionProgram';
+import { ComponentWithPadding } from '@/components/layouts/ComponentWithPadding';
 
 
 interface Props {
@@ -15,7 +19,7 @@ interface Props {
 
 
 const ProgramPage: NextPage<Props> = ({ program }) => {
-
+console.log('program',program)
 
 
     return (
@@ -23,6 +27,10 @@ const ProgramPage: NextPage<Props> = ({ program }) => {
             <BannerProgram bannerSrc={program.imgBanner} >
                 <ContentBanner publicImg={program.publicImg} title={program.titleComplete} />
             </BannerProgram>
+            <DescriptionAndObjectives description={program.description} objective={program.objective} />
+            <ComponentWithPadding>
+                <ContactSectionProgram contactImage={program.contactImage}/>
+            </ComponentWithPadding>
         </MainLayout>
     )
 };

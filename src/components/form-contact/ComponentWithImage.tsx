@@ -9,7 +9,7 @@ type ComponentWithImageProps = {
 };
 
 const ComponentWithImage: React.FC<ComponentWithImageProps> = ({
-  component = <FormComponent TextFieldMessage={false} onSubmit={() => {}} />,
+  component = <FormComponent TextFieldMessage={false} onSubmit={() => { }} />,
   image = '/assets/Alumno1-2.png',
 }) => {
   return (
@@ -17,29 +17,18 @@ const ComponentWithImage: React.FC<ComponentWithImageProps> = ({
       <Grid item xs={12} md={6}>
         {component}
       </Grid>
-      <Grid item xs={12}  md={6} position="relative">
+      <Grid item xs={12} md={6} position="relative">
         <div className="image-container">
-        <img
-          src={image}
-          alt={"students"}
-          style={{
-            width: '100%',
-            height: 'auto',
-            position: 'absolute',
-            top: '1rem',
-          }}
-        />
-          {/* <Image
+          <img
             src={image}
-            alt="aluma1"
-            width={700}
-            height={0}
-            sizes="100vw"
+            alt={"students"}
             style={{
+              width: '100%',
+              height: 'auto',
               position: 'absolute',
-              top: '1rem', // Ajusta el valor según la distancia vertical deseada
+              top: '1rem',
             }}
-          /> */}
+          />
         </div>
       </Grid>
 

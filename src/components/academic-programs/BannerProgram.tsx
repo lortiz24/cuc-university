@@ -46,12 +46,13 @@ export const BannerProgram = ({ bannerSrc, children }: Props) => {
                     <Box
                         sx={{
                             backgroundColor: theme.palette.primary.main,
-                            borderRadius: '15rem',
-                            width: { xs: '100%', sm: '50%' },
+                            borderRadius: { xs: '5rem', sm: '15rem' },
+                            width: { xs: '100%', md: '40%' },
+                            maxWidth: '700px',
                             height: '400px',
                             position: 'absolute',
                             top: `calc(100% - 1.3em)`,
-                            transform: { xs: '', sm: 'translateX(10%)' },
+                            transform: { xs: '', md: 'translateX(10%)' },
                             color: 'transparent',
                             WebkitTextStroke: `2px ${theme.palette.primary.main}`,
                             fontSize: { xs: '14vw', md: '8vw' },
@@ -86,20 +87,7 @@ export const BannerProgram = ({ bannerSrc, children }: Props) => {
                             </Grid>
                         </Grid>
                     </Box>
-                    {/*  <Typography
-                        sx={{
-                            position: 'absolute',
-                            left: '50%',
-                            top: `calc(100% - 0.8em)`,
-                            transform: 'translateX(-50%)',
-                            color: 'transparent',
-                            WebkitTextStroke: `2px ${theme.palette.primary.main}`,
-                            fontSize: { xs: '14vw', md: '8vw' },
 
-                        }}
-                    >
-                        lo que
-                    </Typography> */}
                     {children}
                 </Box>
             </Grid>

@@ -13,15 +13,17 @@ export const ContentBanner = ({ publicImg, title }: Props) => {
     return (
         <Grid
             container
-            minHeight={700}
+            minHeight={{ xs: 400, md: 700 }}
         >
             <Grid
                 item
-                xs={6}
+                xs={12}
+                md={5}
                 display={'flex'}
                 justifyContent={'center'}
                 flexDirection='column'
                 alignItems={'center'}
+                paddingX={{ xs: 10 }}
             /* sx={{
                 backgroundColor: 'red'
             }} */
@@ -29,10 +31,10 @@ export const ContentBanner = ({ publicImg, title }: Props) => {
                 <Typography
                     variant='h2'
                     color={(theme) => theme.palette.primary.main}
-                    lineHeight={0.3}
+                    lineHeight={1}
                     fontWeight="bold"
                     fontSize={{ xs: 25, sm: 42, xl: 40 }}
-                    marginBottom={{ xs: 1, md: 4 }}
+                    marginBottom={{ xs: 1, sm: 10, md: 4 }}
                     textAlign={'start'}
                 >
                     {title.type} <Typography
@@ -50,33 +52,29 @@ export const ContentBanner = ({ publicImg, title }: Props) => {
             </Grid>
             <Grid
                 item
-                xs={6}
+                xs={0}
+                md={7}
+                display={'flex'}
+                justifyContent={'center'}
+                flexDirection='column'
+                alignItems={'center'}
+                paddingX={{ xs: 10 }}
             >
                 <Box sx={{
-                    borderRadius: 100,
+                    borderRadius: '100rem',
                     minHeight: '70%',
-                    minWidth: '100%',
+                    width: '100%',
+                    maxWidth:'700px',
                     backgroundImage: `url(${origin}${publicImg})`,
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     top: 0,
+                    display: { xs: 'none', md: "block" },
                     zIndex: 10,
-                    
-                }} />
-                {/*  <Box sx={{
-                    position: 'relative',
-                    height: '100%',
-                    width: '100%',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    backgroundImage: `url(${origin}${'/assets/City-1.jpg'})`,
-                    backgroundRepeat: 'no-repeat',
-                    backgroundPosition: 'bottom',
-                    backgroundSize: 'contain',
-                }}>
 
-                </Box> */}
+                }} />
+
             </Grid>
         </Grid>
     )

@@ -10,6 +10,7 @@ export interface TitleProgram {
 
 export interface ProgramItem {
     imgBanner: string;
+    contactImage: string;
     publicImg: string;
     path: string;
     title: string;

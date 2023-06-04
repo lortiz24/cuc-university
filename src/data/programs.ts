@@ -4,6 +4,7 @@ export const underGraduatePrograms: ProgramItem[] = [
     {
         id: 'e15f1e9f1e651f59ef196564ef45e',
         publicImg: '/assets/team-work-2.jpg',
+        contactImage: '/assets/Alumno1-2.jpg',
         imgBanner: '/assets/team-work-2.jpg',
         path: '/associates-science-international-business-administration',
         title: 'Associates of Science International Business Administration',
@@ -31,6 +32,7 @@ export const underGraduatePrograms: ProgramItem[] = [
         id: 'f451e58f1ef1e1f5ef1e5f',
         publicImg: '/assets/bachelors.jpg',
         imgBanner: '/assets/team-work-2.jpg',
+        contactImage: '/assets/alumna-contact.png',
         title: 'Bachelors of Science in International Business Administration',
         titleComplete: {
             type: 'Bachelors of Science',
@@ -60,6 +62,7 @@ export const graduatePrograms: ProgramItem[] = [
         path: '/master-of-science-in-international-business-administration',
         publicImg: '/assets/master-of-science.jpg',
         imgBanner: '/assets/team-work-2.jpg',
+        contactImage: '/assets/Alumna-contact-2.png',
         id: 'f9e8f51e85f1e891f8e1f5',
         overView: {
             duration: {
@@ -90,6 +93,7 @@ export const graduatePrograms: ProgramItem[] = [
         path: '/mastter-of-science-in-marketing',
         publicImg: '/assets/master-marketing.jpg',
         imgBanner: '/assets/team-work-2.jpg',
+        contactImage: '/assets/Alumna-contact-2.png',
         id: 'e89f1e1fe1f9e1f98e1f',
         overView: {
             duration: {
@@ -116,6 +120,7 @@ export const graduatePrograms: ProgramItem[] = [
         path: '/master-of-science-in-mass-media-communication-and-media-technology',
         publicImg: '/assets/master-comunication.jpg',
         imgBanner: '/assets/team-work-2.jpg',
+        contactImage: '/assets/Alumno1-2.png',
         id: '56e1f561e98f419e162e15',
         overView: {
             duration: {
