@@ -36,7 +36,7 @@ const TextWithImage = () => {
         <img
           src="/assets/grupoStudiantes2.png"
           alt="Students"
-          style={{ width: '100%', height: 'auto',}}
+          style={{ width: '100%', height: 'auto', maxWidth:'1000px'}}
         />
       </Grid>
     </Grid>

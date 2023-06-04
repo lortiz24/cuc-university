@@ -17,8 +17,8 @@ export const ScolarhipsUp = () => {
                     position: 'relative',
                     display: 'flex',
                     flexDirection: 'column',
-                    justifyContent: 'end',
-                    alignItems: 'end'
+                    justifyContent: 'center',
+                    alignItems: 'center'
                 }}
             >
                 <CircleBanner

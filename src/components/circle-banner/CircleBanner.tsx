@@ -34,6 +34,7 @@ export const CircleBanner = ({
                 borderRadius: { xs: borderRadiusXs, sm: borderRadiusSm, md: borderRadiusMd, lg: borderRadiusLg },
                 position: 'relative',
                 width: '100%',
+                maxWidth:'2000px',
                 height: '100%',
                 backgroundImage: `url(${origin}${src})`,
                 backgroundRepeat: 'no-repeat',

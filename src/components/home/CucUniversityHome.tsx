@@ -55,7 +55,7 @@ export const CucUniversityHome = () => {
                 </Button>
                 </Grid>
             </Grid>
-            <Grid item xs={12} lg={7} marginTop={{ xs: 2, md: 0 }} minHeight={{ xs: '300px', sm: '400px' }}>
+            <Grid item xs={12} lg={7} marginTop={{ xs: 2, md: 0 }} minHeight={{ xs: '300px', sm: '433px' }}>
                 <ContentWithBackgroundv2 />
             </Grid>
             <Grid item xs={12} minHeight={'auto'} width={'100%'} sx={{ zIndex: 1, position: 'relative', top: -35, }}>
