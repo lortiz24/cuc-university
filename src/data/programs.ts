@@ -4,7 +4,7 @@ export const underGraduatePrograms: ProgramItem[] = [
     {
         id: 'e15f1e9f1e651f59ef196564ef45e',
         publicImg: '/assets/team-work-2.jpg',
-        contactImage: '/assets/Alumno1-2.jpg',
+        contactImage: '/assets/Alumno1-2.png',
         imgBanner: '/assets/team-work-2.jpg',
         path: '/associates-science-international-business-administration',
         title: 'Associates of Science International Business Administration',
@@ -139,3 +139,6 @@ export const graduatePrograms: ProgramItem[] = [
         objective: 'The objective of this program is to prepare students for careers in news reporting, editing, digital media, television, public relations, and other mass media outlets. Graduates typically find employment in businesses, government agencies, professional, and non-profit organizations. Some pursue careers in advertising or specialized communication fields such as writing about medicine, technology, or business, while others choose to explore opportunities in "new media* - interactive computer systems and information distribution.'
     },
 ]
+
+
+export const overviewAttributes = ['duration', 'durationSemesters', 'credits', 'modality', 'language']

@@ -19,17 +19,14 @@ interface Props {
 
 
 const ProgramPage: NextPage<Props> = ({ program }) => {
-console.log('program',program)
-
-
     return (
         <MainLayout title={program.title}>
-            <BannerProgram bannerSrc={program.imgBanner} >
+            <BannerProgram program={program} >
                 <ContentBanner publicImg={program.publicImg} title={program.titleComplete} />
             </BannerProgram>
             <DescriptionAndObjectives description={program.description} objective={program.objective} />
             <ComponentWithPadding>
-                <ContactSectionProgram contactImage={program.contactImage}/>
+                <ContactSectionProgram contactImage={program.contactImage} />
             </ComponentWithPadding>
         </MainLayout>
     )

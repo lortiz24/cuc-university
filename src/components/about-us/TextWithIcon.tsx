@@ -9,14 +9,17 @@ import { useGetOrigin } from '@/hooks/useGetOrigin';
 
 
 interface Props {
-    children: React.ReactNode
+    children: React.ReactNode;
+    havIcon?: boolean
+    icon?: React.ReactNode
+    colorText?: string
 }
-export const TextWithIcon = ({ children }: Props) => {
+export const TextWithIcon = ({ children, havIcon = false, icon, colorText = '#626970' }: Props) => {
     const { origin } = useGetOrigin()
     return (
         <ListItem>
             <ListItemIcon sx={{ minWidth: 4 }}>
-                <Box
+                {!havIcon && < Box
                     style={{
                         width: '50px',
                         height: '50px',
@@ -24,10 +27,13 @@ export const TextWithIcon = ({ children }: Props) => {
                         backgroundRepeat: 'no-repeat',
                         backgroundSize: 'cover',
                     }}
-                />
+                />}
+                {
+                    havIcon && icon
+                }
             </ListItemIcon>
-                    
-            <Typography variant="body2" lineHeight={2} gutterBottom color={'#626970'}>
+
+            <Typography variant="body2" lineHeight={2} gutterBottom color={colorText}>
                 {children}
             </Typography>
         </ListItem>

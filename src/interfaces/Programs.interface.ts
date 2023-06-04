@@ -26,3 +26,13 @@ export interface ProgramItem {
     description: string;
     objective: string;
 }
+
+interface Overview {
+    duration: DurationProgram
+    durationSemesters: DurationProgram
+    credits: number
+    modality: string
+    language: string
+}
+
+

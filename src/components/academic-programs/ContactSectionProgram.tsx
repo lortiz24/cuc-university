@@ -1,14 +1,15 @@
-import { Button, CardMedia, Grid, Typography, Box } from '@mui/material'
+import { Grid, Box } from '@mui/material'
 import React from 'react'
 import FormComponent from '../form-contact/FormContactUs'
-import { ContentWithBackgrounImage } from '../ui/ContentWithBackgrounImage';
 import { FooterImageDownload } from './FooterImageDownload';
+import { useGetOrigin } from '@/hooks/useGetOrigin';
 
 
 interface Props {
     contactImage: string;
 }
 export const ContactSectionProgram = ({ contactImage }: Props) => {
+    const { origin } = useGetOrigin()
     return (
         <Grid
             container
