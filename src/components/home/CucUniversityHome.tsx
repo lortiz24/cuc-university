@@ -37,7 +37,7 @@ export const CucUniversityHome = () => {
                 >
                     A distinguished American institution located in Miami, Florida, delivers a versatile hybrid educational approach that combines online and on-campus learning opportunities in English and Spanish.
                 </Typography>
-                <Grid item xs={4}>
+                <Grid item xs={6} md={4}>
                 <Button
                     type="submit"
                     variant="contained"
