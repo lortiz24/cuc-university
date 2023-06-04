@@ -39,12 +39,20 @@ export const BannerProgram = ({ children, program }: Props) => {
                     }}
                 >
                     <MyGradiantBackground
-                        opacity={0.8}
+                        opacity={1}
                         color={theme.palette.background.paper}
                         borderRadiusMd={'0px'}
                         borderRadiusSm={'0px'}
                         borderRadiusXs={'0px'}
                         borderRadiusLg={'0px'}
+                        gradiente={
+                            {
+                                colorLeft: '#FFFFFF',
+                                colorRight: '#FFFFFF',
+                                opacityLeft: 0.8,
+                                opacityRight: 1
+                            }
+                        }
                     />
                     <Box
                         sx={{

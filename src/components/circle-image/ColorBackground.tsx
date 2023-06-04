@@ -6,10 +6,24 @@ interface IMyGradiantBackgroundProps {
     borderRadiusSm?: string
     borderRadiusXs?: string
     borderRadiusLg?: string
-    opacity?: string | number
+    opacity?: string | number,
+    gradiente?: {
+        colorLeft: string;
+        opacityLeft?: number;
+        colorRight: string;
+        opacityRight?: number;
+    }
 }
 
-const MyGradiantBackground = ({ color, borderRadiusMd = '0px', borderRadiusSm = '0px', borderRadiusXs = '0px', borderRadiusLg = '0px', opacity = 0.8 }: IMyGradiantBackgroundProps) => {
+export const hexToRgb = (hex: string) => {
+    const bigint = parseInt(hex.replace("#", ""), 16);
+    const r = (bigint >> 16) & 255;
+    const g = (bigint >> 8) & 255;
+    const b = bigint & 255;
+    return `${r},${g},${b}`;
+}
+
+const MyGradiantBackground = ({ color, borderRadiusMd = '0px', borderRadiusSm = '0px', borderRadiusXs = '0px', borderRadiusLg = '0px', opacity = 0.8, gradiente }: IMyGradiantBackgroundProps) => {
     return (
         <Box
             sx={{
@@ -19,7 +33,9 @@ const MyGradiantBackground = ({ color, borderRadiusMd = '0px', borderRadiusSm = 
                 left: 0,
                 width: '100%',
                 height: '100%',
-                backgroundColor: color,
+                backgroundColor: !gradiente ? color : '',
+                backgroundImage: gradiente ?
+                    `linear-gradient(0deg, rgba(${hexToRgb(gradiente.colorLeft)},${gradiente.opacityLeft}) 0%, rgba(${hexToRgb(gradiente.colorRight)},${gradiente.opacityRight}) 100%)` : '',
                 zIndex: -2,
                 opacity,
             }}
