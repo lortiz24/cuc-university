@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Typography, useTheme } from '@mui/material'
+import { Grid, Typography, useTheme } from '@mui/material'
 import React from 'react'
 import { FooterImageDownload } from './FooterImageDownload';
 import { DownloadItem } from '@/interfaces';

@@ -5,17 +5,27 @@ import { ProgramItem } from '@/interfaces';
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import TranslateOutlinedIcon from '@mui/icons-material/TranslateOutlined';
 import StorageOutlinedIcon from '@mui/icons-material/StorageOutlined';
+import { makeStyles } from '@mui/styles';
 
+const useStyles = makeStyles({
+    customIcon: {
+        color: '#FFFFFF', // Cambia el color aquí
+    },
+});
 
 
 interface Props {
     program: ProgramItem
 }
 export const ContentOverview = ({ program }: Props) => {
+
+    const classes = useStyles();
+
+
     return (
         <Grid
             container
-            width={'70%'}
+            width={'80%'}
             paddingLeft={2}
             paddingY={{ xs: 5, sm: 5 }}
             display={'flex'}
@@ -40,14 +50,14 @@ export const ContentOverview = ({ program }: Props) => {
                 <List>
                     <ListItem sx={{ py: 0.3 }}>
                         <ListItemIcon>
-                            <AccessTimeOutlinedIcon />
+                            <AccessTimeOutlinedIcon className={classes.customIcon} />
                         </ListItemIcon>
                         <ListItemText
                             primary={
                                 <Box sx={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
                                     <Typography
-                                        variant="body1"
-                                        fontWeight={400}
+                                        variant="h1"
+                                        fontWeight={'bold'}
                                         color={'#FFFFFF'}
                                         fontSize={{ xs: 23 }}
                                     >
@@ -59,7 +69,7 @@ export const ContentOverview = ({ program }: Props) => {
                                     <Typography
                                         variant="body1"
                                         component="span"
-                                        fontWeight={200}
+                                        fontWeight={'200'}
                                         color={'#FFFFFF'}
                                         fontSize={{ xs: 23 }}
                                     >
@@ -71,14 +81,14 @@ export const ContentOverview = ({ program }: Props) => {
                     </ListItem>
                     <ListItem sx={{ py: 0.3 }}>
                         <ListItemIcon>
-                            <StorageOutlinedIcon />
+                            <StorageOutlinedIcon className={classes.customIcon}/>
                         </ListItemIcon>
                         <ListItemText
                             primary={
                                 <Box sx={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
                                     <Typography
-                                        variant="body1"
-                                        fontWeight={400}
+                                        variant="h1"
+                                        fontWeight={'bold'}
                                         color={'#FFFFFF'}
                                         fontSize={{ xs: 23 }}
                                     >
@@ -102,14 +112,14 @@ export const ContentOverview = ({ program }: Props) => {
                     </ListItem>
                     <ListItem sx={{ py: 0.3 }}>
                         <ListItemIcon>
-                            <SchoolOutlinedIcon />
+                            <SchoolOutlinedIcon className={classes.customIcon}/>
                         </ListItemIcon>
                         <ListItemText
                             primary={
                                 <Box sx={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
                                     <Typography
-                                        variant="body1"
-                                        fontWeight={400}
+                                        variant="h1"
+                                        fontWeight={'bold'}
                                         color={'#FFFFFF'}
                                         fontSize={{ xs: 23 }}
                                     >
@@ -133,14 +143,14 @@ export const ContentOverview = ({ program }: Props) => {
                     </ListItem>
                     <ListItem sx={{ py: 0.3 }}>
                         <ListItemIcon>
-                            <TranslateOutlinedIcon />
+                            <TranslateOutlinedIcon className={classes.customIcon}/>
                         </ListItemIcon>
                         <ListItemText
                             primary={
                                 <Box sx={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
                                     <Typography
-                                        variant="body1"
-                                        fontWeight={400}
+                                        variant="h1"
+                                        fontWeight={'bold'}
                                         color={'#FFFFFF'}
                                         fontSize={{ xs: 23 }}
                                     >
