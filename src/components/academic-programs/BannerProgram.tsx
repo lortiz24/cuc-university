@@ -59,7 +59,7 @@ export const BannerProgram = ({ children, program }: Props) => {
                             backgroundColor: theme.palette.primary.main,
                             borderRadius: { xs: '5rem', sm: '15rem' },
                             width: { xs: '100%', sm: '100%', md: '60%', lg: '50%' },
-                            maxWidth: '1000px',
+                            maxWidth: '700px',
                             position: 'absolute',
                             top: 'calc(100% - 150px)',
                             // top: { xs: `calc(100% - 2em)`, sm: `calc(100% - 1.6em)`, md: `calc(100% - 1.5em)`, lg: 'calc(100% - 100px)' },
