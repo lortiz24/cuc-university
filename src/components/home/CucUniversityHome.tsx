@@ -1,9 +1,7 @@
 import { Button, Grid, Typography } from '@mui/material'
-import { ContentWithBackgrounImage } from '../ui/ContentWithBackgrounImage'
 import { CircleImage } from '../circle-image/CircleImage'
 import { ContenCircleImage } from './ContenCircleImage'
 import { ContentWithBackgroundv2 } from '../ui/ContentWithBackgroundv2'
-import { Alumna } from '../about-us/Alumna'
 
 export const CucUniversityHome = () => {
     return (
@@ -61,20 +59,17 @@ export const CucUniversityHome = () => {
                 xs={12}
                 lg={7}
                 marginTop={{ xs: 2, md: 0 }}
-                minHeight={{ xs: '300px', sm: '800px' }}>
+                minHeight={{ xs: '300px', sm: '600px', md: '850px' }}
+            >
 
                 <ContentWithBackgroundv2 />
-                {/* <Alumna
-                    item1={`/assets/Alumna-3.png`}
-                    backgroundImage={`/assets/City-1.jpg`}
-                    withBackgroundImage={false}
-                /> */}
-                {/* <ContentWithBackgrounImage
-                    item1={`/assets/figura1.png`}
-                /> */}
             </Grid>
             <Grid item xs={12} minHeight={'auto'} width={'100%'} sx={{ zIndex: 1, position: 'relative', top: -35, }}>
-                <CircleImage src={`/assets/team-work-1-black_and_white.jpg`} height={{ xs: '400px', sm: '450px', md: '500px' }}>
+                <CircleImage
+                    src={`/assets/team-work-1-black_and_white.jpg`}
+                    height={{ xs: '400px', sm: '300px', md: '300px' }}
+                    minHeight={{ xs: '400px', md: '400px', xl: '490px' }}
+                >
                     <ContenCircleImage />
                 </CircleImage>
             </Grid>
