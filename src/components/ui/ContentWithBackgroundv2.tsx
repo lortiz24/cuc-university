@@ -31,8 +31,10 @@ export const ContentWithBackgroundv2 = ({
             backgroundSize: 'contain',
         }}>
              <Box sx={{
-                minHeight: '100%',
-                minWidth: '100%',
+                height: '100%',
+                maxHeight:'700px',
+                width: '100%',
+                maxWidth:'800px',
                 backgroundImage: `url(${origin}${item1})`,
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'bottom ',

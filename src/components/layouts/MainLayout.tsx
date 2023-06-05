@@ -24,11 +24,9 @@ export const MainLayout = ({ children, title = 'Cuc University', description = '
                 <meta name="author" content="Cuc University" />
                 <meta name="description" content={description} />
                 <meta name="keywords" content={`${title}, miami, miami university, america institution`} />
-
                 <meta property="og:title" content={`Information about ${title}`} />
                 <meta property="og:description" content={`This is the page about of ${title}`} />
                 <meta property="og:image" content={`${origin}${image}`} />
-
             </Head>
 
             <NavbarUi />

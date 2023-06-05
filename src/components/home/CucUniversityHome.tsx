@@ -3,6 +3,7 @@ import { ContentWithBackgrounImage } from '../ui/ContentWithBackgrounImage'
 import { CircleImage } from '../circle-image/CircleImage'
 import { ContenCircleImage } from './ContenCircleImage'
 import { ContentWithBackgroundv2 } from '../ui/ContentWithBackgroundv2'
+import { Alumna } from '../about-us/Alumna'
 
 export const CucUniversityHome = () => {
     return (
@@ -38,25 +39,39 @@ export const CucUniversityHome = () => {
                     A distinguished American institution located in Miami, Florida, delivers a versatile hybrid educational approach that combines online and on-campus learning opportunities in English and Spanish.
                 </Typography>
                 <Grid item xs={6} md={4}>
-                <Button
-                    type="submit"
-                    variant="contained"
-                    color='secondary'
-                    fullWidth
-                    sx={{
-                        marginY:2,
-                        borderRadius: 30,
-                        textDecoration:'none',
-                        textTransform: 'none',
-                        fontSize:17
-                    }}
+                    <Button
+                        type="submit"
+                        variant="contained"
+                        color='secondary'
+                        fullWidth
+                        sx={{
+                            marginY: 2,
+                            borderRadius: 30,
+                            textDecoration: 'none',
+                            textTransform: 'none',
+                            fontSize: 17
+                        }}
                     >
-                    See More
-                </Button>
+                        See More
+                    </Button>
                 </Grid>
             </Grid>
-            <Grid item xs={12} lg={7} marginTop={{ xs: 2, md: 0 }} minHeight={{ xs: '300px', sm: '433px' }}>
+            <Grid
+                item
+                xs={12}
+                lg={7}
+                marginTop={{ xs: 2, md: 0 }}
+                minHeight={{ xs: '300px', sm: '800px' }}>
+
                 <ContentWithBackgroundv2 />
+                {/* <Alumna
+                    item1={`/assets/Alumna-3.png`}
+                    backgroundImage={`/assets/City-1.jpg`}
+                    withBackgroundImage={false}
+                /> */}
+                {/* <ContentWithBackgrounImage
+                    item1={`/assets/figura1.png`}
+                /> */}
             </Grid>
             <Grid item xs={12} minHeight={'auto'} width={'100%'} sx={{ zIndex: 1, position: 'relative', top: -35, }}>
                 <CircleImage src={`/assets/team-work-1-black_and_white.jpg`} height={{ xs: '400px', sm: '450px', md: '500px' }}>
