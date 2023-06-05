@@ -33,7 +33,7 @@ export const ActiveLink = ({ text, href, redirect = true, icon, onClick, cursorP
     const buttonCircleStyle: React.CSSProperties = {
         borderRadius: '40rem',
         padding: '4px 15px',
-        textDecoration: 'none'
+        textDecoration: 'none',
     }
 
     return (

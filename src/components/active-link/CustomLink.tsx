@@ -28,6 +28,8 @@ export const CustomLink = ({ href, text, redirect, icon, cursorPointer, colorLin
     };
 
 
+
+
     return (
         <Link
             onClick={redirect ? handleClickWithRedirect : handleClickWithouRedirect}
@@ -41,9 +43,9 @@ export const CustomLink = ({ href, text, redirect, icon, cursorPointer, colorLin
                 <Grid item>
                     <Typography variant="body1" style={`/${router.asPath.split('/')[1]}` === href
                         ?
-                        { color: theme.palette.primary.main, textDecoration: 'none' }
+                        { color: theme.palette.primary.main, textDecoration: 'none', }
                         :
-                        { color: colorLink ? colorLink : theme.palette.secondary.main, textDecoration: 'none' }}>
+                        { color: colorLink ? colorLink : theme.palette.secondary.main, textDecoration: 'none', }}>
                         {text}
                     </Typography>
                 </Grid>
