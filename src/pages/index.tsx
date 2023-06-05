@@ -6,7 +6,6 @@ import { ComponentsWithNoPading } from '@/components/layouts/ComponentsWithNoPad
 import { GetStaticProps, NextPage } from 'next'
 import { ProgramItem } from '@/interfaces/Programs.interface'
 import { graduatePrograms, underGraduatePrograms } from '@/data/programs'
-import { Button } from '@mui/material'
 
 
 

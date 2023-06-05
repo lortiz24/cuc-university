@@ -1,4 +1,4 @@
-import { useTheme, Grid, Box } from '@mui/material';
+import { useTheme, Box } from '@mui/material';
 import MyGradiantBackground from './ColorBackground';
 import { useGetOrigin } from '@/hooks/useGetOrigin';
 
@@ -16,8 +16,8 @@ interface Props {
     borderRadiusSm?: string
     borderRadiusXs?: string
     backgroundRepeat?: "no-repeat" | "repeat" | "repeat-x" | "repeat-y" | "round" | "space";
-    backgroundSize?: "auto" | "contain" | "cover" | string,
-    backgroundPosition?: "bottom" | "center" | "left" | "right" | "top" | string
+    backgroundSize?: string,
+    backgroundPosition?: string
 }
 export const CircleImage = ({
     src = '/assets/team-work-1-black_and_white.jpg',

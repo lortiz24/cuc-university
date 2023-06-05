@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { Button, useTheme, Menu, Grid, Typography } from '@mui/material';
+import { useTheme, Grid, Typography } from '@mui/material';
 
 
 interface Props {
@@ -28,25 +28,18 @@ export const CustomLink = ({ href, text, redirect, icon, cursorPointer, colorLin
     };
 
 
-    /* 
-        if (redirect) {
-            return (
-               
-            )
-        } */
-
     return (
         <Link
             onClick={redirect ? handleClickWithRedirect : handleClickWithouRedirect}
             href={href}
-            style={router.asPath === href
+            style={`/${router.asPath.split('/')[1]}` === href
                 ?
                 { color: theme.palette.primary.main, textDecoration: 'none' }
                 :
                 { color: colorLink ? colorLink : theme.palette.secondary.main, textDecoration: 'none' }}
         ><Grid container alignItems="center">
                 <Grid item>
-                    <Typography variant="body1" style={router.asPath === href
+                    <Typography variant="body1" style={`/${router.asPath.split('/')[1]}` === href
                         ?
                         { color: theme.palette.primary.main, textDecoration: 'none' }
                         :
