@@ -11,30 +11,30 @@ interface Props {
     children: React.ReactNode,
     description?: string
     image?: string
+    keywords?: string
 }
 
 
-export const MainLayout = ({ children, title = 'Cuc University', description = 'information about cuc university', image = '/assets/MainLogo2.png' }: Props) => {
+export const MainLayout = ({ children, title = 'CUC UNIVERSITY', description = 'information about cuc university', image = '/assets/MainLogo2.png', keywords }: Props) => {
 
     const { origin } = useGetOrigin()
     return (
         <>
             <Head>
                 <title>{title}</title>
-                <meta name="author" content="Cuc University" />
+                <meta name="author" content="CUC University" />
                 <meta name="description" content={description} />
-                <meta name="keywords" content={`${title}, miami, miami university, america institution`} />
-                <meta property="og:title" content={`Information about ${title}`} />
-                <meta property="og:description" content={`This is the page about of ${title}`} />
+                <meta name="keywords" content={`${title}, ${keywords}, Miami, Miami University, American institution`} />
+                <meta property="og:title" content={`${title.toUpperCase()} | CUC University - Miami`} />
+                <meta property="og:description" content={`This is the page about ${title} at CUC University - Miami`} />
                 <meta property="og:image" content={`${origin}${image}`} />
+                <meta property="og:type" content="website" />
             </Head>
+
 
             <NavbarUi />
 
             <Box
-            /* sx={{
-                overflowX:'scroll'
-            }} */
             >
                 {children}
             </Box>
