@@ -30,7 +30,9 @@ export const lightTheme = createTheme({
     typography: {
         allVariants: {
             color: '#405262',
+            fontWeight: 'lighter'
         },
+
     },
 
 
