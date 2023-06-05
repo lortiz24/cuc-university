@@ -27,36 +27,22 @@ export const ContentWithBackgroundv2 = ({
             alignItems: 'flex-end',
             backgroundImage: withBackgroundImage ? `url(${origin}${backgroundImage})` : '',
             backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'bottom',
+            backgroundPosition: 'center',
             backgroundSize: 'contain',
         }}>
              <Box sx={{
-                minHeight: '100%',
-                minWidth: '100%',
+                height: '100%',
+                maxHeight:'700px',
+                width: '100%',
+                maxWidth:'800px',
                 backgroundImage: `url(${origin}${item1})`,
                 backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'bottom ',
+                backgroundPosition: 'bottom',
                 backgroundSize: 'contain',
                 // position: 'absolute',
                 // bottom: '0',
                 // marginBottom: '100px',
-
             }} />
-           {/*  <Image
-                src={item1}
-                alt='alumna'
-                width={0}
-                sizes="100vw"
-                height={0}
-                style={{
-                    minWidth: 250,
-                    minHeight: 250,
-                    maxHeight: "100%",
-                    maxWidth: "100%",
-                    width: "auto",
-                    height: "auto",
-                }}
-            /> */}
         </Box>
 
     )

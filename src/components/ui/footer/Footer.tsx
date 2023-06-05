@@ -23,23 +23,7 @@ export const Footer = () => {
       backgroundColor: theme.palette.secondary.main,
       // zIndex: -10,
     }}>
-      {/* <Box
-        sx={{
-          position: 'absolute',
-          left: '50%',
-          bottom: `calc(100%)`,
-          transform: 'translateX(-50%)',
-          color: 'transparent',
-          WebkitTextStroke: `2px ${theme.palette.primary.main}`,
-          fontSize: { xs: '14vw', md: '8vw' },
-          minHeight: '100%',
-          minWidth: '800px',
-          backgroundImage: `url(${origin}/assets/Alumna-4-recorte.png)`,
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'bottom',
-          backgroundSize: 'contain',
-        }}
-      /> */}
+
       <Grid
         container
         sx={{ minHeight }}
@@ -53,10 +37,18 @@ export const Footer = () => {
           md={4}
           padding={{ xs: 5, }}
           minHeight={200}
+          sx={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
         >
           <Box sx={{
-            height: '100%',
-            width: { xs: '100%', lg: 320 },
+            // height: '100%',
+            // width: { xs: '100%', lg: 320 },
+            width: '241px',
+            height: '140px',
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'center',

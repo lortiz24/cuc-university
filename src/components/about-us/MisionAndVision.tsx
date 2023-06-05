@@ -1,6 +1,5 @@
 import React from 'react'
-import { Grid, Typography, useTheme, Box, ListItem, ListItemIcon } from '@mui/material'
-import { useGetOrigin } from '@/hooks/useGetOrigin'
+import { Grid, Typography, useTheme } from '@mui/material'
 import Image from 'next/image';
 export const MisionAndVision = () => {
   const theme = useTheme()
@@ -10,7 +9,9 @@ export const MisionAndVision = () => {
       container
       height={'100%'}
       display='flex'
-      padding={{ xs: 5, lg: 10 }}
+      rowGap={{ xs: 3, lg: 0 }}
+      columnSpacing={10}
+      padding={{ xs: 5, lg: 7 }}
     >
 
       <Grid
@@ -53,7 +54,6 @@ export const MisionAndVision = () => {
           </Typography>
           <Typography
             variant="body2"
-            color={'#626970'}
             fontSize={{ xs: 15, sm: 17, md: 19 }}
             textAlign="center"
           >
@@ -106,7 +106,6 @@ export const MisionAndVision = () => {
           <Typography
             variant='body2'
             marginBottom={{ xs: 2, xl: 4 }}
-            color={'#626970'}
             fontSize={{ xs: 15, sm: 17, md: 19 }}
             textAlign={'center'}
           >CUC University was created with the desire to
@@ -126,11 +125,7 @@ export const MisionAndVision = () => {
           flexDirection: 'column',
           justifyContent: 'start',
           alignItems: 'center',
-          /* padding: {
-            xs: '1rem 1rem',
-            lg: '5rem 5rem',
-            xl: '10rem 10rem',
-          }, */
+
         }}
       >
 
@@ -166,7 +161,6 @@ export const MisionAndVision = () => {
           >Values</Typography>
           <Typography
             variant='body2'
-            color={'#626970'}
             marginBottom={{ xs: 2, xl: 4 }}
             fontSize={{ xs: 15, sm: 17, md: 19 }}
             textAlign={'center'}

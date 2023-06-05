@@ -30,7 +30,7 @@ export const ContentBanner = ({ publicImg, title }: Props) => {
                     color={(theme) => theme.palette.primary.main}
                     lineHeight={1}
                     fontWeight="bold"
-                    fontSize={{ xs: 25, sm: 42, xl: 40 }}
+                    fontSize={{ xs: 30, sm: 40, xl: 50 }}
                     marginBottom={{ xs: 1, sm: 10, md: 4 }}
                     textAlign={'start'}
                 >
@@ -38,7 +38,7 @@ export const ContentBanner = ({ publicImg, title }: Props) => {
                         variant='caption'
                         lineHeight={1.2}
                         color={(theme) => theme.palette.secondary.main}
-                        fontSize={{ xs: 25, sm: 38, xl: 40 }}
+                        fontSize={{ xs: 30, sm: 40, xl: 50 }}
                         marginBottom={{ xs: 1, md: 4 }}
                         textAlign={'start'}
                     >
