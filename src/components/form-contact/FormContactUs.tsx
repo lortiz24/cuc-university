@@ -46,6 +46,7 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                         variant="h4"
                         color="primary"
                         fontWeight="bold"
+                        fontSize={{ xs: 35, lg: 50 }}
                     >
                         {title}
                     </Typography>
@@ -69,7 +70,6 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                                         boxShadow: 'inset 0px 11px 11px -10px rgba(128,128,128,0.65)',
                                         borderTop: 'none',
                                         borderBottom: 'none',
-
 
                                     }
                                 }}

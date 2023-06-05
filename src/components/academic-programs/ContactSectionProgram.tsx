@@ -15,10 +15,9 @@ export const ContactSectionProgram = ({ contactImage, downloadnItem }: Props) =>
     return (
         <Grid
             container
-        // sx={{ backgroundColor: 'red' }}
         >
 
-            <Grid
+            {/* <Grid
                 item
                 xs={12}
                 display={'flex'}
@@ -26,16 +25,19 @@ export const ContactSectionProgram = ({ contactImage, downloadnItem }: Props) =>
                 flexDirection={'column'}
                 alignItems={'center'}
             >
-                <FooterImageDownload withBackgroundImage={false} item1={contactImage} downloadnItem={downloadnItem} />
-            </Grid>
+                <FooterImageDownload downloadnItem={downloadnItem} />
+            </Grid> */}
             <Grid
                 item
                 xs={12}
                 md={6}
                 lg={6}
                 marginBottom={4}
-                paddingX={{ xs: 4, lg: 10 }}
-
+                paddingX={{ xs: 4, md: 10, lg: 20 }}
+                display={'flex'}
+                justifyContent={'center'}
+                flexDirection={'column'}
+                alignItems={'center'}
             // sx={{ backgroundColor: 'blue', }}
             >
                 <FormComponent onSubmit={(values) => console.log(values)} TextFieldMessage={false} />
@@ -64,7 +66,8 @@ export const ContactSectionProgram = ({ contactImage, downloadnItem }: Props) =>
                 }}>
 
                     <Box sx={{
-                        minHeight: { xs: 400, md: '100%' },
+                        minHeight: { xs: 400, md: '700px' },
+                        // backgroundColor: 'pink',
                         minWidth: '100%',
                         backgroundImage: `url(${origin}${contactImage})`,
                         backgroundRepeat: 'no-repeat',

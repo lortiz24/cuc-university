@@ -1,11 +1,8 @@
-import { Box, Button, Grid, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import DownloadButton from '../download-files-button/DownloadButton';
 import { DownloadItem } from '@/interfaces';
 
 interface Props {
-    backgroundImage?: string;
-    item1?: string;
-    withBackgroundImage?: boolean;
     downloadnItem: DownloadItem;
 
 }
@@ -14,9 +11,6 @@ interface Props {
 const origin = (typeof window === 'undefined') ? '' : window.location.origin
 
 export const FooterImageDownload = ({
-    backgroundImage = `/assets/figura1.png`,
-    item1 = `/assets/Grupo-alumnos.png`,
-    withBackgroundImage = true,
     downloadnItem
 }: Props) => {
 
@@ -24,7 +18,7 @@ export const FooterImageDownload = ({
         <Box
             display="flex"
             flexDirection="column"
-            alignItems="end"
+            alignItems="center"
             justifyContent="center"
             width={'100%'}
             paddingX={{ xs: 4, md: 20 }}
@@ -35,7 +29,6 @@ export const FooterImageDownload = ({
                 lineHeight={1.2}
                 color={(theme) => theme.palette.secondary.main}
                 fontSize={{ xs: 20, sm: 20, xl: 20 }}
-                marginBottom={{ xs: 1, md: 4 }}
                 textAlign={'center'}
             >
                 Study Plan and Course Catalogue

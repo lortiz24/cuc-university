@@ -9,7 +9,6 @@ import { BannerProgram } from '@/components/academic-programs/BannerProgram';
 import { ContentBanner } from '@/components/academic-programs/ContentBanner';
 import { DescriptionAndObjectives } from '@/components/academic-programs/DescriptionAndObjectives';
 import { ContactSectionProgram } from '@/components/academic-programs/ContactSectionProgram';
-import { ComponentWithPadding } from '@/components/layouts/ComponentWithPadding';
 
 
 interface Props {
@@ -23,9 +22,8 @@ const ProgramPage: NextPage<Props> = ({ program }) => {
             <BannerProgram program={program} >
                 <ContentBanner publicImg={program.publicImg} title={program.titleComplete} />
             </BannerProgram>
-            <DescriptionAndObjectives description={program.description} objective={program.objective} />
-            <ComponentWithPadding>
-            </ComponentWithPadding>
+            <DescriptionAndObjectives description={program.description} objective={program.objective} downloadnItem={program.pdf} />
+
             <ContactSectionProgram contactImage={program.contactImage} downloadnItem={program.pdf} />
         </MainLayout>
     )

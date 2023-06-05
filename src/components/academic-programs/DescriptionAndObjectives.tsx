@@ -1,13 +1,16 @@
 import { Box, Button, Grid, Typography, useTheme } from '@mui/material'
 import React from 'react'
+import { FooterImageDownload } from './FooterImageDownload';
+import { DownloadItem } from '@/interfaces';
 
 
 
 interface Props {
     description: string;
-    objective: string
+    objective: string;
+    downloadnItem: DownloadItem;
 }
-export const DescriptionAndObjectives = ({ description, objective }: Props) => {
+export const DescriptionAndObjectives = ({ description, objective, downloadnItem }: Props) => {
     const theme = useTheme()
 
 
@@ -23,7 +26,7 @@ export const DescriptionAndObjectives = ({ description, objective }: Props) => {
                 xs={12}
                 lg={6}
                 marginTop={{ xs: 55, sm: 37, md: 40, lg: 40, xl: 40 }}
-                // paddingX={{ xs: 4, sm: 15, md: 15, xl: 20 }}
+            // paddingX={{ xs: 4, sm: 15, md: 15, xl: 20 }}
             >
                 <Typography
                     lineHeight={1.2}
@@ -78,7 +81,7 @@ export const DescriptionAndObjectives = ({ description, objective }: Props) => {
                 >
                     {objective}
                 </Typography>
-
+                <FooterImageDownload downloadnItem={downloadnItem} />
 
             </Grid>
         </Grid >
