@@ -22,7 +22,7 @@ export const CircleBanner = ({
     borderRadiusXs = '0rem',
     backgroundSize = 'cover',
     tittle,
-    fontSize = { xs: '14vw', md: '8vw' }
+    fontSize = { xs: '16vw',sm:'14vw', md: '8vw' }
 }: Props) => {
     const { origin } = useGetOrigin()
     const theme = useTheme()
@@ -34,7 +34,7 @@ export const CircleBanner = ({
                 borderRadius: { xs: borderRadiusXs, sm: borderRadiusSm, md: borderRadiusMd, lg: borderRadiusLg },
                 position: 'relative',
                 width: '100%',
-                maxWidth:'2000px',
+                maxWidth: '2000px',
                 height: '100%',
                 backgroundImage: `url(${origin}${src})`,
                 backgroundRepeat: 'no-repeat',
@@ -51,7 +51,7 @@ export const CircleBanner = ({
                     top: `calc(100% - 0.8em)`,
                     transform: 'translateX(-50%)',
                     color: 'transparent',
-                    WebkitTextStroke: `2px ${theme.palette.primary.main}`,
+                    WebkitTextStroke: { xs: `0.9px ${theme.palette.primary.main}`, sm: `2px ${theme.palette.primary.main}` },
                     fontSize,
 
                 }}
