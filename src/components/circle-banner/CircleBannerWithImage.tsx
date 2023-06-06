@@ -1,5 +1,6 @@
 import { useTheme, Box, Typography } from '@mui/material';
 import { useGetOrigin } from '@/hooks/useGetOrigin';
+import Image from 'next/image';
 
 
 interface Props {
@@ -13,36 +14,30 @@ interface Props {
     tittle?: string,
     fontSize?: any
 }
-export const CircleBanner = ({
+export const CircleBannerWithImage = ({
     src = '/assets/team-work-1-black_and_white.jpg',
-    borderRadiusLg = '17rem',
-    borderRadiusMd = '10rem',
-    borderRadiusSm = '50px',
-    borderRadiusXs = '0rem',
-    backgroundSize = 'cover',
     tittle,
-    fontSize = { xs: '16vw',sm:'14vw', md: '8vw' }
+    fontSize = { xs: '16vw', sm: '14vw', md: '8vw' }
 }: Props) => {
-    const { origin } = useGetOrigin()
     const theme = useTheme()
 
     return (
 
-        <Box
-            sx={{
-                borderRadius: { xs: borderRadiusXs, sm: borderRadiusSm, md: borderRadiusMd, lg: borderRadiusLg },
-                position: 'relative',
-                width: '100%',
-                maxWidth: '2000px',
-                height: '100%',
-                backgroundImage: `url(${origin}${src})`,
-                backgroundRepeat: 'no-repeat',
-                backgroundSize,
-                mixBlendMode: 'overlay',
-                zIndex: -1,
-                backgroundPosition: 'center'
-            }}
-        >
+        <Box sx={{ position: 'relative', width: '100%' }}>
+            <Image
+                src={src}
+                alt="Students"
+                width={0}
+                height={0}
+                sizes="100vw"
+                style={{
+                    width: '100%',
+                    height: 'auto',
+                    maxWidth: '1600px',
+                    maxHeight: '700PX',
+                }}
+            />
+
             <Typography
                 sx={{
                     position: 'absolute',

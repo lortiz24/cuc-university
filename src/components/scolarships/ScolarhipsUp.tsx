@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid, } from '@mui/material'
 import { CircleBanner } from '../circle-banner/CircleBanner'
+import { CircleBannerWithImage } from '../circle-banner/CircleBannerWithImage'
 
 
 export const ScolarhipsUp = () => {
@@ -11,7 +12,6 @@ export const ScolarhipsUp = () => {
                 minHeight={'auto'}
                 width={'100%'}
                 marginBottom={4}
-                height={{ xs: 400, lg: 500, xl: 630 }}
                 sx={{
                     zIndex: 1,
                     position: 'relative',
@@ -21,15 +21,17 @@ export const ScolarhipsUp = () => {
                     alignItems: 'center'
                 }}
             >
-                <CircleBanner
+                {/*  <CircleBanner
                     src={`/assets/graduadas.png`}
                     tittle='SCHOLARSHIPS'
                     borderRadiusLg='400px'
                     borderRadiusMd='200px'
                     borderRadiusSm='200px'
                     fontSize={{ xs: '12vw', md: '8vw' }}
-                >
-                </CircleBanner>
+                /> */}
+                <CircleBannerWithImage
+                    src={`/assets/graduadas.png`}
+                    tittle='ADMISSIONS' />
             </Grid>
         </Grid >
     )
