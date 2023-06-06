@@ -41,11 +41,14 @@ export const CustomLink = ({ href, text, redirect, icon, cursorPointer, colorLin
                 { color: colorLink ? colorLink : theme.palette.secondary.main, textDecoration: 'none' }}
         ><Grid container alignItems="center">
                 <Grid item>
-                    <Typography variant="body1" style={`/${router.asPath.split('/')[1]}` === href
-                        ?
-                        { color: theme.palette.primary.main, textDecoration: 'none', }
-                        :
-                        { color: colorLink ? colorLink : theme.palette.secondary.main, textDecoration: 'none', }}>
+                    <Typography
+                        fontSize={16.5}
+                        variant="body1"
+                        style={`/${router.asPath.split('/')[1]}` === href
+                            ?
+                            { color: theme.palette.primary.main, textDecoration: 'none', }
+                            :
+                            { color: colorLink ? colorLink : theme.palette.secondary.main, textDecoration: 'none', }}>
                         {text}
                     </Typography>
                 </Grid>

@@ -44,6 +44,7 @@ export const ScolarchiptDown = () => {
                 </Typography>
                 <Typography
                     variant='subtitle2'
+                    fontWeight={'bold'}
                     color={(theme) => theme.palette.primary.main}
                     fontSize={{ xs: 14, sm: 16 }}
                     sx={{ marginBottom: '16px', lineHeight: '2' }}

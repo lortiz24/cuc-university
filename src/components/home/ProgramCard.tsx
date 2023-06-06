@@ -34,7 +34,7 @@ export const ProgramCard = ({ programItem }: Props) => {
                     />
                 </Card>
                 <Typography
-                    variant="body2"
+                    variant="body1"
                     color={theme.palette.secondary.main}
                     sx={{
                         width: 200,
