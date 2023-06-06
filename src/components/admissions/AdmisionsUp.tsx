@@ -20,18 +20,17 @@ export const AdmisionsUp = () => {
                     alignItems: 'center'
                 }}
             >
-                {/* 
-                 <CircleBanner
+
+                {/*  <CircleBanner
                     src={`/assets/Negro_con_Escudo.png`}
                     tittle='ADMISSIONS'
                     borderRadiusLg='400px'
                     borderRadiusMd='200px'
-                    borderRadiusSm='200px'
-                >
-                </CircleBanner>
-                 */}
+                    borderRadiusSm='200px' /> */}
+
+
                 <CircleBannerWithImage
-                    src={`/assets/NegroconEscudoYBorderRadius.png`}
+                    src={`/assets/Admission.png`}
                     tittle='ADMISSIONS' />
             </Grid>
 

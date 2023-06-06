@@ -30,7 +30,7 @@ export const ScolarhipsUp = () => {
                     fontSize={{ xs: '12vw', md: '8vw' }}
                 /> */}
                 <CircleBannerWithImage
-                    src={`/assets/graduadas.png`}
+                    src={`/assets/scholarship.png`}
                     tittle='ADMISSIONS' />
             </Grid>
         </Grid >

@@ -21,6 +21,7 @@ export const CircleBannerWithImage = ({
 }: Props) => {
     const theme = useTheme()
 
+    console.log(src)
     return (
 
         <Box sx={{ position: 'relative', width: '100%', display: 'flex', justifyContent: 'center' }}>
