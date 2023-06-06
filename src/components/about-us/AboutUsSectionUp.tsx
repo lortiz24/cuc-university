@@ -45,7 +45,6 @@ export const AboutUsSectionUp = () => {
 
                 <Typography
                     variant='body2'
-                    color={'#626970'}
                     fontSize={{ xs: 15, sm: 16 }}
                     lineHeight={1.8}
                     style={{ marginBottom: '16px' }}

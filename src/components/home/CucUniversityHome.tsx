@@ -30,8 +30,6 @@ export const CucUniversityHome = () => {
                 <Typography
                     lineHeight={2}
                     variant='body2'
-                    fontWeight={'regular'}  
-                    color={'#626970'}
                     fontSize={20}
                 // fontSize={{ xs: 15, sm: 16 }}
                 >

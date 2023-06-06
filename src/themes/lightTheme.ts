@@ -30,8 +30,10 @@ export const lightTheme = createTheme({
     typography: {
         allVariants: {
             color: '#405262',
-            fontWeight: 'lighter'
         },
+        body2: {
+            fontWeight: 300 // Agrega esta línea para especificar fontWeight para h2
+          },
 
     },
 

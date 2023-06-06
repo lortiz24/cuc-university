@@ -54,6 +54,7 @@ export const MisionAndVision = () => {
           </Typography>
           <Typography
             variant="body2"
+            lineHeight={1.8}
             fontSize={{ xs: 15, sm: 17, md: 19 }}
             textAlign="center"
           >
@@ -108,6 +109,7 @@ export const MisionAndVision = () => {
             marginBottom={{ xs: 2, xl: 4 }}
             fontSize={{ xs: 15, sm: 17, md: 19 }}
             textAlign={'center'}
+            lineHeight={1.8}
           >CUC University was created with the desire to
             teach the next generation of skilled workers to
             face the challenges of the continually growing business world. Our vision is to be a leading university in the education of highly skilled citizens who are committed to society and the sustainable development of the country. We strive to be recognized for our academic
@@ -164,6 +166,7 @@ export const MisionAndVision = () => {
             marginBottom={{ xs: 2, xl: 4 }}
             fontSize={{ xs: 15, sm: 17, md: 19 }}
             textAlign={'center'}
+            lineHeight={1.8}
           >Our core values are excellence, responsibility integrity, and commitment to society, These values are reflected in everything we do, from teaching and research to interaction with our students, faculty, and administrative staff.
           </Typography>
         </Grid>

@@ -38,9 +38,8 @@ export const DescriptionAndObjectives = ({ description, objective, downloadnItem
                     Description
                 </Typography>
                 <Typography
-                    variant='caption'
+                    variant='body2'
                     lineHeight={2.2}
-                    color={(theme) => theme.palette.secondary.main}
                     fontSize={{ xs: 20, sm: 20, xl: 20 }}
                     marginBottom={{ xs: 1, md: 4 }}
                     textAlign={'start'}
@@ -72,9 +71,8 @@ export const DescriptionAndObjectives = ({ description, objective, downloadnItem
                     Objective
                 </Typography>
                 <Typography
-                    variant='caption'
+                    variant='body2'
                     lineHeight={2.2}
-                    color={(theme) => theme.palette.secondary.main}
                     fontSize={{ xs: 20, sm: 20, xl: 20 }}
                     marginBottom={{ xs: 1, md: 4 }}
                     textAlign={'end'}

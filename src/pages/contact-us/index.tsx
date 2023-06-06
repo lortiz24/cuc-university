@@ -15,7 +15,7 @@ const index = () => {
     <MainLayout title='Contact Us'>
       <ComponentWithPadding>
         <Grid container marginBottom={10} >
-          <Grid xs={12} sm={12} md={12} lg={6} item >
+          <Grid xs={12} sm={12} md={12} lg={7} paddingX={{xs:10,sm:15,md:0,lg:10,xl:25}} item >
             <FormComponent onSubmit={handleSubmit} />
           </Grid>
 
@@ -25,7 +25,7 @@ const index = () => {
             xs={12}
             sm={12}
             md={12}
-            lg={6}
+            lg={4}
             marginY={{ xs: 4, lg: 0 }}
             justifyContent="center"
             alignItems="center"
@@ -36,7 +36,7 @@ const index = () => {
               sx={{
                 borderRadius,
                 width: '100%',
-                maxWidth: '700px'
+                maxWidth: '550px'
               }}
               component="img"
               image={'/assets/Maps_ubication.png'}

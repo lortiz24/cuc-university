@@ -21,10 +21,9 @@ export const ScolarchiptDown = () => {
                 paddingRight={{ xs: 5, sm: 7, md: 10, lg: 0 }}
             >
                 <Typography
-                    variant='body1'
+                    variant='body2'
                     fontSize={{ xs: 14, sm: 16 }}
                     style={{ marginBottom: '16px', lineHeight: '2' }}
-                    color={'#626970'}
 
                 >
                     CUC University is committed to supporting eligible students through a
@@ -33,8 +32,7 @@ export const ScolarchiptDown = () => {
                     essay topic will be randomly selected.
                 </Typography>
                 <Typography
-                    variant='body1'
-                    color={'#626970'}
+                    variant='body2'
                     fontSize={{ xs: 14, sm: 16 }}
                     style={{ marginBottom: '16px', lineHeight: '2' }}
                 >
