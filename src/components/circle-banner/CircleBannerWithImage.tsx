@@ -23,7 +23,7 @@ export const CircleBannerWithImage = ({
 
     return (
 
-        <Box sx={{ position: 'relative', width: '100%' }}>
+        <Box sx={{ position: 'relative', width: '100%', display: 'flex', justifyContent: 'center' }}>
             <Image
                 src={src}
                 alt="Students"
