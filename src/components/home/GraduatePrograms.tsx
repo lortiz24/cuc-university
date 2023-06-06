@@ -36,6 +36,7 @@ export const GraduatePrograms = ({ graduatePrograms }: Props) => {
                         variant="outlined"
                         sx={{
                             borderRadius: '5rem',
+                            pointerEvents: 'none', // Agregar esta línea
                         }}
                     >Gradute Programs</Button>
                 </Grid>

@@ -51,6 +51,7 @@ export const UndergraduatePrograms = ({ underGraduatePrograms }: Props) => {
                         variant="outlined"
                         sx={{
                             borderRadius: '5rem',
+                            pointerEvents: 'none', // Agregar esta línea
                         }}
                     >Undergradute Programs</Button>
                 </Grid>
