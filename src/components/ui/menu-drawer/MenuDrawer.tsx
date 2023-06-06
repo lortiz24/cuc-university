@@ -9,6 +9,7 @@ import { navItems } from '@/data';
 import { CollapseMenuHeader } from './CollapseMenuHeader';
 import { ActiveLink } from '@/components/active-link/ActiveLink';
 import { Divider } from '@mui/material';
+import { useRouter } from 'next/router';
 
 interface Props {
     mobileOpen: boolean
@@ -16,7 +17,7 @@ interface Props {
 
 export const MenuDrawer = ({ mobileOpen }: Props) => {
     const [open, setOpen] = useState(false);
-
+    const router = useRouter()
     const handleClick = () => {
         setOpen(!open);
     };
@@ -85,11 +86,11 @@ export const MenuDrawer = ({ mobileOpen }: Props) => {
                         </div>)
                 }
                 return (
-                    <ListItemButton key={menu.path + index}>
+                    <ListItemButton key={menu.path} onClick={() => router.push(menu.path)}>
                         <ListItemIcon>
                             {menu.icon}
                         </ListItemIcon>
-                        <ActiveLink href={menu.path} text={menu.name} key={index} />
+                        <ActiveLink href={menu.path} text={menu.name} key={index} redirect={false} />
                     </ListItemButton>
                 )
             })}
