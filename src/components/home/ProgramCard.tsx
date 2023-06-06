@@ -8,7 +8,7 @@ interface Props {
 
 export const ProgramCard = ({ programItem }: Props) => {
     const theme = useTheme()
-    const borderRadius = '3rem'
+    const borderRadius = '4rem'
 
     return (
         <>
@@ -20,26 +20,33 @@ export const ProgramCard = ({ programItem }: Props) => {
                     },
                 }}
             >
-                <Card sx={{ width: 200, borderRadius }}>
+                <Card sx={{
+                    width: '289px',
+                    height: '344px',
+                    borderRadius,
+                    /* display: 'flex',
+                    justifyContent: 'center',
+                    flexDirection: 'column',
+                    alignItems:'center', */
+                }}>
                     <CardMedia
                         sx={{
                             borderRadius,
-                            height: '250px',
-                            width: '200px',
+                            height: '100%',
+                            width: '100%',
                         }}
                         component="img"
-                        height="194"
                         image={programItem.publicImg}
                         alt="Paella dish"
                     />
                 </Card>
                 <Typography
-                    variant="body1"
+                    fontSize={{ xs: 24 }}
                     color={theme.palette.secondary.main}
                     sx={{
-                        width: 200,
+                        width: '289px',
                         textAlign: 'center',
-                        marginTop: '10px',
+                        marginTop: '15px',
                     }}
                     className="hoverTypography" // Agrega una clase para seleccionar el Typography
                 >

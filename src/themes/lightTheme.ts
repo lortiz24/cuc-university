@@ -33,7 +33,7 @@ export const lightTheme = createTheme({
         },
         body2: {
             fontWeight: 300 // Agrega esta línea para especificar fontWeight para h2
-          },
+        },
 
     },
 

@@ -23,7 +23,9 @@ export const GraduatePrograms = ({ graduatePrograms }: Props) => {
         }}>
             <Grid container
                 display={'flex'}
-                justifyContent={'center'}>
+                justifyContent={'center'}
+                marginBottom={{xs:10}}
+                >
                 <Grid
                     item
                     display={'flex'}
@@ -31,12 +33,17 @@ export const GraduatePrograms = ({ graduatePrograms }: Props) => {
                     width={'100%'}
                     marginTop={{ xs: 2, sm: 4 }}
                 >
+
                     <Button
                         color={'secondary'}
                         variant="outlined"
                         sx={{
+
                             borderRadius: '5rem',
                             pointerEvents: 'none', // Agregar esta línea
+                            textTransform: 'none',
+                            fontSize: { xs: 25, sm: 30 },
+                            fontWeight: 400
                         }}
                     >Gradute Programs</Button>
                 </Grid>
@@ -49,9 +56,9 @@ export const GraduatePrograms = ({ graduatePrograms }: Props) => {
                     flexWrap: 'wrap',
                     gap: '2rem'
                 }}>
-                 {graduatePrograms.map((programItem, index) => (
-                        <Link key={index} style={{textDecoration: 'none'}} href={`academic-programs${programItem.path}`} passHref>
-                                <ProgramCard programItem={programItem} />
+                    {graduatePrograms.map((programItem, index) => (
+                        <Link key={index} style={{ textDecoration: 'none' }} href={`academic-programs${programItem.path}`} passHref>
+                            <ProgramCard programItem={programItem} />
                         </Link>
                     ))}
                 </div>

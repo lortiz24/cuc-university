@@ -27,7 +27,11 @@ export const CustomLink = ({ href, text, redirect, icon, cursorPointer, colorLin
         router.push(href)
     };
 
-
+    const commonCss: React.CSSProperties = {
+        textDecoration: 'none',
+        fontSize:'16px',
+        // fontWeight:300
+    }
 
 
     return (
@@ -36,9 +40,15 @@ export const CustomLink = ({ href, text, redirect, icon, cursorPointer, colorLin
             href={href}
             style={`/${router.asPath.split('/')[1]}` === href
                 ?
-                { color: theme.palette.primary.main, textDecoration: 'none' }
+                {
+                    color: theme.palette.primary.main,
+                    ...commonCss
+                }
                 :
-                { color: colorLink ? colorLink : theme.palette.secondary.main, textDecoration: 'none' }}
+                {
+                    color: colorLink ? colorLink : theme.palette.secondary.main,
+                    ...commonCss
+                }}
         ><Grid container alignItems="center">
                 <Grid item>
                     <Typography
@@ -46,9 +56,15 @@ export const CustomLink = ({ href, text, redirect, icon, cursorPointer, colorLin
                         variant="body1"
                         style={`/${router.asPath.split('/')[1]}` === href
                             ?
-                            { color: theme.palette.primary.main, textDecoration: 'none', }
+                            {
+                                color: theme.palette.primary.main,
+                                ...commonCss
+                            }
                             :
-                            { color: colorLink ? colorLink : theme.palette.secondary.main, textDecoration: 'none', }}>
+                            {
+                                color: colorLink ? colorLink : theme.palette.secondary.main,
+                                ...commonCss
+                            }}>
                         {text}
                     </Typography>
                 </Grid>

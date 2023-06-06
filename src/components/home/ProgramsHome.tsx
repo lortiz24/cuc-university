@@ -22,7 +22,7 @@ export const ProgramsHome = ({ graduatePrograms, underGraduatePrograms }: Props)
                     width={'100%'}>
                     <UndergraduatePrograms underGraduatePrograms={underGraduatePrograms} />
                 </Grid>
-                <Grid item width={'100%'}>
+                <Grid item width={'100%'} >
                     <GraduatePrograms graduatePrograms={graduatePrograms} />
                 </Grid>
             </Grid>

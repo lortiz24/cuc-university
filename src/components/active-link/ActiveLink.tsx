@@ -34,6 +34,7 @@ export const ActiveLink = ({ text, href, redirect = true, icon, onClick, cursorP
         borderRadius: '40rem',
         padding: '4px 15px',
         textDecoration: 'none',
+        // fontSize:'20px'
     }
 
     return (
@@ -41,12 +42,13 @@ export const ActiveLink = ({ text, href, redirect = true, icon, onClick, cursorP
             {href === '/contact-us'
                 ?
                 <Link
+                    href={href}
                     style={
                         router.asPath === href ?
                             { backgroundColor: theme.palette.primary.main, color: '#FFFFFF', ...buttonCircleStyle }
                             :
                             { backgroundColor: theme.palette.secondary.main, color: '#ffffff', ...buttonCircleStyle }}
-                    href={href} >{text}{icon}</Link>
+                >{text}{icon}</Link>
                 :
                 <CustomLink
                     href={href}
