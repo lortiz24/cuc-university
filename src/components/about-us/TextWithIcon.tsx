@@ -13,11 +13,13 @@ interface Props {
     havIcon?: boolean
     icon?: React.ReactNode
     colorText?: string
+    padding?: boolean
+
 }
-export const TextWithIcon = ({ children, havIcon = false, icon, colorText = '#626970' }: Props) => {
+export const TextWithIcon = ({ children, havIcon = false, icon, colorText = '#626970',padding=false }: Props) => {
     const { origin } = useGetOrigin()
     return (
-        <ListItem>
+        <ListItem >
             <ListItemIcon sx={{ minWidth: 4 }}>
                 {!havIcon && < Box
                     style={{

@@ -40,11 +40,11 @@ export const Alumna = ({
                 // backgroundColor:'yellow',
             }} />
             <Box sx={{
-                borderRadius: 100,
+                borderRadius: 80,
                 // backgroundColor: 'yellow',
                 minHeight: '70%',
                 width: '100%',
-                maxWidth:'700px',
+                maxWidth:'860px',
                 backgroundImage: `url(${origin}${backgroundImage})`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',

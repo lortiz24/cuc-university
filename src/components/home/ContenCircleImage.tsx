@@ -46,7 +46,7 @@ export const ContenCircleImage = () => {
                     variant='h2'
                     color={theme.palette.primary.main}
                     fontWeight="bold"
-                    fontSize={{ xs: 40, xl: 40 }}
+                    fontSize={50}
                     marginBottom={{ xs: 2, xl: 4 }}
                     textAlign={'end'}
                 >With a primary emphasis on business education,</Typography>

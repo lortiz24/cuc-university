@@ -29,7 +29,7 @@ export const CustomLink = ({ href, text, redirect, icon, cursorPointer, colorLin
 
     const commonCss: React.CSSProperties = {
         textDecoration: 'none',
-        fontSize:'16px',
+        fontSize:'24px',
         // fontWeight:300
     }
 

@@ -34,7 +34,7 @@ export const ActiveLink = ({ text, href, redirect = true, icon, onClick, cursorP
         borderRadius: '40rem',
         padding: '4px 15px',
         textDecoration: 'none',
-        // fontSize:'20px'
+        fontSize:'24px'
     }
 
     return (

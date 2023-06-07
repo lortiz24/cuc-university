@@ -6,12 +6,12 @@ import { CircleBannerWithImage } from '../circle-banner/CircleBannerWithImage'
 
 export const ScolarhipsUp = () => {
     return (
-        <Grid container >
+        <Grid container>
             <Grid
                 item xs={12}
                 minHeight={'auto'}
                 width={'100%'}
-                marginBottom={4}
+                marginBottom={15}
                 sx={{
                     zIndex: 1,
                     position: 'relative',
@@ -31,7 +31,7 @@ export const ScolarhipsUp = () => {
                 /> */}
                 <CircleBannerWithImage
                     src={`/assets/scholarship.png`}
-                    tittle='ADMISSIONS' />
+                    tittle='SCHOLARSHIPS' />
             </Grid>
         </Grid >
     )

@@ -31,7 +31,7 @@ export const AdmissionsRequirements = () => {
                     fontWeight="bold"
                     fontSize={{ xs: 35, md: 60  }}
                     textAlign="center"
-                    paddingBottom={2}
+                    paddingBottom={5}
                 >
                     Admissions Requirement
                 </Typography>

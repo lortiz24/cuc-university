@@ -5,7 +5,7 @@ import { CircleBannerWithImage } from '../circle-banner/CircleBannerWithImage'
 
 export const AdmisionsUp = () => {
     return (
-        <Grid container >
+        <Grid container marginBottom={7}>
             <Grid
                 item xs={12}
                 minHeight={'auto'}

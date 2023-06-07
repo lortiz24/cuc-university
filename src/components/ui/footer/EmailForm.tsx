@@ -13,7 +13,7 @@ export const EmailForm = () => {
                     required
                     size='small'
                     type="email"
-                    placeholder="Message"
+                    placeholder="Enter your email"
                     fullWidth
                     InputProps={{
                         sx: {

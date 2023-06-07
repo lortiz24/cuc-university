@@ -8,11 +8,11 @@ export const AboutUsSectionUp = () => {
     const theme = useTheme()
 
     return (
-        <Grid container >
+        <Grid container marginTop={20}>
             <Grid
                 item
                 xs={12} lg={5}
-                paddingLeft={{ xs: 0, xl: 20 }}
+                // paddingLeft={{ xs: 0, xl: 20 }}
                 paddingX={{ xs: 4, }}
                 paddingBottom={{ xs: 4 }}
                 sx={{
@@ -27,7 +27,7 @@ export const AboutUsSectionUp = () => {
                     color={(theme) => theme.palette.primary.main}
                     lineHeight={0.3}
                     fontWeight="bold"
-                    fontSize={{ xs: 25, sm: 42, xl: 40 }}
+                    fontSize={{ xs: 25, sm: 60}}
                     marginBottom={{ xs: 1, md: 4 }}
                     textAlign={'start'}
                 >
@@ -35,7 +35,7 @@ export const AboutUsSectionUp = () => {
                         variant='caption'
                         lineHeight={1.2}
                         color={(theme) => theme.palette.secondary.main}
-                        fontSize={{ xs: 25, sm: 38, xl: 40 }}
+                        fontSize={{ xs: 25, sm:60 }}
                         marginBottom={{ xs: 1, md: 4 }}
                         textAlign={'start'}
                     >
@@ -70,7 +70,7 @@ export const AboutUsSectionUp = () => {
                 minHeight={{ xs: '300px', sm: '600px' }}
                 display='flex'
                 flexDirection='column'
-                alignItems='start'
+                alignItems='center'
                 sx={{ zIndex: -20, /* backgroundColor:'red' */ }}
             >
                 <Alumna
