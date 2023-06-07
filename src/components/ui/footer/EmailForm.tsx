@@ -32,7 +32,10 @@ export const EmailForm = () => {
                     fullWidth
                     sx={{
                         borderRadius: 6,
-                        paddingX: 2
+                        paddingX: 0,
+                        textTransform: 'none',
+                        color: 'white',
+                        fontSize:22
                     }}
                 >
                     Subscribe

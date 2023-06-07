@@ -15,6 +15,7 @@ export const ProgramCard = ({ programItem }: Props) => {
             <Box
                 sx={{
                     marginTop: '2rem',
+                    marginX:6,
                     '&:hover .hoverTypography': {
                         color: theme.palette.primary.main,
                     },
