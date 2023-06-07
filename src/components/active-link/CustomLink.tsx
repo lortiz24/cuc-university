@@ -29,9 +29,14 @@ export const CustomLink = ({ href, text, redirect, icon, cursorPointer, colorLin
 
     const commonCss: React.CSSProperties = {
         textDecoration: 'none',
-        fontSize:'24px',
-        // fontWeight:300
-    }
+        fontSize: theme.typography.fontSize,
+    };
+
+    // Establecer diferentes tamaños de letra según los breakpoints
+    theme.typography.h2.fontSize = '24px'; // xl
+    theme.typography.h3.fontSize = '20px'; // lg
+    theme.typography.body1.fontSize = '16px'; // md, sm, xs
+
 
 
     return (
