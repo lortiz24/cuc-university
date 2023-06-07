@@ -18,7 +18,7 @@ const SplitPage = () => {
             variant='h2'
             color={(theme) => theme.palette.secondary.main}
             fontWeight="bold"
-            fontSize={{ xs: 25, sm: 40 }}
+            fontSize={{ xs: 25, sm: 50 }}
             marginBottom={{ xs: 1, md: 1 }}
             textAlign={'start'}
           >
@@ -54,14 +54,14 @@ const SplitPage = () => {
             variant='h2'
             color={(theme) => theme.palette.secondary.main}
             fontWeight="bold"
-            fontSize={{ xs: 25, sm: 40 }}
+            fontSize={{ xs: 25, sm: 50 }}
             marginBottom={{ xs: 2, md: 3 }}
             textAlign={'start'}
           >
             Accreditation
           </Typography>
           <Grid xs={8}>
-            <Typography variant="body2" lineHeight={2} gutterBottom color={'#626970'}>
+            <Typography variant="body2" lineHeight={2} gutterBottom fontSize={{xs:15,sm:20}} color={'#626970'}>
               CUC University is a private institution organized as a for profit corporation under the laws of the State of Florida. It is licensed under the Commission for Independent Education Florida Department of Education, to provide post-secondary education and has authority to grant degrees under the laws of the State of Florida.
             </Typography>
           </Grid>

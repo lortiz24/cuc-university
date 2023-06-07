@@ -55,7 +55,7 @@ export const MisionAndVision = () => {
           <Typography
             variant="body2"
             lineHeight={1.8}
-            fontSize={{ xs: 15, sm: 17, md: 19 }}
+            fontSize={{ xs: 15, sm: 20 }}
             textAlign="center"
           >
             At CUC University, our mission is to train an integral citizen under the principle of freedom of thought and ideological pluralism, with a high sense of responsibility in the permanent search for academics and research, using to achieve it the development of science, technique, technology and culture.
@@ -107,7 +107,7 @@ export const MisionAndVision = () => {
           <Typography
             variant='body2'
             marginBottom={{ xs: 2, xl: 4 }}
-            fontSize={{ xs: 15, sm: 17, md: 19 }}
+            fontSize={{ xs: 15, sm: 20 }}
             textAlign={'center'}
             lineHeight={1.8}
           >CUC University was created with the desire to
@@ -164,7 +164,7 @@ export const MisionAndVision = () => {
           <Typography
             variant='body2'
             marginBottom={{ xs: 2, xl: 4 }}
-            fontSize={{ xs: 15, sm: 17, md: 19 }}
+            fontSize={{ xs: 15, sm: 20 }}
             textAlign={'center'}
             lineHeight={1.8}
           >Our core values are excellence, responsibility integrity, and commitment to society, These values are reflected in everything we do, from teaching and research to interaction with our students, faculty, and administrative staff.

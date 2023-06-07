@@ -32,7 +32,7 @@ export const DescriptionAndObjectives = ({ description, objective, downloadnItem
                     lineHeight={1.2}
                     color={theme.palette.primary.main}
                     fontWeight={'bold'}
-                    fontSize={{ xs: 25, sm: 38, xl: 50 }}
+                    fontSize={{ xs: 30, sm:50 }}
                     textAlign={'start'}
                 >
                     Description
@@ -63,7 +63,7 @@ export const DescriptionAndObjectives = ({ description, objective, downloadnItem
                 <Typography
                     lineHeight={1.6}
                     color={theme.palette.primary.main}
-                    fontSize={{ xs: 25, sm: 38, xl: 40 }}
+                    fontSize={{ xs: 25, sm:50 }}
                     marginBottom={{ xs: 1, md: 4 }}
                     fontWeight={'bold'}
                     textAlign={'end'}

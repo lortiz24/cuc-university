@@ -18,7 +18,7 @@ const TextWithImage = () => {
           color={(theme) => theme.palette.primary.main}
           fontWeight="bold"
           marginX={{ xs: 4, md: 0 }}
-          fontSize={{ xs: 25, sm: 40 }}
+          fontSize={{ xs: 30, sm: 60 }}
           textAlign='start'
         >
           Students
@@ -28,7 +28,7 @@ const TextWithImage = () => {
           variant='body2'
           marginX={{ xs: 4, md: 0 }}
           color={'#626970'}
-          fontSize={{ xs: 13, sm: 14, lg: 18 }}
+          fontSize={{ xs: 13, sm: 24}}
         >
           This will be the page where students find relevant information and tools including log in to Campus Café, Canva, Online Payments Library Resources, University Catalog and Academic Calendar.
         </Typography>

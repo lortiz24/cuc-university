@@ -29,6 +29,7 @@ export const FooterImageDownload = ({
                 lineHeight={1.2}
                 color={(theme) => theme.palette.secondary.main}
                 fontSize={{ xs: 20, sm: 20, xl: 20 }}
+                paddingX={10}
                 textAlign={'center'}
             >
                 Study Plan and Course Catalogue

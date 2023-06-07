@@ -45,7 +45,7 @@ export const AboutUsSectionUp = () => {
 
                 <Typography
                     variant='body2'
-                    fontSize={{ xs: 15, sm: 16 }}
+                    fontSize={{ xs: 15, sm: 20 }}
                     lineHeight={1.8}
                     style={{ marginBottom: '16px' }}
                 >
@@ -56,7 +56,7 @@ export const AboutUsSectionUp = () => {
                     variant='body2'
                     color={'#626970'}
                     lineHeight={1.8}
-                    fontSize={{ xs: 15, sm: 16 }}
+                    fontSize={{ xs: 15, sm: 20 }}
                 >
                     With a primary emphasis on business education, CUC University is dedicated to providing students with the essential knowledge and skills to thrive in the competitive global marketplace. Our unwavering commitment to excellence and quality ensures that our curriculum
                     prepares students to adeptly navigate the ever-evolving business

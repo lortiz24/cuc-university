@@ -29,7 +29,7 @@ export const AdmissionsRequirements = () => {
                     variant="h2"
                     color={theme.palette.secondary.main}
                     fontWeight="bold"
-                    fontSize={{ xs: 35, xl: 40 }}
+                    fontSize={{ xs: 35, md: 60  }}
                     textAlign="center"
                     paddingBottom={2}
                 >
@@ -54,7 +54,7 @@ export const AdmissionsRequirements = () => {
                     variant="h2"
                     color={theme.palette.primary.main}
                     fontWeight="bold"
-                    fontSize={{ xs: 35, xl: 40 }}
+                    fontSize={{ xs: 35, xl: 50 }}
                     textAlign="center"
                     paddingBottom={2}
                 >
@@ -102,7 +102,7 @@ export const AdmissionsRequirements = () => {
                     variant="h2"
                     color={theme.palette.primary.main}
                     fontWeight="bold"
-                    fontSize={{ xs: 35, xl: 40 }}
+                    fontSize={{ xs: 35, xl: 50 }}
                     textAlign="center"
                     paddingBottom={2}
                 >

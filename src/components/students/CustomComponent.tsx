@@ -25,13 +25,13 @@ const CustomComponent: React.FC<CustomComponentProps> = ({ title, items }) => {
               <ListItemText
                 primary={
                   <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <Typography variant="body1" fontWeight="bold">
+                    <Typography variant="body1" fontWeight="bold" fontSize={{xs:15,sm:20}}>
                       {item.date + ' '}
                     </Typography>
                     <Typography variant="body1" component="span" sx={{ marginLeft: '0.5rem' ,marginRight:'0.5rem'}}>
                       {' - '}
                     </Typography>
-                    <Typography variant="body1" component="span">
+                    <Typography variant="body1" component="span" fontSize={{xs:15,sm:20}}>
                       { ' ' + item.description}
                     </Typography>
                   </Box>

@@ -33,7 +33,7 @@ export const TextWithIcon = ({ children, havIcon = false, icon, colorText = '#62
                 }
             </ListItemIcon>
 
-            <Typography variant="body2" lineHeight={2} gutterBottom color={colorText}>
+            <Typography variant="body2" lineHeight={2} gutterBottom fontSize={{xs:15,sm:20}} color={colorText}>
                 {children}
             </Typography>
         </ListItem>

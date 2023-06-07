@@ -22,7 +22,7 @@ export const ScolarchiptDown = () => {
             >
                 <Typography
                     variant='body2'
-                    fontSize={{ xs: 14, sm: 16 }}
+                    fontSize={{ xs: 14, sm: 20 }}
                     style={{ marginBottom: '16px', lineHeight: '2' }}
 
                 >
@@ -33,7 +33,7 @@ export const ScolarchiptDown = () => {
                 </Typography>
                 <Typography
                     variant='body2'
-                    fontSize={{ xs: 14, sm: 16 }}
+                    fontSize={{ xs: 14, sm: 20 }}
                     style={{ marginBottom: '16px', lineHeight: '2' }}
                 >
                     All students who receive CUC University scholarships must maintain a
@@ -44,7 +44,7 @@ export const ScolarchiptDown = () => {
                     variant='subtitle2'
                     fontWeight={'bold'}
                     color={(theme) => theme.palette.primary.main}
-                    fontSize={{ xs: 14, sm: 16 }}
+                    fontSize={{ xs: 14, sm: 20 }}
                     sx={{ marginBottom: '16px', lineHeight: '2' }}
                 >
                     Application deadlines for each semester will be posted on the university website. It is essential to note that upon withdrawal or failure of courses, recipients of institutional aid will forfeit the CUC University scholarship and become financially liable for the full tuition of the ongoing semester.
