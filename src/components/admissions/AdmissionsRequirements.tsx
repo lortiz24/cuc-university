@@ -33,7 +33,7 @@ export const AdmissionsRequirements = () => {
                     textAlign="center"
                     paddingBottom={5}
                 >
-                    Admissions Requirement
+                    Admissions Requirements
                 </Typography>
 
             </Grid>
@@ -42,6 +42,7 @@ export const AdmissionsRequirements = () => {
                 xs={12}
                 md={6}
                 width={'100%'}
+                paddingX={{xs: 2, sm: 3, lg: 13}}
                 sx={{
                     position: 'relative',
                     zIndex: 1,
@@ -89,6 +90,7 @@ export const AdmissionsRequirements = () => {
                 item
                 xs={12}
                 md={6}
+                paddingX={{xs: 2, sm: 3, lg: 13}}
                 width={'100%'}
                 sx={{
                     position: 'relative',
@@ -106,7 +108,7 @@ export const AdmissionsRequirements = () => {
                     textAlign="center"
                     paddingBottom={2}
                 >
-                    Masters Programs
+                    Undergraduate Programs
                 </Typography>
                 <List>
                     <TextWithIcon  >
