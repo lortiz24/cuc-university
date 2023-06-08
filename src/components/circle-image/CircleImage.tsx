@@ -49,6 +49,8 @@ export const CircleImage = ({
                 backgroundImage: `url(${origin}${src})`,
                 backgroundRepeat,
                 backgroundSize,
+                mixBlendMode: 'overlay',
+                backgroundColor: backgroundColor ? backgroundColor : theme.palette.secondary.main,
                 backgroundPosition,
                 zIndex: -1,
             }}
