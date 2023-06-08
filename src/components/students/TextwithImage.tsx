@@ -40,7 +40,7 @@ const TextWithImage = () => {
           alt="Students"
           style={{ width: '100%', height: 'auto', maxWidth: '1000px' }}
         /> */}
-        <Image
+        <img
           src="/assets/grupoStudiantes2.png"
           alt="Students"
           width={0}
