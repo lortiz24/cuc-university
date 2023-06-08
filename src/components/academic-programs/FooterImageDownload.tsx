@@ -21,7 +21,6 @@ export const FooterImageDownload = ({
             alignItems="center"
             justifyContent="center"
             width={'100%'}
-            paddingX={{ xs: 4, md: 20 }}
             marginY={10}
         >
             <Typography

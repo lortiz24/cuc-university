@@ -13,7 +13,7 @@ export const ContentBanner = ({ publicImg, title }: Props) => {
     return (
         <Grid
             container
-            minHeight={{ xs: 400, md: 700 }}
+            minHeight={{ xs: 400, md: 900 }}
         >
             <Grid
                 item
@@ -23,29 +23,32 @@ export const ContentBanner = ({ publicImg, title }: Props) => {
                 justifyContent={'center'}
                 flexDirection='column'
                 alignItems={'center'}
-                paddingX={{ xs: 10 }}
+                maxHeight={{ xs: 400, md: 800 }}
+                // paddingLeft={{ xl: 15 }}
+                paddingX={{ xs: 10, md: 0 }}
+            // sx={{ backgroundColor: 'red' }}
             >
                 <Typography
-                    variant='h2'
+                    variant="h2"
                     color={(theme) => theme.palette.primary.main}
                     lineHeight={1}
                     fontWeight="bold"
-                    fontSize={{ xs: 30, sm: 40, xl: 50 }}
+                    fontSize={{ xs: 40, sm: 55, xl: 60 }}
                     marginBottom={{ xs: 1, sm: 10, md: 4 }}
-                    textAlign={'start'}
+                    textAlign={{ xs: 'center', md: "right" }} // Alinear el texto a la derecha
                 >
-                    {title.type} <Typography
-                        variant='caption'
+                    {title.type}{" "}
+                    <Typography
+                        variant="caption"
                         lineHeight={1.2}
                         color={(theme) => theme.palette.secondary.main}
-                        fontSize={{ xs: 30, sm: 40, xl: 50 }}
+                        fontSize={{ xs: 30, sm: 40, xl: 60 }}
                         marginBottom={{ xs: 1, md: 4 }}
-                        textAlign={'start'}
+                        textAlign={{ xs: 'center', md: "right" }}
                     >
                         {title.specialty}
                     </Typography>
                 </Typography>
-
             </Grid>
             <Grid
                 item
@@ -61,7 +64,7 @@ export const ContentBanner = ({ publicImg, title }: Props) => {
                     borderRadius: '100rem',
                     minHeight: '70%',
                     width: '100%',
-                    maxWidth:'1000px',
+                    maxWidth: '940px',
                     backgroundImage: `url(${origin}${publicImg})`,
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: 'cover',

@@ -39,10 +39,9 @@ export const ContentOverview = ({ program }: Props) => {
                 xs={12}
             >
                 <Typography
-                    variant='h1'
                     color={'#FFFFFF'}
-                    fontWeight={500}
-                    fontSize={{ xs: 25, sm: 42, xl: 40 }}
+                    fontWeight={'bold'}
+                    fontSize={{ xs: 25, sm: 42, xl: 50 }}
                     textAlign={'start'}
                 >
                     Overview
@@ -81,7 +80,7 @@ export const ContentOverview = ({ program }: Props) => {
                     </ListItem>
                     <ListItem sx={{ py: 0.3 }}>
                         <ListItemIcon>
-                            <StorageOutlinedIcon className={classes.customIcon}/>
+                            <StorageOutlinedIcon className={classes.customIcon} />
                         </ListItemIcon>
                         <ListItemText
                             primary={
@@ -112,7 +111,7 @@ export const ContentOverview = ({ program }: Props) => {
                     </ListItem>
                     <ListItem sx={{ py: 0.3 }}>
                         <ListItemIcon>
-                            <SchoolOutlinedIcon className={classes.customIcon}/>
+                            <SchoolOutlinedIcon className={classes.customIcon} />
                         </ListItemIcon>
                         <ListItemText
                             primary={
@@ -143,7 +142,7 @@ export const ContentOverview = ({ program }: Props) => {
                     </ListItem>
                     <ListItem sx={{ py: 0.3 }}>
                         <ListItemIcon>
-                            <TranslateOutlinedIcon className={classes.customIcon}/>
+                            <TranslateOutlinedIcon className={classes.customIcon} />
                         </ListItemIcon>
                         <ListItemText
                             primary={
