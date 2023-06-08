@@ -61,7 +61,7 @@ export const BannerProgram = ({ children, program }: Props) => {
                             width: { xs: '100%', sm: '100%', md: '60%', lg: '50%' },
                             maxWidth: '740px',
                             position: 'absolute',
-                            top: 'calc(100% - 150px)',
+                            top: { xs: 'calc(100% - 100px)', sm: 'calc(100% - 160px)' },
                             // top: { xs: `calc(100% - 2em)`, sm: `calc(100% - 1.6em)`, md: `calc(100% - 1.5em)`, lg: 'calc(100% - 100px)' },
                             transform: { xs: '', md: 'translateX(10%)' },
                             color: 'transparent',
@@ -74,27 +74,7 @@ export const BannerProgram = ({ children, program }: Props) => {
                     >
                         <ContentOverview program={program} />
                     </Box>
-                    {/* <Box
-                        sx={{
-                            maxWidth: '1000px',
-                            height: '400px',
-                            width: '400px',
-                            minHeight: '400px',
-                            backgroundColor: theme.palette.primary.main,
-                            borderRadius: { xs: '5rem', sm: '15rem' },
-                            position: 'absolute',
-                            left: '20px',
-                            top: `calc(100% - 0.8em)`,
-                            color: 'transparent',
-                            fontSize: { xs: '14vw', md: '8vw' },
-                            display: 'flex',
-                            justifyContent: 'start',
-                            flexDirection: 'column',
-                            alignItems: 'center'
-                        }}
-                    >
-                         <ContentOverview program={program} /> 
-                    </Box> */}
+
                     <Box>{children}</Box>
                 </Box>
             </Grid>

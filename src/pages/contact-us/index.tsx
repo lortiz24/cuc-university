@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { MainLayout } from '@/components/layouts/MainLayout'
 import FormComponent from '../../components/form-contact/FormContactUs';
-import { Grid, Card, CardMedia, Skeleton } from '@mui/material';
-import Image from 'next/image';
+import { Grid } from '@mui/material';
 import { FormContact } from '@/interfaces';
 import { ComponentWithPadding } from '@/components/layouts/ComponentWithPadding';
 import { ImageMap } from '@/components/contact-us/ImageMap';
@@ -13,7 +12,7 @@ const index = () => {
   };
 
   const borderRadius = '3rem'
-  
+
   return (
     <MainLayout title='Contact Us'>
       <ComponentWithPadding>
