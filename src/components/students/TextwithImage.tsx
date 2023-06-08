@@ -40,12 +40,12 @@ const TextWithImage = () => {
           alt="Students"
           style={{ width: '100%', height: 'auto', maxWidth: '1000px' }}
         /> */}
-        <img
+        <Image
           src="/assets/grupoStudiantes2.png"
           alt="Students"
           width={0}
           height={0}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
           style={{
             width: '100%', height: 'auto', maxWidth: '1000px'
           }}
