@@ -10,19 +10,19 @@ export const ContenCircleImage = () => {
             container
             height={'100%'}
             display='flex'
-        // sx={{ backgroundColor: "red", }}
         >
             <Grid
                 item
                 xs={12}
                 lg={5}
+                xl={6}
                 padding={{ xs: 5, lg: 5 }}
                 display={{ xs: 'none', lg: 'block' }}
                 sx={{
                     maxWidth: '900px',
                     backgroundImage: `url(${origin}/assets/mano-start.png)`,
                     backgroundRepeat: 'no-repeat',
-                    backgroundPosition: 'center',
+                    backgroundPosition: 'right 35% bottom 45%',
                     backgroundSize: 'contain',
                     height: '100%',
                     width: '100%',
@@ -34,11 +34,13 @@ export const ContenCircleImage = () => {
                 item
                 xs={12}
                 lg={7}
-                padding={{ xs: 5, lg: 10 }}
+                xl={6}
+                height={'100%'}
+                padding={{ xs: 5, lg: 10, xl: 15 }}
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
-                    justifyContent: 'start',
+                    justifyContent: 'center',
                     alignItems: 'center',
                 }}
             >
