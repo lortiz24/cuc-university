@@ -24,7 +24,7 @@ export const lightTheme = createTheme({
             sm: 600,
             md: 900,
             lg: 1220,
-            xl: 1536,
+            xl: 1636,
         },
     },
     typography: {

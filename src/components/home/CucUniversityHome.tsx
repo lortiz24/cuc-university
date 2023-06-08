@@ -68,12 +68,12 @@ export const CucUniversityHome = () => {
                 xs={12}
                 lg={7}
                 marginTop={{ xs: 2, md: 0 }}
-                minHeight={{ xs: '300px', sm: '600px', md: '850px' }}
+                minHeight={{ xs: '300px', sm: '600px', md: '650px', lg: '750px', xl: '850px' }}
             >
 
                 <ContentWithBackgroundv2 />
             </Grid>
-            <Grid item xs={12} minHeight={'auto'} width={'100%'} sx={{ zIndex: 1, position: 'relative', top: -35, }}>
+            {/*  <Grid item xs={12} minHeight={'auto'} width={'100%'} sx={{ zIndex: 1, position: 'relative', top: -35, }}>
                 <CircleImage
                     src={`/assets/team-work-1-black_and_white.jpg`}
                     // height={{ xs: '400px', sm: '300px', md: '300px' }}
@@ -81,7 +81,7 @@ export const CucUniversityHome = () => {
                 >
                     <ContenCircleImage />
                 </CircleImage>
-            </Grid>
+            </Grid> */}
         </Grid>
     )
 }

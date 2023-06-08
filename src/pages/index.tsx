@@ -6,7 +6,9 @@ import { ComponentsWithNoPading } from '@/components/layouts/ComponentsWithNoPad
 import { GetStaticProps, NextPage } from 'next'
 import { ProgramItem } from '@/interfaces/Programs.interface'
 import { graduatePrograms, underGraduatePrograms } from '@/data/programs'
-
+import { Grid } from '@mui/material';
+import { CircleImage } from '@/components/circle-image/CircleImage'
+import { ContenCircleImage } from '@/components/home/ContenCircleImage'
 
 
 interface Props {
@@ -21,7 +23,16 @@ const HomePage: NextPage<Props> = ({ graduatePrograms, underGraduatePrograms }) 
         <ComponentWithPadding>
           <CucUniversityHome />
         </ComponentWithPadding>
-
+        <Grid container paddingX={{ xs: 2, sm: 5, lg: 10, xl: 15 }}>
+          <Grid item xs={12} minHeight={'auto'} width={'100%'} sx={{ zIndex: 1, position: 'relative', top: -35, }}>
+            <CircleImage
+              src={`/assets/team-work-1-black_and_white.jpg`}
+              minHeight={{ xs: '400px', md: '400px', xl: '490px' }}
+            >
+              <ContenCircleImage />
+            </CircleImage>
+          </Grid>
+        </Grid>
         <ProgramsHome graduatePrograms={graduatePrograms} underGraduatePrograms={underGraduatePrograms} />
 
       </MainLayout >

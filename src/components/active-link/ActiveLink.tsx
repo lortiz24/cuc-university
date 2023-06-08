@@ -1,5 +1,5 @@
 import React from 'react'
-import { useTheme } from '@mui/material';
+import { useTheme, Typography } from '@mui/material';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import MenuItem from '@mui/material/MenuItem';
@@ -33,8 +33,7 @@ export const ActiveLink = ({ text, href, redirect = true, icon, onClick, cursorP
     const buttonCircleStyle: React.CSSProperties = {
         borderRadius: '40rem',
         padding: '4px 15px',
-        textDecoration: 'none',
-        fontSize:'24px'
+        // fontSize: '24px'
     }
 
     return (
@@ -43,12 +42,24 @@ export const ActiveLink = ({ text, href, redirect = true, icon, onClick, cursorP
                 ?
                 <Link
                     href={href}
-                    style={
-                        router.asPath === href ?
-                            { backgroundColor: theme.palette.primary.main, color: '#FFFFFF', ...buttonCircleStyle }
-                            :
-                            { backgroundColor: theme.palette.secondary.main, color: '#ffffff', ...buttonCircleStyle }}
-                >{text}{icon}</Link>
+                    style={{ textDecoration: 'none' }}
+                ><Typography
+                    fontSize={{ xs: '16px', xl: '24px' }}
+                    variant="body1"
+                    sx={`/${router.asPath.split('/')[1]}` === href
+                        ?
+                        {
+                            backgroundColor: theme.palette.primary.main, color: '#FFFFFF',
+                            ...buttonCircleStyle,
+                            fontSize:{ xs: '16px', xl: '24px'}
+                        }
+                        :
+                        {
+                            backgroundColor: theme.palette.secondary.main, color: '#ffffff',
+                            ...buttonCircleStyle
+                        }}>
+                        {text}
+                    </Typography></Link>
                 :
                 <CustomLink
                     href={href}

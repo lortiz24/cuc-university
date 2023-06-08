@@ -29,13 +29,10 @@ export const CustomLink = ({ href, text, redirect, icon, cursorPointer, colorLin
 
     const commonCss: React.CSSProperties = {
         textDecoration: 'none',
-        fontSize: theme.typography.fontSize,
-    };
+        // fontSize: { xs: 16, md: '24px' },
+        // fontWeight:300
+    }
 
-    // Establecer diferentes tamaños de letra según los breakpoints
-    theme.typography.h2.fontSize = '24px'; // xl
-    theme.typography.h3.fontSize = '20px'; // lg
-    theme.typography.body1.fontSize = '16px'; // md, sm, xs
 
 
 
@@ -57,7 +54,7 @@ export const CustomLink = ({ href, text, redirect, icon, cursorPointer, colorLin
         ><Grid container alignItems="center">
                 <Grid item>
                     <Typography
-                        fontSize={16.5}
+                        fontSize={{ xs: '16px', lg: '18px', xl: '24px' }}
                         variant="body1"
                         style={`/${router.asPath.split('/')[1]}` === href
                             ?

@@ -21,17 +21,8 @@ const origin = typeof window === "undefined" ? "" : window.location.origin;
 export const NavbarUi = (props: Props) => {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const [openSubMenuIndex, setOpenSubMenuIndex] = React.useState<null | number[]>(null); // Nuevo estado para los índices de submenús abiertos
-  const [anchorEl2, setAnchorEl2] = React.useState<null | HTMLElement>(null);
 
 
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-
-  const router = useRouter();
   const theme = useTheme()
 
 
@@ -39,20 +30,7 @@ export const NavbarUi = (props: Props) => {
     setMobileOpen((prevState) => !prevState);
   };
 
-  const handleMenuOpen = (event: React.MouseEvent<HTMLLIElement, MouseEvent> | React.MouseEvent<HTMLButtonElement, MouseEvent>, menuIndex: number, subMenuIndex: number) => {
-    if (subMenuIndex === 0) {
-      setAnchorEl(event.currentTarget);
-      setOpenSubMenuIndex([menuIndex, subMenuIndex]);
-    } else {
-      setAnchorEl2(event.currentTarget);
-      setOpenSubMenuIndex([menuIndex, subMenuIndex]);
-    }
-  };
 
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-    setOpenSubMenuIndex(null); // Restablecer los índices de los submenús abiertos
-  };
 
 
   const container =
@@ -86,7 +64,7 @@ export const NavbarUi = (props: Props) => {
               src={`${origin}/assets/MainLogo2.png`}
             />
           </div>
-          <Box sx={{ display: { xs: "none", lg: "block" } }}>
+          <Box sx={{ display: { xs: "none", xl: "block" } }}>
             <Menu />
           </Box>
           <IconButton
@@ -94,7 +72,7 @@ export const NavbarUi = (props: Props) => {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { lg: "none" } }}
+            sx={{ mr: 2, display: { xl: "none" } }}
           >
             <MenuIcon />
           </IconButton>
