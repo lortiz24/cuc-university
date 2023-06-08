@@ -1,4 +1,5 @@
-import { useTheme, Box, Typography } from '@mui/material';
+import { useState } from 'react';
+import { useTheme, Box, Typography, Skeleton, Grid } from '@mui/material';
 import { useGetOrigin } from '@/hooks/useGetOrigin';
 import Image from 'next/image';
 
@@ -20,24 +21,57 @@ export const CircleBannerWithImage = ({
     fontSize = { xs: '16vw', sm: '14vw', md: '8vw' }
 }: Props) => {
     const theme = useTheme()
+    const [imageLoaded, setImageLoaded] = useState(false);
 
-    console.log(src)
+    const handleImageLoad = () => {
+        setImageLoaded(true);
+    };
     return (
 
-        <Box sx={{ position: 'relative', width: '100%', display: 'flex', justifyContent: 'center' }}>
-            <Image
-                src={src}
-                alt="Students"
-                width={0}
-                height={0}
-                sizes="100vw"
-                style={{
-                    width: '100%',
-                    height: 'auto',
-                    maxWidth: '1600px',
-                    maxHeight: '700PX',
-                }}
-            />
+        <Box
+            sx={{
+                position: 'relative',
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+            }}
+        >
+            <Grid container
+                width={'100%'}
+            >
+                <Grid
+                    item
+                    width={'100%'}
+                >
+                    <Image
+                        src={src}
+                        alt="Students"
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        style={{
+                            width: '100%',
+                            height: 'auto',
+                            maxWidth: '1600px',
+                            maxHeight: '700px',
+                        }}
+                        onLoad={handleImageLoad}
+                    />
+                </Grid>
+                <Grid
+                    item
+                    width={'100%'}
+                >
+                    {!imageLoaded && (
+                        <Skeleton
+                            variant='rectangular'
+                            animation="wave"
+                            width="100%"
+                            sx={{ borderRadius: '20rem', height: { xs: 150, sm: 250, md: 400, lg: 500, xl: 600 } }} />
+                    )}
+                </Grid>
+            </Grid>
+
 
             <Typography
                 sx={{
@@ -46,9 +80,11 @@ export const CircleBannerWithImage = ({
                     top: `calc(100% - 0.8em)`,
                     transform: 'translateX(-50%)',
                     color: 'transparent',
-                    WebkitTextStroke: { xs: `0.9px ${theme.palette.primary.main}`, sm: `2px ${theme.palette.primary.main}` },
+                    WebkitTextStroke: {
+                        xs: `0.9px ${theme.palette.primary.main}`,
+                        sm: `2px ${theme.palette.primary.main}`,
+                    },
                     fontSize,
-
                 }}
             >
                 {tittle}
