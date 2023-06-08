@@ -22,7 +22,7 @@ interface Props {
 export const CircleImage = ({
     src = '/assets/team-work-1-black_and_white.jpg',
     children,
-    opacity = 0.1,
+    opacity = 0.9,
     backgroundColor,
     borderRadiusLg = '17rem',
     borderRadiusMd = '10rem',
@@ -53,7 +53,7 @@ export const CircleImage = ({
                 zIndex: -1,
             }}
         >
-            {/* {!whithouBoxBackground &&
+            {!whithouBoxBackground &&
                 <MyGradiantBackground
                     opacity={opacity}
                     color={backgroundColor ? backgroundColor : theme.palette.secondary.main}
@@ -62,7 +62,7 @@ export const CircleImage = ({
                     borderRadiusXs={borderRadiusXs}
                     borderRadiusLg={borderRadiusLg}
                 />}
- */}
+
             {children}
 
         </Box >

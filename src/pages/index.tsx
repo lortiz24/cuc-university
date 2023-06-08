@@ -26,6 +26,7 @@ const HomePage: NextPage<Props> = ({ graduatePrograms, underGraduatePrograms }) 
         <Grid container paddingX={{ xs: 2, sm: 5, lg: 10, xl: 15 }}>
           <Grid item xs={12} minHeight={'auto'} width={'100%'} sx={{ zIndex: 1, position: 'relative', top: -35, }}>
             <CircleImage
+              whithouBoxBackground
               src={`/assets/team-work-1-black_and_white.png`}
               minHeight={{ xs: '400px', md: '400px', xl: '490px' }}
             >
