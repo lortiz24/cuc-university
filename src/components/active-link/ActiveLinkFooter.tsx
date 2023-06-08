@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import MenuItem from '@mui/material/MenuItem';
 import { CustomLink } from './CustomLink';
-
+import style from './ActiveLinkFooterStyle.module.css'
 
 interface IActiveLinkProps {
     text: string;
@@ -34,7 +34,6 @@ export const ActiveLinkFooter = ({ text, href, redirect = true, icon, onClick, c
         borderRadius: '40rem',
         padding: '4px 15px',
         textDecoration: 'none',
-        
     }
 
     return (
@@ -42,12 +41,13 @@ export const ActiveLinkFooter = ({ text, href, redirect = true, icon, onClick, c
             {href === '/contact-us'
                 ?
                 <Link
+                    className={style.contactLink}
                     style={
                         router.asPath === href ?
                             { color: '#FFFFFF', ...buttonCircleStyle, border: `1px solid ${theme.palette.primary.main}` }
                             :
                             { color: '#ffffff', ...buttonCircleStyle, border: '1px solid #FFFFFF' }}
-                    href={href} >{text}{icon}</Link>
+                    href={href} >{text}</Link>
                 :
                 <CustomLink
                     colorLink={colorLink}
