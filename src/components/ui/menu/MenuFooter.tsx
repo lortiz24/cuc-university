@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { ActiveLinkFooter } from '@/components/active-link/ActiveLinkFooter';
-import { navItems } from '@/data';
+import { navItems, navItemsFooter } from '@/data';
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import styles from "../Navbar.module.css";
 import { Box, MenuItem, Popover, Grid } from '@mui/material';
 import { useRouter } from 'next/router';
+import { useGetBreakpoints } from '@/hooks/useGetBreakpoints';
 
 
 interface Props {
@@ -17,7 +18,7 @@ export const MenuFooter = ({ colorLink }: Props) => {
     const [openSubMenuIndex, setOpenSubMenuIndex] = useState<null | number[]>(null); // Nuevo estado para los índices de submenús abiertos
     const [anchorEl2, setAnchorEl2] = useState<null | HTMLElement>(null);
     const router = useRouter();
-
+    const { sm } = useGetBreakpoints()
 
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorEl(event.currentTarget);
@@ -46,7 +47,7 @@ export const MenuFooter = ({ colorLink }: Props) => {
             component={'nav'}
             rowGap={3}
         >
-            {navItems.map((menuItem, menuIndex) => (
+            {(sm ? navItemsFooter : navItems).map((menuItem, menuIndex) => (
                 <Grid
                     item
                     xs={12}

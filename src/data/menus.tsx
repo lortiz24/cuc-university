@@ -68,3 +68,64 @@ export const navItems: MenuItem[] = [
         icon: <EmailOutlinedIcon />
     },
 ];
+export const navItemsFooter: MenuItem[] = [
+    {
+        path: "/",
+        name: "Home",
+        icon: <HomeOutlinedIcon />
+    },
+
+    {
+        name: "Students",
+        path: "/students",
+        icon: <PeopleOutlineOutlinedIcon />
+    },
+    {
+        name: "About Us",
+        path: "/about-us",
+        icon: <Groups2OutlinedIcon />
+    },
+    {
+        name: "Scholarships",
+        path: "/scholarships",
+        icon: <AttachMoneyOutlinedIcon />
+
+    },
+    {
+        name: "Academic Programs",
+        path: "/academic-programs",
+        icon: <SchoolOutlinedIcon />,
+        dropdown: [
+            {
+                name: "Undergraduate Programs",
+                path: "",
+                dropdown: underGraduatePrograms.map((program) => {
+                    return {
+                        name: program.title,
+                        path: program.path,
+                    }
+                })
+            },
+            {
+                name: "Graduate Programs",
+                path: "",
+                dropdown: graduatePrograms.map((program) => {
+                    return {
+                        name: program.title,
+                        path: program.path,
+                    }
+                })
+            },
+        ],
+    },
+    {
+        name: "Contact Us",
+        path: "/contact-us",
+        icon: <EmailOutlinedIcon />
+    },
+    {
+        name: "Admissions",
+        path: "/admissions",
+        icon: <PeopleOutlineOutlinedIcon />
+    },
+];

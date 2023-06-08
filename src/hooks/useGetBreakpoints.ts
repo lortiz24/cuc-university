@@ -4,11 +4,13 @@ import { useTheme } from '@mui/material/styles';
 
 export const useGetBreakpoints = () => {
     const theme = useTheme();
+
     const matchXs = useMediaQuery(theme.breakpoints.up('xs'));
     const matchSm = useMediaQuery(theme.breakpoints.up('sm'));
     const matchMd = useMediaQuery(theme.breakpoints.up('md'));
     const matchLg = useMediaQuery(theme.breakpoints.up('lg'));
     const matchXl = useMediaQuery(theme.breakpoints.up('xl'));
+
 
     const [xs, setXs] = useState(false)
     const [sm, setSm] = useState(false)
