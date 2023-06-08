@@ -74,7 +74,7 @@ export const UndergraduatePrograms = ({ underGraduatePrograms }: Props) => {
                     display: 'flex',
                     justifyContent: 'center',
                     flexWrap: 'wrap',
-                    gap: '2rem'
+                    columnGap: '7rem'
                 }}>
                     {underGraduatePrograms.map((programItem, index) => (
                         <Link key={index} style={{ textDecoration: 'none' }} href={`academic-programs${programItem.path}`} passHref>

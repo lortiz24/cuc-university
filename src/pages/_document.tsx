@@ -13,7 +13,6 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='anonymous' />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
-
       </Head>
       <body>
         <Main />

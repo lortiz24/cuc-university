@@ -1,6 +1,7 @@
 import React from 'react'
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import styles from './social-networks.module.css';
+import { TikTokIcon } from '@/components/icons/TikTokIcon';
 
 
 
@@ -27,6 +28,11 @@ export const SocialNetworks = () => {
             </a>
             <a className={styles.link} style={{ color: '#FFFFFF' }}>
                 <i className={`${styles['link-icon']} fa fa-whatsapp`}> </i>
+                {/* <span className={styles['link-title']}>Whatsapp</span> */}
+            </a>
+            <a className={styles.link} style={{ color: '#FFFFFF' }}>
+                {/* <i className={`${styles['link-icon']} fa-brands fa-tiktok`}> </i> */}
+                <TikTokIcon className={`${styles['link-icon']}`} />
                 {/* <span className={styles['link-title']}>Whatsapp</span> */}
             </a>
 

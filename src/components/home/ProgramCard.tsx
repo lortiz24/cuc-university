@@ -15,32 +15,39 @@ export const ProgramCard = ({ programItem }: Props) => {
             <Box
                 sx={{
                     marginTop: '2rem',
-                    marginX:6,
                     '&:hover .hoverTypography': {
                         color: theme.palette.primary.main,
                     },
                 }}
             >
-                <Card sx={{
-                    width: '289px',
-                    height: '344px',
-                    borderRadius,
-                    /* display: 'flex',
-                    justifyContent: 'center',
-                    flexDirection: 'column',
-                    alignItems:'center', */
-                }}>
-                    <CardMedia
+                <div>
+                    <Card
                         sx={{
+                            maxWidth: '289px',
+                            height: '344px',
                             borderRadius,
-                            height: '100%',
-                            width: '100%',
+                            '@media (min-width: 320px)': {
+                                maxWidth: '289px',
+                                height: '344px',
+                            },
+                            '@media (max-width: 320px)': {
+                                maxWidth: '100%',
+                                height: '300px',
+                            },
                         }}
-                        component="img"
-                        image={programItem.publicImg}
-                        alt="Paella dish"
-                    />
-                </Card>
+                    >
+                        <CardMedia
+                            sx={{
+                                borderRadius,
+                                height: '100%',
+                                width: '100%',
+                            }}
+                            component="img"
+                            image={programItem.publicImg}
+                            alt="Paella dish"
+                        />
+                    </Card>
+                </div>
                 <Typography
                     fontSize={{ xs: 24 }}
                     color={theme.palette.secondary.main}
