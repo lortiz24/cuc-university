@@ -12,10 +12,11 @@ interface Props {
     description?: string
     image?: string
     keywords?: string
+    height100vh?: boolean
 }
 
 
-export const MainLayout = ({ children, title = 'CUC UNIVERSITY', description = 'information about cuc university', image = '/assets/MainLogo2.png', keywords }: Props) => {
+export const MainLayout = ({ children, title = 'CUC UNIVERSITY', description = 'information about cuc university', image = '/assets/MainLogo2.png', keywords, height100vh }: Props) => {
 
     const { origin } = useGetOrigin()
     return (
@@ -35,6 +36,9 @@ export const MainLayout = ({ children, title = 'CUC UNIVERSITY', description = '
             <NavbarUi />
 
             <Box
+                sx={{
+                    minHeight: height100vh ? '100vh' : '0px',
+                }}
             >
                 {children}
             </Box>
