@@ -8,8 +8,8 @@ export const EmailForm = () => {
             component={'form'}
             gap={2}
         >
-            <Grid item xs={12} sm={6} >
-                <TextField
+            <Grid item xs={12} lg={6} >
+                {/* <TextField
                     required
                     size='small'
                     type="email"
@@ -21,10 +21,26 @@ export const EmailForm = () => {
                             color: '#FFFFFF'
                         }
                     }}
+                /> */}
+                <TextField
+                    required
+                    size='small'
+                    type="email"
+                    placeholder="Enter your email"
+                    fullWidth
+                    InputProps={{
+                        sx: {
+                            borderRadius: 6,
+                            color: '#FFFFFF',
+                            '& fieldset': {
+                                borderColor: '#FFFFFF',
+                            },
+                        },
+                    }}
                 />
 
             </Grid>
-            <Grid item xs={7} sm={4}>
+            <Grid item xs={4} sm={6} lg={4}>
                 <Button
                     type="submit"
                     variant="contained"
@@ -32,10 +48,9 @@ export const EmailForm = () => {
                     fullWidth
                     sx={{
                         borderRadius: 6,
-                        paddingX: 0,
                         textTransform: 'none',
                         color: 'white',
-                        fontSize:22
+                        fontSize: 18
                     }}
                 >
                     Subscribe
