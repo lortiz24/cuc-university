@@ -57,11 +57,11 @@ export const NavbarUi = (props: Props) => {
               sx={{
                 maxHeight: { xs: 200, md: 167 },
                 maxWidth: { xs: '100%', sm: 250, md: 250 },
-                marginTop:2.5,
-                marginLeft:6
+                marginTop: 2.5,
+                marginLeft: 6
               }}
               alt="The house from the offer."
-              src={`${origin}/assets/MainLogo2.png`}
+              src={`/assets/MainLogo2.png`}
             />
           </div>
           <Box sx={{ display: { xs: "none", xl: "block" } }}>

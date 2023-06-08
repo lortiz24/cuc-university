@@ -45,7 +45,7 @@ const TextWithImage = () => {
           alt="Students"
           width={0}
           height={0}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+          sizes="100vw"
           style={{
             width: '100%', height: 'auto', maxWidth: '1000px'
           }}

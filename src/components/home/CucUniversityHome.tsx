@@ -1,6 +1,4 @@
 import { Button, Grid, Typography, Box } from '@mui/material'
-import { CircleImage } from '../circle-image/CircleImage'
-import { ContenCircleImage } from './ContenCircleImage'
 import { ContentWithBackgroundv2 } from '../ui/ContentWithBackgroundv2'
 
 export const CucUniversityHome = () => {

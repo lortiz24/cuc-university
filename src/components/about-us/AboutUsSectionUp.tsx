@@ -1,11 +1,8 @@
 import React from 'react'
-import { Grid, Typography, useTheme } from '@mui/material'
-import { CircleImage } from '../circle-image/CircleImage'
-import { MisionAndVision } from './MisionAndVision';
+import { Grid, Typography } from '@mui/material'
 import { Alumna } from './Alumna';
 
 export const AboutUsSectionUp = () => {
-    const theme = useTheme()
 
     return (
         <Grid container marginTop={20}>
@@ -27,7 +24,7 @@ export const AboutUsSectionUp = () => {
                     color={(theme) => theme.palette.primary.main}
                     lineHeight={0.3}
                     fontWeight="bold"
-                    fontSize={{ xs: 25, sm: 60}}
+                    fontSize={{ xs: 25, sm: 60 }}
                     marginBottom={{ xs: 1, md: 4 }}
                     textAlign={'start'}
                 >
@@ -35,7 +32,7 @@ export const AboutUsSectionUp = () => {
                         variant='caption'
                         lineHeight={1.2}
                         color={(theme) => theme.palette.secondary.main}
-                        fontSize={{ xs: 25, sm:60 }}
+                        fontSize={{ xs: 25, sm: 60 }}
                         marginBottom={{ xs: 1, md: 4 }}
                         textAlign={'start'}
                     >
@@ -79,7 +76,7 @@ export const AboutUsSectionUp = () => {
                     withBackgroundImage={false}
                 />
             </Grid>
-            <Grid
+            {/* <Grid
                 item
                 xs={12}
                 width={'100%'}
@@ -93,7 +90,7 @@ export const AboutUsSectionUp = () => {
                 >
                     <MisionAndVision />
                 </CircleImage>
-            </Grid>
+            </Grid> */}
         </Grid >
 
     )
