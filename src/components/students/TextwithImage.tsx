@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const TextWithImage = () => {
   return (
-    <Grid container spacing={5}>
+    <Grid container spacing={15} paddingX={{xs:6}}>
       <Grid
         item
         xs={12} lg={4}
