@@ -45,7 +45,7 @@ export const GraduatePrograms = ({ graduatePrograms }: Props) => {
                             fontSize: { xs: 25, sm: 30 },
                             fontWeight: 400
                         }}
-                    >Gradute Programs</Button>
+                    >Graduate Programs</Button>
                 </Grid>
 
 
