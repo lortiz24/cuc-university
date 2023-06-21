@@ -54,7 +54,7 @@ export const CustomLink = ({ href, text, redirect, icon, cursorPointer, colorLin
         ><Grid container alignItems="center">
                 <Grid item>
                     <Typography
-                        fontSize={{ xs: '16px', lg: '18px', xl: '24px' }}
+                        fontSize={{ xs: '16px', lg: '18px'}}
                         variant="body1"
                         style={`/${router.asPath.split('/')[1]}` === href
                             ?

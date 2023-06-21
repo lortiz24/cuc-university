@@ -55,8 +55,11 @@
   top: 3rem;
 }
 
-@media (max-width: 1238px) {
+@media (max-width: 1315px) {
   .menu-container > * {
-    margin-right: 20px;
+    margin-right: 10px;
   }
 }
+
+
+

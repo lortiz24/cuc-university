@@ -44,14 +44,14 @@ export const ActiveLink = ({ text, href, redirect = true, icon, onClick, cursorP
                     href={href}
                     style={{ textDecoration: 'none' }}
                 ><Typography
-                    fontSize={{ xs: '16px', xl: '24px' }}
+                    fontSize={{ xs: '16px', xl: '18px' }}
                     variant="body1"
                     sx={`/${router.asPath.split('/')[1]}` === href
                         ?
                         {
                             backgroundColor: theme.palette.primary.main, color: '#FFFFFF',
                             ...buttonCircleStyle,
-                            fontSize:{ xs: '16px', xl: '24px'}
+                            fontSize:{ xs: '16px', xl: '18px'}
                         }
                         :
                         {

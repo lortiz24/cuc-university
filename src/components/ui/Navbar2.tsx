@@ -50,7 +50,6 @@ export const NavbarUi = (props: Props) => {
         color="transparent"
       >
         <Toolbar>
-
           <div style={{ flexGrow: 1 }}>
             <Box
               component="img"
@@ -58,13 +57,13 @@ export const NavbarUi = (props: Props) => {
                 maxHeight: { xs: 200, md: 167 },
                 maxWidth: { xs: '100%', sm: 250, md: 250 },
                 marginTop: 2.5,
-                marginLeft: 6
+                marginLeft: { xs: 0, xl: 4 }
               }}
               alt="The house from the offer."
               src={`/assets/MainLogo2.png`}
             />
           </div>
-          <Box sx={{ display: { xs: "none", xl: "block" } }}>
+          <Box sx={{ display: { xs: "none", lg: "block" } }}>
             <Menu />
           </Box>
           <IconButton
@@ -72,7 +71,7 @@ export const NavbarUi = (props: Props) => {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { xl: "none" } }}
+            sx={{ mr: 2, display: { lg: "none" } }}
           >
             <MenuIcon />
           </IconButton>
