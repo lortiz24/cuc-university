@@ -10,6 +10,7 @@ import { CollapseMenuHeader } from './CollapseMenuHeader';
 import { ActiveLink } from '@/components/active-link/ActiveLink';
 import { Divider } from '@mui/material';
 import { useRouter } from 'next/router';
+import { ChangeLenguage } from '@/components/change-lenguage/ChangeLenguage';
 
 interface Props {
     mobileOpen: boolean
@@ -29,7 +30,6 @@ export const MenuDrawer = ({ mobileOpen }: Props) => {
 
     }, [mobileOpen])
 
-    //todo: menu no responde enseguida
     return (
         <List
             sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
@@ -94,7 +94,6 @@ export const MenuDrawer = ({ mobileOpen }: Props) => {
                     </ListItemButton>
                 )
             })}
-
         </List>
     )
 }

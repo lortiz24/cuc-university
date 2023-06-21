@@ -10,6 +10,7 @@ import { Divider, Drawer, Typography, useTheme } from "@mui/material";
 import { navItems } from "@/data";
 import { MenuDrawer } from "./menu-drawer/MenuDrawer";
 import { Menu } from "./menu/Menu";
+import { ChangeLenguage } from "../change-lenguage/ChangeLenguage";
 
 interface Props {
   window?: () => Window;
@@ -43,7 +44,7 @@ export const NavbarUi = (props: Props) => {
         sx={{
           marginTop: { xs: 4, md: 4 },
           marginBottom: { xs: 4, md: 4 },
-          paddingX: { xs: 4, md: 10 },
+          paddingX: { xs: 4, md: 6, xl: 10 },
         }}
         component="nav"
         elevation={0}
@@ -109,6 +110,13 @@ export const NavbarUi = (props: Props) => {
         <Divider />
 
         <MenuDrawer mobileOpen={mobileOpen} />
+        <Box sx={{
+          position: 'absolute',
+          bottom: 40,
+          right: 40,
+        }}>
+          <ChangeLenguage />
+        </Box>
       </Drawer>
 
     </>

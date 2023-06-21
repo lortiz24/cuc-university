@@ -5,6 +5,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import styles from "../Navbar.module.css";
 import { Box, MenuItem, Popover } from '@mui/material';
 import { useRouter } from 'next/router';
+import { ChangeLenguage } from '@/components/change-lenguage/ChangeLenguage';
 
 
 
@@ -40,7 +41,7 @@ export const Menu = ({ colorLink }: Props) => {
 
 
     return (
-        <Box component={'nav'} className={"menu-container"}>
+        <Box component={'nav'} className={"menu-container"} >
             {navItems.map((menuItem, menuIndex) => (
                 <React.Fragment key={menuItem.name}>
                     {menuItem.dropdown ? (
@@ -119,6 +120,7 @@ export const Menu = ({ colorLink }: Props) => {
                     )}
                 </React.Fragment>
             ))}
+            <ChangeLenguage />
         </Box>
     )
 }
