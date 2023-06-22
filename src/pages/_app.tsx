@@ -8,6 +8,8 @@ import '@/styles/Navbar-style.css'
 import '@/styles/ComponentImage-style.css'
 import { Provider } from 'react-redux';
 
+import GoogleAnalytics from '@bradgarropy/next-google-analytics'
+
 
 
 
@@ -21,6 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Provider store={store}>
         <Component     {...pageProps} />
       </Provider>
+      <GoogleAnalytics measurementId='G-BZMLF94FJW'/>
     </ThemeProvider>
   )
 }
