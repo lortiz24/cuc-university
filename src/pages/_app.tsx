@@ -1,22 +1,26 @@
 import '@/styles/globals.css'
-import {  lightTheme } from '@/themes'
+import { lightTheme } from '@/themes'
 import { ThemeProvider, CssBaseline } from '@mui/material'
 import '@/styles/AlumsImage-style.css'
 import '@/styles/circle-style.css'
 import '@/styles/footer.style.css'
 import '@/styles/Navbar-style.css'
 import '@/styles/ComponentImage-style.css'
+import { Provider } from 'react-redux';
 
 
 
 
 import type { AppProps } from 'next/app'
+import { store } from '@/store/store'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={lightTheme}>
       <CssBaseline />
-      <Component     {...pageProps} />
+      <Provider store={store}>
+        <Component     {...pageProps} />
+      </Provider>
     </ThemeProvider>
   )
 }
