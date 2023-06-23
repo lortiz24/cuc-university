@@ -6,6 +6,7 @@ import { useAppDispatch, useAppSelector } from '@/store/store';
 import { changeLanguageSlice } from '@/store/language';
 import { LANGUAGES } from '@/constants/Languages';
 import { useTranslation } from 'react-i18next';
+import { loadLanguageLocalStorage, saveLanguageLocalStorage } from '@/helpers/Language-helpers';
 
 const sizeFlag = 20
 
@@ -18,19 +19,20 @@ const flagLanguage = {
 export const ChangeLenguage = () => {
 
     const { i18n } = useTranslation()
-    const [flagSelected, setflagSelected] = useState(flagLanguage.en)
+    const dispatch = useAppDispatch()
+    const { languageSelected } = useAppSelector(select => select.language)
+    const [flagSelected, setflagSelected] = useState(flagLanguage[languageSelected])
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
     const theme = useTheme()
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         setAnchorEl(event.currentTarget);
     };
-    const { languageSelected } = useAppSelector(select => select.language)
-    const dispatch = useAppDispatch()
 
     useEffect(() => {
         setflagSelected(flagLanguage[languageSelected])
-        console.log(languageSelected)
+        const languageStorage = loadLanguageLocalStorage()
+        dispatch(changeLanguageSlice(languageStorage))
     }, [languageSelected])
 
     const handleClose = (language: Language) => {
@@ -38,6 +40,7 @@ export const ChangeLenguage = () => {
             setflagSelected(flagLanguage[language])
             dispatch(changeLanguageSlice(language))
             i18n.changeLanguage(language)
+            saveLanguageLocalStorage(language)
         }
         setAnchorEl(null);
     };

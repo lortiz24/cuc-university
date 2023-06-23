@@ -1,3 +1,4 @@
+import { useLayoutEffect } from 'react';
 import '@/styles/globals.css'
 import { lightTheme } from '@/themes'
 import { ThemeProvider, CssBaseline } from '@mui/material'
@@ -15,8 +16,18 @@ import './i18n'
 
 import type { AppProps } from 'next/app'
 import { store } from '@/store/store'
+import { loadLanguageLocalStorage } from '@/helpers/Language-helpers';
+import { useTranslation } from 'react-i18next';
 
 export default function App({ Component, pageProps }: AppProps) {
+  const { i18n } = useTranslation()
+
+  useLayoutEffect(() => {
+    const language = loadLanguageLocalStorage()
+    i18n.changeLanguage(language)
+  }, [])
+
+
   return (
     <ThemeProvider theme={lightTheme}>
       <CssBaseline />
