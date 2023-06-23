@@ -1,7 +1,8 @@
+import { Language } from '@/interfaces/language.interface';
 import { createSlice } from '@reduxjs/toolkit';
 
 interface languageState {
-    languageSelected: string
+    languageSelected: Language
 }
 
 
@@ -12,7 +13,7 @@ export const languageSlice = createSlice({
     name: 'language',
     initialState,
     reducers: {
-        changeLanguage: (state, { payload }) => {
+        changeLanguageSlice: (state, { payload }) => {
             state.languageSelected = payload
         },
     },
@@ -20,5 +21,5 @@ export const languageSlice = createSlice({
 
 // Action creators are generated for each case reducer function
 export const {
-    changeLanguage,
+    changeLanguageSlice,
 } = languageSlice.actions;

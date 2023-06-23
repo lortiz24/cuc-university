@@ -1,0 +1,10 @@
+{
+    "menu.home": "Home",
+    "menu.about-us": "About Us",
+    "menu.academic-programs": "About Us",
+    "menu.students": "Students",
+    "menu.admissions": "Admissions",
+    "menu.scholarships": "Scholarships",
+    "menu.contact-us": "Contact Us",
+    "user": "My name is: {{name}}"
+}

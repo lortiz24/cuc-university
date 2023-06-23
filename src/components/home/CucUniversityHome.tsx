@@ -2,6 +2,7 @@ import { Button, Grid, Typography, Box } from '@mui/material'
 import { ContentWithBackgroundv2 } from '../ui/ContentWithBackgroundv2'
 
 export const CucUniversityHome = () => {
+    
     return (
         <Grid container >
             <Grid

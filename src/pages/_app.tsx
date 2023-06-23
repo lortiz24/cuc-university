@@ -9,7 +9,7 @@ import '@/styles/ComponentImage-style.css'
 import { Provider } from 'react-redux';
 
 import GoogleAnalytics from '@bradgarropy/next-google-analytics'
-
+import './i18n'
 
 
 
@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Provider store={store}>
         <Component     {...pageProps} />
       </Provider>
-      <GoogleAnalytics measurementId='G-BZMLF94FJW'/>
+      <GoogleAnalytics measurementId='G-BZMLF94FJW' />
     </ThemeProvider>
   )
 }
