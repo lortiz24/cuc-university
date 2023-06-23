@@ -1,10 +1,18 @@
 {
-    "menu.home": "Home",
-    "menu.about-us": "About Us",
-    "menu.academic-programs": "About Us",
-    "menu.students": "Students",
-    "menu.admissions": "Admissions",
-    "menu.scholarships": "Scholarships",
-    "menu.contact-us": "Contact Us",
-    "user": "My name is: {{name}}"
+    "menu.home": "Inicio",
+    "menu.about-us": "Acerca de Nosotros",
+    "menu.academic-programs": "Programas Académicos",
+    "menu.academic-programs.UP": "Programas de pregrado",
+    "menu.academic-programs.GP": "Programas de postgrado",
+    "menu.academic-programs.aosiba": "Asociado en Ciencias en Administración de Negocios Internacionales",
+    "menu.academic-programs.bosiiba": "Licenciatura en Ciencias en Administración de Negocios Internacionales",
+    "menu.academic-programs.mosiiba": "Maestría en Administración de Negocios Internacionales",
+    "menu.academic-programs.mosim": "Maestría en Marketing",
+    "menu.academic-programs.mosimmcamt": "Maestría en Comunicación de Medios Masivos y Tecnología de Medios",
+    "menu.students": "Estudiantes",
+    "menu.admissions": "Admisiones",
+    "menu.scholarships": "Becas",
+    "menu.contact-us": "Contáctenos",
+    "home.introduction": "Una distinguida institución americana ubicada en Miami, Florida, ofrece un enfoque educativo híbrido versátil que combina oportunidades de aprendizaje en línea y presenciales. Nuestros programas académicos completos se ofrecen tanto en español como en inglés, acomodando a una amplia gama de estudiantes.",
+    "home.introduction.button": "Ver Mas"
 }

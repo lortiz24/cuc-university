@@ -10,7 +10,7 @@ export const underGraduatePrograms: ProgramItem[] = [
         publicImg: '/assets/team-work-2.jpg',
         contactImage: '/assets/Alumno1-2.png',
         path: '/associates-science-international-business-administration',
-        title: 'Associates of Science International Business Administration',
+        title: 'menu.academic-programs.aosiba',
         titleComplete: {
             type: 'Associates of Science',
             specialty: 'in International Business Administration'
@@ -39,7 +39,7 @@ export const underGraduatePrograms: ProgramItem[] = [
         },
         publicImg: '/assets/bachelors.jpg',
         contactImage: '/assets/alumna-contact.png',
-        title: 'Bachelors of Science in International Business Administration',
+        title: 'menu.academic-programs.bosiiba',
         titleComplete: {
             type: 'Bachelors of Science',
             specialty: 'in International Business Administration'
@@ -64,7 +64,7 @@ export const underGraduatePrograms: ProgramItem[] = [
 ]
 export const graduatePrograms: ProgramItem[] = [
     {
-        title: 'Master of Science in International Business Administration',
+        title: 'menu.academic-programs.mosiiba',
         pdf: {
             name: 'Master of Science in International Business Administration PLAN.pdf',
             ruta: '/files/pdf/Master-of-Science-in-International-Business-Administration-PLAN.pdf'
@@ -94,7 +94,7 @@ export const graduatePrograms: ProgramItem[] = [
         objective: 'In an increasingly globalized world, the Master\'s in International Business (MIB) program aims to provide robust content and managerial development opportunities. This program prepares students for active leadership roles in the global business landscape. Teaching focuses on equipping students to function effectively in culturally diverse settings, emphasizing inclusivity for individuals from all backgrounds.'
     },
     {
-        title: 'Mastter of Science in Marketing',
+        title: 'menu.academic-programs.mosim',
         pdf: {
             name: 'Master of Science in Marketing.pdf',
             ruta: '/files/pdf/Master-of-Science-in-Marketing.pdf'
@@ -124,7 +124,7 @@ export const graduatePrograms: ProgramItem[] = [
         objective: 'The Master of Science in Marketing program aims to train individuals as marketing professionals, addressing the career needs of those with varying levels of experience in marketing, whether through employment or classroom instruction. Students acquire the knowledge and credentials necessary to advance their careers through focused classroom instruction, emphasizing the inclusion of all cultural groups.'
     },
     {
-        title: 'Master of Science in Mass Media Communication and Media Technology',
+        title: 'menu.academic-programs.mosimmcamt',
         pdf: {
             name: 'Master of Science in Mass Media Communication and Media Technology.pdf',
             ruta: '/files/pdf/Master-of-Science-in-Mass-Media-Communication-and-Media-Technology.pdf'

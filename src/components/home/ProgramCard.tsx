@@ -1,6 +1,7 @@
 import React from 'react'
 import { ProgramItem } from '@/interfaces/Programs.interface'
 import { Box, Card, CardMedia, Grid, Typography, useTheme } from '@mui/material'
+import { useTranslation } from 'react-i18next';
 
 interface Props {
     programItem: ProgramItem
@@ -9,7 +10,7 @@ interface Props {
 export const ProgramCard = ({ programItem }: Props) => {
     const theme = useTheme()
     const borderRadius = '4rem'
-
+    // const { t } = useTranslation()
     return (
         <>
             <Box
@@ -58,6 +59,7 @@ export const ProgramCard = ({ programItem }: Props) => {
                     }}
                     className="hoverTypography" // Agrega una clase para seleccionar el Typography
                 >
+                    {/* {t(programItem.title)} */}
                     {programItem.title}
                 </Typography>
             </Box>

@@ -1,8 +1,9 @@
 import { Button, Grid, Typography, Box } from '@mui/material'
 import { ContentWithBackgroundv2 } from '../ui/ContentWithBackgroundv2'
+import { useTranslation } from 'react-i18next'
 
 export const CucUniversityHome = () => {
-    
+    const { t } = useTranslation()
     return (
         <Grid container >
             <Grid
@@ -32,7 +33,7 @@ export const CucUniversityHome = () => {
                     fontSize={20}
                 // fontSize={{ xs: 15, sm: 16 }}
                 >
-                    A distinguished American institution located in Miami, Florida, delivers a versatile hybrid educational approach that combines online and on-campus learning opportunities in English and Spanish.
+                    {t('home.introduction')}
                 </Typography>
                 <Box
                     marginTop={3}
@@ -55,7 +56,7 @@ export const CucUniversityHome = () => {
                             minWidth: '180px',
                         }}
                     >
-                        See More
+                        {t('home.introduction.button')}
                     </Button>
                 </Box>
                 {/* <Grid item xs={6} md={4}>

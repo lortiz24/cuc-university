@@ -10,22 +10,22 @@ import Groups2OutlinedIcon from '@mui/icons-material/Groups2Outlined';
 
 export const navItems: MenuItem[] = [
     {
+        name: "menu.home",
         path: "/",
-        name: "Home",
         icon: <HomeOutlinedIcon />
     },
     {
-        name: "About Us",
+        name: "menu.about-us",
         path: "/about-us",
         icon: <Groups2OutlinedIcon />
     },
     {
-        name: "Academic Programs",
+        name: "menu.academic-programs",
         path: "/academic-programs",
         icon: <SchoolOutlinedIcon />,
         dropdown: [
             {
-                name: "Undergraduate Programs",
+                name: "menu.academic-programs.UP",
                 path: "",
                 dropdown: underGraduatePrograms.map((program) => {
                     return {
@@ -35,7 +35,7 @@ export const navItems: MenuItem[] = [
                 })
             },
             {
-                name: "Graduate Programs",
+                name: "menu.academic-programs.GP",
                 path: "",
                 dropdown: graduatePrograms.map((program) => {
                     return {
@@ -47,57 +47,57 @@ export const navItems: MenuItem[] = [
         ],
     },
     {
-        name: "Students",
+        name: "menu.students",
         path: "/students",
         icon: <PeopleOutlineOutlinedIcon />
     },
     {
-        name: "Admissions",
+        name: "menu.admissions",
         path: "/admissions",
         icon: <PeopleOutlineOutlinedIcon />
     },
     {
-        name: "Scholarships",
+        name: "menu.scholarships",
         path: "/scholarships",
         icon: <AttachMoneyOutlinedIcon />
 
     },
     {
-        name: "Contact Us",
+        name: "menu.contact-us",
         path: "/contact-us",
         icon: <EmailOutlinedIcon />
     },
 ];
 export const navItemsFooter: MenuItem[] = [
     {
+        name: "menu.home",
         path: "/",
-        name: "Home",
         icon: <HomeOutlinedIcon />
     },
 
     {
-        name: "Students",
+        name: "menu.student",
         path: "/students",
         icon: <PeopleOutlineOutlinedIcon />
     },
     {
-        name: "About Us",
+        name: "menu.about-us",
         path: "/about-us",
         icon: <Groups2OutlinedIcon />
     },
     {
-        name: "Scholarships",
+        name: "menu.scholarships",
         path: "/scholarships",
         icon: <AttachMoneyOutlinedIcon />
 
     },
     {
-        name: "Academic Programs",
+        name: "menu.academic-programs",
         path: "/academic-programs",
         icon: <SchoolOutlinedIcon />,
         dropdown: [
             {
-                name: "Undergraduate Programs",
+                name: "menu.academic-programs.UP",
                 path: "",
                 dropdown: underGraduatePrograms.map((program) => {
                     return {
@@ -107,7 +107,7 @@ export const navItemsFooter: MenuItem[] = [
                 })
             },
             {
-                name: "Graduate Programs",
+                name: "menu.academic-programs.GP",
                 path: "",
                 dropdown: graduatePrograms.map((program) => {
                     return {
@@ -119,12 +119,12 @@ export const navItemsFooter: MenuItem[] = [
         ],
     },
     {
-        name: "Contact Us",
+        name: "menu.contact-us",
         path: "/contact-us",
         icon: <EmailOutlinedIcon />
     },
     {
-        name: "Admissions",
+        name: "menu.admissions",
         path: "/admissions",
         icon: <PeopleOutlineOutlinedIcon />
     },

@@ -11,6 +11,7 @@ import { ActiveLink } from '@/components/active-link/ActiveLink';
 import { Divider } from '@mui/material';
 import { useRouter } from 'next/router';
 import { ChangeLenguage } from '@/components/change-lenguage/ChangeLenguage';
+import { useTranslation } from 'react-i18next';
 
 interface Props {
     mobileOpen: boolean
@@ -18,6 +19,7 @@ interface Props {
 
 export const MenuDrawer = ({ mobileOpen }: Props) => {
     const [open, setOpen] = useState(false);
+    const { t } = useTranslation()
     const router = useRouter()
     const handleClick = () => {
         setOpen(!open);
@@ -45,7 +47,7 @@ export const MenuDrawer = ({ mobileOpen }: Props) => {
                                 <ListItemIcon>
                                     {menu.icon}
                                 </ListItemIcon>
-                                <ActiveLink href={menu.path} text={menu.name} key={index} redirect={false} />
+                                <ActiveLink href={menu.path} text={t(menu.name)} key={index} redirect={false} />
                                 {open ? <ExpandLess /> : <ExpandMore />}
                             </ListItemButton>
                             <Collapse in={open} timeout="auto" unmountOnExit>
@@ -61,13 +63,13 @@ export const MenuDrawer = ({ mobileOpen }: Props) => {
                                                     <List component="nav"
                                                         aria-labelledby="nested-list-subheader"
                                                         key={subMenu.name}>
-                                                        <CollapseMenuHeader primary={subMenu.name}>
+                                                        <CollapseMenuHeader primary={t(subMenu.name)}>
                                                             {
                                                                 subMenu.dropdown.map((program, inedx) => {
                                                                     return (
                                                                         <div key={menu.path + index}>
                                                                             <ListItemButton >
-                                                                                <ActiveLink href={menu.path + program.path} text={program.name} />
+                                                                                <ActiveLink href={menu.path + program.path} text={t(program.name)} />
                                                                             </ListItemButton>
                                                                         </div>
                                                                     )
@@ -90,7 +92,7 @@ export const MenuDrawer = ({ mobileOpen }: Props) => {
                         <ListItemIcon>
                             {menu.icon}
                         </ListItemIcon>
-                        <ActiveLink href={menu.path} text={menu.name} key={index} redirect={false} />
+                        <ActiveLink href={menu.path} text={t(menu.name)} key={index} redirect={false} />
                     </ListItemButton>
                 )
             })}

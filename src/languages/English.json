@@ -1,9 +1,18 @@
 {
     "menu.home": "Home",
     "menu.about-us": "About Us",
-    "menu.academic-programs": "About Us",
+    "menu.academic-programs": "Academic Programs",
+    "menu.academic-programs.UP": "Undergraduate Programs",
+    "menu.academic-programs.GP": "Graduate Programs",
+    "menu.academic-programs.aosiba": "Associates of Science International Business Administration",
+    "menu.academic-programs.bosiiba": "Bachelors of Science in International Business Administration",
+    "menu.academic-programs.mosiiba": "Master of Science in International Business Administration",
+    "menu.academic-programs.mosimmcamt": "Master of Science in Mass Media Communication and Media Technology",
+    "menu.academic-programs.mosim": "Mastter of Science in Marketing",
     "menu.students": "Students",
     "menu.admissions": "Admissions",
     "menu.scholarships": "Scholarships",
-    "menu.contact-us": "Contact Us"
+    "menu.contact-us": "Contact Us",
+    "home.introduction": "A distinguished American institution located in Miami, Florida, delivers a versatile hybrid educational approach that combines online and on-campus learning opportunities in English and Spanish.",
+    "home.introduction.button": "See More"
 }
