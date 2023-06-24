@@ -36,7 +36,7 @@ export const AboutUsSectionUp = () => {
                         marginBottom={{ xs: 1, md: 4 }}
                         textAlign={'start'}
                     >
-                        a distinguished America institution located in Miami, Florida,
+                        a distinguished American institution located in Miami, Florida,
                     </Typography>
                 </Typography>
 

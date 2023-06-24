@@ -25,7 +25,7 @@ export const underGraduatePrograms: ProgramItem[] = [
                 unidad: 'semesters'
             },
             credits: 60,
-            modality: 'Fully Online, On Campues or Hybrid',
+            modality: 'Fully Online, On Campus or Hybrid',
             language: 'English or Spanish',
         },
         description: 'This program encompasses courses designed to prepare students for the workplace by offering insights into international trade, cultural differences, and global business strategies. These classes provide a solid grounding in the professional environment, introducing students to key concepts that will prove valuable throughout their academic journey and beyond. By engaging with this curriculum, students will gain valuable knowledge and skills, including effective communication, problem-solving, and teamwork, which are essential in the international business arena. Upon completion, graduates will be well-prepared to pursue further education or enter the workforce with confidence in their abilities to navigate the global business landscape.',
@@ -55,7 +55,7 @@ export const underGraduatePrograms: ProgramItem[] = [
                 unidad: 'semesters'
             },
             credits: 120,
-            modality: 'Fully Online, On Campues or Hybrid',
+            modality: 'Fully Online, On Campus or Hybrid',
             language: 'English or Spanish',
         },
         description: 'Graduates of the BS in Business Administration program will possess a deep understanding of business theories, policies, and procedures, preparing them for a successful career in the world of business. They will acquire essential skills in decision-making, problem-solving, and leadership, in addition to fundamental business and management practices. The program nurtures students\' commitment to personal values, moral excellence, and professional competence, enabling them to excel in their chosen field.',
@@ -83,7 +83,7 @@ export const graduatePrograms: ProgramItem[] = [
                 unidad: 'semesters'
             },
             credits: 42,
-            modality: 'Fully Online, On Campues or Hybrid',
+            modality: 'Fully Online, On Campus or Hybrid',
             language: 'English or Spanish',
         },
         titleComplete: {
@@ -103,7 +103,7 @@ export const graduatePrograms: ProgramItem[] = [
             type: 'Master of Science',
             specialty: 'in Marketing'
         },
-        path: '/mastter-of-science-in-marketing',
+        path: '/master-of-science-in-marketing',
         publicImg: '/assets/master-marketing.jpg',
         contactImage: '/assets/Alumna-contact-2.png',
         id: 'e89f1e1fe1f9e1f98e1f',
@@ -117,7 +117,7 @@ export const graduatePrograms: ProgramItem[] = [
                 unidad: 'semesters'
             },
             credits: 39,
-            modality: 'Fully Online, On Campues or Hybrid',
+            modality: 'Fully Online, On Campus or Hybrid',
             language: 'English or Spanish',
         },
         description: 'Marketing management is a critical function within any business organization, drawing on concepts from the behavioral sciences, economics, and quantitative methods. Marketing managers face the challenge of developing strategies that achieve the company\'s objectives while providing customer satisfaction more effectively than competitors. The Master of Science in Marketing program prepares students for careers in marketing management, product management, sales management, advertising, and related staff positions, equipping them with the skills and knowledge to excel in their chosen field.',
@@ -147,7 +147,7 @@ export const graduatePrograms: ProgramItem[] = [
                 unidad: 'semesters'
             },
             credits: 42,
-            modality: 'Fully Online, On Campues or Hybrid',
+            modality: 'Fully Online, On Campus or Hybrid',
             language: 'English or Spanish',
         },
         description: 'The program offers a comprehensive understanding of electronic media from both theoretical and practical perspectives. The curriculum is designed to prepare students for diverse careers in Mass Media Communication, equipping them with the knowledge and skills necessary to excel in a rapidly evolving media landscape. Through hands-on experiences and in-depth coursework, students will gain the expertise required to navigate the dynamic world of mass media effectively.',
