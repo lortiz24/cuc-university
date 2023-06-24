@@ -25,15 +25,24 @@
     "footer.body": "Manténgase al día con nuestras noticias, publicaciones de blog y anuncios suscribiéndose a nuestro boletín.",
     "footer.input.placeholder": "Ingrese su correo electrónico",
     "footer.button": "Suscribirse",
-
-
-
-
-
-
-
-
-
+    "aboutUs.title": "CUC University, ",
+    "aboutUs.title-body": "una distinguida institución americana ubicada en Miami, Florida",
+    "aboutUs.body-one": "ofrece un enfoque educativo híbrido versátil que combina oportunidades de aprendizaje en línea y presenciales. Nuestros programas académicos completos se ofrecen tanto en español como en inglés, acomodando a una amplia gama de estudiantes.",
+    "aboutUs.body-tow": "Con un énfasis principal en la educación empresarial, CUC University se dedica a proporcionar a los estudiantes el conocimiento y las habilidades esenciales para prosperar en el competitivo mercado global. Nuestro compromiso inquebrantable con la excelencia y la calidad garantiza que nuestro plan de estudios prepare a los estudiantes para navegar hábilmente en el entorno empresarial en constante evolución y aplicar su experiencia académica a los desafíos del mundo real.",
+    "aboutUs.circle-section.mission-title": "Misión",
+    "aboutUs.circle-section.mission-body": "En CUC University, nuestra misión es formar un ciudadano integral bajo el principio de libertad de pensamiento y pluralismo ideológico, con un alto sentido de responsabilidad en la búsqueda permanente de la académica y la investigación, utilizando para lograrlo el desarrollo de la ciencia, técnica, tecnología y cultura.",
+    "aboutUs.circle-section.vision-title": "Visión",
+    "aboutUs.circle-section.vision-body": "CUC University fue creada con el deseo de enseñar a la próxima generación de trabajadores capacitados para enfrentar los desafíos del mundo empresarial en constante crecimiento. Nuestra visión es ser una universidad líder en la educación de ciudadanos altamente capacitados que estén comprometidos con la sociedad y el desarrollo sostenible del país. Nos esforzamos por ser reconocidos por nuestra excelencia académica y nuestra contribución al avance de la ciencia y la tecnología.",
+    "aboutUs.circle-section.values-title": "Valores",
+    "aboutUs.circle-section.values-body": "Nuestros valores fundamentales son la excelencia, la responsabilidad, la integridad y el compromiso con la sociedad. Estos valores se reflejan en todo lo que hacemos, desde la enseñanza e investigación hasta la interacción con nuestros estudiantes, profesores y personal administrativo.",
+    "aboutUs.statement.title": "Propósito",
+    "aboutUs.statement.one": "Proporcionar programas de licenciatura y maestría con un ambiente que se enfoque en todas las dimensiones del aprendizaje: conocimiento, comprensión, habilidades, comportamientos, valores y actitudes.",
+    "aboutUs.statement.two": "Crear y difundir conocimiento sobre importantes cuestiones empresariales a través de la investigación, innovación y experiencias de aprendizaje gratificantes.",
+    "aboutUs.statement.three": "Servir a la sociedad a través del intercambio de ideas y prácticas.",
+    "aboutUs.statement.four": "Practicar un liderazgo ético mediante la gestión efectiva y eficiente de nuestros recursos.",
+    "aboutUs.statement.five": "Fomentar una cultura de excelencia, inclusión, colaboración y respeto por las ideas diversas.",
+    "aboutUs.accreditation.title": "Acreditación",
+    "aboutUs.accreditation.body": "CUC University es una institución privada organizada como una corporación con fines de lucro bajo las leyes del Estado de Florida. Está licenciada bajo la Comisión para la Educación Independiente del Departamento de Educación de Florida, para proporcionar educación postsecundaria y tiene autoridad para otorgar títulos bajo las leyes del Estado de Florida.",
 
 
 
@@ -80,8 +89,11 @@
 "contactus.MessageForm":"Mensaje",
 "contactus.SendForm":"Enviar",
 "contactus.terms-and-conditions":"He leído y acepto",
-"contactus.terms-and-conditionsv2":"los términos y condiciones"
-
+"contactus.terms-and-conditionsv2":"los términos y condiciones",
+"Students.title":"Estudiantes",
+"Students.textmain":"Esta será la página en la que los estudiantes encontrarán información y herramientas relevantes, como el inicio de sesión en Campus Café, Canva, los recursos de la biblioteca de pagos en línea, el catálogo de la universidad y el calendario académico.",
+"Students.fall":"OTOÑO 2022",
+"Students.SPRING":"PRIMAVERA 2023"
 
 
 }
