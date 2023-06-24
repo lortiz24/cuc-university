@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Provider store={store}>
         <Component     {...pageProps} />
       </Provider>
-      <GoogleAnalytics measurementId='G-BZMLF94FJW'/>
+      <GoogleAnalytics measurementId='G-MD4VTYYHVH'/>
     </ThemeProvider>
   )
 }
