@@ -1,10 +1,12 @@
 import React from 'react'
 import { Grid, Typography, useTheme } from '@mui/material'
 import { useGetOrigin } from '@/hooks/useGetOrigin'
+import { useTranslation } from 'react-i18next'
 
 export const ContenCircleImage = () => {
     const theme = useTheme()
     const { origin } = useGetOrigin()
+    const { t } = useTranslation()
     return (
         <Grid
             container
@@ -51,7 +53,7 @@ export const ContenCircleImage = () => {
                     fontSize={50}
                     marginBottom={{ xs: 2, xl: 4 }}
                     textAlign={'end'}
-                >With a primary emphasis on business education,</Typography>
+                >{t('home.circle-section.title')}</Typography>
                 <Typography
                     lineHeight={2}
                     variant='body2'
@@ -60,7 +62,7 @@ export const ContenCircleImage = () => {
                     color={'#FFFFFF'}
                     // fontSize={{ xs: 20, sm: 27, md: 25 }}
                     textAlign={'end'}
-                >CUC Unisersity is dedicated to providing students with the essential knowledge and skils to thrive in the competitive global marketplace.
+                >{t('home.circle-section.body')}
                 </Typography>
             </Grid>
 

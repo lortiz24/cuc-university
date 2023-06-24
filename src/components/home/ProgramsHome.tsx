@@ -3,6 +3,7 @@ import { Grid } from '@mui/material';
 import { UndergraduatePrograms } from './UndergraduatePrograms';
 import { GraduatePrograms } from './GraduatePrograms';
 import { ProgramItem } from '@/interfaces/Programs.interface';
+import { useTranslation } from 'react-i18next';
 
 
 interface Props {
@@ -12,7 +13,6 @@ interface Props {
 
 
 export const ProgramsHome = ({ graduatePrograms, underGraduatePrograms }: Props) => {
-    //todo: colocar el hoverable y onClick a las programsCArds
     return (
         <>
             <Grid container width={'100%'} >

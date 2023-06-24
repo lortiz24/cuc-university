@@ -14,5 +14,10 @@
     "menu.scholarships": "Scholarships",
     "menu.contact-us": "Contact Us",
     "home.introduction": "A distinguished American institution located in Miami, Florida, delivers a versatile hybrid educational approach that combines online and on-campus learning opportunities in English and Spanish.",
-    "home.introduction.button": "See More"
+    "home.introduction.button": "See More",
+    "home.circle-section.title": "With a primary emphasis on business education,",
+    "home.circle-section.body": "CUC Unisersity is dedicated to providing students with the essential knowledge and skils to thrive in the competitive global marketplace.",
+    "home.programs-section.title": "Academic Programs",
+    "home.programs-section.type-one": "Undergraduate Programs",
+    "home.programs-section.type-two": "Graduate Programs"
 }

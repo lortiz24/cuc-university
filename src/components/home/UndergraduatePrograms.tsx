@@ -4,15 +4,18 @@ import { ProgramCard } from './ProgramCard';
 import { useGetOrigin } from '@/hooks/useGetOrigin';
 import { ProgramItem } from '@/interfaces/Programs.interface';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 
 
 interface Props {
     underGraduatePrograms: ProgramItem[];
 }
-
+const t = (epa: string) => {
+    return epa
+}
 export const UndergraduatePrograms = ({ underGraduatePrograms }: Props) => {
-    const theme = useTheme()
     const { origin } = useGetOrigin()
+    const { t } = useTranslation()
     return (
         <Box sx={{
             marginTop: 4,
@@ -37,7 +40,7 @@ export const UndergraduatePrograms = ({ underGraduatePrograms }: Props) => {
                         fontWeight="bold"
                         color={(theme) => theme.palette.primary.main}
                         textAlign={'center'}
-                    >Academic Programs
+                    >{t('home.programs-section.title')}
                     </Typography>
                 </Grid>
                 <Grid
