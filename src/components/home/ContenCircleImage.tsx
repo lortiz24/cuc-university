@@ -60,7 +60,7 @@ export const ContenCircleImage = () => {
                     color={'#FFFFFF'}
                     // fontSize={{ xs: 20, sm: 27, md: 25 }}
                     textAlign={'end'}
-                >CUC Unisersity is dedicated to providing students with the essential knowledge and skils to thrive in the competitive global marketplace.
+                >CUC University is dedicated to providing students with the essential knowledge and skils to thrive in the competitive global marketplace.
                 </Typography>
             </Grid>
 
