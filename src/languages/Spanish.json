@@ -13,13 +13,18 @@
     "menu.admissions": "Admisiones",
     "menu.scholarships": "Becas",
     "menu.contact-us": "Contáctenos",
+    "home.title": "Tu futuro con CUC U",
     "home.introduction": "Una distinguida institución americana ubicada en Miami, Florida, ofrece un enfoque educativo híbrido versátil que combina oportunidades de aprendizaje en línea y presenciales. Nuestros programas académicos completos se ofrecen tanto en español como en inglés, acomodando a una amplia gama de estudiantes.",
     "home.introduction.button": "Ver Mas",
     "home.circle-section.title": "Con un énfasis principal en la educación empresarial,",
     "home.circle-section.body": "La Universidad CUC se dedica a proporcionar a los estudiantes los conocimientos y habilidades esenciales para prosperar en el competitivo mercado global.",
     "home.programs-section.title": "Programas Académicos",
     "home.programs-section.type-one": "Programas Académicos",
-    "home.programs-section.type-two": "Programas de postgrado"
+    "home.programs-section.type-two": "Programas de postgrado",
+    "footer.title": "Suscríbase a nuestro boletín",
+    "footer.body": "Manténgase al día con nuestras noticias, publicaciones de blog y anuncios suscribiéndose a nuestro boletín.",
+    "footer.input.placeholder": "Ingrese su correo electrónico",
+    "footer.button": "Suscribirse"
 
 
 
@@ -70,6 +75,6 @@
 
 
 
-    
+
 
 }

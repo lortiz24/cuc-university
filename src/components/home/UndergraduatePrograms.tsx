@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography, Grid, Button, Box, useTheme } from '@mui/material';
+import { Typography, Grid, Button, Box } from '@mui/material';
 import { ProgramCard } from './ProgramCard';
 import { useGetOrigin } from '@/hooks/useGetOrigin';
 import { ProgramItem } from '@/interfaces/Programs.interface';
@@ -10,9 +10,7 @@ import { useTranslation } from 'react-i18next';
 interface Props {
     underGraduatePrograms: ProgramItem[];
 }
-const t = (epa: string) => {
-    return epa
-}
+
 export const UndergraduatePrograms = ({ underGraduatePrograms }: Props) => {
     const { origin } = useGetOrigin()
     const { t } = useTranslation()
@@ -61,7 +59,7 @@ export const UndergraduatePrograms = ({ underGraduatePrograms }: Props) => {
                             fontSize: { xs: 25, sm: 30 },
                             fontWeight: 400
                         }}
-                    >Undergraduate Programs</Button>
+                    >{t('home.programs-section.type-one')}</Button>
                     {/* <Typography
                         fontSize={30}
                         fontWeight={400}

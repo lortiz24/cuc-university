@@ -25,7 +25,7 @@ export const CucUniversityHome = () => {
                     marginBottom={{ xs: 1, md: 2 }}
                     textAlign={'start'}
                 >
-                    Your future with CUC U
+                    {t('home.title')}
                 </Typography>
                 <Typography
                     lineHeight={2}

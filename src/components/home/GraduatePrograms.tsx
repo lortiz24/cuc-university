@@ -4,6 +4,7 @@ import { Grid, Button, useTheme } from '@mui/material';
 import { ProgramCard } from './ProgramCard';
 import { ProgramItem } from '@/interfaces/Programs.interface';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 
 
 interface Props {
@@ -14,6 +15,7 @@ interface Props {
 export const GraduatePrograms = ({ graduatePrograms }: Props) => {
 
     const theme = useTheme()
+    const { t } = useTranslation()
     return (
         <div style={{
             marginTop: '4rem',
@@ -24,8 +26,8 @@ export const GraduatePrograms = ({ graduatePrograms }: Props) => {
             <Grid container
                 display={'flex'}
                 justifyContent={'center'}
-                marginBottom={{xs:10}}
-                >
+                marginBottom={{ xs: 10 }}
+            >
                 <Grid
                     item
                     display={'flex'}
@@ -45,7 +47,7 @@ export const GraduatePrograms = ({ graduatePrograms }: Props) => {
                             fontSize: { xs: 25, sm: 30 },
                             fontWeight: 400
                         }}
-                    >Graduate Programs</Button>
+                    >{t('home.programs-section.type-two')}</Button>
                 </Grid>
 
 

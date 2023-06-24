@@ -1,7 +1,9 @@
 import React from 'react'
 import { Button, Grid, TextField } from '@mui/material'
+import { useTranslation } from 'react-i18next'
 
 export const EmailForm = () => {
+    const { t } = useTranslation()
     return (
         <Grid
             container
@@ -26,7 +28,7 @@ export const EmailForm = () => {
                     required
                     size='small'
                     type="email"
-                    placeholder="Enter your email"
+                    placeholder={t('footer.input.placeholder')}
                     fullWidth
                     InputProps={{
                         sx: {
@@ -53,7 +55,7 @@ export const EmailForm = () => {
                         fontSize: 18
                     }}
                 >
-                    Subscribe
+                    {t('footer.button')}
                 </Button>
             </Grid>
         </Grid>

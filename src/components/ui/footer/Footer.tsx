@@ -4,12 +4,13 @@ import { useGetOrigin } from '@/hooks/useGetOrigin'
 import { SocialNetworks } from './SocialNetworks'
 import { MenuFooter } from '../menu/MenuFooter'
 import { EmailForm } from './EmailForm'
+import { useTranslation } from 'react-i18next'
 
 export const Footer = () => {
   const { origin } = useGetOrigin()
   const theme = useTheme()
-
   const minHeight = '27rem'
+  const { t } = useTranslation()
 
   return (
     <Box sx={{
@@ -91,14 +92,14 @@ export const Footer = () => {
                 fontWeight="bold"
                 fontSize={{ xs: 22, md: 22 }}
                 textAlign={'start'}
-              >Join our Newsletter</Typography>
+              >{t('footer.title')}</Typography>
               <Typography
                 variant='body2'
                 color={'#FFFFFF'}
                 fontSize={18}
                 textAlign={'start'}
               >
-                Stay up to date our news, blog post, and announcements by subscribing to our Newsletter.
+                {t('footer.body')}
               </Typography>
             </Grid>
 

@@ -6,7 +6,7 @@ import { TikTokIcon } from '@/components/icons/TikTokIcon';
 
 
 export const SocialNetworks = () => {
-    //todo:agregar icono de tiktok
+    
     return (
         <div className={styles.menu} style={{
         }}>
