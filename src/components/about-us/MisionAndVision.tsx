@@ -1,8 +1,10 @@
 import React from 'react'
 import { Grid, Typography, useTheme } from '@mui/material'
 import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
 export const MisionAndVision = () => {
   const theme = useTheme()
+  const { t } = useTranslation()
 
   return (
     <Grid
@@ -50,7 +52,7 @@ export const MisionAndVision = () => {
             textAlign="end"
             paddingBottom={2}
           >
-            Mission
+            {t('aboutUs.circle-section.mission-title')}
           </Typography>
           <Typography
             variant="body2"
@@ -58,7 +60,7 @@ export const MisionAndVision = () => {
             fontSize={{ xs: 15, sm: 20 }}
             textAlign="center"
           >
-            At CUC University, our mission is to train an integral citizen under the principle of freedom of thought and ideological pluralism, with a high sense of responsibility in the permanent search for academics and research, using to achieve it the development of science, technique, technology and culture.
+            {t('aboutUs.circle-section.mission-body')}
           </Typography>
         </Grid>
       </Grid>
@@ -103,17 +105,14 @@ export const MisionAndVision = () => {
             fontSize={{ xs: 35, xl: 40 }}
             textAlign={'end'}
             paddingBottom={2}
-          >Vision</Typography>
+          >{t('aboutUs.circle-section.vision-title')}</Typography>
           <Typography
             variant='body2'
             marginBottom={{ xs: 2, xl: 4 }}
             fontSize={{ xs: 15, sm: 20 }}
             textAlign={'center'}
             lineHeight={1.8}
-          >CUC University was created with the desire to
-            teach the next generation of skilled workers to
-            face the challenges of the continually growing business world. Our vision is to be a leading university in the education of highly skilled citizens who are committed to society and the sustainable development of the country. We strive to be recognized for our academic
-            excellence and our contribution to the advancement of science and technology.
+          >{t('aboutUs.circle-section.vision-body')}
           </Typography>
         </Grid>
 
@@ -160,14 +159,14 @@ export const MisionAndVision = () => {
             fontSize={{ xs: 35, xl: 40 }}
             textAlign={'end'}
             paddingBottom={2}
-          >Values</Typography>
+          >{t('aboutUs.circle-section.values-title')}</Typography>
           <Typography
             variant='body2'
             marginBottom={{ xs: 2, xl: 4 }}
             fontSize={{ xs: 15, sm: 20 }}
             textAlign={'center'}
             lineHeight={1.8}
-          >Our core values are excellence, responsibility integrity, and commitment to society, These values are reflected in everything we do, from teaching and research to interaction with our students, faculty, and administrative staff.
+          >{t('aboutUs.circle-section.vision-body')}
           </Typography>
         </Grid>
 

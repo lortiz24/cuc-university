@@ -6,9 +6,10 @@ import {
   List,
 } from '@mui/material';
 import { TextWithIcon } from './TextWithIcon';
+import { useTranslation } from 'react-i18next';
 
 const SplitPage = () => {
-
+  const { t } = useTranslation()
   return (
 
     <Grid container display={'flex'} justifyContent={'center'} >
@@ -22,25 +23,25 @@ const SplitPage = () => {
             marginBottom={{ xs: 1, md: 1 }}
             textAlign={'start'}
           >
-            Statement of Purpose
+            {t('aboutUs.statement.title')}
           </Typography>
           <Grid sx={{ marginBottom: { xs: 3, md: 10 } }}>
             <List>
 
               <TextWithIcon  >
-                Provide undergraduate and master&apos;s programs with an environment that focuses on all dimensions of learning - knowledge, understanding, skills, behaviors, values, and attitudes.
+                {t('aboutUs.statement.one')}
               </TextWithIcon>
               <TextWithIcon  >
-                Create and disseminate knowledge on important business issues through research, innovation, and rewarding learning experiences.
+                {t('aboutUs.statement.two')}
               </TextWithIcon>
               <TextWithIcon  >
-                Serve society through the exchange of ideas and practices.
+                {t('aboutUs.statement.three')}
               </TextWithIcon>
               <TextWithIcon  >
-                Practice ethical leadership by managing our resources effectively and efficiently.
+                {t('aboutUs.statement.four')}
               </TextWithIcon>
               <TextWithIcon  >
-                Foster a culture of excellence, inclusion, collaboration, and respect for diverse ideas
+                {t('aboutUs.statement.five')}
               </TextWithIcon>
             </List>
 
@@ -58,11 +59,11 @@ const SplitPage = () => {
             marginBottom={{ xs: 2, md: 3 }}
             textAlign={'start'}
           >
-            Accreditation
+            {t('aboutUs.accreditation.title')}
           </Typography>
           <Grid xs={8}>
-            <Typography variant="body2" lineHeight={2} gutterBottom fontSize={{xs:15,sm:20}} color={'#626970'}>
-              CUC University is a private institution organized as a for profit corporation under the laws of the State of Florida. It is licensed under the Commission for Independent Education Florida Department of Education, to provide post-secondary education and has authority to grant degrees under the laws of the State of Florida.
+            <Typography variant="body2" lineHeight={2} gutterBottom fontSize={{ xs: 15, sm: 20 }} color={'#626970'}>
+              {t('aboutUs.accreditation.body')}
             </Typography>
           </Grid>
           <img

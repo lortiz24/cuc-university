@@ -1,9 +1,10 @@
 import React from 'react'
 import { Grid, Typography } from '@mui/material'
 import { Alumna } from './Alumna';
+import { useTranslation } from 'react-i18next';
 
 export const AboutUsSectionUp = () => {
-
+    const { t } = useTranslation()
     return (
         <Grid container marginTop={20}>
             <Grid
@@ -28,7 +29,7 @@ export const AboutUsSectionUp = () => {
                     marginBottom={{ xs: 1, md: 4 }}
                     textAlign={'start'}
                 >
-                    CUC University, <Typography
+                    {t('aboutUs.title')} <Typography
                         variant='caption'
                         lineHeight={1.2}
                         color={(theme) => theme.palette.secondary.main}
@@ -36,7 +37,7 @@ export const AboutUsSectionUp = () => {
                         marginBottom={{ xs: 1, md: 4 }}
                         textAlign={'start'}
                     >
-                        a distinguished American institution located in Miami, Florida,
+                        {t('aboutUs.title-body')}
                     </Typography>
                 </Typography>
 
@@ -46,7 +47,7 @@ export const AboutUsSectionUp = () => {
                     lineHeight={1.8}
                     style={{ marginBottom: '16px' }}
                 >
-                    delivers a versatile hybrid educational approach that combines online and on-campus learning opportunities. Our comprehensive academic programs are offered in both Spanish and English, accommodating a diverse range of students.
+                    {t('aboutUs.body-one')}
                 </Typography>
 
                 <Typography
@@ -55,9 +56,8 @@ export const AboutUsSectionUp = () => {
                     lineHeight={1.8}
                     fontSize={{ xs: 15, sm: 20 }}
                 >
-                    With a primary emphasis on business education, CUC University is dedicated to providing students with the essential knowledge and skills to thrive in the competitive global marketplace. Our unwavering commitment to excellence and quality ensures that our curriculum
-                    prepares students to adeptly navigate the ever-evolving business
-                    environment and apply their academic expertise to real-world challenges.
+                    {t('aboutUs.body-tow')}
+
                 </Typography>
             </Grid>
             <Grid
@@ -68,7 +68,7 @@ export const AboutUsSectionUp = () => {
                 display='flex'
                 flexDirection='column'
                 alignItems='center'
-                sx={{ zIndex: -20, /* backgroundColor:'red' */ }}
+                sx={{ zIndex: -20, }}
             >
                 <Alumna
                     item1={`/assets/Alumna-3.png`}
@@ -76,21 +76,6 @@ export const AboutUsSectionUp = () => {
                     withBackgroundImage={false}
                 />
             </Grid>
-            {/* <Grid
-                item
-                xs={12}
-                width={'100%'}
-                sx={{ position: 'relative', top: -20, zIndex: 1 }}>
-                <CircleImage
-                    src={`/assets/figura2.png`}
-                    backgroundColor={theme.palette.background.paper}
-                    backgroundPosition='center'
-                    backgroundSize='contain'
-                    whithouBoxBackground
-                >
-                    <MisionAndVision />
-                </CircleImage>
-            </Grid> */}
         </Grid >
 
     )

@@ -11,19 +11,6 @@ export const EmailForm = () => {
             gap={2}
         >
             <Grid item xs={12} lg={6} >
-                {/* <TextField
-                    required
-                    size='small'
-                    type="email"
-                    placeholder="Enter your email"
-                    fullWidth
-                    InputProps={{
-                        sx: {
-                            borderRadius: 6,
-                            color: '#FFFFFF'
-                        }
-                    }}
-                /> */}
                 <TextField
                     required
                     size='small'
