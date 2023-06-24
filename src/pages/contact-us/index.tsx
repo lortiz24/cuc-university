@@ -5,8 +5,11 @@ import { Grid } from '@mui/material';
 import { FormContact } from '@/interfaces';
 import { ComponentWithPadding } from '@/components/layouts/ComponentWithPadding';
 import { ImageMap } from '@/components/contact-us/ImageMap';
+import { useTranslation } from 'react-i18next';
 
 const index = () => {
+  const {t} = useTranslation()
+
   const handleSubmit = (formData: FormContact) => {
     console.log(formData);
   };
@@ -18,7 +21,7 @@ const index = () => {
       <ComponentWithPadding>
         <Grid container marginBottom={10} >
           <Grid xs={12} sm={12} md={12} lg={7} paddingX={{ xs: 10, sm: 15, md: 0, lg: 10, xl: 25 }} item >
-            <FormComponent onSubmit={handleSubmit} />
+            <FormComponent onSubmit={handleSubmit} title={t("contactus.title")} />
           </Grid>
 
           <Grid

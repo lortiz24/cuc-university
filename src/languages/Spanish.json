@@ -24,7 +24,7 @@
     "footer.title": "Suscríbase a nuestro boletín",
     "footer.body": "Manténgase al día con nuestras noticias, publicaciones de blog y anuncios suscribiéndose a nuestro boletín.",
     "footer.input.placeholder": "Ingrese su correo electrónico",
-    "footer.button": "Suscribirse"
+    "footer.button": "Suscribirse",
 
 
 
@@ -72,8 +72,15 @@
 
 
 
-
-
+"contactus.title":"Déjenos sus datos y nos pondremos en contacto con usted",
+"contactus.nameForm":"Nombre",
+"contactus.LastNameForm":"Apellido",
+"contactus.PhoneForm":"Teléfono",
+"contactus.EmailForm":"Correo electrónico",
+"contactus.MessageForm":"Mensaje",
+"contactus.SendForm":"Enviar",
+"contactus.terms-and-conditions":"He leído y acepto",
+"contactus.terms-and-conditionsv2":"los términos y condiciones"
 
 
 

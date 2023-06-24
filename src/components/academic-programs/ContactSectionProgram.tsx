@@ -4,6 +4,8 @@ import FormComponent from '../form-contact/FormContactUs'
 import { FooterImageDownload } from './FooterImageDownload';
 import { useGetOrigin } from '@/hooks/useGetOrigin';
 import { DownloadItem } from '@/interfaces';
+import { useTranslation } from 'react-i18next';
+
 
 
 interface Props {
@@ -11,6 +13,7 @@ interface Props {
     downloadnItem: DownloadItem;
 }
 export const ContactSectionProgram = ({ contactImage, downloadnItem }: Props) => {
+    const {t} = useTranslation()
     const { origin } = useGetOrigin()
     return (
         <Grid
@@ -40,7 +43,7 @@ export const ContactSectionProgram = ({ contactImage, downloadnItem }: Props) =>
                 alignItems={'center'}
             // sx={{ backgroundColor: 'blue', }}
             >
-                <FormComponent onSubmit={(values) => console.log(values)} TextFieldMessage={false} />
+                <FormComponent onSubmit={(values) => console.log(values)} TextFieldMessage={false} title={t("contactus.title")} />
             </Grid>
             <Grid
                 item

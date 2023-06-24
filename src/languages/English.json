@@ -23,7 +23,65 @@
     "home.programs-section.type-two": "Graduate Programs",
     "footer.title": "Join our Newsletter",
     "footer.body": "Stay up to date our news, blog post, and announcements by subscribing to our Newsletter.",
-    "footer.button": "Subscribe"
+    "footer.button": "Subscribe",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "contactus.title":"Leave us your details and we will contact you",
+    "contactus.nameForm":"Name",
+    "contactus.LastNameForm":"Last Name",
+    "contactus.PhoneForm":"Phone",
+    "contactus.EmailForm":"Email",
+    "contactus.MessageForm":"Message",
+    "contactus.SendForm":"Send",
+    "contactus.terms-and-conditions":"I have read and accept",
+    "contactus.terms-and-conditionsv2":"the terms and conditions"
+
+
 
 
 

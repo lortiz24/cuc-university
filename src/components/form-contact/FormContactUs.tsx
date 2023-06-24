@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button, FormControlLabel, Grid, TextField, Typography, Link, useTheme } from '@mui/material';
 import { BpCheckbox } from '../ui/Checkbox';
 import { FormContact } from '@/interfaces';
+import { useTranslation } from 'react-i18next';
 
 
 interface FormComponentProps {
@@ -13,7 +14,7 @@ interface FormComponentProps {
 
 
 const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your details and we will contact you", onSubmit, TextFieldMessage = true }) => {
-
+    const {t} = useTranslation()
     const [name, setName] = useState('');
     const [lastName, setLastName] = useState('');
     const [phone, setPhone] = useState('');
@@ -54,7 +55,7 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                         <Grid item xs={12} marginTop={3} >
                             <TextField
                                 size='small'
-                                placeholder='Name'
+                                placeholder={t("contactus.nameForm")}
                                 value={name}
                                 onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                                     setName(e.target.value)
@@ -78,7 +79,7 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                         <Grid item xs={12}>
                             <TextField
                                 size='small'
-                                placeholder="Last Name"
+                                placeholder={t("contactus.LastNameForm")}
                                 value={lastName}
                                 onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                                     setLastName(e.target.value)
@@ -100,7 +101,7 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                         <Grid item xs={12}>
                             <TextField
                                 size='small'
-                                placeholder="Phone"
+                                placeholder={t("contactus.PhoneForm")}
                                 type="number"
                                 value={phone}
                                 onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
@@ -123,7 +124,7 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                         <Grid item marginBottom={!TextFieldMessage ? 1 : 0} xs={12}>
                             <TextField
                                 size='small'
-                                placeholder="Email"
+                                placeholder={t("contactus.EmailForm")}
                                 type="email"
                                 value={email}
                                 onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
@@ -147,7 +148,7 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                             TextFieldMessage && (
                                 <Grid item marginBottom={1} xs={12}>
                                     <TextField
-                                        placeholder="Message"
+                                        placeholder={t("contactus.MessageForm")}
                                         multiline
                                         rows={4}
                                         value={message}
@@ -182,9 +183,9 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                                 }
                                 label={
                                     <span>
-                                        *I have read and accept the{' '}
+                                        *{t("contactus.terms-and-conditions") }{' '}
                                         <Link href="#" color="primary">
-                                            the terms and conditions
+                                        {t("contactus.terms-and-conditionsv2") }
                                         </Link>
                                     </span>
                                 }
@@ -203,7 +204,7 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                                     fontSize: 18
                                 }}
                             >
-                                Send
+                               {t("contactus.SendForm")}
                             </Button>
                         </Grid>
                     </Grid>
