@@ -31,7 +31,6 @@ export const CucUniversityHome = () => {
                     lineHeight={2}
                     variant='body2'
                     fontSize={20}
-                // fontSize={{ xs: 15, sm: 16 }}
                 >
                     {t('home.introduction')}
                 </Typography>
@@ -59,9 +58,7 @@ export const CucUniversityHome = () => {
                         {t('home.introduction.button')}
                     </Button>
                 </Box>
-                {/* <Grid item xs={6} md={4}>
-                   
-                </Grid> */}
+                
             </Grid>
             <Grid
                 item
@@ -73,15 +70,7 @@ export const CucUniversityHome = () => {
 
                 <ContentWithBackgroundv2 />
             </Grid>
-            {/*  <Grid item xs={12} minHeight={'auto'} width={'100%'} sx={{ zIndex: 1, position: 'relative', top: -35, }}>
-                <CircleImage
-                    src={`/assets/team-work-1-black_and_white.jpg`}
-                    // height={{ xs: '400px', sm: '300px', md: '300px' }}
-                    minHeight={{ xs: '400px', md: '400px', xl: '490px' }}
-                >
-                    <ContenCircleImage />
-                </CircleImage>
-            </Grid> */}
+           
         </Grid>
     )
 }

@@ -6,6 +6,7 @@ import styles from "../Navbar.module.css";
 import { Box, MenuItem, Popover, Grid } from '@mui/material';
 import { useRouter } from 'next/router';
 import { useGetBreakpoints } from '@/hooks/useGetBreakpoints';
+import { useTranslation } from 'react-i18next';
 
 
 interface Props {
@@ -14,6 +15,7 @@ interface Props {
 
 
 export const MenuFooter = ({ colorLink }: Props) => {
+    const {t} = useTranslation()
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const [openSubMenuIndex, setOpenSubMenuIndex] = useState<null | number[]>(null); // Nuevo estado para los índices de submenús abiertos
     const [anchorEl2, setAnchorEl2] = useState<null | HTMLElement>(null);
@@ -60,7 +62,7 @@ export const MenuFooter = ({ colorLink }: Props) => {
                             <ActiveLinkFooter
                                 colorLink={colorLink}
                                 href={menuItem.path}
-                                text={menuItem.name}
+                                text={t(menuItem.name)}
                                 redirect={false}
                                 icon={<ExpandMoreIcon className={styles["expand-icon"]} />}
                                 onClick={handleClick}
@@ -87,7 +89,7 @@ export const MenuFooter = ({ colorLink }: Props) => {
                                                 }
                                                 sx={{ width: "100%" }}
                                             >
-                                                {subMenu.name}
+                                                {t(subMenu.name)}
                                                 <ExpandMoreIcon className={styles["expand-icon"]} />
                                             </MenuItem>
                                             {openSubMenuIndex?.[0] === menuIndex &&
@@ -115,7 +117,7 @@ export const MenuFooter = ({ colorLink }: Props) => {
                                                                     }}
                                                                     sx={{ width: "100%" }}
                                                                 >
-                                                                    {subItem.name}
+                                                                    {t(subItem.name)}
                                                                 </MenuItem>
                                                             ))}
                                                         </Box>
@@ -127,7 +129,7 @@ export const MenuFooter = ({ colorLink }: Props) => {
                             </Popover>
                         </div>
                     ) : (
-                        <ActiveLinkFooter text={menuItem.name} href={menuItem.path} colorLink={colorLink} />
+                        <ActiveLinkFooter text={t(menuItem.name)} href={menuItem.path} colorLink={colorLink} />
                     )}
                 </Grid>
             ))}

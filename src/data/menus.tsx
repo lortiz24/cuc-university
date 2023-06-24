@@ -76,7 +76,7 @@ export const navItemsFooter: MenuItem[] = [
     },
 
     {
-        name: "menu.student",
+        name: "menu.students",
         path: "/students",
         icon: <PeopleOutlineOutlinedIcon />
     },
