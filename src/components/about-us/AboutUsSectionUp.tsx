@@ -25,7 +25,7 @@ export const AboutUsSectionUp = () => {
                     color={(theme) => theme.palette.primary.main}
                     lineHeight={0.3}
                     fontWeight="bold"
-                    fontSize={{ xs: 25, sm: 60 }}
+                    fontSize={{ xs: 30, sm: 60 }}
                     marginBottom={{ xs: 1, md: 4 }}
                     textAlign={'start'}
                 >
@@ -33,7 +33,7 @@ export const AboutUsSectionUp = () => {
                         variant='caption'
                         lineHeight={1.2}
                         color={(theme) => theme.palette.secondary.main}
-                        fontSize={{ xs: 25, sm: 60 }}
+                        fontSize={{ xs: 30, sm: 60 }}
                         marginBottom={{ xs: 1, md: 4 }}
                         textAlign={'start'}
                     >

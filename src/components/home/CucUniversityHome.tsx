@@ -21,7 +21,7 @@ export const CucUniversityHome = () => {
                 <Typography
                     color={(theme) => theme.palette.primary.main}
                     fontWeight="bold"
-                    fontSize={60}
+                    fontSize={{ xs: 50, sm: 60 }}
                     marginBottom={{ xs: 1, md: 2 }}
                     textAlign={'start'}
                 >
@@ -58,7 +58,7 @@ export const CucUniversityHome = () => {
                         {t('home.introduction.button')}
                     </Button>
                 </Box>
-                
+
             </Grid>
             <Grid
                 item
@@ -70,7 +70,7 @@ export const CucUniversityHome = () => {
 
                 <ContentWithBackgroundv2 />
             </Grid>
-           
+
         </Grid>
     )
 }

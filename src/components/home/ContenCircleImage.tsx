@@ -50,14 +50,14 @@ export const ContenCircleImage = () => {
                     variant='h2'
                     color={theme.palette.primary.main}
                     fontWeight="bold"
-                    fontSize={50}
+                    fontSize={{ xs: 40, sm: 50 }}
                     marginBottom={{ xs: 2, xl: 4 }}
                     textAlign={'end'}
                 >{t('home.circle-section.title')}</Typography>
                 <Typography
                     lineHeight={2}
                     variant='body2'
-                    fontSize={{ xs: 15, sm: 20 }}
+                    fontSize={{ xs: 20, sm: 20 }}
 
                     color={'#FFFFFF'}
                     // fontSize={{ xs: 20, sm: 27, md: 25 }}

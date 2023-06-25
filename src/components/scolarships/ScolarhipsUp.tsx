@@ -6,8 +6,8 @@ import { useTranslation } from 'react-i18next'
 
 
 export const ScolarhipsUp = () => {
-    const {t} = useTranslation()
-    
+    const { t } = useTranslation()
+
     return (
         <Grid container>
             <Grid
@@ -24,17 +24,11 @@ export const ScolarhipsUp = () => {
                     alignItems: 'center'
                 }}
             >
-                {/*  <CircleBanner
-                    src={`/assets/graduadas.png`}
-                    tittle='SCHOLARSHIPS'
-                    borderRadiusLg='400px'
-                    borderRadiusMd='200px'
-                    borderRadiusSm='200px'
-                    fontSize={{ xs: '12vw', md: '8vw' }}
-                /> */}
                 <CircleBannerWithImage
                     src={`/assets/scholarship.png`}
-                    tittle={t("scholarships.title")} />
+                    tittle={t("scholarships.title")} 
+                    fontSize={{ xs: '12vw', sm: '13vw', md: '8vw' }}
+                    />
             </Grid>
         </Grid >
     )

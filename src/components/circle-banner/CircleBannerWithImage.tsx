@@ -18,7 +18,7 @@ interface Props {
 export const CircleBannerWithImage = ({
     src = '/assets/team-work-1-black_and_white.jpg',
     tittle,
-    fontSize = { xs: '16vw', sm: '14vw', md: '8vw' }
+    fontSize = { xs: '14vw', sm: '13vw', md: '8vw' }
 }: Props) => {
     const theme = useTheme()
     const [imageLoaded, setImageLoaded] = useState(false);
@@ -62,13 +62,13 @@ export const CircleBannerWithImage = ({
                     item
                     width={'100%'}
                 >
-                    {!imageLoaded && (
+                    {/* {!imageLoaded && (
                         <Skeleton
                             variant='rectangular'
                             animation="wave"
                             width="100%"
                             sx={{ borderRadius: '20rem', height: { xs: 150, sm: 250, md: 400, lg: 500, xl: 600 } }} />
-                    )}
+                    )} */}
                 </Grid>
             </Grid>
 
