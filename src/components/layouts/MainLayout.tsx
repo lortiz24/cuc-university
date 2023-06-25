@@ -4,6 +4,7 @@ import { NavbarUi } from '../ui';
 import { Box } from '@mui/material'
 import { Footer } from '../ui/footer/Footer';
 import { useGetOrigin } from '@/hooks/useGetOrigin';
+import { useTranslation } from 'react-i18next';
 
 
 interface Props {
@@ -19,10 +20,11 @@ interface Props {
 export const MainLayout = ({ children, title = 'CUC UNIVERSITY', description = 'information about cuc university', image = '/assets/MainLogo2.png', keywords, height100vh }: Props) => {
 
     const { origin } = useGetOrigin()
+    const { t } = useTranslation()
     return (
         <>
             <Head>
-                <title>{title}</title>
+                <title>{t(title)}</title>
                 <meta name="author" content="CUC University" />
                 <meta name="description" content={description} />
                 <meta name="keywords" content={`${title}, ${keywords}, Miami, Miami University, American institution`} />

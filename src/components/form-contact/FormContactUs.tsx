@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, FormControlLabel, Grid, TextField, Typography, Link, useTheme } from '@mui/material';
+import { Button, FormControlLabel, Grid, TextField, Typography, Link } from '@mui/material';
 import { BpCheckbox } from '../ui/Checkbox';
 import { FormContact } from '@/interfaces';
 import { useTranslation } from 'react-i18next';
@@ -13,8 +13,8 @@ interface FormComponentProps {
 
 
 
-const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your details and we will contact you", onSubmit, TextFieldMessage = true }) => {
-    const {t} = useTranslation()
+const FormComponent: React.FC<FormComponentProps> = ({ title = "contactus.title", onSubmit, TextFieldMessage = true }) => {
+    const { t } = useTranslation()
     const [name, setName] = useState('');
     const [lastName, setLastName] = useState('');
     const [phone, setPhone] = useState('');
@@ -49,7 +49,7 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                         fontWeight="bold"
                         fontSize={{ xs: 32, md: 50 }}
                     >
-                        {title}
+                        {t(title)}
                     </Typography>
                     <Grid container spacing={2}>
                         <Grid item xs={12} marginTop={3} >
@@ -183,9 +183,9 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                                 }
                                 label={
                                     <span>
-                                        *{t("contactus.terms-and-conditions") }{' '}
+                                        *{t("contactus.terms-and-conditions")}{' '}
                                         <Link href="#" color="primary">
-                                        {t("contactus.terms-and-conditionsv2") }
+                                            {t("contactus.terms-and-conditionsv2")}
                                         </Link>
                                     </span>
                                 }
@@ -204,7 +204,7 @@ const FormComponent: React.FC<FormComponentProps> = ({ title = "Leave us your de
                                     fontSize: 18
                                 }}
                             >
-                               {t("contactus.SendForm")}
+                                {t("contactus.SendForm")}
                             </Button>
                         </Grid>
                     </Grid>

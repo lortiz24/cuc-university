@@ -9,7 +9,6 @@ import { BannerProgram } from '@/components/academic-programs/BannerProgram';
 import { ContentBanner } from '@/components/academic-programs/ContentBanner';
 import { DescriptionAndObjectives } from '@/components/academic-programs/DescriptionAndObjectives';
 import { ContactSectionProgram } from '@/components/academic-programs/ContactSectionProgram';
-import { useTranslation } from 'react-i18next';
 
 
 interface Props {
@@ -18,9 +17,8 @@ interface Props {
 
 
 const ProgramPage: NextPage<Props> = ({ program }) => {
-    const { t } = useTranslation()
     return (
-        <MainLayout title={t(program.title)} description={program.description} image={program.publicImg}>
+        <MainLayout title={program.title} description={program.description} image={program.publicImg}>
             <BannerProgram program={program} >
                 <ContentBanner publicImg={program.publicImg} title={program.titleComplete} />
             </BannerProgram>

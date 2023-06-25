@@ -23,7 +23,7 @@ const CustomComponent: React.FC<CustomComponentProps> = ({ title, items }) => {
         align='center'
         paddingBottom={1}
       >
-        {title}
+        {t(title)}
       </Typography>
       <Box sx={{
         border: 1,
