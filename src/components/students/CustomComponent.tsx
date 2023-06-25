@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, Typography, Box, Paper, List, ListItem, ListItemText } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 interface CustomComponentProps {
   title: string;
@@ -7,6 +8,8 @@ interface CustomComponentProps {
 }
 
 const CustomComponent: React.FC<CustomComponentProps> = ({ title, items }) => {
+  const {t} = useTranslation()
+
   return (
     <Grid
       item
@@ -40,13 +43,13 @@ const CustomComponent: React.FC<CustomComponentProps> = ({ title, items }) => {
                 primary={
                   <Box sx={{ display: 'flex', alignItems: 'center' }}>
                     <Typography variant="body1" fontWeight="bold" fontSize={{ xs: 15, sm: 20 }}>
-                      {item.date + ' '}
+                      {t(item.date) + ' '}
                     </Typography>
                     <Typography variant="body1" component="span" sx={{ marginLeft: '0.5rem', marginRight: '0.5rem' }}>
                       {' - '}
                     </Typography>
                     <Typography variant="body1" component="span" fontSize={{ xs: 15, sm: 20 }}>
-                      {' ' + item.description}
+                      {' ' + t(item.description)}
                     </Typography>
                   </Box>
                 }

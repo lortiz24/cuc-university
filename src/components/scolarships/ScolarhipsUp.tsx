@@ -2,9 +2,12 @@ import React from 'react'
 import { Grid, } from '@mui/material'
 import { CircleBanner } from '../circle-banner/CircleBanner'
 import { CircleBannerWithImage } from '../circle-banner/CircleBannerWithImage'
+import { useTranslation } from 'react-i18next'
 
 
 export const ScolarhipsUp = () => {
+    const {t} = useTranslation()
+    
     return (
         <Grid container>
             <Grid
@@ -31,7 +34,7 @@ export const ScolarhipsUp = () => {
                 /> */}
                 <CircleBannerWithImage
                     src={`/assets/scholarship.png`}
-                    tittle='SCHOLARSHIPS' />
+                    tittle={t("scholarships.title")} />
             </Grid>
         </Grid >
     )

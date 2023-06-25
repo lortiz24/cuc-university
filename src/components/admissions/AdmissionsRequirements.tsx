@@ -4,8 +4,10 @@ import { useGetOrigin } from '@/hooks/useGetOrigin'
 import { MisionAndVision } from '../about-us/MisionAndVision'
 import { AdmissionBackground } from './AdmissionBackground'
 import { TextWithIcon } from '../about-us/TextWithIcon'
+import { useTranslation } from 'react-i18next'
 
 export const AdmissionsRequirements = () => {
+    const {t} = useTranslation()
     const { origin } = useGetOrigin()
     const theme = useTheme()
     return (
@@ -33,7 +35,7 @@ export const AdmissionsRequirements = () => {
                     textAlign="center"
                     paddingBottom={5}
                 >
-                    Admissions Requirements
+                    {t("admissions.subtitle")}
                 </Typography>
 
             </Grid>
@@ -59,29 +61,29 @@ export const AdmissionsRequirements = () => {
                     textAlign="center"
                     paddingBottom={2}
                 >
-                    Masters Programs
+                    {t("admissions.masterpro")}
                 </Typography>
                 <List>
                     <TextWithIcon  >
-                        Hold a bachelor&apos;   s degree from a college or university (Provide copy of sealed transcripts).
+                        {t("admissions.masterpro0")}
                     </TextWithIcon>
                     <TextWithIcon  >
-                        Submit a completed Admissions Application.
+                        {t("admissions.masterpro1")}
                     </TextWithIcon>
                     <TextWithIcon  >
-                        Submit a One Time Application Fee: $100.00 (Non-Refundable).
+                        {t("admissions.masterpro2")}
                     </TextWithIcon>
                     <TextWithIcon  >
-                        Submit an updated Resume.
+                        {t("admissions.masterpro3")}
                     </TextWithIcon>
                     <TextWithIcon  >
-                        Submit 3 letters of professional references (non-family members).
+                        {t("admissions.masterpro4")}
                     </TextWithIcon>
                     <TextWithIcon  >
-                        Submit a personal statement that describes the applicant&apos;s professional accomplishments and goals.
+                        {t("admissions.masterpro5")}
                     </TextWithIcon>
                     <TextWithIcon  >
-                        Copy of valid government issued ID
+                        {t("admissions.masterpro6")}
                     </TextWithIcon>
                 </List>
 
@@ -108,20 +110,20 @@ export const AdmissionsRequirements = () => {
                     textAlign="center"
                     paddingBottom={2}
                 >
-                    Undergraduate Programs
+                    {t("admissions.undergrapro")}
                 </Typography>
                 <List>
                     <TextWithIcon  >
-                        Submit A High School Diploma, A GED or proof of post-secondary education.
+                        {t("admissions.undergrapro0")}
                     </TextWithIcon>
                     <TextWithIcon  >
-                        Submit A Completed Admissions Application.
+                        {t("admissions.undergrapro1")}
                     </TextWithIcon>
                     <TextWithIcon  >
-                        Submit a One Time Application Fee: $100.00 (Non-Refundable)
+                        {t("admissions.undergrapro2")}
                     </TextWithIcon>
                     <TextWithIcon  >
-                        Copy of Valid Government Issued ID
+                        {t("admissions.undergrapro3")}
                     </TextWithIcon>
                 </List>
             </Grid>

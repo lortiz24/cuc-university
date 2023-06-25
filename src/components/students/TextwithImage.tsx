@@ -1,7 +1,10 @@
 import { Button, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
 
 const TextWithImage = () => {
+  const {t} = useTranslation()
+
   return (
     <Grid container columnSpacing={15} paddingX={{xs:6}}>
       <Grid
@@ -21,7 +24,7 @@ const TextWithImage = () => {
           fontSize={{ xs: 30, sm: 60 }}
           textAlign='start'
         >
-          Students
+          {t("Students.title")}
         </Typography>
         <Typography
           lineHeight={2}
@@ -30,7 +33,7 @@ const TextWithImage = () => {
           color={'#626970'}
           fontSize={{ xs: 13, sm: 24}}
         >
-          This will be the page where students find relevant information and tools including log in to Campus Café, Canva, Online Payments Library Resources, University Catalog and Academic Calendar.
+          {t("Students.textmain")}
         </Typography>
       </Grid>
       <Grid item xs={12} lg={8} marginLeft={{ xs: 4, md: 0 }} marginRight={{ xs: 1.5, md: 0 }} sx={{ paddingTop: '0px', position: 'relative' }}>
