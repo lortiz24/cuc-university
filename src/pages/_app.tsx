@@ -10,7 +10,7 @@ import '@/styles/ComponentImage-style.css'
 import { Provider } from 'react-redux';
 
 import GoogleAnalytics from '@bradgarropy/next-google-analytics'
-import './i18n'
+import '../languages/config/i18n'
 
 
 
