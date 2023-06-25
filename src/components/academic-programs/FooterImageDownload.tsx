@@ -1,6 +1,7 @@
 import { Box, Typography } from '@mui/material'
 import DownloadButton from '../download-files-button/DownloadButton';
 import { DownloadItem } from '@/interfaces';
+import { useTranslation } from 'react-i18next';
 
 interface Props {
     downloadnItem: DownloadItem;
@@ -13,7 +14,7 @@ const origin = (typeof window === 'undefined') ? '' : window.location.origin
 export const FooterImageDownload = ({
     downloadnItem
 }: Props) => {
-
+    const { t } = useTranslation()
     return (
         <Box
             display="flex"
@@ -31,7 +32,7 @@ export const FooterImageDownload = ({
                 paddingX={10}
                 textAlign={'center'}
             >
-                Study Plan and Course Catalogue
+                {t('programs.pdf-text')}
             </Typography>
 
             <DownloadButton downloadnItem={downloadnItem} />

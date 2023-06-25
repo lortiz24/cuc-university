@@ -6,6 +6,7 @@ import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import TranslateOutlinedIcon from '@mui/icons-material/TranslateOutlined';
 import StorageOutlinedIcon from '@mui/icons-material/StorageOutlined';
 import { makeStyles } from '@mui/styles';
+import { useTranslation } from 'react-i18next';
 
 const useStyles = makeStyles({
     customIcon: {
@@ -20,7 +21,7 @@ interface Props {
 export const ContentOverview = ({ program }: Props) => {
 
     const classes = useStyles();
-
+    const { t } = useTranslation()
 
     return (
         <Grid
@@ -44,7 +45,7 @@ export const ContentOverview = ({ program }: Props) => {
                     fontSize={{ xs: 25, sm: 42, xl: 50 }}
                     textAlign={'start'}
                 >
-                    Overview
+                    {t('programs.overview-title')}
                 </Typography>
                 <List>
                     <ListItem sx={{ py: 0.3 }}>
@@ -60,7 +61,7 @@ export const ContentOverview = ({ program }: Props) => {
                                         color={'#FFFFFF'}
                                         fontSize={{ xs: 23 }}
                                     >
-                                        {'Duration:' + ' '}
+                                        {t('programs.overview.duration-title') + ' '}
                                     </Typography>
                                     <Typography variant="body1" component="span" sx={{ marginLeft: '0.5rem', marginRight: '0.5rem' }}>
                                         {' '}
@@ -72,7 +73,7 @@ export const ContentOverview = ({ program }: Props) => {
                                         color={'#FFFFFF'}
                                         fontSize={{ xs: 23 }}
                                     >
-                                        {' ' + `${program.overView.duration.value} ${program.overView.duration.unidad} (${program.overView.durationSemesters.value} ${program.overView.durationSemesters.unidad})`}
+                                        {t(program.overView.duration)}
                                     </Typography>
                                 </Box>
                             }
@@ -91,7 +92,7 @@ export const ContentOverview = ({ program }: Props) => {
                                         color={'#FFFFFF'}
                                         fontSize={{ xs: 23 }}
                                     >
-                                        {'Credits:' + ' '}
+                                        {t('programs.overview.credits-title') + ' '}
                                     </Typography>
                                     <Typography variant="body1" component="span" sx={{ marginLeft: '0.5rem', marginRight: '0.5rem' }}>
                                         {' '}
@@ -103,7 +104,7 @@ export const ContentOverview = ({ program }: Props) => {
                                         color={'#FFFFFF'}
                                         fontSize={{ xs: 23 }}
                                     >
-                                        {' ' + program.overView.credits}
+                                        {t(program.overView.credits)}
                                     </Typography>
                                 </Box>
                             }
@@ -122,7 +123,7 @@ export const ContentOverview = ({ program }: Props) => {
                                         color={'#FFFFFF'}
                                         fontSize={{ xs: 23 }}
                                     >
-                                        {'Modality:' + ' '}
+                                        {t('programs.overview.modality-title') + ' '}
                                     </Typography>
                                     <Typography variant="body1" component="span" sx={{ marginLeft: '0.5rem', marginRight: '0.5rem' }}>
                                         {' '}
@@ -134,7 +135,7 @@ export const ContentOverview = ({ program }: Props) => {
                                         color={'#FFFFFF'}
                                         fontSize={{ xs: 23 }}
                                     >
-                                        {' ' + program.overView.modality}
+                                        {t(program.overView.modality)}
                                     </Typography>
                                 </Box>
                             }
@@ -153,7 +154,7 @@ export const ContentOverview = ({ program }: Props) => {
                                         color={'#FFFFFF'}
                                         fontSize={{ xs: 23 }}
                                     >
-                                        {'Lenguage:' + ' '}
+                                        {t('programs.overview.language-title') + ' '}
                                     </Typography>
                                     <Typography variant="body1" component="span" sx={{ marginLeft: '0.5rem', marginRight: '0.5rem' }}>
                                         {' '}
@@ -165,7 +166,7 @@ export const ContentOverview = ({ program }: Props) => {
                                         color={'#FFFFFF'}
                                         fontSize={{ xs: 23 }}
                                     >
-                                        {' ' + program.overView.language}
+                                        {t(program.overView.language)}
                                     </Typography>
                                 </Box>
                             }

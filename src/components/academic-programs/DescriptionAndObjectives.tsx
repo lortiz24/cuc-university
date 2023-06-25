@@ -2,6 +2,7 @@ import { Grid, Typography, useTheme } from '@mui/material'
 import React from 'react'
 import { FooterImageDownload } from './FooterImageDownload';
 import { DownloadItem } from '@/interfaces';
+import { useTranslation } from 'react-i18next';
 
 
 
@@ -12,7 +13,7 @@ interface Props {
 }
 export const DescriptionAndObjectives = ({ description, objective, downloadnItem }: Props) => {
     const theme = useTheme()
-
+    const { t } = useTranslation()
 
 
     return (
@@ -32,10 +33,10 @@ export const DescriptionAndObjectives = ({ description, objective, downloadnItem
                     lineHeight={1.2}
                     color={theme.palette.primary.main}
                     fontWeight={'bold'}
-                    fontSize={{ xs: 30, sm:50 }}
+                    fontSize={{ xs: 30, sm: 50 }}
                     textAlign={'start'}
                 >
-                    Description
+                    {t('programs.aosiba.description.title')}
                 </Typography>
                 <Typography
                     variant='body2'
@@ -44,7 +45,7 @@ export const DescriptionAndObjectives = ({ description, objective, downloadnItem
                     marginBottom={{ xs: 1, md: 4 }}
                     textAlign={'start'}
                 >
-                    {description}
+                    {t(description)}
                 </Typography>
 
             </Grid>
@@ -62,11 +63,11 @@ export const DescriptionAndObjectives = ({ description, objective, downloadnItem
             >
                 <Typography
                     color={theme.palette.primary.main}
-                    fontSize={{ xs: 25, sm:50 }}
+                    fontSize={{ xs: 25, sm: 50 }}
                     fontWeight={'bold'}
                     textAlign={'end'}
                 >
-                    Objective
+                    {t('programs.aosiba.objective.title')}
                 </Typography>
                 <Typography
                     variant='body2'
@@ -75,7 +76,7 @@ export const DescriptionAndObjectives = ({ description, objective, downloadnItem
                     marginBottom={{ xs: 1, md: 4 }}
                     textAlign={'end'}
                 >
-                    {objective}
+                    {t(objective)}
                 </Typography>
                 <FooterImageDownload downloadnItem={downloadnItem} />
 

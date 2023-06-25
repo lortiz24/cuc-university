@@ -22,9 +22,8 @@ export interface ProgramItem {
     titleComplete: TitleProgram;
     id?: string;
     overView: {
-        duration: DurationProgram
-        durationSemesters: DurationProgram
-        credits: number
+        duration: string
+        credits: string
         modality: string
         language: string
     };

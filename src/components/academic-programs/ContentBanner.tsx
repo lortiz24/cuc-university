@@ -2,6 +2,7 @@ import { useGetOrigin } from '@/hooks/useGetOrigin'
 import { TitleProgram } from '@/interfaces';
 import { Box, Grid, Typography } from '@mui/material'
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 
 interface Props {
     publicImg: string;
@@ -10,6 +11,7 @@ interface Props {
 
 export const ContentBanner = ({ publicImg, title }: Props) => {
     const { origin } = useGetOrigin()
+    const { t } = useTranslation()
     return (
         <Grid
             container
@@ -37,7 +39,7 @@ export const ContentBanner = ({ publicImg, title }: Props) => {
                     marginBottom={{ xs: 1, sm: 10, md: 4 }}
                     textAlign={{ xs: 'center', md: "right" }} // Alinear el texto a la derecha
                 >
-                    {title.type}{" "}
+                    {t(title.type)}{" "}
                     <Typography
                         variant="caption"
                         lineHeight={1.2}
@@ -46,7 +48,7 @@ export const ContentBanner = ({ publicImg, title }: Props) => {
                         marginBottom={{ xs: 1, md: 4 }}
                         textAlign={{ xs: 'center', md: "right" }}
                     >
-                        {title.specialty}
+                        {t(title.specialty)}
                     </Typography>
                 </Typography>
             </Grid>

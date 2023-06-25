@@ -1,12 +1,14 @@
 import React from 'react';
 import { Button } from '@mui/material';
 import { DownloadItem } from '@/interfaces';
+import { useTranslation } from 'react-i18next';
 
 interface Props {
     downloadnItem: DownloadItem;
 }
 
 const DownloadButton = ({ downloadnItem }: Props) => {
+    const { t } = useTranslation()
     const handleDownload = () => {
         const filePath = downloadnItem.ruta; // Ruta relativa al archivo en la carpeta "public"
         const downloadLink = document.createElement('a');
@@ -30,7 +32,7 @@ const DownloadButton = ({ downloadnItem }: Props) => {
             }}
             onClick={handleDownload}
         >
-            Download
+            {t('programs.pdf-button')}
         </Button>
     );
 };
