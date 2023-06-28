@@ -31,6 +31,7 @@ const TextWithImage = () => {
           variant='body2'
           marginX={{ xs: 4, md: 0 }}
           color={'#626970'}
+          textAlign={'justify'}
           fontSize={{ xs: 13, sm: 24}}
         >
           {t("Students.textmain")}

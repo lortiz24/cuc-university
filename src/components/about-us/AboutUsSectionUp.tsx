@@ -29,7 +29,9 @@ export const AboutUsSectionUp = () => {
                     marginBottom={{ xs: 1, md: 4 }}
                     textAlign={'start'}
                 >
-                    {t('aboutUs.title')} <Typography
+                    {t('aboutUs.title')} 
+                    
+                    {/* <Typography
                         variant='caption'
                         lineHeight={1.2}
                         color={(theme) => theme.palette.secondary.main}
@@ -38,14 +40,14 @@ export const AboutUsSectionUp = () => {
                         textAlign={'start'}
                     >
                         {t('aboutUs.title-body')}
-                    </Typography>
+                    </Typography> */}
                 </Typography>
 
                 <Typography
                     variant='body2'
                     fontSize={{ xs: 15, sm: 20 }}
                     lineHeight={1.8}
-                    style={{ marginBottom: '16px' }}
+                    style={{ marginBottom: '16px', textAlign: 'justify' }}
                 >
                     {t('aboutUs.body-one')}
                 </Typography>
@@ -54,6 +56,7 @@ export const AboutUsSectionUp = () => {
                     variant='body2'
                     color={'#626970'}
                     lineHeight={1.8}
+                    style={{ textAlign: 'justify' }}
                     fontSize={{ xs: 15, sm: 20 }}
                 >
                     {t('aboutUs.body-tow')}

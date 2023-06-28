@@ -31,6 +31,7 @@ export const CucUniversityHome = () => {
                     lineHeight={2}
                     variant='body2'
                     fontSize={20}
+                    textAlign={'justify'}
                 >
                     {t('home.introduction')}
                 </Typography>

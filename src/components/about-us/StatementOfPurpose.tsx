@@ -62,7 +62,7 @@ const SplitPage = () => {
             {t('aboutUs.accreditation.title')}
           </Typography>
           <Grid xs={8}>
-            <Typography variant="body2" lineHeight={2} gutterBottom fontSize={{ xs: 15, sm: 20 }} color={'#626970'}>
+            <Typography variant="body2" lineHeight={2} gutterBottom textAlign={'justify'} fontSize={{ xs: 15, sm: 20 }} color={'#626970'}>
               {t('aboutUs.accreditation.body')}
             </Typography>
           </Grid>
