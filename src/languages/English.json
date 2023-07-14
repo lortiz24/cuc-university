@@ -23,6 +23,7 @@
     "home.programs-section.type-one": "Undergraduate Programs",
     "home.programs-section.type-two": "Graduate Programs",
     "footer.title": "Join our Newsletter",
+    "footer.input.placeholder": "Enter your email address",
     "footer.body": "Stay up to date our news, blog post, and announcements by subscribing to our Newsletter.",
     "footer.button": "Subscribe",
     "aboutUs.title": "CUC University",
@@ -178,7 +179,11 @@
     "scholarships.title":"SCHOLARSHIPS",
     "scholarships.parr0":"CUC University is committed to supporting eligible students through a variety of scholarships, which are awarded on a semester basis and renewable based on satisfactory academic progress. Upon completing the scholarship application, eligible candidates will be scheduled for an interview and asked to compose a 300-word essay on campus. The essay topic will be randomly selected.",
     "scholarships.parr1":"All students who receive CUC University scholarships must maintain a 3.0 GPA to remain eligible for renewal. Scholarship recipients are required to reaffirm their commitment to the scholarship terms by signing the 'Terms for Institutional Scholarships' form.",
-    "scholarships.parr2":"Application deadlines for each semester will be posted on the university website. It is essential to note that upon withdrawal or failure of courses, recipients of institutional aid will forfeit the CUC University scholarship and become financially liable for the full tuition of the ongoing semester."
+    "scholarships.parr2":"Application deadlines for each semester will be posted on the university website. It is essential to note that upon withdrawal or failure of courses, recipients of institutional aid will forfeit the CUC University scholarship and become financially liable for the full tuition of the ongoing semester.",
+    "thanks.title1":"THANKS FOR WRITING US!",
+    "thanks.title2":"WE'LL CONTACT YOU AS SOON AS POSSIBLE"
+
+
 
 
 
