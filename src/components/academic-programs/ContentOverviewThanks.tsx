@@ -28,7 +28,6 @@ export const ContentOverviewThanks = ({ program }: Props) => {
       justifyContent={"center"}
       flexDirection={"column"}
       alignItems={"center"}
-    // sx={{ backgroundColor: 'red' }}
     >
       <Grid item xs={12}>
         <Typography

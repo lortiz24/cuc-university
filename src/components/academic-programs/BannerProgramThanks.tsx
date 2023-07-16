@@ -17,6 +17,7 @@ export const BannerProgramThanks = ({ children, program }: Props) => {
     return (
         <Grid
             container
+            height={{ xs: 700, md: 750 }}
         >
             <Grid
                 item
@@ -81,7 +82,7 @@ export const BannerProgramThanks = ({ children, program }: Props) => {
                         <ContentOverviewThanks program={program} />
                     </Box>
 
-                    <Box>{children}</Box>
+                    <Box sx={{ height: '100%' }}>{children}</Box>
                 </Box>
             </Grid>
 
