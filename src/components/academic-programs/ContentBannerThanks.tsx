@@ -13,20 +13,19 @@ export const ContentBannerThanks = ({ publicImg, title }: Props) => {
         <Grid
             container
             minHeight={{ xs: 800, md: 900 }}
+            
         >
             <Grid
                 item
                 xs={12}
                 md={12}
-                lg={5}
+                lg={8}
                 display={'flex'}
                 justifyContent={'center'}
                 flexDirection='column'
                 alignItems={'center'}
                 maxHeight={{ xs: 500, md: 800 }}
-                // paddingLeft={{ xl: 15 }}
                 paddingX={{ xs: 10, md: 0 }}
-            // sx={{ backgroundColor: 'red' }}
             >
                 <Typography
                     variant="h2"
