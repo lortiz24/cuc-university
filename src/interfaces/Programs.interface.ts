@@ -17,6 +17,7 @@ export interface ProgramItem {
     pdf: DownloadItem;
     contactImage: string;
     publicImg: string;
+    publicImgBlackAndWhite: string;
     path: string;
     title: string;
     titleComplete: TitleProgram;

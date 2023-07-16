@@ -8,6 +8,7 @@ export const underGraduatePrograms: ProgramItem[] = [
             ruta: '/files/pdf/Associates-of-Science-in-International-Plan.pdf'
         },
         publicImg: '/assets/team-work-2.jpg',
+        publicImgBlackAndWhite: '/assets/team-work-2-BN.jpg',
         contactImage: '/assets/Alumno1-2.png',
         path: '/associates-science-international-business-administration',
         title: 'menu.academic-programs.aosiba',
@@ -31,6 +32,7 @@ export const underGraduatePrograms: ProgramItem[] = [
             ruta: '/files/pdf/Bachelors-of-Science-in-International-Business-Administration-Plan.pdf'
         },
         publicImg: '/assets/bachelors.jpg',
+        publicImgBlackAndWhite: '/assets/bachelors-BN.jpg',
         contactImage: '/assets/alumna-contact.png',
         path: '/bachelors-of-science-in-international-business-administration',
         title: 'menu.academic-programs.bosiiba',
@@ -57,6 +59,7 @@ export const graduatePrograms: ProgramItem[] = [
         },
         path: '/master-of-science-in-international-business-administration',
         publicImg: '/assets/master-of-science.jpg',
+        publicImgBlackAndWhite: '/assets/master-of-science-BN.jpg',
         contactImage: '/assets/Alumna-contact-2.png',
         id: 'f9e8f51e85f1e891f8e1f5',
         titleComplete: {
@@ -81,6 +84,7 @@ export const graduatePrograms: ProgramItem[] = [
 
         path: '/master-of-science-in-marketing',
         publicImg: '/assets/master-marketing.jpg',
+        publicImgBlackAndWhite: '/assets/master-marketing-BN.jpg',
         contactImage: '/assets/Alumna-contact-2.png',
         id: 'e89f1e1fe1f9e1f98e1f',
         titleComplete: {
@@ -106,6 +110,7 @@ export const graduatePrograms: ProgramItem[] = [
         },
         path: '/master-of-science-in-mass-media-communication-and-media-technology',
         publicImg: '/assets/master-comunication.jpg',
+        publicImgBlackAndWhite: '/assets/master-comunication-BN.jpg',
         titleComplete: {
             type: 'programs.mosimmcamt.title-complete.type',
             specialty: 'programs.mosimmcamt.title-complete.specialty'

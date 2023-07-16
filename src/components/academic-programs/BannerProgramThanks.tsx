@@ -17,7 +17,7 @@ export const BannerProgramThanks = ({ children, program }: Props) => {
     return (
         <Grid
             container
-            height={{ xs: 700, md: 750 }}
+            height={{ xs: 700, md: 900 }}
         >
             <Grid
                 item
@@ -30,11 +30,10 @@ export const BannerProgramThanks = ({ children, program }: Props) => {
                         position: 'relative',
                         width: '100%',
                         height: '70%',
-                        backgroundImage: `url(${origin}${program.publicImg})`,
+                        backgroundImage: `url(${origin}${program.publicImgBlackAndWhite})`,
                         backgroundRepeat: 'no-repeat',
                         backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        mixBlendMode: 'overlay',
+                        backgroundPosition: '50% 20%',
                         zIndex: -1,
                         backgroundColor: theme.palette.background.paper,
                     }}
@@ -50,7 +49,7 @@ export const BannerProgramThanks = ({ children, program }: Props) => {
                             {
                                 colorLeft: '#FFFFFF',
                                 colorRight: '#FFFFFF',
-                                opacityLeft: 0.8,
+                                opacityLeft: 0.5,
                                 opacityRight: 1
                             }
                         }
