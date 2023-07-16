@@ -25,7 +25,7 @@ export const ContentBannerThanks = ({ publicImg, title }: Props) => {
                 flexDirection='column'
                 alignItems={'center'}
                 maxHeight={{ xs: 500, md: 800 }}
-                paddingX={{ xs: 10, md: 0 }}
+                paddingX={{ xs: 10, md: 5 }}
             >
                 <Typography
                     variant="h2"
