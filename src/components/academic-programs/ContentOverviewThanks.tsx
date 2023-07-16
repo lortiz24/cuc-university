@@ -23,12 +23,12 @@ export const ContentOverviewThanks = ({ program }: Props) => {
       container
       paddingLeft={2}
       paddingY={{ xs: 5, sm: 5 }}
-      paddingX={10}
+      paddingX={{ xs: 1, xl: 10 }}
       display={"flex"}
       justifyContent={"center"}
       flexDirection={"column"}
       alignItems={"center"}
-      // sx={{ backgroundColor: 'red' }}
+    // sx={{ backgroundColor: 'red' }}
     >
       <Grid item xs={12}>
         <Typography

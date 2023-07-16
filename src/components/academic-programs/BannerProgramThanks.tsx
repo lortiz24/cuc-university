@@ -54,15 +54,16 @@ export const BannerProgramThanks = ({ children, program }: Props) => {
                             }
                         }
                     />
+
                     <Box
                         sx={{
                             backgroundColor: theme.palette.secondary.main,
                             borderRadius: { xs: '5rem', sm: '15rem' },
-                            width: { xs: '100%', sm: '100%', md: '60%', lg: '64%' },
-                            height:'290px',
+                            width: { xs: '100%', md: '60%', lg: '64%' },
+                            height: '290px',
                             maxWidth: '1500px',
                             position: 'absolute',
-                            top: 'calc(50% + 300px)',
+                            top: { xs: 'calc(100% - 10px)', sm: 'calc(100%)' },
                             left: '50%',
                             transform: 'translate(-50%, -50%)',
                             color: 'transparent',

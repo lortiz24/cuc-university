@@ -1,7 +1,5 @@
-import { useGetOrigin } from '@/hooks/useGetOrigin'
 import { TitleProgram } from '@/interfaces';
-import { Box, Grid, Typography } from '@mui/material'
-import React from 'react'
+import { Grid, Typography } from '@mui/material'
 import { useTranslation } from 'react-i18next';
 
 interface Props {
@@ -10,12 +8,11 @@ interface Props {
 }
 
 export const ContentBannerThanks = ({ publicImg, title }: Props) => {
-    const { origin } = useGetOrigin()
     const { t } = useTranslation()
     return (
         <Grid
             container
-            minHeight={{ xs: 400, md: 900 }}
+            minHeight={{ xs: 800, md: 900 }}
         >
             <Grid
                 item
@@ -26,7 +23,7 @@ export const ContentBannerThanks = ({ publicImg, title }: Props) => {
                 justifyContent={'center'}
                 flexDirection='column'
                 alignItems={'center'}
-                maxHeight={{ xs: 400, md: 800 }}
+                maxHeight={{ xs: 500, md: 800 }}
                 // paddingLeft={{ xl: 15 }}
                 paddingX={{ xs: 10, md: 0 }}
             // sx={{ backgroundColor: 'red' }}
@@ -38,7 +35,7 @@ export const ContentBannerThanks = ({ publicImg, title }: Props) => {
                     fontWeight="bold"
                     fontSize={{ xs: 40, sm: 55, xl: 60 }}
                     marginBottom={{ xs: 15, sm: 20, md: 30 }}
-                    textAlign={{ xs: 'center',md: "center" ,lg:"right" }} // Alinear el texto a la derecha
+                    textAlign={{ xs: 'center', md: "center", lg: "right" }} // Alinear el texto a la derecha
                 >
                     {t(title.type)}{" "}
                     <Typography
@@ -47,7 +44,7 @@ export const ContentBannerThanks = ({ publicImg, title }: Props) => {
                         color={(theme) => theme.palette.secondary.main}
                         fontSize={{ xs: 30, sm: 40, xl: 60 }}
                         marginBottom={{ xs: 1, md: 4 }}
-                        textAlign={{ xs: 'center', md: "center" ,lg:"right" }}
+                        textAlign={{ xs: 'center', md: "center", lg: "right" }}
                     >
                         {t(title.specialty)}
                     </Typography>

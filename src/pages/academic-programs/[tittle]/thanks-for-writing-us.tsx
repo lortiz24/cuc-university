@@ -1,5 +1,6 @@
 import { BannerProgramThanks } from '@/components/academic-programs/BannerProgramThanks';
 import { ContentBannerThanks } from '@/components/academic-programs/ContentBannerThanks';
+import { ComponentWithPadding } from '@/components/layouts/ComponentWithPadding';
 import { MainLayout } from '@/components/layouts/MainLayout';
 import { graduatePrograms, underGraduatePrograms } from '@/data';
 import { ProgramItem } from '@/interfaces';
@@ -16,7 +17,8 @@ interface Props {
 
 const index: NextPage<Props> = ({ program }) => {
   return (
-    <MainLayout title={program.title} description={program.description} image={program.publicImg} >
+    <MainLayout title={program.title} description={program.description} image={program.publicImg} height100vh>
+
       <BannerProgramThanks program={program} >
         <ContentBannerThanks publicImg={program.publicImg} title={program.titleComplete} />
       </BannerProgramThanks>

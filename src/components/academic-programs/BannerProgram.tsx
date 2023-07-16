@@ -62,7 +62,6 @@ export const BannerProgram = ({ children, program }: Props) => {
                             maxWidth: '740px',
                             position: 'absolute',
                             top: { xs: 'calc(100% - 100px)', sm: 'calc(100% - 160px)' },
-                            // top: { xs: `calc(100% - 2em)`, sm: `calc(100% - 1.6em)`, md: `calc(100% - 1.5em)`, lg: 'calc(100% - 100px)' },
                             transform: { xs: '', md: 'translateX(10%)' },
                             color: 'transparent',
                             fontSize: { xs: '14vw', md: '8vw' },
